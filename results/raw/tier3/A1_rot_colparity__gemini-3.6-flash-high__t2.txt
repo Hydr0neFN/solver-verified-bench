@@ -1,0 +1,33 @@
+```
+[Input Grid] ──> [90° CW Rotation] ──┐
+                                     ├──> (Bitwise XOR) ──> [Output Grid]
+[Input Grid] ──> [Column Parity] ───┘
+```
+
+The transformation consists of two steps applied over GF(2):
+1. **90° Clockwise Rotation**: Rotate the input grid 90° clockwise.
+2. **Column Parity Mask**: Compute column parity (sum of bits mod 2 for each column) and broadcast across all rows.
+3. **Combination**: Compute the bitwise XOR of the rotated grid with the column parity mask.
+
+Applying to the query:
+
+Input Grid:
+`0 1 1 1`
+`0 1 1 1`
+`0 1 1 0`
+`1 1 1 0`
+
+Column Parity: `[1, 0, 0, 0]`
+90° CW Rotated Grid:
+`1 0 0 0`
+`1 1 1 1`
+`1 1 1 1`
+`0 0 1 1`
+
+XOR Result:
+`0 0 0 0`
+`0 1 1 1`
+`0 1 1 1`
+`1 0 1 1`
+
+FINAL: 0000; 0111; 0111; 1011

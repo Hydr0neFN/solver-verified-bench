@@ -1,7 +1,16 @@
 """ARC-focus battery: composite grid rules, the one axis where tier-2 discriminated."""
 import os, json, random
 
-d = "tasks3"
+# Output paths are repo-relative so this runs from the repo root:
+#   python bench/make_tier3.py
+# It writes ONLY the prompts. The answer keys in truth/ are curated -- solver output in
+# a unified schema plus two corrections documented inline there. The raw solver output
+# is written alongside as truth/generated-tier3.json so the two can be diffed.
+import os as _os
+_ROOT = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+
+
+d = _os.path.join(_ROOT, "tasks", "tier3")
 os.makedirs(d, exist_ok=True)
 TRUTH = {}
 N = 4
@@ -73,6 +82,6 @@ for name, fn in RULES.items():
         "Every example uses the same rule. Infer it and apply it to the query.\n\n"
         + body + f"Query\nIN:\n{gs(q)}\nOUT: ?" + STRICT + "\n")
 
-json.dump(TRUTH, open("truth3.json", "w"), indent=1)
+json.dump(TRUTH, open(_os.path.join(_ROOT, "truth", "generated-tier3.json"), "w"), indent=1)
 for k, v in TRUTH.items():
     print(k, v["value"])

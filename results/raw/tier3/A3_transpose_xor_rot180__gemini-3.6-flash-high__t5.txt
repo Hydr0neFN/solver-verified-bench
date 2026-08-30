@@ -1,0 +1,27 @@
+```
+IN Grid:                 Anti-Symmetric Linear Map                OUT Grid:
+[0 0 0 0]               ---------------------------              [0 0 1 0]
+[0 0 1 1]           ──►  Anti-diag (r+c=3) = 0     ──►           [0 0 0 1]
+[0 1 0 1]                Main-diag = IN(i,i) ^ IN(3-i,3-i)       [0 0 0 0]
+[1 1 1 0]                Off-diag = Anti-diag Symmetric Map      [0 0 0 0]
+```
+
+### Reasoning
+
+1. **Anti-Diagonal Symmetry**: The output grid $\text{OUT}$ is anti-diagonally symmetric ($\text{OUT}[r, c] = \text{OUT}[3-c, 3-r]$) with all elements along the anti-diagonal ($r + c = 3$) equal to $0$.
+2. **Main Diagonal Rule**: The main diagonal elements are given by the XOR of the symmetric main-diagonal pairs of $\text{IN}$:
+   - $\text{OUT}[0, 0] = \text{OUT}[3, 3] = \text{IN}[0, 0] \oplus \text{IN}[3, 3]$
+   - $\text{OUT}[1, 1] = \text{OUT}[2, 2] = \text{IN}[1, 1] \oplus \text{IN}[2, 2]$
+3. **Off-Diagonal Mapping**:
+   - $\text{OUT}[0, 1] = \text{OUT}[2, 3] = \text{IN}[0, 2]$
+   - $\text{OUT}[0, 2] = \text{OUT}[1, 3] = \text{IN}[2, 1]$
+   - $\text{OUT}[1, 0] = \text{OUT}[3, 2] = \text{IN}[1, 0]$
+   - $\text{OUT}[2, 0] = \text{OUT}[3, 1] = \text{IN}[2, 2]$
+
+Applying this deterministic map to the Query input:
+- Row 1: `0 0 1 0`
+- Row 2: `0 0 0 1`
+- Row 3: `0 0 0 0`
+- Row 4: `0 0 0 0`
+
+FINAL: 0010; 0001; 0000; 0000

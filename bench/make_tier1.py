@@ -1,5 +1,14 @@
 import os
-d = "tasks"
+
+# Output paths are repo-relative so this runs from the repo root:
+#   python bench/make_tier1.py
+# It writes ONLY the prompts. The answer keys in truth/ are curated -- solver output in
+# a unified schema plus two corrections documented inline there. The raw solver output
+# is written alongside as truth/generated-tier1.json so the two can be diffed.
+import os as _os
+_ROOT = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+
+d = _os.path.join(_ROOT, "tasks", "tier1")
 os.makedirs(d, exist_ok=True)
 
 

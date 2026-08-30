@@ -793,10 +793,10 @@
   "task": "H1_arc2",
   "model": "gemini-3.6-flash-high",
   "trial": "2",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 15841,
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 30725,
   "retried_after_timeout": false
  },
  {
@@ -2003,10 +2003,10 @@
   "task": "H9_spec",
   "model": "gemini-3.6-flash-high",
   "trial": "3",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 24993,
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 53307,
   "retried_after_timeout": false
  },
  {

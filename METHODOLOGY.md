@@ -83,6 +83,48 @@ enumerates a 64-rule family and confirms the examples pin the rule uniquely, and
 both parity values are demonstrated for every column the query depends on. The task is
 sound; the models simply got it wrong together.
 
+## Parallelism changes the result, so it is part of the method
+
+The runner takes a parallelism argument. That is not a convenience knob — set it wrong
+and you measure the harness instead of the model.
+
+Running three tier-3 cells at once with a 10-minute budget, `claude-sonnet-4-6` failed
+at a flat **~201 s every time**, with an empty reply and nothing on stderr. Run alone
+with a 15-minute budget, the same task finished in **3 min 14 s with the correct
+answer**. Nothing about the model changed; the parallel runs were being throttled, and
+scoring them would have recorded "cannot solve it" for a task the model solves.
+
+Failure duration is the tell, and the scorer uses it:
+
+| elapsed before failure | reading | treatment |
+|---|---|---|
+| a few seconds | quota or capacity refusal | excluded, not the model's doing |
+| ~200 s under parallelism | throttling | excluded; re-run sequentially |
+| the whole budget (~600 s+) | the model did not converge | scored zero |
+
+The Gemini models tolerated six-way parallelism. The Claude models did not. If you
+reproduce this, run those sequentially with a generous budget, and check the elapsed
+time on every failure before believing it.
+
+## What was not measured, and why
+
+`claude-sonnet-4-6` and `claude-opus-4-6-thinking` were added late and are reported as
+**partial**: Sonnet completed two of the four induction rules, Opus one. Neither is given
+a tier mean.
+
+The reason is quota, not model behaviour. Both accounts available for this work had their
+CLAUDE+GPT weekly limit exhausted by these two models -- one account in roughly ten
+minutes of thinking-tier runs. Quota is consumed in proportion to token cost, and a
+tier-3 induction task keeps a thinking model working for minutes at a time, so the run
+count is a poor guide to the cost. On the tasks they did reach, both answered correctly
+every time, but two and one rules respectively are not enough to characterise either
+model and no inference should be drawn from those cells.
+
+Substituting a different harness was considered and rejected. The same model version
+reached through another tool is not the same measurement: system prompt, tool set and
+time budget all differ, and the comparison in these tables depends on every model seeing
+an identical prompt through an identical path.
+
 ## Limits
 
 - **Small trial counts.** 2–5 per cell. Large gaps are visible, small ones are not. The

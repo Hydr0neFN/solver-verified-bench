@@ -1,0 +1,43 @@
+```
+┌─────────────────┐
+│ Input Grid      │
+│  1 0 1 0 (sum=2)│
+│  1 1 1 1 (sum=4)│
+│  1 1 0 1 (sum=3)│
+│  1 1 0 1 (sum=3)│
+└────────┬────────┘
+         │ Transpose
+         ▼
+┌─────────────────┐
+│ Transposed Grid │
+│  1 1 1 1        │
+│  0 1 1 1        │
+│  1 1 0 0        │
+│  0 1 1 1        │
+└────────┬────────┘
+         │ Invert row i if IN row i sum is odd
+         ▼
+┌─────────────────┐
+│ Output Grid     │
+│  1 1 1 1  [x]   │ (even sum=2 -> keep)
+│  0 1 1 1  [x]   │ (even sum=4 -> keep)
+│  0 0 1 1  [x]   │ (odd  sum=3 -> invert)
+│  1 0 0 0  [x]   │ (odd  sum=3 -> invert)
+└─────────────────┘
+```
+
+### Transformation Rule
+1. **Transpose Matrix**: First, transpose the binary grid (`OUT[r, c] = IN[c, r]`).
+2. **Row Parity Inversion**: For each row `r` of the transformed grid, calculate the sum of row `r` in the **original** input grid:
+   - If the sum is **even** (0, 2, 4), keep row `r` unchanged.
+   - If the sum is **odd** (1, 3), invert all bits in row `r` (`0 ↔ 1`).
+
+### Query Evaluation
+- **Input row sums**: `row 0 = 2` (even), `row 1 = 4` (even), `row 2 = 3` (odd), `row 3 = 3` (odd).
+- **Transposed grid**:
+  - `row 0`: `1 1 1 1` → keep → `1 1 1 1`
+  - `row 1`: `0 1 1 1` → keep → `0 1 1 1`
+  - `row 2`: `1 1 0 0` → invert → `0 0 1 1`
+  - `row 3`: `0 1 1 1` → invert → `1 0 0 0`
+
+FINAL: 1111; 0111; 0011; 1000

@@ -1,0 +1,35 @@
+Each cell in the output grid at row $r$ and column $c$ (with periodic wrapping modulo 4) is obtained by taking the XOR (exclusive OR) of its down neighbor and its right neighbor in the input grid:
+
+$$\text{OUT}[r, c] = \text{IN}[(r+1) \bmod 4, c] \oplus \text{IN}[r, (c+1) \bmod 4]$$
+
+Applying this rule to the Query grid:
+
+- **Row 0**:
+  - (0,0): $\text{IN}[1,0] \oplus \text{IN}[0,1] = 1 \oplus 0 = 1$
+  - (0,1): $\text{IN}[1,1] \oplus \text{IN}[0,2] = 1 \oplus 0 = 1$
+  - (0,2): $\text{IN}[1,2] \oplus \text{IN}[0,3] = 0 \oplus 1 = 1$
+  - (0,3): $\text{IN}[1,3] \oplus \text{IN}[0,0] = 0 \oplus 1 = 1$
+  - Row 0 = `1 1 1 1`
+
+- **Row 1**:
+  - (1,0): $\text{IN}[2,0] \oplus \text{IN}[1,1] = 0 \oplus 1 = 1$
+  - (1,1): $\text{IN}[2,1] \oplus \text{IN}[1,2] = 1 \oplus 0 = 1$
+  - (1,2): $\text{IN}[2,2] \oplus \text{IN}[1,3] = 0 \oplus 0 = 0$
+  - (1,3): $\text{IN}[2,3] \oplus \text{IN}[1,0] = 0 \oplus 1 = 1$
+  - Row 1 = `1 1 0 1`
+
+- **Row 2**:
+  - (2,0): $\text{IN}[3,0] \oplus \text{IN}[2,1] = 0 \oplus 1 = 1$
+  - (2,1): $\text{IN}[3,1] \oplus \text{IN}[2,2] = 0 \oplus 0 = 0$
+  - (2,2): $\text{IN}[3,2] \oplus \text{IN}[2,3] = 0 \oplus 0 = 0$
+  - (2,3): $\text{IN}[3,3] \oplus \text{IN}[2,0] = 1 \oplus 0 = 1$
+  - Row 2 = `1 0 0 1`
+
+- **Row 3**:
+  - (3,0): $\text{IN}[0,0] \oplus \text{IN}[3,1] = 1 \oplus 0 = 1$
+  - (3,1): $\text{IN}[0,1] \oplus \text{IN}[3,2] = 0 \oplus 0 = 0$
+  - (3,2): $\text{IN}[0,2] \oplus \text{IN}[3,3] = 0 \oplus 1 = 1$
+  - (3,3): $\text{IN}[0,3] \oplus \text{IN}[3,0] = 1 \oplus 0 = 1$
+  - Row 3 = `1 0 1 1`
+
+FINAL: 1111; 1101; 1001; 1011

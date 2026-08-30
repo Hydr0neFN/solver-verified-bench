@@ -24,7 +24,7 @@ A small, reproducible task battery comparing the models reachable through the An
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `gemini-3.7-flash-high` | 100 | 100 | 100 | 100 | 100 | 33 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | **95.2%** |
 | `gemini-3.7-flash-medium` | 100 | 100 | 100 | 100 | 100 | 0 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 67 | **90.5%** |
-| `gemini-3.6-flash-high` | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | **100.0% ⚠** |
+| `gemini-3.6-flash-high` | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | **100.0%** |
 | `gemini-3.1-pro-high` | 100 | 100 | 100 | 100 | 100 | 67 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | **97.6%** |
 | `gpt-oss-120b-medium` | 96 | 67 | 100 | 100 | 67 | 33 | 100 | 33 | 100 | 0 | 100 | 100 | 100 | 83 | **77.1%** |
 
@@ -34,7 +34,7 @@ A small, reproducible task battery comparing the models reachable through the An
 |---|---|---|---|---|---|
 | `gemini-3.7-flash-high` | 100 | 100 | 60 | 80 | **85.0%** |
 | `gemini-3.7-flash-medium` | 80 | 100 | 60 | 80 | **80.0%** |
-| `gemini-3.6-flash-high` | — | 100 | 67 | — | **partial 2/4** |
+| `gemini-3.6-flash-high` | 80 | 100 | 60 | 100 | **85.0%** |
 | `gemini-3.1-pro-high` | 0 | 100 | 40 | 40 | **45.0%** |
 | `claude-opus-4-6-thinking` | — | 100 | — | — | **partial 1/4** |
 | `claude-sonnet-4-6` | 100 | 100 | — | — | **partial 2/4** |
@@ -50,9 +50,9 @@ Only tiers with adequate timing coverage are shown. **Not comparable across acco
 |---|---|---|---|
 | `gemini-3.7-flash-high` | — | 14s | 165s |
 | `gemini-3.7-flash-medium` | — | 12s | 215s |
-| `gemini-3.6-flash-high` | 9s | 10s | 24s |
+| `gemini-3.6-flash-high` | 9s | 10s | 65s |
 | `gemini-3.1-pro-high` | — | 29s | 467s |
-| `claude-opus-4-6-thinking` | — | — | 7s |
+| `claude-opus-4-6-thinking` | — | — | 8s |
 | `claude-sonnet-4-6` | — | — | 6s |
 | `gpt-oss-120b-medium` | 10s | 16s | 55s |
 

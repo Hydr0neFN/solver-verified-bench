@@ -1,0 +1,25 @@
+To infer the mapping rule, we analyze the 4x4 binary grid patterns across all examples:
+
+1. **Orbit Decomposition under Grid Symmetries ($D_4$)**:
+   - The $4 \times 4$ grid partitions into 3 distinct geometric orbits: the 4 corners, the 4 center cells, and the 8 perimeter edge cells.
+   - For all 8 perimeter edge-center cells and the 4 center cells, the output values are uniquely determined by the local and symmetric $D_4$ group bit patterns of the input grid.
+   - For the query, matching these $D_4$ orbit invariants yields:
+     - Top row inner cells $(0,1), (0,2) \to 1, 1$
+     - Bottom row inner cells $(3,1), (3,2) \to 1, 1$
+     - Left column inner cells $(1,0), (2,0) \to 1, 1$
+     - Right column inner cells $(1,3), (2,3) \to 1, 1$
+     - Center 2x2 cells $\to 0, 0, 0, 0$
+
+2. **Corner Orbit Behavior**:
+   - Across all examples, input grids with 1 or 2 ones in the corner positions consistently map to active main-diagonal corners $(0,0)=1, (3,3)=1$ and inactive anti-diagonal corners $(0,3)=0, (3,0)=0$.
+   - The query grid contains 1 one in its corners at $(3,0)$, so its output corners evaluate to $(0,0)=1$, $(0,3)=0$, $(3,0)=0$, and $(3,3)=1$.
+
+Combining these results gives the transformed $4 \times 4$ grid:
+```
+1 1 1 0
+1 0 0 1
+1 0 0 1
+0 1 1 1
+```
+
+FINAL: 1110; 1001; 1001; 0111

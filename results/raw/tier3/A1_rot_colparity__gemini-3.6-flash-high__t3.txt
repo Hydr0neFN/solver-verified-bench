@@ -1,0 +1,49 @@
+```
+Transformation Pipeline:
+[IN Grid] ──► 1. Rotate 90° CW ───────► [Rotated Grid]
+   │                                           │
+   └──► 2. Compute Column Parities ──► [XOR Column Mask]
+                                               │
+                                               ▼
+                                   3. [Rotated Grid] ⊕ [Mask] ──► [OUT Grid]
+```
+
+### Transformation Rule
+1. **Rotate** the $4 \times 4$ binary input grid **90 degrees clockwise**.
+2. **Compute column parities** of the original input grid: for each column $c$, parity is $1$ if the sum of 1s in that column is odd, and $0$ if even.
+3. **Invert (XOR)** each column $c$ of the rotated grid if the corresponding column parity of the input grid is $1$.
+
+---
+
+### Application to Query
+
+**Query Input:**
+```
+0 1 1 1
+0 1 1 1
+0 1 1 0
+1 1 1 0
+```
+
+1. **Rotated 90° Clockwise:**
+```
+1 0 0 0
+1 1 1 1
+1 1 1 1
+0 0 1 1
+```
+
+2. **Input Column Parities (sum mod 2):**
+- Col 0: $(0+0+0+1) \bmod 2 = 1$ (odd)
+- Col 1: $(1+1+1+1) \bmod 2 = 0$ (even)
+- Col 2: $(1+1+1+1) \bmod 2 = 0$ (even)
+- Col 3: $(1+1+0+0) \bmod 2 = 0$ (even)
+Mask: `[1, 0, 0, 0]`
+
+3. **XOR Rotated Grid with Column Mask:**
+- Row 1: `1^1  0^0  0^0  0^0` $\rightarrow$ `0 0 0 0`
+- Row 2: `1^1  1^0  1^0  1^0` $\rightarrow$ `0 1 1 1`
+- Row 3: `1^1  1^0  1^0  1^0` $\rightarrow$ `0 1 1 1`
+- Row 4: `0^1  0^0  1^0  1^0` $\rightarrow$ `1 0 1 1`
+
+FINAL: 0000; 0111; 0111; 1011

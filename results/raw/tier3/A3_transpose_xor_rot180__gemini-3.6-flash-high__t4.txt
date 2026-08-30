@@ -1,0 +1,24 @@
+```
+[IN] ──┬──> Transpose (INᵀ) ─────┐
+       │                         ├─> XOR (⊕) ──> [OUT]
+       └──> Rotate 180° (Rot180) ┘
+
+[Query IN]           [Transpose]          [Rotated 180°]       [Query OUT]
+0 0 0 0              0 0 0 1              0 1 1 1              0 1 1 0
+0 0 1 1  ───┬───>    0 0 1 1   ───┬───>   1 0 1 0   ───┬───>   1 0 0 1
+0 1 0 1     │        0 1 0 1      │       1 1 0 0      │       1 0 0 1
+1 1 1 0     └───>    0 1 1 0      └─ ⊕ ─> 0 0 0 0      └───>   0 1 1 0
+```
+
+The transformation rule is:
+$$\text{OUT} = \text{IN}^T \oplus \text{Rot}_{180}(\text{IN})$$
+
+Applying this to the Query grid:
+1. **Transpose ($\text{IN}^T$)**:
+   $$\begin{pmatrix} 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 1 \\ 0 & 1 & 0 & 1 \\ 0 & 1 & 1 & 0 \end{pmatrix}$$
+2. **Rotate 180° ($\text{Rot}_{180}(\text{IN})$)**:
+   $$\begin{pmatrix} 0 & 1 & 1 & 1 \\ 1 & 0 & 1 & 0 \\ 1 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix}$$
+3. **Element-wise XOR ($\oplus$)**:
+   $$\begin{pmatrix} 0 & 1 & 1 & 0 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 1 \\ 0 & 1 & 1 & 0 \end{pmatrix}$$
+
+FINAL: 0110; 1001; 1001; 0110

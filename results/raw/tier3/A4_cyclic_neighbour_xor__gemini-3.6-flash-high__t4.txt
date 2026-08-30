@@ -1,0 +1,34 @@
+```
+[IN(r, (c+1)%4)] ──┐
+                    ├─ XOR ──> OUT(r, c)
+[IN((r+1)%4, c)] ──┘
+```
+
+The transformation rule evaluates each cell at position $(r, c)$ by taking the bitwise **XOR** of its right neighbor (with toroidal wrapping) and its bottom neighbor (with toroidal wrapping):
+
+$$\text{OUT}[r, c] = \text{IN}[r, (c + 1) \bmod 4] \oplus \text{IN}[(r + 1) \bmod 4, c]$$
+
+Applying this rule cell-by-cell to the Query grid:
+
+* **Row 0**:
+  * $(0,0): 0 \oplus 1 = 1$
+  * $(0,1): 0 \oplus 1 = 1$
+  * $(0,2): 1 \oplus 0 = 1$
+  * $(0,3): 1 \oplus 0 = 1$
+* **Row 1**:
+  * $(1,0): 1 \oplus 0 = 1$
+  * $(1,1): 0 \oplus 1 = 1$
+  * $(1,2): 0 \oplus 0 = 0$
+  * $(1,3): 1 \oplus 0 = 1$
+* **Row 2**:
+  * $(2,0): 1 \oplus 0 = 1$
+  * $(2,1): 0 \oplus 0 = 0$
+  * $(2,2): 0 \oplus 0 = 0$
+  * $(2,3): 0 \oplus 1 = 1$
+* **Row 3**:
+  * $(3,0): 0 \oplus 1 = 1$
+  * $(3,1): 0 \oplus 0 = 0$
+  * $(3,2): 1 \oplus 0 = 1$
+  * $(3,3): 0 \oplus 1 = 1$
+
+FINAL: 1111; 1101; 1001; 1011

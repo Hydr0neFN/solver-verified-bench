@@ -1,0 +1,24 @@
+```
+[IN Grid] ──(Rotate 90° CW)──> [ROT] ──(XOR)──> [OUT Grid]
+                                 ▲
+[Col XOR Parity Vector] ─────────┘
+```
+
+The transformation consists of two steps:
+1. Rotate the input binary grid 90° clockwise.
+2. Compute the bitwise XOR sum of each column of the input grid to form a 4-element row vector `[p0, p1, p2, p3]`, then XOR this vector with each row of the rotated grid.
+
+For the query:
+- Column XOR parity vector: `[0, 0, 0, 1]`
+- Rotated grid (90° CW):
+  1 1 0 0
+  0 1 0 1
+  0 0 0 0
+  1 0 0 0
+- Bitwise XOR with `[0, 0, 0, 1]`:
+  1 1 0 1
+  0 1 0 0
+  0 0 0 1
+  1 0 0 1
+
+FINAL: 1101; 0100; 0001; 1001

@@ -1,0 +1,15 @@
+```
+[IN(r, c+1 mod 4)] ──┐
+                     ├─ XOR ──> [OUT(r, c)]
+[IN(r+1 mod 4, c)] ──┘
+```
+
+Rule: `OUT[r, c] = IN[r, (c+1)%4] ⊕ IN[(r+1)%4, c]` (XOR of right neighbor and below neighbor with periodic wrapping).
+
+Applying rule to Query IN:
+- Row 0: (0 0 1 1) ⊕ (1 1 0 0) → 1 1 1 1
+- Row 1: (1 0 0 1) ⊕ (0 1 0 0) → 1 1 0 1
+- Row 2: (1 0 0 0) ⊕ (0 0 0 1) → 1 0 0 1
+- Row 3: (0 0 1 0) ⊕ (1 0 0 1) → 1 0 1 1
+
+FINAL: 1111; 1101; 1001; 1011

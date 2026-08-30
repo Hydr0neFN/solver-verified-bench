@@ -1,0 +1,30 @@
+```
+┌──────┐      ┌──────────────┐
+│  IN  ├─────►│ Rotate 90°CW ├──┐
+└──┬───┘      └──────────────┘  │
+   │                            ▼
+   │          ┌──────────────┐  ┌─────┐      ┌───────┐
+   └─────────►│ Col Parities ├─►│ XOR ├─────►│  OUT  │
+              └──────────────┘  └─────┘      └───────┘
+```
+
+The transformation consists of two steps:
+1. Rotate the input grid **90 degrees clockwise**.
+2. Compute the **column parity vector** (XOR sum of each column of the input grid), and XOR it bitwise across each row of the rotated grid.
+
+For the Query grid:
+- **Rotated Grid (90° CW)**:
+  `1 0 0 0`
+  `1 1 1 1`
+  `1 1 1 1`
+  `0 0 1 1`
+
+- **Column Parity Vector**: `[1, 0, 0, 0]`
+
+- **XOR Result (OUT)**:
+  `0 0 0 0`
+  `0 1 1 1`
+  `0 1 1 1`
+  `1 0 1 1`
+
+FINAL: 0000; 0111; 0111; 1011

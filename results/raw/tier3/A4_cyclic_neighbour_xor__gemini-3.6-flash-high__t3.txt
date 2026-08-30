@@ -1,0 +1,13 @@
+```
+[IN(r, c)] ──► OUT(r, c) = IN(r, (c+1) mod 4) ⊕ IN((r+1) mod 4, c)
+```
+
+Each cell at `(r, c)` in the output grid is obtained by taking the bitwise **XOR** (\(\oplus\)) of its right neighbor `(r, (c+1) mod 4)` and its bottom neighbor `((r+1) mod 4, c)` in the input grid (wrapping around boundaries).
+
+Applying this deterministic rule to the query grid:
+- Row 0: `(0^1, 0^1, 1^0, 1^0) = (1, 1, 1, 1)`
+- Row 1: `(1^0, 0^1, 0^0, 1^0) = (1, 1, 0, 1)`
+- Row 2: `(1^0, 0^0, 0^0, 0^1) = (1, 0, 0, 1)`
+- Row 3: `(0^1, 0^0, 1^0, 0^1) = (1, 0, 1, 1)`
+
+FINAL: 1111; 1101; 1001; 1011

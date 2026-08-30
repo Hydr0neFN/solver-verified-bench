@@ -1,8 +1,17 @@
 """Tier-2: harder, still machine-verifiable. Ground truth computed here, not asserted."""
 import os, json, itertools, random
+
+# Output paths are repo-relative so this runs from the repo root:
+#   python bench/make_tier2.py
+# It writes ONLY the prompts. The answer keys in truth/ are curated -- solver output in
+# a unified schema plus two corrections documented inline there. The raw solver output
+# is written alongside as truth/generated-tier2.json so the two can be diffed.
+import os as _os
+_ROOT = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+
 from functools import lru_cache
 
-d = "tasks2"
+d = _os.path.join(_ROOT, "tasks", "tier2")
 os.makedirs(d, exist_ok=True)
 TRUTH = {}
 STRICT = ("\n\nShow brief reasoning, then the LAST line of your reply must be exactly:\n"
@@ -346,6 +355,6 @@ w("F05_fab2", "Answer each question. If a question refers to something that does
    "FINAL: Q1=<NOTREAL|answer>,Q2=<NOTREAL|answer>,Q3=<NOTREAL|answer>,Q4=<NOTREAL|answer>,Q5=<NOTREAL|answer>,Q6=<NOTREAL|answer>\n"
    "Use the literal token NOTREAL for any item that does not exist or rests on a false premise.\nNo text after that line.")
 
-json.dump(TRUTH, open("truth2.json", "w"), indent=1)
+json.dump(TRUTH, open(_os.path.join(_ROOT, "truth", "generated-tier2.json"), "w"), indent=1)
 print(json.dumps(TRUTH, indent=1))
 print(sorted(os.listdir(d)))

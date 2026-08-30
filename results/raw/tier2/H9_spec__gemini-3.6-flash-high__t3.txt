@@ -1,0 +1,22 @@
+```
+t=0s                 t=29.9s  t=30s                         t=60s
+│                     │        │                             │
+├─ W1: Executes Job ──┤        │                             │
+│                      (Stops) │                             │
+│                              ├─ Scheduler Reassigns (R4) ──┤
+│                              │                             │
+│                              └─ W2: Executes Job ──────────┘
+
+Requirement Evaluation Matrix:
+│ Requirement                   │ Status                      │
+├───────────────────────────────┼─────────────────────────────┤
+│ R11 (No Concurrency)          │ [x] Satisfied (Sequential)  │
+│ R2  (At-Most-Once)            │ ! Violated (Executed Twice) │
+```
+
+- **R2** guarantees **at-most-once** execution (a job is executed $\le 1$ time).
+- **R4** mandates job reassignment upon lease expiry, forcing **at-least-once** re-execution semantics.
+- If Worker 1 starts executing a job and its lease expires, R4 requires the scheduler to reassign the job to Worker 2, resulting in multiple execution attempts for the same job.
+- Thus, R2 and R4 represent mutually unsatisfiable execution semantics.
+
+FINAL: R2 and R4

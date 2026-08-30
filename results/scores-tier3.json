@@ -103,50 +103,50 @@
   "task": "A1_rot_colparity",
   "model": "gemini-3.6-flash-high",
   "trial": "1",
-  "score": null,
-  "empty_reason": "unknown",
+  "score": 0.0,
+  "empty_reason": "timeout",
   "rc": 1,
-  "ms": 10942,
+  "ms": 604993,
   "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
   "model": "gemini-3.6-flash-high",
   "trial": "2",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 172109,
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 109329,
   "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
   "model": "gemini-3.6-flash-high",
   "trial": "3",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 44239,
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 136800,
   "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
   "model": "gemini-3.6-flash-high",
   "trial": "4",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 20205,
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 447307,
   "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
   "model": "gemini-3.6-flash-high",
   "trial": "5",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 13095,
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 69957,
   "retried_after_timeout": false
  },
  {
@@ -453,10 +453,10 @@
   "task": "A2_transpose_rowparity",
   "model": "gemini-3.6-flash-high",
   "trial": "1",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 15364,
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 93968,
   "retried_after_timeout": false
  },
  {
@@ -493,10 +493,10 @@
   "task": "A2_transpose_rowparity",
   "model": "gemini-3.6-flash-high",
   "trial": "5",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 31354,
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 49427,
   "retried_after_timeout": false
  },
  {
@@ -656,7 +656,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 6757,
+  "ms": 7316,
   "retried_after_timeout": false
  },
  {
@@ -666,7 +666,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 5641,
+  "ms": 5433,
   "retried_after_timeout": false
  },
  {
@@ -773,10 +773,10 @@
   "task": "A3_transpose_xor_rot180",
   "model": "gemini-3.6-flash-high",
   "trial": "1",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 91085,
+  "score": 0.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 140222,
   "retried_after_timeout": false
  },
  {
@@ -803,20 +803,20 @@
   "task": "A3_transpose_xor_rot180",
   "model": "gemini-3.6-flash-high",
   "trial": "4",
-  "score": 0.0,
-  "empty_reason": "timeout",
-  "rc": 1,
-  "ms": 606362,
-  "retried_after_timeout": false
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 37784,
+  "retried_after_timeout": true
  },
  {
   "task": "A3_transpose_xor_rot180",
   "model": "gemini-3.6-flash-high",
   "trial": "5",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 6094,
+  "score": 0.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 196500,
   "retried_after_timeout": false
  },
  {
@@ -976,7 +976,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 6851,
+  "ms": 8043,
   "retried_after_timeout": false
  },
  {
@@ -986,7 +986,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 6722,
+  "ms": 7048,
   "retried_after_timeout": false
  },
  {
@@ -996,7 +996,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 6931,
+  "ms": 6312,
   "retried_after_timeout": false
  },
  {
@@ -1006,7 +1006,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 6054,
+  "ms": 6221,
   "retried_after_timeout": false
  },
  {
@@ -1016,7 +1016,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 5616,
+  "ms": 5555,
   "retried_after_timeout": false
  },
  {
@@ -1046,7 +1046,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 6114,
+  "ms": 6184,
   "retried_after_timeout": false
  },
  {
@@ -1056,7 +1056,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 5683,
+  "ms": 6348,
   "retried_after_timeout": false
  },
  {
@@ -1066,7 +1066,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 5836,
+  "ms": 5800,
   "retried_after_timeout": false
  },
  {
@@ -1123,50 +1123,50 @@
   "task": "A4_cyclic_neighbour_xor",
   "model": "gemini-3.6-flash-high",
   "trial": "1",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 6391,
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 36818,
   "retried_after_timeout": false
  },
  {
   "task": "A4_cyclic_neighbour_xor",
   "model": "gemini-3.6-flash-high",
   "trial": "2",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 6185,
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 59201,
   "retried_after_timeout": false
  },
  {
   "task": "A4_cyclic_neighbour_xor",
   "model": "gemini-3.6-flash-high",
   "trial": "3",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 8078,
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 62587,
   "retried_after_timeout": false
  },
  {
   "task": "A4_cyclic_neighbour_xor",
   "model": "gemini-3.6-flash-high",
   "trial": "4",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 9352,
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 44783,
   "retried_after_timeout": false
  },
  {
   "task": "A4_cyclic_neighbour_xor",
   "model": "gemini-3.6-flash-high",
   "trial": "5",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 5943,
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 67928,
   "retried_after_timeout": false
  },
  {
