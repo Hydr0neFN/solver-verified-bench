@@ -10,11 +10,22 @@ byte-identically from the same fixed seeds.
 
 ## Tier 1
 
-`tier1.json` is hand-written. Its tasks are fixed puzzles whose answers were verified by
-brute force during construction (knights-and-knaves enumeration, a permutation search
-for the logic grid, a DP for the constrained count, and so on), but the generator does
-not emit a key file, so there is nothing to diff. The answers are checkable directly:
-every one of them is a short fact you can verify with a few lines of Python.
+`tier1.json` is hand-written, so there is no generator output to diff it against.
+Instead `bench/verify_tier1.py` re-derives every computable tier-1 answer from scratch --
+knights-and-knaves enumeration, a permutation search for the logic grid, backward
+induction for the pirate split, a DP for the constrained count, a composition
+enumeration for the self-descriptive number, and so on -- and compares each against the
+key. It runs in a fraction of a second:
+
+```
+$ python bench/verify_tier1.py
+8 verified, 0 mismatched, 7 not computable
+```
+
+The seven it cannot compute are named individually in its output rather than skipped:
+the two defect-identification tasks are keyword judgements, the false-premise task has
+no answer to compute (the correct response is to refuse), and the three fact batteries
+were checked against sources by hand.
 
 ## Tier 2 — how the curated key differs from the generated one
 

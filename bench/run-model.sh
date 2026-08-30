@@ -6,15 +6,20 @@
 set -u
 cd "$(dirname "$0")" || exit 1
 
-M="${1:?usage: run-model.sh <model-slug> [parallelism]}"
+M="${1:?usage: run-model.sh <model-slug> [parallelism] [tiers] [budget]}"
 P="${2:-6}"
+TIERS="${3:-123}"          # e.g. "3" to run only tier 3
+BUDGET="${4:-}"            # e.g. 15m -- overrides the per-tier print-timeout.
+                           # Some models need a larger budget on the induction tier and
+                           # are sensitive to parallelism; scoring a throttled run as a
+                           # model failure would misattribute it.
 mkdir -p out out2 out3 log log2 log3
 
 JOBS="joblist-${M}.txt"
 : > "$JOBS"
-for f in tasks/*.txt;  do t=$(basename "$f" .txt); for n in 1 2;       do echo "1|$t|$n" >> "$JOBS"; done; done
-for f in tasks2/*.txt; do t=$(basename "$f" .txt); for n in 1 2 3;     do echo "2|$t|$n" >> "$JOBS"; done; done
-for f in tasks3/*.txt; do t=$(basename "$f" .txt); for n in 1 2 3 4 5; do echo "3|$t|$n" >> "$JOBS"; done; done
+case "$TIERS" in *1*) for f in tasks/*.txt;  do t=$(basename "$f" .txt); for n in 1 2;       do echo "1|$t|$n" >> "$JOBS"; done; done;; esac
+case "$TIERS" in *2*) for f in tasks2/*.txt; do t=$(basename "$f" .txt); for n in 1 2 3;     do echo "2|$t|$n" >> "$JOBS"; done; done;; esac
+case "$TIERS" in *3*) for f in tasks3/*.txt; do t=$(basename "$f" .txt); for n in 1 2 3 4 5; do echo "3|$t|$n" >> "$JOBS"; done; done;; esac
 
 run_one() {
   IFS='|' read -r tier t n <<< "$1"
@@ -23,6 +28,10 @@ run_one() {
     2) td=tasks2; od=out2; ld=log2; tim=timings2.csv; pt=10m; to=700 ;;
     3) td=tasks3; od=out3; ld=log3; tim=timings3.csv; pt=10m; to=700 ;;
   esac
+  if [ -n "$BUDGET" ]; then
+    pt="$BUDGET"
+    to=$(( $(echo "$BUDGET" | tr -dc '0-9') * 60 + 120 ))
+  fi
   outf="${od}/${t}__${M}__t${n}.txt"
   [ -s "$outf" ] && return 0
   start=$(date +%s%3N)
@@ -36,6 +45,7 @@ run_one() {
 }
 export -f run_one
 export M
+export BUDGET
 
 cat "$JOBS" | xargs -P "$P" -I{} bash -c 'run_one "$@"' _ {}
 echo "DONE ${M}: $(wc -l < "$JOBS") jobs"

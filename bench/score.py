@@ -175,12 +175,16 @@ def why_empty(tier, task, model, trial, ms, rc):
 def score_tier(tier):
     truth = json.load(open(os.path.join(TRUTH_DIR, f"tier{tier}.json"), encoding="utf-8"))
 
-    # Every attempt is kept, not just the last one. A cell that was re-run after an
-    # infrastructure failure (quota, capacity throttle, auth) legitimately takes the
-    # retry's result -- that failure was not the model's. But a cell where the model
-    # burned its whole time budget and returned nothing has FAILED, and re-running it
-    # until it passes would launder that away. So a timeout anywhere in a cell's
-    # history pins it to zero, whatever a later attempt produced.
+    # Every attempt is kept, not just the last one, because cells were re-run whenever
+    # the provider failed and the history is the only record of what happened.
+    #
+    # An earlier version of this scorer pinned any cell with a timeout to zero, on the
+    # reasoning that re-running until it passes launders a real failure. That rule was
+    # withdrawn once a bug was found in the runner: a failing re-run used to overwrite
+    # a previous successful answer with an empty file, so some cells that the model had
+    # solved looked like timeouts. Penalising those would blame the model for a defect
+    # in the harness. The rule now is simply: score what the model actually produced,
+    # and report retries-after-timeout separately instead of folding them into the mean.
     attempts = collections.defaultdict(list)
     tf = os.path.join(RAW_DIR, f"tier{tier}", "timings.csv")
     if os.path.exists(tf):
@@ -189,8 +193,9 @@ def score_tier(tier):
             if len(p) == 5:
                 attempts[(p[0], p[1], p[2])].append((int(p[3]), int(p[4])))
     timings = {k: v[-1] for k, v in attempts.items()}
-    timed_out = {k for k, v in attempts.items()
-                 if any(rc != 0 and ms >= PRINT_TIMEOUT_MS for rc, ms in v)}
+    had_timeout = {k for k, v in attempts.items()
+                   if any(rc != 0 and ms >= PRINT_TIMEOUT_MS for rc, ms in v)}
+    had_success = {k for k, v in attempts.items() if any(rc == 0 for rc, _ in v)}
 
     rows = []
     for f in sorted(glob.glob(os.path.join(RAW_DIR, f"tier{tier}", "*.txt"))):
@@ -200,19 +205,23 @@ def score_tier(tier):
         spec = truth.get(task)
         rc, ms = timings.get((task, model, trial), (None, None))
 
+        key = (task, model, trial)
         sc, reason = None, None
         if spec is None:
             reason = "no-truth"
-        elif (task, model, trial) in timed_out:
-            sc, reason = 0.0, "timeout"          # pinned; a later retry cannot lift it
         elif txt.strip():
             sc = KINDS[spec["kind"]](spec, final_line(txt), txt)
+        elif key in had_success:
+            # the model answered at least once, but the answer was overwritten by a
+            # later failing re-run before the runner was fixed -- lost, not failed
+            reason = "lost-to-clobber"
         else:
             reason = why_empty(tier, task, model, trial, ms, rc)
             if reason == "timeout":
-                sc = 0.0
+                sc = 0.0                        # never delivered inside its own budget
         rows.append({"task": task, "model": model, "trial": trial,
-                     "score": sc, "empty_reason": reason, "rc": rc, "ms": ms})
+                     "score": sc, "empty_reason": reason, "rc": rc, "ms": ms,
+                     "retried_after_timeout": key in had_timeout and key in had_success})
     return rows
 
 
@@ -268,6 +277,18 @@ def summarise(all_rows, quiet=False):
                 lo = min(counts)
                 tl += f"{(str(lo) + ' of ' + str(target) + (' !' if lo < target else '')):>24}"
         print(tl)
+
+        # Reliability, kept out of the mean on purpose: how many cells only produced an
+        # answer after an earlier attempt had burned the whole time budget, and how many
+        # were lost to the runner bug described above.
+        rl = f"{'timeout then retry':<26}"
+        for m in models:
+            nr = sum(1 for r in rows if r["model"] == m and r.get("retried_after_timeout"))
+            lost = sum(1 for r in rows if r["model"] == m
+                       and r.get("empty_reason") == "lost-to-clobber")
+            txt = f"{nr}" + (f" (+{lost} lost)" if lost else "")
+            rl += f"{txt:>24}"
+        print(rl)
 
         # Latency needs near-complete timing coverage to mean anything; tier 1's
         # timings file was truncated early in the run, so it is usually withheld here.

@@ -6,7 +6,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F01_tf",
@@ -15,7 +16,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F01_tf",
@@ -24,7 +26,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 9450
+  "ms": 9450,
+  "retried_after_timeout": false
  },
  {
   "task": "F01_tf",
@@ -33,7 +36,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 9695
+  "ms": 9695,
+  "retried_after_timeout": false
  },
  {
   "task": "F01_tf",
@@ -42,7 +46,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F01_tf",
@@ -51,7 +56,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F01_tf",
@@ -60,7 +66,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F01_tf",
@@ -69,7 +76,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F01_tf",
@@ -78,7 +86,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 10529
+  "ms": 10529,
+  "retried_after_timeout": false
  },
  {
   "task": "F01_tf",
@@ -87,7 +96,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 7459
+  "ms": 7459,
+  "retried_after_timeout": false
  },
  {
   "task": "F02_fabrication",
@@ -96,7 +106,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F02_fabrication",
@@ -105,7 +116,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F02_fabrication",
@@ -114,7 +126,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 6346
+  "ms": 6346,
+  "retried_after_timeout": false
  },
  {
   "task": "F02_fabrication",
@@ -123,7 +136,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 6449
+  "ms": 6449,
+  "retried_after_timeout": false
  },
  {
   "task": "F02_fabrication",
@@ -132,7 +146,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F02_fabrication",
@@ -141,7 +156,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F02_fabrication",
@@ -150,7 +166,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F02_fabrication",
@@ -159,7 +176,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F02_fabrication",
@@ -168,7 +186,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 6435
+  "ms": 6435,
+  "retried_after_timeout": false
  },
  {
   "task": "F02_fabrication",
@@ -177,7 +196,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 9301
+  "ms": 9301,
+  "retried_after_timeout": false
  },
  {
   "task": "F03_precision",
@@ -186,7 +206,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F03_precision",
@@ -195,7 +216,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F03_precision",
@@ -204,7 +226,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 5728
+  "ms": 5728,
+  "retried_after_timeout": false
  },
  {
   "task": "F03_precision",
@@ -213,7 +236,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 6739
+  "ms": 6739,
+  "retried_after_timeout": false
  },
  {
   "task": "F03_precision",
@@ -222,7 +246,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F03_precision",
@@ -231,7 +256,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F03_precision",
@@ -240,7 +266,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F03_precision",
@@ -249,7 +276,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "F03_precision",
@@ -258,7 +286,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 6077
+  "ms": 6077,
+  "retried_after_timeout": false
  },
  {
   "task": "F03_precision",
@@ -267,7 +296,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 7510
+  "ms": 7510,
+  "retried_after_timeout": false
  },
  {
   "task": "R01_knaves",
@@ -276,7 +306,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R01_knaves",
@@ -285,7 +316,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R01_knaves",
@@ -294,7 +326,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 6458
+  "ms": 6458,
+  "retried_after_timeout": false
  },
  {
   "task": "R01_knaves",
@@ -303,7 +336,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 6820
+  "ms": 6820,
+  "retried_after_timeout": false
  },
  {
   "task": "R01_knaves",
@@ -312,7 +346,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R01_knaves",
@@ -321,7 +356,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R01_knaves",
@@ -330,7 +366,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R01_knaves",
@@ -339,7 +376,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R01_knaves",
@@ -348,7 +386,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 7047
+  "ms": 7047,
+  "retried_after_timeout": false
  },
  {
   "task": "R01_knaves",
@@ -357,7 +396,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 6353
+  "ms": 6353,
+  "retried_after_timeout": false
  },
  {
   "task": "R02_grid",
@@ -366,7 +406,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R02_grid",
@@ -375,7 +416,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R02_grid",
@@ -384,7 +426,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 9458
+  "ms": 9458,
+  "retried_after_timeout": false
  },
  {
   "task": "R02_grid",
@@ -393,7 +436,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 8093
+  "ms": 8093,
+  "retried_after_timeout": false
  },
  {
   "task": "R02_grid",
@@ -402,7 +446,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R02_grid",
@@ -411,7 +456,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R02_grid",
@@ -420,7 +466,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R02_grid",
@@ -429,7 +476,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R02_grid",
@@ -438,7 +486,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 14755
+  "ms": 14755,
+  "retried_after_timeout": false
  },
  {
   "task": "R02_grid",
@@ -447,7 +496,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 11945
+  "ms": 11945,
+  "retried_after_timeout": false
  },
  {
   "task": "R03_bug",
@@ -456,7 +506,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R03_bug",
@@ -465,7 +516,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R03_bug",
@@ -474,7 +526,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 6537
+  "ms": 6537,
+  "retried_after_timeout": false
  },
  {
   "task": "R03_bug",
@@ -483,7 +536,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 10775
+  "ms": 10775,
+  "retried_after_timeout": false
  },
  {
   "task": "R03_bug",
@@ -492,7 +546,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R03_bug",
@@ -501,7 +556,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R03_bug",
@@ -510,7 +566,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R03_bug",
@@ -519,7 +576,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R03_bug",
@@ -528,7 +586,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 7257
+  "ms": 7257,
+  "retried_after_timeout": false
  },
  {
   "task": "R03_bug",
@@ -537,7 +596,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 4594
+  "ms": 4594,
+  "retried_after_timeout": false
  },
  {
   "task": "R04_spec",
@@ -546,7 +606,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R04_spec",
@@ -555,7 +616,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R04_spec",
@@ -564,7 +626,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 8340
+  "ms": 8340,
+  "retried_after_timeout": false
  },
  {
   "task": "R04_spec",
@@ -573,7 +636,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 7746
+  "ms": 7746,
+  "retried_after_timeout": false
  },
  {
   "task": "R04_spec",
@@ -582,7 +646,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R04_spec",
@@ -591,7 +656,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R04_spec",
@@ -600,7 +666,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R04_spec",
@@ -609,7 +676,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R04_spec",
@@ -618,7 +686,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 5952
+  "ms": 5952,
+  "retried_after_timeout": false
  },
  {
   "task": "R04_spec",
@@ -627,7 +696,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 5889
+  "ms": 5889,
+  "retried_after_timeout": false
  },
  {
   "task": "R05_bayes",
@@ -636,7 +706,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R05_bayes",
@@ -645,7 +716,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R05_bayes",
@@ -654,7 +726,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 6971
+  "ms": 6971,
+  "retried_after_timeout": false
  },
  {
   "task": "R05_bayes",
@@ -663,7 +736,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 5947
+  "ms": 5947,
+  "retried_after_timeout": false
  },
  {
   "task": "R05_bayes",
@@ -672,7 +746,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R05_bayes",
@@ -681,7 +756,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R05_bayes",
@@ -690,7 +766,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R05_bayes",
@@ -699,7 +776,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R05_bayes",
@@ -708,7 +786,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 5843
+  "ms": 5843,
+  "retried_after_timeout": false
  },
  {
   "task": "R05_bayes",
@@ -717,7 +796,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 5690
+  "ms": 5690,
+  "retried_after_timeout": false
  },
  {
   "task": "R06_pirates",
@@ -726,7 +806,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R06_pirates",
@@ -735,7 +816,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R06_pirates",
@@ -744,7 +826,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 14341
+  "ms": 14341,
+  "retried_after_timeout": false
  },
  {
   "task": "R06_pirates",
@@ -753,7 +836,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 13334
+  "ms": 13334,
+  "retried_after_timeout": false
  },
  {
   "task": "R06_pirates",
@@ -762,7 +846,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R06_pirates",
@@ -771,7 +856,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R06_pirates",
@@ -780,7 +866,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R06_pirates",
@@ -789,7 +876,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R06_pirates",
@@ -798,7 +886,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 13534
+  "ms": 13534,
+  "retried_after_timeout": false
  },
  {
   "task": "R06_pirates",
@@ -807,7 +896,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 13125
+  "ms": 13125,
+  "retried_after_timeout": false
  },
  {
   "task": "R07_count",
@@ -816,7 +906,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R07_count",
@@ -825,7 +916,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 64305
+  "ms": 64305,
+  "retried_after_timeout": false
  },
  {
   "task": "R07_count",
@@ -834,7 +926,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 17154
+  "ms": 17154,
+  "retried_after_timeout": false
  },
  {
   "task": "R07_count",
@@ -843,7 +936,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 14386
+  "ms": 14386,
+  "retried_after_timeout": false
  },
  {
   "task": "R07_count",
@@ -852,7 +946,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R07_count",
@@ -861,7 +956,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R07_count",
@@ -870,7 +966,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R07_count",
@@ -879,7 +976,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R07_count",
@@ -888,7 +986,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 14574
+  "ms": 14574,
+  "retried_after_timeout": false
  },
  {
   "task": "R07_count",
@@ -897,7 +996,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 41768
+  "ms": 41768,
+  "retried_after_timeout": false
  },
  {
   "task": "R08_falsepremise",
@@ -906,7 +1006,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R08_falsepremise",
@@ -915,7 +1016,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R08_falsepremise",
@@ -924,7 +1026,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 12572
+  "ms": 12572,
+  "retried_after_timeout": false
  },
  {
   "task": "R08_falsepremise",
@@ -933,7 +1036,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 12522
+  "ms": 12522,
+  "retried_after_timeout": false
  },
  {
   "task": "R08_falsepremise",
@@ -942,7 +1046,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R08_falsepremise",
@@ -951,7 +1056,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R08_falsepremise",
@@ -960,7 +1066,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R08_falsepremise",
@@ -969,7 +1076,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R08_falsepremise",
@@ -978,7 +1086,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 6390
+  "ms": 6390,
+  "retried_after_timeout": false
  },
  {
   "task": "R08_falsepremise",
@@ -987,7 +1096,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 6341
+  "ms": 6341,
+  "retried_after_timeout": false
  },
  {
   "task": "R09_arc",
@@ -996,7 +1106,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R09_arc",
@@ -1005,7 +1116,8 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 366453
+  "ms": 366453,
+  "retried_after_timeout": false
  },
  {
   "task": "R09_arc",
@@ -1014,7 +1126,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 40137
+  "ms": 40137,
+  "retried_after_timeout": false
  },
  {
   "task": "R09_arc",
@@ -1023,7 +1136,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 23582
+  "ms": 23582,
+  "retried_after_timeout": false
  },
  {
   "task": "R09_arc",
@@ -1032,7 +1146,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 106353
+  "ms": 106353,
+  "retried_after_timeout": false
  },
  {
   "task": "R09_arc",
@@ -1041,7 +1156,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R09_arc",
@@ -1050,7 +1166,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R09_arc",
@@ -1059,7 +1176,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R09_arc",
@@ -1068,7 +1186,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 17288
+  "ms": 17288,
+  "retried_after_timeout": false
  },
  {
   "task": "R09_arc",
@@ -1077,7 +1196,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 27113
+  "ms": 27113,
+  "retried_after_timeout": false
  },
  {
   "task": "R10_selfdesc",
@@ -1086,7 +1206,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R10_selfdesc",
@@ -1095,7 +1216,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R10_selfdesc",
@@ -1104,7 +1226,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 8428
+  "ms": 8428,
+  "retried_after_timeout": false
  },
  {
   "task": "R10_selfdesc",
@@ -1113,7 +1236,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 7984
+  "ms": 7984,
+  "retried_after_timeout": false
  },
  {
   "task": "R10_selfdesc",
@@ -1122,7 +1246,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R10_selfdesc",
@@ -1131,7 +1256,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R10_selfdesc",
@@ -1140,7 +1266,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R10_selfdesc",
@@ -1149,7 +1276,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R10_selfdesc",
@@ -1158,7 +1286,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 10967
+  "ms": 10967,
+  "retried_after_timeout": false
  },
  {
   "task": "R10_selfdesc",
@@ -1167,7 +1296,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 11138
+  "ms": 11138,
+  "retried_after_timeout": false
  },
  {
   "task": "R11_design",
@@ -1176,7 +1306,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R11_design",
@@ -1185,7 +1316,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R11_design",
@@ -1194,7 +1326,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 16962
+  "ms": 16962,
+  "retried_after_timeout": false
  },
  {
   "task": "R11_design",
@@ -1203,7 +1336,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 11965
+  "ms": 11965,
+  "retried_after_timeout": false
  },
  {
   "task": "R11_design",
@@ -1212,7 +1346,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R11_design",
@@ -1221,7 +1356,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R11_design",
@@ -1230,7 +1366,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R11_design",
@@ -1239,7 +1376,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 26741
+  "ms": 26741,
+  "retried_after_timeout": false
  },
  {
   "task": "R11_design",
@@ -1248,7 +1386,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 11089
+  "ms": 11089,
+  "retried_after_timeout": false
  },
  {
   "task": "R11_design",
@@ -1257,7 +1396,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 13691
+  "ms": 13691,
+  "retried_after_timeout": false
  },
  {
   "task": "R12_simpson",
@@ -1266,7 +1406,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R12_simpson",
@@ -1275,7 +1416,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R12_simpson",
@@ -1284,7 +1426,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 8374
+  "ms": 8374,
+  "retried_after_timeout": false
  },
  {
   "task": "R12_simpson",
@@ -1293,7 +1436,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 8838
+  "ms": 8838,
+  "retried_after_timeout": false
  },
  {
   "task": "R12_simpson",
@@ -1302,7 +1446,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R12_simpson",
@@ -1311,7 +1456,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R12_simpson",
@@ -1320,7 +1466,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 13459
+  "ms": 13459,
+  "retried_after_timeout": false
  },
  {
   "task": "R12_simpson",
@@ -1329,7 +1476,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": null,
-  "ms": null
+  "ms": null,
+  "retried_after_timeout": false
  },
  {
   "task": "R12_simpson",
@@ -1338,7 +1486,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 18535
+  "ms": 18535,
+  "retried_after_timeout": false
  },
  {
   "task": "R12_simpson",
@@ -1347,6 +1496,7 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 20502
+  "ms": 20502,
+  "retried_after_timeout": false
  }
 ]

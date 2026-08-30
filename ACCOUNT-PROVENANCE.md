@@ -21,3 +21,17 @@ inside one block, or be re-measured with all models on one account.
 
 Known-clean latency comparison: 3.7-flash-high vs 3.7-flash-medium vs 3.1-pro-high
 (all block A, Tier 2).
+
+## Update, later the same day
+
+A third block was added when the first account's Gemini 5-hour bucket refilled and the
+CLI was switched back to it.
+
+| block | models | account tier | note |
+|---|---|---|---|
+| C | claude-sonnet-4-6, claude-opus-4-6-thinking | Google AI Pro | tier 3 only; billed to the CLAUDE+GPT quota group, which is separate from GEMINI |
+
+Blocks B and C therefore both exist for the non-Gemini models. `gpt-oss-120b-medium` ran
+entirely in block B (AI Plus); the two Claude models ran entirely in block C (AI Pro).
+Comparing their latencies to each other, or to the Gemini models in block A, is not
+meaningful. Their **accuracy** is comparable to everything else.

@@ -1,12 +1,63 @@
 [
  {
   "task": "A1_rot_colparity",
+  "model": "claude-sonnet-4-6",
+  "trial": "1",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 6341,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A1_rot_colparity",
+  "model": "claude-sonnet-4-6",
+  "trial": "2",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 6275,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A1_rot_colparity",
+  "model": "claude-sonnet-4-6",
+  "trial": "3",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 5987,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A1_rot_colparity",
+  "model": "claude-sonnet-4-6",
+  "trial": "4",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 7411,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A1_rot_colparity",
+  "model": "claude-sonnet-4-6",
+  "trial": "5",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 5917,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A1_rot_colparity",
   "model": "gemini-3.1-pro-high",
   "trial": "1",
   "score": 0.0,
   "empty_reason": "timeout",
   "rc": 1,
-  "ms": 604340
+  "ms": 604340,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -15,7 +66,8 @@
   "score": 0.0,
   "empty_reason": "timeout",
   "rc": 1,
-  "ms": 604420
+  "ms": 604420,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -24,7 +76,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 525382
+  "ms": 525382,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -33,7 +86,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 568700
+  "ms": 568700,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -42,7 +96,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 467128
+  "ms": 467128,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -51,7 +106,8 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 10942
+  "ms": 10942,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -60,7 +116,8 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 172109
+  "ms": 172109,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -69,7 +126,8 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 44239
+  "ms": 44239,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -78,7 +136,8 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 20205
+  "ms": 20205,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -87,7 +146,8 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 13095
+  "ms": 13095,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -96,7 +156,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 190229
+  "ms": 190229,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -105,7 +166,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 139121
+  "ms": 139121,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -114,7 +176,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 119179
+  "ms": 119179,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -123,7 +186,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 249173
+  "ms": 249173,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -132,7 +196,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 323861
+  "ms": 323861,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -141,7 +206,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 209880
+  "ms": 209880,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -150,7 +216,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 556613
+  "ms": 556613,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -159,7 +226,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 172171
+  "ms": 172171,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -168,7 +236,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 279823
+  "ms": 279823,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -177,7 +246,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 346963
+  "ms": 346963,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -186,7 +256,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 55123
+  "ms": 55123,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -195,7 +266,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 115986
+  "ms": 115986,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -204,7 +276,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 54748
+  "ms": 54748,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -213,7 +286,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 86130
+  "ms": 86130,
+  "retried_after_timeout": false
  },
  {
   "task": "A1_rot_colparity",
@@ -222,7 +296,108 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 78566
+  "ms": 78566,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A2_transpose_rowparity",
+  "model": "claude-opus-4-6-thinking",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 351400,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A2_transpose_rowparity",
+  "model": "claude-opus-4-6-thinking",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 78810,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A2_transpose_rowparity",
+  "model": "claude-opus-4-6-thinking",
+  "trial": "3",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 202936,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A2_transpose_rowparity",
+  "model": "claude-opus-4-6-thinking",
+  "trial": "4",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 166875,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A2_transpose_rowparity",
+  "model": "claude-opus-4-6-thinking",
+  "trial": "5",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 86952,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A2_transpose_rowparity",
+  "model": "claude-sonnet-4-6",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 561736,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A2_transpose_rowparity",
+  "model": "claude-sonnet-4-6",
+  "trial": "2",
+  "score": null,
+  "empty_reason": "lost-to-clobber",
+  "rc": 1,
+  "ms": 7492,
+  "retried_after_timeout": true
+ },
+ {
+  "task": "A2_transpose_rowparity",
+  "model": "claude-sonnet-4-6",
+  "trial": "3",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 400568,
+  "retried_after_timeout": true
+ },
+ {
+  "task": "A2_transpose_rowparity",
+  "model": "claude-sonnet-4-6",
+  "trial": "4",
+  "score": null,
+  "empty_reason": "lost-to-clobber",
+  "rc": 1,
+  "ms": 6220,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A2_transpose_rowparity",
+  "model": "claude-sonnet-4-6",
+  "trial": "5",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 7423,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -231,7 +406,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 78253
+  "ms": 78253,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -240,7 +416,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 147467
+  "ms": 147467,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -249,7 +426,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 152803
+  "ms": 152803,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -258,7 +436,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 248868
+  "ms": 248868,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -267,7 +446,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 108135
+  "ms": 108135,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -276,7 +456,8 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 15364
+  "ms": 15364,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -285,7 +466,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 96614
+  "ms": 96614,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -294,7 +476,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 26954
+  "ms": 26954,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -303,7 +486,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 37888
+  "ms": 37888,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -312,7 +496,8 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 31354
+  "ms": 31354,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -321,7 +506,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 61785
+  "ms": 61785,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -330,7 +516,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 54671
+  "ms": 54671,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -339,7 +526,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 77292
+  "ms": 77292,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -348,7 +536,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 83345
+  "ms": 83345,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -357,7 +546,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 107003
+  "ms": 107003,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -366,7 +556,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 74706
+  "ms": 74706,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -375,7 +566,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 156911
+  "ms": 156911,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -384,7 +576,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 77135
+  "ms": 77135,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -393,7 +586,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 83994
+  "ms": 83994,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -402,7 +596,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 120177
+  "ms": 120177,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -411,7 +606,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 54102
+  "ms": 54102,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -420,7 +616,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 35522
+  "ms": 35522,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -429,7 +626,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 27574
+  "ms": 27574,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -438,7 +636,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 26124
+  "ms": 26124,
+  "retried_after_timeout": false
  },
  {
   "task": "A2_transpose_rowparity",
@@ -447,7 +646,78 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 35844
+  "ms": 35844,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A3_transpose_xor_rot180",
+  "model": "claude-opus-4-6-thinking",
+  "trial": "4",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 6757,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A3_transpose_xor_rot180",
+  "model": "claude-opus-4-6-thinking",
+  "trial": "5",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 5641,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A3_transpose_xor_rot180",
+  "model": "claude-sonnet-4-6",
+  "trial": "1",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 6539,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A3_transpose_xor_rot180",
+  "model": "claude-sonnet-4-6",
+  "trial": "2",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 6131,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A3_transpose_xor_rot180",
+  "model": "claude-sonnet-4-6",
+  "trial": "3",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 6753,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A3_transpose_xor_rot180",
+  "model": "claude-sonnet-4-6",
+  "trial": "4",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 5687,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A3_transpose_xor_rot180",
+  "model": "claude-sonnet-4-6",
+  "trial": "5",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 5870,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -456,7 +726,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 597306
+  "ms": 597306,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -465,7 +736,8 @@
   "score": 0.0,
   "empty_reason": "timeout",
   "rc": 1,
-  "ms": 604207
+  "ms": 604207,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -474,7 +746,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 257440
+  "ms": 257440,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -483,7 +756,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 597428
+  "ms": 597428,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -492,7 +766,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 539629
+  "ms": 539629,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -501,7 +776,8 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 91085
+  "ms": 91085,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -510,7 +786,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 33675
+  "ms": 33675,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -519,7 +796,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 36609
+  "ms": 36609,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -528,7 +806,8 @@
   "score": 0.0,
   "empty_reason": "timeout",
   "rc": 1,
-  "ms": 606362
+  "ms": 606362,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -537,7 +816,8 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 6094
+  "ms": 6094,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -546,7 +826,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 74972
+  "ms": 74972,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -555,7 +836,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 242848
+  "ms": 242848,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -564,7 +846,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 310829
+  "ms": 310829,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -573,7 +856,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 134399
+  "ms": 134399,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -582,7 +866,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 268390
+  "ms": 268390,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -591,7 +876,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 351547
+  "ms": 351547,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -600,7 +886,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 159198
+  "ms": 159198,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -609,7 +896,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 219768
+  "ms": 219768,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -618,7 +906,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 429553
+  "ms": 429553,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -627,7 +916,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 463071
+  "ms": 463071,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -636,7 +926,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 266864
+  "ms": 266864,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
@@ -645,178 +936,298 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 150774
+  "ms": 150774,
+  "retried_after_timeout": false
  },
  {
   "task": "A3_transpose_xor_rot180",
   "model": "gpt-oss-120b-medium",
   "trial": "3",
+  "score": 0.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 124228,
+  "retried_after_timeout": true
+ },
+ {
+  "task": "A3_transpose_xor_rot180",
+  "model": "gpt-oss-120b-medium",
+  "trial": "4",
+  "score": 0.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 50080,
+  "retried_after_timeout": true
+ },
+ {
+  "task": "A3_transpose_xor_rot180",
+  "model": "gpt-oss-120b-medium",
+  "trial": "5",
+  "score": 0.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 84219,
+  "retried_after_timeout": true
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "claude-opus-4-6-thinking",
+  "trial": "1",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 6851,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "claude-opus-4-6-thinking",
+  "trial": "2",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 6722,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "claude-opus-4-6-thinking",
+  "trial": "3",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 6931,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "claude-opus-4-6-thinking",
+  "trial": "4",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 6054,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "claude-opus-4-6-thinking",
+  "trial": "5",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 5616,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "claude-sonnet-4-6",
+  "trial": "1",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 6341,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "claude-sonnet-4-6",
+  "trial": "2",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 6160,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "claude-sonnet-4-6",
+  "trial": "3",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 6114,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "claude-sonnet-4-6",
+  "trial": "4",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 5683,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "claude-sonnet-4-6",
+  "trial": "5",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 5836,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 0.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 444461,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": 0.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 466198,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.1-pro-high",
+  "trial": "3",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 354544,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.1-pro-high",
+  "trial": "4",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 545483,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.1-pro-high",
+  "trial": "5",
+  "score": 0.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 433754,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 6391,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 6185,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.6-flash-high",
+  "trial": "3",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 8078,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.6-flash-high",
+  "trial": "4",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 9352,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.6-flash-high",
+  "trial": "5",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 5943,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 69614,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 206589,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.7-flash-high",
+  "trial": "3",
+  "score": 0.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 366920,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.7-flash-high",
+  "trial": "4",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 196805,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.7-flash-high",
+  "trial": "5",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 238649,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "A4_cyclic_neighbour_xor",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
   "score": 0.0,
   "empty_reason": "timeout",
-  "rc": 0,
-  "ms": 124228
- },
- {
-  "task": "A3_transpose_xor_rot180",
-  "model": "gpt-oss-120b-medium",
-  "trial": "4",
-  "score": 0.0,
-  "empty_reason": "timeout",
-  "rc": 0,
-  "ms": 50080
- },
- {
-  "task": "A3_transpose_xor_rot180",
-  "model": "gpt-oss-120b-medium",
-  "trial": "5",
-  "score": 0.0,
-  "empty_reason": "timeout",
-  "rc": 0,
-  "ms": 84219
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.1-pro-high",
-  "trial": "1",
-  "score": 0.0,
-  "empty_reason": null,
-  "rc": 0,
-  "ms": 444461
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.1-pro-high",
-  "trial": "2",
-  "score": 0.0,
-  "empty_reason": null,
-  "rc": 0,
-  "ms": 466198
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.1-pro-high",
-  "trial": "3",
-  "score": 1.0,
-  "empty_reason": null,
-  "rc": 0,
-  "ms": 354544
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.1-pro-high",
-  "trial": "4",
-  "score": 1.0,
-  "empty_reason": null,
-  "rc": 0,
-  "ms": 545483
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.1-pro-high",
-  "trial": "5",
-  "score": 0.0,
-  "empty_reason": null,
-  "rc": 0,
-  "ms": 433754
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.6-flash-high",
-  "trial": "1",
-  "score": null,
-  "empty_reason": "unknown",
   "rc": 1,
-  "ms": 6391
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.6-flash-high",
-  "trial": "2",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 6185
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.6-flash-high",
-  "trial": "3",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 8078
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.6-flash-high",
-  "trial": "4",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 9352
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.6-flash-high",
-  "trial": "5",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 5943
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.7-flash-high",
-  "trial": "1",
-  "score": 1.0,
-  "empty_reason": null,
-  "rc": 0,
-  "ms": 69614
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.7-flash-high",
-  "trial": "2",
-  "score": 1.0,
-  "empty_reason": null,
-  "rc": 0,
-  "ms": 206589
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.7-flash-high",
-  "trial": "3",
-  "score": 0.0,
-  "empty_reason": null,
-  "rc": 0,
-  "ms": 366920
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.7-flash-high",
-  "trial": "4",
-  "score": 1.0,
-  "empty_reason": null,
-  "rc": 0,
-  "ms": 196805
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.7-flash-high",
-  "trial": "5",
-  "score": 1.0,
-  "empty_reason": null,
-  "rc": 0,
-  "ms": 238649
- },
- {
-  "task": "A4_cyclic_neighbour_xor",
-  "model": "gemini-3.7-flash-medium",
-  "trial": "1",
-  "score": 0.0,
-  "empty_reason": "timeout",
-  "rc": 1,
-  "ms": 604328
+  "ms": 604328,
+  "retried_after_timeout": false
  },
  {
   "task": "A4_cyclic_neighbour_xor",
@@ -825,7 +1236,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 340384
+  "ms": 340384,
+  "retried_after_timeout": false
  },
  {
   "task": "A4_cyclic_neighbour_xor",
@@ -834,7 +1246,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 332401
+  "ms": 332401,
+  "retried_after_timeout": false
  },
  {
   "task": "A4_cyclic_neighbour_xor",
@@ -843,7 +1256,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 86994
+  "ms": 86994,
+  "retried_after_timeout": false
  },
  {
   "task": "A4_cyclic_neighbour_xor",
@@ -852,7 +1266,8 @@
   "score": 1.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 187802
+  "ms": 187802,
+  "retried_after_timeout": false
  },
  {
   "task": "A4_cyclic_neighbour_xor",
@@ -861,7 +1276,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 49153
+  "ms": 49153,
+  "retried_after_timeout": false
  },
  {
   "task": "A4_cyclic_neighbour_xor",
@@ -870,7 +1286,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 50137
+  "ms": 50137,
+  "retried_after_timeout": false
  },
  {
   "task": "A4_cyclic_neighbour_xor",
@@ -879,7 +1296,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 56790
+  "ms": 56790,
+  "retried_after_timeout": false
  },
  {
   "task": "A4_cyclic_neighbour_xor",
@@ -888,7 +1306,8 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 43967
+  "ms": 43967,
+  "retried_after_timeout": false
  },
  {
   "task": "A4_cyclic_neighbour_xor",
@@ -897,6 +1316,7 @@
   "score": 0.0,
   "empty_reason": null,
   "rc": 0,
-  "ms": 67590
+  "ms": 67590,
+  "retried_after_timeout": false
  }
 ]
