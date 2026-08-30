@@ -38,8 +38,13 @@ run_one() {
   timeout "$to" agy -p "$(cat "${td}/${t}.txt")" \
       --model "$M" --output-format text --print-timeout "$pt" \
       --dangerously-skip-permissions \
-      > "$outf" 2> "${ld}/${t}__${M}__t${n}.err"
+      > "${outf}.part" 2> "${ld}/${t}__${M}__t${n}.err"
   rc=$?
+  # Only move a non-empty result into place. Two runners can have the same cell queued;
+  # with a plain redirect, whichever finishes last wipes the other one's answer, and a
+  # successful run silently becomes an empty file.
+  if [ -s "${outf}.part" ]; then mv -f "${outf}.part" "$outf"
+  else rm -f "${outf}.part"; [ -e "$outf" ] || : > "$outf"; fi
   end=$(date +%s%3N)
   echo "${t}|${M}|${n}|${rc}|$((end-start))" >> "$tim"
 }

@@ -37,7 +37,7 @@ A small, reproducible task battery comparing the models reachable through the An
 | `gemini-3.6-flash-high` | — | 100 | 67 | — | **partial 2/4** |
 | `gemini-3.1-pro-high` | 0 | 100 | 40 | 40 | **45.0%** |
 | `claude-opus-4-6-thinking` | — | 100 | — | — | **partial 1/4** |
-| `claude-sonnet-4-6` | — | 100 | — | — | **partial 1/4** |
+| `claude-sonnet-4-6` | 100 | 100 | — | — | **partial 2/4** |
 | `gpt-oss-120b-medium` | 0 | 60 | 0 | 0 | **15.0%** |
 
 Cells are mean score % for that task. `⚠` means at least one cell for that model has fewer trials than the tier target (2 / 3 / 5 for tiers 1 / 2 / 3) — one sample fewer is enough to flip a ranking, so treat that row's mean as indicative. `partial` means the model is missing whole tasks, and no mean is given for it.

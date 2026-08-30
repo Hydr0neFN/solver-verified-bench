@@ -35,3 +35,20 @@ Blocks B and C therefore both exist for the non-Gemini models. `gpt-oss-120b-med
 entirely in block B (AI Plus); the two Claude models ran entirely in block C (AI Pro).
 Comparing their latencies to each other, or to the Gemini models in block A, is not
 meaningful. Their **accuracy** is comparable to everything else.
+
+## Second correction
+
+Block C did not complete. The first account's CLAUDE+GPT 5-hour bucket was exhausted by
+the Claude runs before the tier-3 sweep finished, so the CLI was switched back to the
+second account, whose CLAUDE+GPT group was still full. Its GEMINI group remained
+exhausted (weekly, ~7 days), which is what confirmed the switch had taken effect.
+
+| block | models | account tier | note |
+|---|---|---|---|
+| D | claude-sonnet-4-6, claude-opus-4-6-thinking | Google AI Plus | tier 3; run sequentially with a 15-minute budget |
+
+Sequential execution matters here and is not a stylistic choice. Run three at a time
+with a 10-minute budget, these two models failed at a flat ~201 s every time; run alone
+with a 15-minute budget, the same task completed in 3 min 14 s with the correct answer.
+Scoring the parallel runs as model failures would have recorded a throttling artefact
+as an inability to solve the task.

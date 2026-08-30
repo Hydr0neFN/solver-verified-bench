@@ -3,11 +3,11 @@
   "task": "A1_rot_colparity",
   "model": "claude-sonnet-4-6",
   "trial": "1",
-  "score": null,
-  "empty_reason": "unknown",
-  "rc": 1,
-  "ms": 6341,
-  "retried_after_timeout": false
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 599772,
+  "retried_after_timeout": true
  },
  {
   "task": "A1_rot_colparity",
@@ -16,7 +16,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 6275,
+  "ms": 8289,
   "retried_after_timeout": false
  },
  {
@@ -26,7 +26,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 5987,
+  "ms": 6330,
   "retried_after_timeout": false
  },
  {
@@ -36,7 +36,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 7411,
+  "ms": 6069,
   "retried_after_timeout": false
  },
  {
@@ -46,7 +46,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 5917,
+  "ms": 6411,
   "retried_after_timeout": false
  },
  {
@@ -366,7 +366,7 @@
   "score": null,
   "empty_reason": "lost-to-clobber",
   "rc": 1,
-  "ms": 7492,
+  "ms": 6429,
   "retried_after_timeout": true
  },
  {
@@ -386,7 +386,7 @@
   "score": null,
   "empty_reason": "lost-to-clobber",
   "rc": 1,
-  "ms": 6220,
+  "ms": 6855,
   "retried_after_timeout": false
  },
  {
@@ -396,7 +396,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 7423,
+  "ms": 6036,
   "retried_after_timeout": false
  },
  {
@@ -676,7 +676,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 6539,
+  "ms": 7339,
   "retried_after_timeout": false
  },
  {
@@ -686,7 +686,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 6131,
+  "ms": 6209,
   "retried_after_timeout": false
  },
  {
@@ -696,7 +696,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 6753,
+  "ms": 6816,
   "retried_after_timeout": false
  },
  {
@@ -706,7 +706,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 5687,
+  "ms": 5871,
   "retried_after_timeout": false
  },
  {
@@ -716,7 +716,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 5870,
+  "ms": 6189,
   "retried_after_timeout": false
  },
  {
@@ -1026,7 +1026,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 6341,
+  "ms": 8092,
   "retried_after_timeout": false
  },
  {
@@ -1036,7 +1036,7 @@
   "score": null,
   "empty_reason": "unknown",
   "rc": 1,
-  "ms": 6160,
+  "ms": 5807,
   "retried_after_timeout": false
  },
  {

@@ -37,7 +37,7 @@
 | `gemini-3.6-flash-high` | — | 100 | 67 | — | **partial 2/4** |
 | `gemini-3.1-pro-high` | 0 | 100 | 40 | 40 | **45.0%** |
 | `claude-opus-4-6-thinking` | — | 100 | — | — | **partial 1/4** |
-| `claude-sonnet-4-6` | — | 100 | — | — | **partial 1/4** |
+| `claude-sonnet-4-6` | 100 | 100 | — | — | **partial 2/4** |
 | `gpt-oss-120b-medium` | 0 | 60 | 0 | 0 | **15.0%** |
 
 格內為該題平均得分 %。`⚠` 表示該模型至少有一格的 trial 數低於該層目標（Tier 1 各 2 次、Tier 2 各 3 次、Tier 3 各 5 次）——少一次抽樣就足以翻轉排名，看到 `⚠` 請把該列的平均當成參考值。`partial` 表示該模型有題目完全沒跑，這種情況不給平均。
