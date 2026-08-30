@@ -1,0 +1,10 @@
+A sequence begins:
+
+7, 11, 13, 14, 19, 21, 22, 25, 26, 28, 35, 37, 38, 41, 42, 44, 49, 50, 52, 56, ...
+
+Identify the rule and give the 25th term.
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: <integer>

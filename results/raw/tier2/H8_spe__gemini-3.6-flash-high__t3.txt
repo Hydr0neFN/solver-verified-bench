@@ -1,0 +1,19 @@
+```
+[P1]
+ ├─ L ── [P2]
+ │        ├─ a → (3, 1)
+ │        └─ b → (1, 4)  [x] ← P2 chooses b (4 > 1)
+ └─ R ── [P2]  [x] ← P1 chooses R (2 > 1)
+          ├─ c → (2, 5)  [x] ← P2 chooses c (5 > 2)
+          └─ d → (4, 2)
+```
+
+Backward induction reasoning:
+
+1. **Subgame after L**: Player 2 chooses between `a` (payoff 1) and `b` (payoff 4). Player 2 chooses `b`, giving payoff (1, 4).
+2. **Subgame after R**: Player 2 chooses between `c` (payoff 5) and `d` (payoff 2). Player 2 chooses `c`, giving payoff (2, 5).
+3. **Player 1's decision at root**: Player 1 anticipates Player 2's optimal moves and compares payoff from L (1) vs R (2). Player 1 chooses `R`.
+
+The subgame perfect equilibrium path is `Rc`, resulting in payoffs (2, 5).
+
+FINAL: path=Rc, payoffs=2,5

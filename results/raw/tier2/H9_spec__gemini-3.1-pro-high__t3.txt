@@ -1,0 +1,3 @@
+To satisfy **R2** ("at most once" execution), the system must never retry a job on an ambiguous failure, because the job might have already been fully or partially executed. However, **R4** explicitly mandates reassigning (retrying) a job whenever its lease expires. Because workers can be partitioned from the scheduler while still running (or after having just finished executing the job but before reporting success, per **R5**), a lease expiration is an ambiguous failure. If the scheduler blindly follows R4 and reassigns a job that the partitioned worker has already executed, the new worker will execute it a second time. This creates a hard distributed systems contradiction between At-Most-Once delivery and At-Least-Once retry mechanisms.
+
+FINAL: R2 and R4

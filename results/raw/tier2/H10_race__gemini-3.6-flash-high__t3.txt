@@ -1,0 +1,18 @@
+```
+Server A                   Server B                  Postgres DB
+   │                          │                           │
+   ├── SELECT sent_at ───────┼──────────────────────────>│ (Returns None)
+   │                          ├── SELECT sent_at ────────>│ (Returns None)
+   ├── mailer.send() [!]      │                           │
+   │   (Email #1 sent)        │                           │
+   │                          ├── mailer.send() [!]       │
+   │                          │   (Email #2 sent)         │
+   v                          v                           v
+```
+
+Reasoning:
+- Under READ COMMITTED isolation, `SELECT sent_at` does not acquire a lock on the missing row.
+- Two concurrent execution paths both execute `SELECT`, see no existing row (`row is None`), and bypass the guard check.
+- Both callers invoke `mailer.send()` before attempting the `INSERT`, causing the welcome email to be dispatched twice.
+
+FINAL: Check-then-act race condition

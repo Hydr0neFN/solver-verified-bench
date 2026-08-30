@@ -1,0 +1,14 @@
+The disease prevalence is 0.1 % (1 / 1000).  
+True‑positive rate = 99 % → P(positive | disease)=0.99.  
+False‑positive rate = 5 % (1 − specificity) → P(positive | no disease)=0.05.
+
+Posterior probability:
+\[
+P(\text{disease}\mid\text{positive})=\frac{0.001\times0.99}{0.001\times0.99+0.999\times0.05}
+=\frac{0.00099}{0.00099+0.04995}
+=\frac{0.00099}{0.05094}\approx0.01945.
+\]
+
+Convert to percentage → 1.945 % → 1.95 % (two decimal places).
+
+FINAL: 1.95%

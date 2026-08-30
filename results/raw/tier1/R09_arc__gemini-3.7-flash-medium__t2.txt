@@ -1,0 +1,20 @@
+```
+[ IN ] ──┬──> [ rot180(IN) ] ──┐
+         │                     ▼
+         └──────────────────> [ XOR ] ──> [ OUT ]
+```
+
+- Rule: $\text{OUT} = \text{IN} \oplus \text{rot}_{180}(\text{IN})$ (elementwise XOR with its 180° rotation).
+- Query application:
+  - $\text{rot}_{180}(\text{IN})$:
+    `0 1 0 1`
+    `1 0 1 1`
+    `0 0 1 0`
+    `1 1 0 1`
+  - $\text{IN} \oplus \text{rot}_{180}(\text{IN})$:
+    Row 0: `1 0 1 1` $\oplus$ `0 1 0 1` = `1 1 1 0`
+    Row 1: `0 1 0 0` $\oplus$ `1 0 1 1` = `1 1 1 1`
+    Row 2: `1 1 0 1` $\oplus$ `0 0 1 0` = `1 1 1 1`
+    Row 3: `1 0 1 0` $\oplus$ `1 1 0 1` = `0 1 1 1`
+
+FINAL: 1 1 1 0; 1 1 1 1; 1 1 1 1; 0 1 1 1

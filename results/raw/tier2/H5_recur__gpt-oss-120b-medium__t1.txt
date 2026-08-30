@@ -1,0 +1,77 @@
+The sequence starts at a₁ = 1 and each term adds three components of the previous term:
+* the integer part of its square‑root,
+* its remainder modulo 7,
+* and the term itself.
+
+Iterating the recurrence  
+
+aₙ₊₁ = aₙ + ⌊√aₙ⌋ + (aₙ mod 7)  
+
+from n = 1 up to n = 60 yields:
+
+```
+a₁=1
+a₂=3
+a₃=7
+a₄=9
+a₅=14
+a₆=17
+a₇=24
+a₈=31
+a₉=39
+a₁₀=49
+a₁₁=56
+a₁₂=63
+a₁₃=70
+a₁₄=78
+a₁₅=87
+a₁₆=99
+a₁₇=109
+a₁₈=123
+a₁₉=138
+a₂₀=154
+a₂₁=166
+a₂₂=183
+a₂₃=197
+a₂₄=212
+a₂₅=228
+a₂₆=247
+a₂₇=264
+a₂₈=285
+a₂₉=306
+a₃₀=328
+a₃₁=352
+a₃₂=372
+a₃₃=392
+a₃₄=411
+a₃₅=436
+a₃₆=458
+a₃₇=482
+a₃₈=509
+a₃₉=536
+a₄₀=564
+a₄₁=591
+a₄₂=618
+a₄₃=645
+a₄₄=672
+a₄₅=697
+a₄₆=727
+a₄₇=759
+a₄₈=789
+a₄₉=822
+a₅₀=853
+a₅₁=888
+a₅₂=923
+a₅₃=959
+a₅₄=989
+a₅₅=1022
+a₅₆=1053
+a₅₇=1088
+a₅₈=1123
+a₅₉=1159
+a₆₀=1197
+```
+
+Each step follows directly from the definition, and the final value is:
+
+FINAL: 1197

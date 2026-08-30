@@ -1,0 +1,15 @@
+```
+Server A                                Server B
+   │                                       │
+   ├─ SELECT sent_at (no row)              │
+   │                                       ├─ SELECT sent_at (no row)
+   ├─ mailer.send()                        │
+   │                                       ├─ mailer.send()  ! duplicate send
+   ├─ INSERT ... ON CONFLICT               │
+   └─ conn.commit()                        ├─ INSERT ... ON CONFLICT
+                                           └─ conn.commit()
+```
+
+- Unlocked `SELECT` + `mailer.send()` before write → concurrent executions read empty state simultaneously → both send before either commits.
+
+FINAL: check-then-act race condition

@@ -1,0 +1,15 @@
+```
+P1
+├─ L ── P2
+│       ├─ a ── (3, 1)
+│       └─ b ── (1, 4)  [x]  ← P2 prefers b (4 > 1)
+└─ R ── P2  [x]              ← P1 prefers R (2 > 1)
+        ├─ c ── (2, 5)  [x]  ← P2 prefers c (5 > 2)
+        └─ d ── (4, 2)
+```
+
+1. **Subgame after L**: Player 2 compares payoffs 1 (`a`) and 4 (`b`), so Player 2 chooses `b`, giving payoff `(1, 4)`.
+2. **Subgame after R**: Player 2 compares payoffs 5 (`c`) and 2 (`d`), so Player 2 chooses `c`, giving payoff `(2, 5)`.
+3. **Player 1's decision**: Player 1 compares 1 (from `L`) and 2 (from `R`), choosing `R`.
+
+FINAL: path=Rc, payoffs=2,5

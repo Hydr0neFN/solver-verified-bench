@@ -1,0 +1,29 @@
+To determine the output for a given 4x4 binary matrix:
+
+1. **Transpose Matrix**: First, transpose the input matrix $\text{IN}$ so that row $r$ of the working matrix becomes column $r$ of $\text{IN}$.
+2. **Conditional Bit Inversion**: For each row $r$ (from 0 to 3):
+   - Calculate the sum of elements in row $r$ of the original input matrix $\text{IN}$.
+   - If the sum is **even**, keep row $r$ of the transposed matrix unchanged.
+   - If the sum is **odd**, invert all bits (bitwise NOT) in row $r$ of the transposed matrix.
+
+Applying this rule to the **Query**:
+
+**Input Matrix $\text{IN}$ & Row Parities:**
+- Row 0: `1 0 1 0` $\rightarrow$ Sum = 2 (Even)
+- Row 1: `1 1 1 1` $\rightarrow$ Sum = 4 (Even)
+- Row 2: `1 1 0 1` $\rightarrow$ Sum = 3 (Odd)
+- Row 3: `1 1 0 1` $\rightarrow$ Sum = 3 (Odd)
+
+**Columns of $\text{IN}$ (Rows of $\text{IN}^T$):**
+- Col 0: `1 1 1 1`
+- Col 1: `0 1 1 1`
+- Col 2: `1 1 0 0`
+- Col 3: `0 1 1 1`
+
+**Output Rows:**
+- Row 0 (Even): `1 1 1 1`
+- Row 1 (Even): `0 1 1 1`
+- Row 2 (Odd): Invert Col 2 $\rightarrow$ `0 0 1 1`
+- Row 3 (Odd): Invert Col 3 $\rightarrow$ `1 0 0 0`
+
+FINAL: 1111; 0111; 0011; 1000

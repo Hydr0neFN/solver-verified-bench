@@ -1,0 +1,18 @@
+1. **TRUE**. HTTP/2 introduces multiplexing, allowing multiple streams of requests and responses to be sent simultaneously over a single TCP connection.
+2. **TRUE**. While CPython 3.6 implemented ordered dictionaries as an implementation detail, it officially became a language specification guarantee in Python 3.7.
+3. **FALSE**. The Raft algorithm is designed for crash-fault tolerance. It cannot handle Byzantine faults (where nodes act maliciously or return conflicting information).
+4. **FALSE**. PostgreSQL uses Snapshot Isolation for its REPEATABLE READ level, which prevents phantoms but does not prevent write skew. To prevent write skew, you must use the SERIALIZABLE isolation level.
+5. **TRUE**. TLS 1.3 dropped support for static RSA (and static Diffie-Hellman) key exchanges to mandate forward secrecy. RSA is now only used for signatures/authentication.
+6. **TRUE**. The Linux Out-Of-Memory (OOM) killer calculates an `oom_score` for each process (influenced by memory usage and `oom_score_adj`) and kills the process with the highest score.
+7. **TRUE**. Git's logical object model stores full file snapshots (blobs) for every version of a file. Delta compression is only applied later as an implementation optimization within packfiles for storage and network transfer.
+8. **FALSE**. The CAP theorem states that in the presence of a network partition (P), a system must choose between consistency (C) and availability (A). It does not mean you must pick exactly two in all circumstances; when there is no partition, a system can be both consistent and available.
+9. **FALSE**. In Rust, the `Send` trait indicates that ownership of a value can be safely transferred (moved) to another thread. The `Sync` trait indicates that a type can be safely shared by reference (`&T`) across threads.
+10. **TRUE**. The x86-64 architecture implements Total Store Ordering (TSO), which permits a load to be reordered before a prior store to a different memory location (StoreLoad reordering).
+11. **TRUE**. An IPv6 address is 128 bits long (compared to 32 bits for IPv4).
+12. **TRUE**. The SHAttered attack in 2017 successfully demonstrated a practical SHA-1 collision by generating two different PDF files with the exact same SHA-1 hash.
+13. **FALSE**. Kafka only guarantees the total ordering of messages within a single partition, not globally across all partitions in a topic.
+14. **TRUE**. In Java, writing to a `volatile` variable establishes a happens-before relationship with any subsequent read of that same variable, ensuring memory visibility across threads.
+15. **FALSE**. While DNS primarily uses UDP for standard queries, it can and does use TCP for responses larger than the UDP size limit, for zone transfers (AXFR), or when UDP is blocked.
+16. **TRUE**. A Kubernetes StatefulSet guarantees that each of its pods retains a unique, stable network identity (e.g., `pod-name-0`, `pod-name-1`) across rescheduling.
+
+FINAL: 1=T,2=T,3=F,4=F,5=T,6=T,7=T,8=F,9=F,10=T,11=T,12=T,13=F,14=T,15=F,16=T

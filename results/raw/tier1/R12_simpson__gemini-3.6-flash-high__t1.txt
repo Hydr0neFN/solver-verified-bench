@@ -1,0 +1,14 @@
+```
+│ Stone Size │ Treatment A        │ Treatment B        │ Preferred │
+├────────────┼────────────────────┼────────────────────┼───────────┤
+│ Small      │  81/ 87 (93.10%)   │ 234/270 (86.67%)   │ A [x]     │
+│ Large      │ 192/263 (73.00%)   │  55/ 80 (68.75%)   │ A [x]     │
+├────────────┼────────────────────┼────────────────────┼───────────┤
+│ Overall    │ 273/350 (78.00%)   │ 289/350 (82.57%)   │ Simpson ! │
+```
+
+- **Subgroup Superiority**: Treatment A outperforms Treatment B for both small stones (93.10% > 86.67%) and large stones (73.00% > 68.75%).
+- **Simpson's Paradox**: Treatment B's higher overall aggregate rate (82.57% vs 78.00%) is a confounding artifact because B was assigned predominantly to easier small-stone cases (270/350 vs 87/350).
+- **Aggregate Calculation**: Treatment A succeeded in 81 + 192 = 273 out of 87 + 263 = 350 total cases: \(273 / 350 = 78.00\%\).
+
+FINAL: prefer=A, A_overall=78.00%

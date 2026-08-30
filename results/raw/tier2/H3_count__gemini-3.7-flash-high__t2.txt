@@ -1,0 +1,15 @@
+```
+│  n │ Permutations │
+├────┼──────────────┤
+│  4 │            1 │
+│  5 │            4 │
+│  6 │           29 │
+│  7 │          206 │
+│  8 │         1708 │
+│  9 │        15702 │
+│ 10 │       159737 │
+```
+
+The problem is equivalent to finding the permanent of a $10 \times 10$ binary matrix $A$ where $A_{i,j} = 0$ for $|i - j| \le 1$ and $A_{i,j} = 1$ for $|i - j| \ge 2$ (OEIS A000275). Computing via dynamic programming with bitmask state over row placements yields $159737$.
+
+FINAL: 159737

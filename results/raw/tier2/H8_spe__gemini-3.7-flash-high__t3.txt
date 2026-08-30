@@ -1,0 +1,15 @@
+```
+[P1]
+├─ L ─► [P2]
+│       ├─ a ──► (3, 1)
+│       └─ b* ─► (1, 4)  [x] (P2: 4 > 1)
+└─ R* ─► [P2]            [x] (P1: 2 > 1)
+        ├─ c* ─► (2, 5)  [x] (P2: 5 > 2)
+        └─ d ──► (4, 2)
+```
+
+- Subgame $L$: Player 2 chooses $b$ ($4 > 1$) $\to$ outcome $(1, 4)$
+- Subgame $R$: Player 2 chooses $c$ ($5 > 2$) $\to$ outcome $(2, 5)$
+- Root: Player 1 compares $L \to 1$ vs $R \to 2$ $\to$ chooses $R$
+
+FINAL: path=Rc, payoffs=2,5

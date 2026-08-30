@@ -1,0 +1,17 @@
+```
+┌────────────────────────────────────────────────────────────────────────────┐
+│ Contradiction: Immutability vs Erasure                                     │
+├────────────────────────────────────────────────────────────────────────────┤
+│ [R1: Append-Only] ── May never update or delete any row                    │
+│                            ▲                                               │
+│                            │ (Hard Contradiction)                          │
+│                            ▼                                               │
+│ [R3: Right to Erasure] ── Produce state with no trace of record existence  │
+└────────────────────────────────────────────────────────────────────────────┘
+```
+
+- **R1** mandates strict physical immutability: transaction rows may never be deleted or updated under any circumstance.
+- **R3** mandates complete erasure: the system must produce a ledger state leaving no trace that a voided transaction ever existed (purging/deleting the record).
+- An immutable append-only ledger retaining all historical rows cannot simultaneously support true erasure of a record.
+
+FINAL: R1 and R3

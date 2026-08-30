@@ -1,0 +1,16 @@
+```
+Case Analysis Tree:
+├─ Case 1: Assume C is Knight (C=knight)
+│  └─ Statement "A and B are knaves" is True → A=knave, B=knave
+│     └─ A says "B is knave" (True) → Contradiction (knave telling truth) !
+└─ Case 2: Assume C is Knave (C=knave)
+   ├─ B says "C is knave" (True) → B is Knight (B=knight) [x]
+   ├─ A says "B is knave" (False) → A is Knave (A=knave) [x]
+   └─ C says "A and B are knaves" (False, since B is knight) → Consistent [x]
+```
+
+1. **Test C as Knight:** If C were a knight, C's claim that both A and B are knaves would be true. This would make B a knave, which makes A's claim ("B is a knave") true. But A cannot be a knight and a knave simultaneously, creating a contradiction. Thus, C is a **knave**.
+2. **Determine B:** Since C is a knave, B's statement ("C is a knave") is true, making B a **knight**.
+3. **Determine A:** Since B is a knight, A's statement ("B is a knave") is false, making A a **knave**.
+
+FINAL: A=knave, B=knight, C=knave

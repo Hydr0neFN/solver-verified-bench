@@ -1,0 +1,19 @@
+A distributed job scheduler has these requirements. Exactly one PAIR is mutually unsatisfiable — a hard logical contradiction, not a tension or a cost concern. Name the two.
+
+R1.  Every job has a globally unique id assigned at submission.
+R2.  Jobs are executed at most once.
+R3.  A worker leases a job for 30 seconds and must heartbeat to extend the lease.
+R4.  If a worker's lease expires, the scheduler MUST reassign the job to another worker.
+R5.  Workers may be partitioned from the scheduler while still running, and cannot detect the partition.
+R6.  The scheduler persists all state to a quorum-replicated log before acknowledging.
+R7.  Job output is written by the worker directly to object storage under the job id.
+R8.  Object storage provides read-after-write consistency for new keys.
+R9.  The scheduler exposes a job status API that never returns a stale terminal state.
+R10. Clock skew between any two nodes is bounded by 100 ms.
+R11. No job is ever executed concurrently by two workers.
+R12. A job may be cancelled by an operator at any time before it reaches a terminal state.
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: R<x> and R<y>

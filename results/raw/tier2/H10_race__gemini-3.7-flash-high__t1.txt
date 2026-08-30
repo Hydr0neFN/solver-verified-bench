@@ -1,0 +1,16 @@
+```
+Server A                          Server B
+   │                                 │
+   ├─ SELECT sent_at (None)          │
+   │                                 ├─ SELECT sent_at (None)
+   ├─ mailer.send() ─── sent #1      │
+   │                                 ├─ mailer.send() ─── sent #2 !
+   ├─ INSERT ... ON CONFLICT         │
+   └─ conn.commit()                  ├─ INSERT ... ON CONFLICT
+                                     └─ conn.commit()
+```
+
+- `SELECT` does not lock rows in `READ COMMITTED` isolation.
+- Concurrent workers can both observe no existing record and execute `mailer.send()` before either worker records the send in `welcome_emails`.
+
+FINAL: Check-then-act race condition

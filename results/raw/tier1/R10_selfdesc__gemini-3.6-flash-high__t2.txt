@@ -1,0 +1,20 @@
+Let $d_i$ be the digit at position $i$ ($0 \le i \le 9$) in a 10-digit self-descriptive number.
+
+1. **Total count constraint**: Since each $d_i$ counts the frequency of digit $i$ in the 10-digit number, the sum of all digits must equal the total number of digits:
+   $$\sum_{i=0}^{9} d_i = 10$$
+
+2. **Sum of values constraint**: The sum of the digits in the number must also equal the sum of each digit multiplied by its count:
+   $$\sum_{i=0}^{9} i \cdot d_i = 10$$
+
+3. **Solving for digits**:
+   - $d_0$ must be large since most digits in a 10-digit number are 0.
+   - For $b = 10$, setting $d_0 = 6$, $d_1 = 2$, $d_2 = 1$, and $d_6 = 1$ (with all other $d_i = 0$) satisfies all constraints:
+     - 6 zeros (at positions 3, 4, 5, 7, 8, 9)
+     - 2 ones (at positions 2, 6)
+     - 1 two (at position 1)
+     - 1 six (at position 0)
+     - 0 for digits 3, 4, 5, 7, 8, 9
+
+Thus, `6210001000` is the unique self-descriptive number in base 10.
+
+FINAL: 6210001000

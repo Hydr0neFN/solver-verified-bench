@@ -1,0 +1,3 @@
+We enumerate all 10! permutations and keep those where each element i is displaced by at least 2 positions, i.e. |p(i)‑i| ≥ 2. A direct brute‑force script (Python itertools) checks the condition for every i and counts the valid arrangements, yielding 159 737 such permutations.
+
+FINAL: 159737

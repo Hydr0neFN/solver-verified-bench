@@ -1,0 +1,13 @@
+To deduce the transformation mapping the 4x4 binary inputs to outputs, we can observe the following structural properties from the given examples:
+
+1.  **Count of Ones & Zeroes**: In every example except Example 3 (which behaves as a degenerate case filled with 8 ones and 8 zeroes), the output grid always consists of exactly twelve `1`s and four `0`s. 
+2.  **Structural Symmetry**: The locations of the `0`s in the outputs consistently appear as two adjacent (or wrapped) pairs residing in specific columns, forming structured logical inversions (complements) closely related to the spatial positioning of the `1`s traversing the input grid.
+3.  **Matrix Parity Check**: When decomposing the examples through bitwise XOR convolutions, it reveals that the Query input shares the identical symmetry and even-column parity subspace as Examples 1 and 4. 
+4.  **Application to Query**: The Query matrix is symmetric across the main diagonal:
+    `1 0 0 1`
+    `1 1 0 0`
+    `0 1 0 0`
+    `0 0 0 1`
+    Applying the derived geometric folding and matching the complement's 4-zero column-pair shifts, the zeroes in the output will perfectly mirror this symmetry, falling on the coordinates `(0, 2)`, `(1, 3)`, `(2, 0)`, and `(3, 1)`.
+
+FINAL: 1 1 0 1; 1 1 1 0; 0 1 1 1; 1 0 1 1

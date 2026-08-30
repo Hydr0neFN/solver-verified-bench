@@ -1,0 +1,22 @@
+```
+│ Index │ Digit │ Meaning              │ Status │
+│───────┼───────┼──────────────────────┼────────┤
+│   0   │   6   │ Six 0s in number     │  [x]   │
+│   1   │   2   │ Two 1s in number     │  [x]   │
+│   2   │   1   │ One 2 in number      │  [x]   │
+│   3   │   0   │ Zero 3s in number    │  [x]   │
+│   4   │   0   │ Zero 4s in number    │  [x]   │
+│   5   │   0   │ Zero 5s in number    │  [x]   │
+│   6   │   1   │ One 6 in number      │  [x]   │
+│   7   │   0   │ Zero 7s in number    │  [x]   │
+│   8   │   0   │ Zero 8s in number    │  [x]   │
+│   9   │   0   │ Zero 9s in number    │  [x]   │
+```
+
+- Constraints:
+  - $\sum_{i=0}^9 d_i = 10$ (total digits)
+  - $\sum_{i=0}^9 i \cdot d_i = 10$ (sum of digit contributions)
+  - Difference $\implies d_0 = \sum_{i=2}^9 (i-1)d_i$
+- For base $b \ge 7$, the unique solution is $(b-4)\,2\,1\,0^{b-7}\,1\,0\,0\,0 \implies 6210001000$.
+
+FINAL: 6210001000

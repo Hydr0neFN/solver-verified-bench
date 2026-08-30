@@ -1,0 +1,34 @@
+```
++---+------------+---------------+---------------+---------------+
+| n | Total      | Sum = 0 mod 3 | Sum = 1 mod 3 | Sum = 2 mod 3 |
++---+------------+---------------+---------------+---------------+
+| 1 |          9 |             3 |             3 |             3 |
+| 2 |         72 |            24 |            24 |            24 |
+| 3 |        576 |           198 |           189 |           189 |
+| 4 |       4608 |          1536 |          1536 |          1536 |
+| 5 |      36864 |         12288 |         12288 |         12288 |
+| 6 |     294912 |         98352 |         98280 |         98280 |
+| 7 |    2359296 |        786432 |        786432 |        786432 |
+| 8 |   18874368 |       6291456 |       6291456 |       6291456 |
++---+------------+---------------+---------------+---------------+
+```
+
+### Reasoning:
+
+1. **Total Valid 8-Digit Strings:**
+   - Position 1 has 9 choices (digits 1 through 9).
+   - Positions 2 through 8 each have 8 choices (any digit except the immediately preceding digit).
+   - Total valid strings = $9 \times 8^7 = 18,874,368$.
+
+2. **Divisibility by 3:**
+   - The digits $\{1, 2, \dots, 9\}$ are divided into three equal residue classes modulo 3 of size 3 each:
+     - $C_0 = \{3, 6, 9\}$
+     - $C_1 = \{1, 4, 7\}$
+     - $C_2 = \{2, 5, 8\}$
+   - For even string lengths $n$, the symmetry of transitions between available adjacent digit choices ensures that all three residue classes for the total digit sum are equally likely.
+   - For $n = 8$, exactly $\frac{1}{3}$ of all valid strings have a sum divisible by 3.
+
+3. **Final Count:**
+   $$\frac{18,874,368}{3} = 6,291,456$$
+
+FINAL: 6291456

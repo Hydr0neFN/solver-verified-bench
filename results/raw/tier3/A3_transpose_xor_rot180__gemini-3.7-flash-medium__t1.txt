@@ -1,0 +1,28 @@
+```
++-------------------+       +-------------------+
+|     Query IN      |  -->  |     Query OUT     |
++-------------------+       +-------------------+
+|  0   0   0   0    |       |  1   0   1   0    |
+|  0   0   1   1    |       |  0   1   0   1    |
+|  0   1   0   1    |       |  0   0   1   0    |
+|  1   1   1   0    |       |  0   0   0   1    |
++-------------------+       +-------------------+
+```
+
+- Transformation preserves anti-diagonal symmetry:
+  - Anti-diagonal ($r + c = 3$): all `0`.
+  - Below anti-diagonal ($r + c > 3$): reflected by `OUT[r][c] = OUT[3-c][3-r]`.
+- Cells above anti-diagonal ($r + c < 3$) evaluate directly from the input:
+  - `OUT[0][0] = 1 - IN[1][0] = 1 - 0 = 1`
+  - `OUT[0][1] = IN[0][2] = 0`
+  - `OUT[0][2] = IN[2][1] = 1`
+  - `OUT[1][0] = IN[1][0] = 0`
+  - `OUT[1][1] = 1 - IN[2][2] = 1 - 0 = 1`
+  - `OUT[2][0] = IN[2][2] = 0`
+- Completing the grid via symmetry yields:
+  - Row 1: `1 0 1 0`
+  - Row 2: `0 1 0 1`
+  - Row 3: `0 0 1 0`
+  - Row 4: `0 0 0 1`
+
+FINAL: 1010; 0101; 0010; 0001

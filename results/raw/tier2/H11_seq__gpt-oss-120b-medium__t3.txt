@@ -1,0 +1,3 @@
+The sequence lists integers whose binary representation contains exactly three 1‑bits, in increasing order. After …56 (111000₂) the next numbers with three 1‑bits are 67 (1000011₂), 69 (1000101₂), 70 (1000110₂), 73 (1001001₂), 74 (1001010₂). Hence the 25th term is 74.  
+
+FINAL: 74

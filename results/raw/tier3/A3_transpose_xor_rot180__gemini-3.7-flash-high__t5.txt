@@ -1,0 +1,38 @@
+```
+[IN Grid] ──► [Extract 4 Control Bits] ──► [Symmetric Anti-diagonal Mapping] ──► [OUT Grid]
+                    │                                 │
+                    ├─ A = ~IN[1][0]                  ├─ OUT[r][3-r] = 0 (Anti-diagonal)
+                    ├─ B =  IN[0][2]                  ├─ OUT[r][c] = OUT[3-c][3-r]
+                    ├─ C =  IN[2][1]                  └─ Diagonal groups:
+                    ├─ D =  IN[1][0] = ~A                  d=+0 (corners)=A, d=+0 (inner)=E
+                    ├─ E = ~IN[2][2]                       d=+1=B, d=+2=C
+                    └─ F =  IN[2][2] = ~E                  d=-1=D, d=-2=F
+```
+
+### Analysis & Transformation Rule
+
+1. **Anti-diagonal symmetry & zero**:
+   - `OUT[r][3 - r] = 0` for all $r \in \{0, 1, 2, 3\}$.
+   - `OUT[r][c] = OUT[3 - c][3 - r]$ (reflection symmetry across the anti-diagonal).
+
+2. **Diagonal group assignments**:
+   - $\text{Group A} = \text{OUT}[0][0] = \text{OUT}[3][3] = \neg \text{IN}[1][0]$
+   - $\text{Group B} = \text{OUT}[0][1] = \text{OUT}[2][3] = \text{IN}[0][2]$
+   - $\text{Group C} = \text{OUT}[0][2] = \text{OUT}[1][3] = \text{IN}[2][1]$
+   - $\text{Group D} = \text{OUT}[1][0] = \text{OUT}[3][2] = \text{IN}[1][0]$
+   - $\text{Group E} = \text{OUT}[1][1] = \text{OUT}[2][2] = \neg \text{IN}[2][2]$
+   - $\text{Group F} = \text{OUT}[2][0] = \text{OUT}[3][1] = \text{IN}[2][2]$
+
+3. **Applying to Query**:
+   - $\text{IN}[1][0] = 0 \implies A = 1, D = 0$
+   - $\text{IN}[0][2] = 0 \implies B = 0$
+   - $\text{IN}[2][1] = 1 \implies C = 1$
+   - $\text{IN}[2][2] = 0 \implies E = 1, F = 0$
+
+Constructing the grid:
+- Row 0: `1 0 1 0`
+- Row 1: `0 1 0 1`
+- Row 2: `0 0 1 0`
+- Row 3: `0 0 0 1`
+
+FINAL: 1 0 1 0; 0 1 0 1; 0 0 1 0; 0 0 0 1

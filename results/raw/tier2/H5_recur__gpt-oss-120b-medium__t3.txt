@@ -1,0 +1,5 @@
+Compute iteratively using a(n)=a(n‑1)+⌊√a(n‑1)⌋+(a(n‑1) mod 7), starting from a₁=1.  
+After 59 steps the value reaches 1153; applying the recurrence once more gives  
+a₆₀ = 1153 + ⌊√1153⌋ + (1153 mod 7) = 1153 + 33 + 5 = **1191**.
+
+FINAL: 1191

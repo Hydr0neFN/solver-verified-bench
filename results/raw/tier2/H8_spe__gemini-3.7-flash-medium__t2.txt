@@ -1,0 +1,17 @@
+```
+P1 (Root)
+├─ L
+│  └─ P2
+│     ├─ a → (3, 1)
+│     └─ b → (1, 4)  [x] (P2: 4 > 1)
+└─ R  [x] (P1: 2 > 1)
+   └─ P2
+      ├─ c → (2, 5)  [x] (P2: 5 > 2)
+      └─ d → (4, 2)
+```
+
+- Subgame at L: P2 compares payoffs `b` (4) > `a` (1) → selects `b`, yielding (1, 4).
+- Subgame at R: P2 compares payoffs `c` (5) > `d` (2) → selects `c`, yielding (2, 5).
+- Root decision: P1 compares payoffs from `R` (2) > `L` (1) → selects `R`.
+
+FINAL: path=Rc, payoffs=2,5

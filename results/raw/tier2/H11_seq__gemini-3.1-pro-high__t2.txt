@@ -1,0 +1,19 @@
+The sequence consists of positive integers that have exactly three `1`s in their binary representation, listed in ascending order. 
+
+Let's verify the first few terms:
+- 7 in binary is `111` (3 ones)
+- 11 in binary is `1011` (3 ones)
+- 13 in binary is `1101` (3 ones)
+- ...
+- 56 in binary is `111000` (3 ones)
+
+The first 20 terms cover all valid numbers up to 6 bits. To find the 25th term, we need the 5th number in the sequence that has 7 bits. In a 7-bit number starting with `1` (which represents $2^6 = 64$), we need to choose the positions of the remaining two `1`s from the lowest 6 bits to keep them as small as possible.
+
+Listing the first few 7-bit numbers with exactly three `1`s:
+21st term: `1000011` = $64 + 2 + 1 = 67$
+22nd term: `1000101` = $64 + 4 + 1 = 69$
+23rd term: `1000110` = $64 + 4 + 2 = 70$
+24th term: `1001001` = $64 + 8 + 1 = 73$
+25th term: `1001010` = $64 + 8 + 2 = 74$
+
+FINAL: 74

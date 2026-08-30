@@ -1,0 +1,3 @@
+R2 guarantees a job never runs more than once, but R4 forces the scheduler to re‑assign a job whenever its lease expires. Because a worker may still be running the job when the lease times‑out (e.g., due to partitioning or delayed heartbeats), the reassignment can cause the same job to run on two workers, violating the “at most once” guarantee. Hence these two requirements cannot both be satisfied.
+
+FINAL: R2 and R4

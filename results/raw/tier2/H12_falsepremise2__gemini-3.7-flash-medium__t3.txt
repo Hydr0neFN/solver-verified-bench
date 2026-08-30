@@ -1,0 +1,13 @@
+```
+│ Concept    │ Premise                    │ Reality (PostgreSQL)      │
+├────────────┼────────────────────────────┼───────────────────────────┤
+│ Mechanism  │ Two-Phase Locking (2PL)    │ SSI (Snapshot Isolation)  │
+│ Read locks │ Shared locks block writes  │ SIREAD locks never block  │
+│ Blocking   │ Readers block writers      │ Non-blocking reads/writes │
+```
+
+- PostgreSQL implements Serializable Snapshot Isolation (SSI), not Two-Phase Locking (2PL).
+- Predicate locks (`SIREAD` locks) merely monitor read-write dependencies to detect serialization anomalies; they never block concurrent writers or readers.
+- `max_pred_locks_per_page` controls lock escalation granularity to prevent exhaustion of the shared predicate lock table, not blocking behavior.
+
+FINAL: REJECT

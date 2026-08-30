@@ -1,0 +1,17 @@
+```
+[Worker 1: Executing] ──(Lease Expiry)──► [R4: Mandatory Reassign]
+         │                                         │
+         ▼                                         ▼
+   [Execution 1]                             [Execution 2]
+         └────────────────────┬────────────────────┘
+                              ▼
+                  [Total Executions >= 2] !
+                              │
+                  (Violates R2: At-Most-Once)
+```
+
+- **R4** enforces at-least-once execution to maximize task completion utility by mandating reassignment upon lease expiration.
+- **R2** strictly mandates at-most-once execution ($N \le 1$) to eliminate the negative utility of duplicated side effects.
+- If a worker's lease expires after execution has started or completed, **R4** forces a second worker to execute the same job ($N \ge 2$), creating a direct logical contradiction with **R2**.
+
+FINAL: R2 and R4

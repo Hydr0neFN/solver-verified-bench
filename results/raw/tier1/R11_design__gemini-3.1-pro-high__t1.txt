@@ -1,0 +1,20 @@
+```
+Consumer 1            Redis           Postgres          Consumer 2
+    │                   │                 │                 │
+    ├─ 1. Check Key ───>│                 │                 │
+    │                   │<── 2. Check Key ──────────────────┤
+    │<─ 3. Not Found ───┤                 │                 │
+    │                   ├─ 4. Not Found ───────────────────>│
+    ├─ 5. Write Data ────────────────────>│                 │
+    │                   │                 │<── 6. Write Data┤ ! Duplicate
+    ├─ 7. Set Key ─────>│                 │                 │
+    │                   │<── 8. Set Key ────────────────────┤
+```
+
+The architecture separates the idempotency state from the application state, breaking transactional atomicity. This manifests in two critical correctness failures:
+1. **Check-then-act race condition:** As shown above, concurrent delivery of duplicate events (common in at-least-once systems) will bypass the Redis check and cause duplicate Postgres writes.
+2. **Partial failure (Dual-write):** If a consumer crashes after the Postgres write but before updating Redis, the event will be redelivered and duplicated.
+
+To guarantee exactly-once processing, the idempotency key must be written to Postgres in the exact same atomic transaction as the business results.
+
+FINAL: Lack of transactional atomicity

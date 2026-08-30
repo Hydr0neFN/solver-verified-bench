@@ -1,0 +1,18 @@
+1. **TRUE** — HTTP/2 frames and multiplexes multiple streams over a single TCP connection.
+2. **TRUE** — CPython implementation detail in 3.6; official language specification guarantee in Python 3.7+.
+3. **FALSE** — Raft is a crash fault-tolerant (CFT) algorithm; it does not handle Byzantine (arbitrary/malicious) faults.
+4. **FALSE** — PostgreSQL's `REPEATABLE READ` implements Snapshot Isolation, which permits write skew; preventing write skew requires `SERIALIZABLE`.
+5. **TRUE** — TLS 1.3 removed static RSA key exchange to enforce forward secrecy via (EC)DHE.
+6. **TRUE** — Linux calculates `oom_score` (based on RSS, swap, and `oom_score_adj`) to pick termination targets.
+7. **TRUE** — Git's object model represents commits as full tree/blob snapshots; delta compression is an internal packfile optimization.
+8. **FALSE** — Partitions cannot be opted out of; CAP dictates choosing Consistency or Availability specifically during a network partition.
+9. **FALSE** — `Send` allows transferring ownership across threads; `Sync` allows sharing references (`&T`) across threads.
+10. **TRUE** — x86-64 implements Total Store Order (TSO), allowing StoreLoad reordering via store buffers.
+11. **TRUE** — IPv6 addresses are 128 bits (16 octets).
+12. **TRUE** — Demonstrated practically in 2017 (CWI Amsterdam & Google "SHAttered" attack).
+13. **FALSE** — Kafka only guarantees total ordering within a single partition, not across all partitions in a topic.
+14. **TRUE** — A write to a `volatile` variable establishes a happens-before relationship with subsequent reads of the same variable.
+15. **FALSE** — DNS supports and uses TCP (e.g., responses > 512 bytes, zone transfers via AXFR, DoT).
+16. **TRUE** — Kubernetes `StatefulSet` assigns deterministic ordinals and stable network identities (DNS hostnames).
+
+FINAL: 1=T,2=T,3=F,4=F,5=T,6=T,7=T,8=F,9=F,10=T,11=T,12=T,13=F,14=T,15=F,16=T

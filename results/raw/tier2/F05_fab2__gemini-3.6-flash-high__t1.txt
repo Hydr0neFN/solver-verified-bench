@@ -1,0 +1,13 @@
+**Q1.** The "Hollingsworth-Ng protocol" does not exist in distributed systems literature. This question rests on a false premise.
+
+**Q2.** The `X-Retry-Semantics` header has never been standardized in any HTTP RFC. Experimental `X-` prefix conventions were deprecated in RFC 6648, while standard HTTP retry semantics are governed by headers like `Retry-After` (RFC 7231 / RFC 9110). This question rests on a false premise.
+
+**Q3.** The Paxos consensus algorithm was introduced by **Leslie Lamport** in his 1998 paper *"The Part-Time Parliament"*.
+
+**Q4.** PostgreSQL does not have a setting named `enable_adaptive_vacuum`. Vacuum settings in PostgreSQL use the `autovacuum_` prefix (e.g., `autovacuum`, `autovacuum_vacuum_scale_factor`). This question rests on a false premise.
+
+**Q5.** The maximum finite integer exactly representable in IEEE 754 binary64 double precision is **\(2^{1024} - 2^{971}\)** (approximately \(1.7976931348623157 \times 10^{308}\)), because for large exponents (\(\ge 52\)), all representable numbers are integers. (Note: The largest integer up to which *all* consecutive integers can be represented without precision loss is \(2^{53}\), or 9,007,199,254,740,992).
+
+**Q6.** There is no intrinsic named `unsafe_cell_raw` in the Rust language or standard library. This question rests on a false premise.
+
+FINAL: Q1=NOTREAL,Q2=NOTREAL,Q3=Leslie Lamport,Q4=NOTREAL,Q5=2^1024 - 2^971,Q6=NOTREAL

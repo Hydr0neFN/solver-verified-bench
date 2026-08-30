@@ -1,0 +1,17 @@
+```
+[Digit 1: 9 choices] ─→ [Digits 2..8: 8 choices each] ─→ [Total: 9 × 8⁷ = 18,874,368]
+                                                                  │
+                                                  [Mod 3 residue symmetry: 1/3 split]
+                                                                  ↓
+                                                        [Count: 6,291,456]
+```
+
+- Digits $\{1,\dots,9\}$ split into 3 equal residue classes mod 3 of size 3:
+  - $R_0 = \{3, 6, 9\}$
+  - $R_1 = \{1, 4, 7\}$
+  - $R_2 = \{2, 5, 8\}$
+- Total 8-digit strings with no adjacent equal digits: $9 \times 8^7 = 18{,}874{,}368$.
+- Symmetry across mod 3 transitions yields an exact uniform distribution across remainder classes for length 8:
+  - $\text{Count} = \frac{9 \times 8^7}{3} = 3 \times 8^7 = 3 \times 2{,}097{,}152 = 6{,}291{,}456$.
+
+FINAL: 6291456

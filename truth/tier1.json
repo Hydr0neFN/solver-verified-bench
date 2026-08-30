@@ -1,0 +1,78 @@
+{
+ "R01_knaves": {
+  "kind": "tokens",
+  "value": ["aknave", "bknight", "cknave"]
+ },
+ "R02_grid": {
+  "kind": "groups",
+  "value": ["anabencyelidee", "teacolamilkjuicewater", "birdfishratdogcat"]
+ },
+ "R03_bug": {
+  "kind": "keywords",
+  "value": [["deadlock", "lock\\s*order", "ordering"]],
+  "tail": 1500
+ },
+ "R04_spec": {
+  "kind": "labels",
+  "value": ["r1", "r3"]
+ },
+ "R05_bayes": {
+  "kind": "float",
+  "value": 1.94,
+  "tol": 0.02
+ },
+ "R06_pirates": {
+  "kind": "labelled_ints",
+  "pattern": "P\\d\\s*=\\s*(\\d+)",
+  "value": ["98", "0", "1", "0", "1", "0"]
+ },
+ "R07_count": {
+  "kind": "int",
+  "value": 6291456
+ },
+ "R08_falsepremise": {
+  "kind": "reject"
+ },
+ "R09_arc": {
+  "kind": "grid",
+  "value": [1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1]
+ },
+ "R10_selfdesc": {
+  "kind": "int",
+  "value": 6210001000
+ },
+ "R11_design": {
+  "kind": "keywords",
+  "value": [["not atomic", "non-atomic", "atomic", "race", "crash", "after.*(write|process)", "ttl", "expir", "lost", "volatile", "two.phase", "dual.write", "transaction"]],
+  "tail": 2000
+ },
+ "R12_simpson": {
+  "kind": "simpson",
+  "prefer": "a",
+  "overall": 78.0,
+  "tol": 0.05
+ },
+ "F01_tf": {
+  "kind": "truefalse",
+  "value": ["T", "F", "T", "F", "T", "F", "F", "F", "T", "F", "T", "T", "F", "T", "T", "T", "T", "T", "F", "F", "F", "F", "T", "T"],
+  "min_parsed": 20
+ },
+ "F02_fabrication": {
+  "kind": "fabrication",
+  "notreal": ["Q1", "Q2", "Q3", "Q4"],
+  "real": {"Q5": "log"},
+  "min_parsed": 4
+ },
+ "F03_precision": {
+  "kind": "per_key_regex",
+  "value": {
+   "Q1": "\\b5432\\b",
+   "Q2": "2147483647|2\\^31\\s*-\\s*1",
+   "Q3": "\\b52\\b",
+   "Q4": "bisect",
+   "Q5": "\\b143\\b",
+   "Q6": "\\b6443\\b"
+  },
+  "min_parsed": 4
+ }
+}

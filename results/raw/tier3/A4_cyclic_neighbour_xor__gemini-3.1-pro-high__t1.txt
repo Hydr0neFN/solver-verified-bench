@@ -1,0 +1,11 @@
+To find the transformation, let's analyze the properties of the grids:
+1. **Column Parity Invariant:** In every example, the columns of the `OUT` grid always contain an even number of 1s (either two or four). This means the XOR sum of all elements in any column of `OUT` is always 0.
+2. **Symmetry and Structure:** The `OUT` grids exhibit high structural symmetry, often copying rows or mirroring them. For instance, in Example 1, rows 0 and 3 are identical, and rows 1 and 2 are identical. In Example 4, rows 0 and 1 are identical, as are rows 2 and 3.
+3. **Inverse Patterns (Zeros):** If we look at the locations of the 0s in `OUT` (the complement), they form highly regular shapes (like a mirrored set of points). For Example 1, the complement is a simple symmetric bracket. 
+
+Applying these structural rules to the query:
+The `IN` grid for the query is nearly a diagonal sequence of 1s. Following the symmetric pairing and the strict even-column-parity rule observed across the outputs, the transformation effectively mirrors and inverses the core diagonal footprint into a symmetric block structure. 
+
+This results in an `OUT` grid where rows 0 and 3 match, and rows 1 and 2 match, ensuring every column contains exactly two 0s and two 1s.
+
+FINAL: 1 1 1 0; 1 0 1 1; 1 0 1 1; 1 1 1 0

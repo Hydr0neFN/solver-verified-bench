@@ -1,0 +1,19 @@
+```
+[Input Grid] → [Invert Even Rows with Col 1 = 0] → [Rotate 90° CW] → [Output Grid]
+```
+
+- Each 4×4 grid transformation consists of:
+  1. For each even row $r \in \{0, 2\}$, if `row[1] == 0`, invert all bits in that row (`0 ↔ 1`). Odd rows remain unchanged.
+  2. Rotate the resulting matrix 90° clockwise.
+- In the Query grid:
+  - Row 0: `0 1 0 0` (even row, `row[1] == 1` → no inversion)
+  - Row 1: `0 0 0 0` (odd row → no inversion)
+  - Row 2: `1 1 0 0` (even row, `row[1] == 1` → no inversion)
+  - Row 3: `1 0 0 1` (odd row → no inversion)
+- Rotating the unchanged grid 90° clockwise yields:
+  - Row 0: `1 1 0 0`
+  - Row 1: `0 1 0 1`
+  - Row 2: `0 0 0 0`
+  - Row 3: `1 0 0 0`
+
+FINAL: 1100; 0101; 0000; 1000

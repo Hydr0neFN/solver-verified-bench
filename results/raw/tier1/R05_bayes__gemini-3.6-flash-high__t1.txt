@@ -1,0 +1,20 @@
+```
+Population (100,000)
+├─ Disease (100)
+│  ├─ Test (+) [x] 99%  →   99
+│  └─ Test (-)      1%  →    1
+└─ Healthy (99,900)
+   ├─ Test (+) [!]  5%  → 4995  ← False positives
+   └─ Test (-)     95%  → 94905
+```
+
+- Prior probability \(P(D) = 0.001\), \(P(\neg D) = 0.999\)
+- Sensitivity \(P(+|D) = 0.99\)
+- False positive rate \(P(+|\neg D) = 1 - 0.95 = 0.05\)
+
+Apply Bayes' theorem:
+\[P(D|+) = \frac{P(+|D) P(D)}{P(+|D) P(D) + P(+|\neg D) P(\neg D)}\]
+
+\[P(D|+) = \frac{0.99 \times 0.001}{(0.99 \times 0.001) + (0.05 \times 0.999)} = \frac{0.00099}{0.05094} \approx 0.019435\]
+
+FINAL: 1.94%

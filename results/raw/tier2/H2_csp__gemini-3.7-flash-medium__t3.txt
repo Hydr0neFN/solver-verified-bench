@@ -1,0 +1,19 @@
+```
+Pos │ Name │ Drink │ Pet
+────┼──────┼───────┼──────
+ 1  │ Ada  │ cola  │ dog
+ 2  │ Dev  │ juice │ rat
+ 3  │ Bo   │ tea   │ bird
+ 4  │ Fay  │ water │ fish
+ 5  │ Cai  │ milk  │ cat
+ 6  │ Eun  │ kefir │ newt
+```
+
+- Eun at end (3), Bo < Kefir (8), Water not at end (10) → Eun at 6 with Kefir/Newt (11).
+- Cola immediately left of juice (9), Water at 4 (10), Milk with Cai (6) → Drinks: Cola(1), Juice(2), Tea(3), Water(4), Milk(5), Kefir(6).
+- Tea at 3 → Ada at 1 (7), Bo at 3 (1, 5, 8).
+- Cai(5) has Milk → Dev at 2 (|5-2|=3) (2), Fay at 4 (4).
+- Dev has Rat (15), Tea(3) has Bird (14), Cat adjacent to Eun(6) at 5 (12).
+- Dog left of Fish (13) + Fish does not drink Milk (16) → Dog at 1, Fish at 4.
+
+FINAL: names=Ada,Dev,Bo,Fay,Cai,Eun | drinks=cola,juice,tea,water,milk,kefir | pets=dog,rat,bird,fish,cat,newt

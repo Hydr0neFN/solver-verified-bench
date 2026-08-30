@@ -1,0 +1,15 @@
+```
+│ Index │ 0 │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │
+│ Digit │ 6 │ 2 │ 1 │ 0 │ 0 │ 0 │ 1 │ 0 │ 0 │ 0 │
+│ Count │ 6 │ 2 │ 1 │ 0 │ 0 │ 0 │ 1 │ 0 │ 0 │ 0 │
+```
+
+- Let $d_i$ be the digit at index $i \in \{0, \dots, 9\}$.
+- Total digits: $\sum_{i=0}^9 d_i = 10$.
+- Sum of digits: $\sum_{i=0}^9 i \cdot d_i = 10$.
+- Subtracting yields: $\sum_{i=0}^9 (i - 1) d_i = 0 \implies d_0 = \sum_{i=2}^9 (i - 1) d_i$.
+- $d_0 \ge 1$ (if $d_0 = 0$, index 0 contains 0, contradiction) $\implies$ at least one $d_k \ge 1$ for $k \ge 2$.
+- For any base $b \ge 7$, there is a unique self-descriptive number of the form $(b - 4, 2, 1, 0, \dots, 1, 0, 0, 0)$.
+- For $b = 10$: $d_0 = 6, d_1 = 2, d_2 = 1, d_6 = 1$, and all other $d_i = 0$.
+
+FINAL: 6210001000

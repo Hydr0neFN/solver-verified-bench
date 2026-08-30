@@ -1,0 +1,6 @@
+R1 dictates that the ledger is strictly immutable, meaning transaction rows may *never* be updated or deleted. 
+R3 requires the system to support the "right to erasure" for a voided record, which fundamentally mandates the physical deletion or destructive anonymization of that underlying data from the system to leave "no trace". 
+
+These two form a hard logical contradiction: a record cannot simultaneously be guaranteed to never be deleted (R1) and guaranteed to be permanently erased upon request (R3). Attempting to satisfy R3 by merely producing a filtered view or projection leaves the underlying data intact (failing the legal/actual definition of erasure for that record), whereas physically deleting the record to achieve true erasure directly violates the strict append-only immutability of R1.
+
+FINAL: R1 and R3

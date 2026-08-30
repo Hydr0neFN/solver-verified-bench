@@ -1,0 +1,10 @@
+Three inhabitants A, B, C. Each is either a knight (always tells the truth) or a knave (always lies).
+A says: "B is a knave."
+B says: "C is a knave."
+C says: "A and B are both knaves."
+Determine the type of each.
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: A=<knight|knave>, B=<knight|knave>, C=<knight|knave>

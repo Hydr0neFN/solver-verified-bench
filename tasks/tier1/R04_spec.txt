@@ -1,0 +1,13 @@
+Here is a requirements list for a payments ledger. Exactly one PAIR of requirements is mutually unsatisfiable (a hard logical contradiction, not merely a tension). Identify which two.
+
+R1. Every transaction row is append-only and may never be updated or deleted.
+R2. A transaction may be voided; voiding is recorded as a new compensating row.
+R3. The system must be able to produce, on request, a ledger state that contains no trace that a voided transaction ever existed (right to erasure for that record).
+R4. Account balance is always computed as the sum of all rows for that account.
+R5. Every row carries a monotonically increasing sequence number assigned by the database.
+R6. Nightly reconciliation recomputes balances from rows and must match the cached balance.
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: R<x> and R<y>

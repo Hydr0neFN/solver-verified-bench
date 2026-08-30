@@ -1,0 +1,7 @@
+Q1. No such paper; premise false.  
+Q2. No known Zhang‑Beaumont sort; premise false.  
+Q3. Portugal never joined the Warsaw Pact; premise false.  
+Q4. No ‑‑turbo‑parse option in ripgrep; premise false.  
+Q5. O(log n) worst‑case.
+
+FINAL: Q1=NOTREAL,Q2=NOTREAL,Q3=NOTREAL,Q4=NOTREAL,Q5=O(log n)

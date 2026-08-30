@@ -1,0 +1,33 @@
+This code is meant to guarantee that a given user's welcome email is sent exactly once, even with many application servers running concurrently against one Postgres database. Find the single defect that breaks the exactly-once guarantee. Ignore style, naming, and performance.
+
+```python
+import psycopg2, smtplib
+
+def send_welcome_once(conn, user_id, mailer):
+    with conn.cursor() as cur:
+        cur.execute(
+            "SELECT sent_at FROM welcome_emails WHERE user_id = %s",
+            (user_id,),
+        )
+        row = cur.fetchone()
+    if row is not None and row[0] is not None:
+        return False
+
+    mailer.send(to=user_id, template="welcome")
+
+    with conn.cursor() as cur:
+        cur.execute(
+            "INSERT INTO welcome_emails (user_id, sent_at) VALUES (%s, now()) "
+            "ON CONFLICT (user_id) DO UPDATE SET sent_at = EXCLUDED.sent_at",
+            (user_id,),
+        )
+    conn.commit()
+    return True
+```
+
+The table has `user_id` as PRIMARY KEY. The connection uses the default READ COMMITTED isolation level.
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: <one short phrase naming the defect>

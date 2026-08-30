@@ -1,0 +1,8 @@
+Define a(1) = 1 and, for n >= 2,
+    a(n) = a(n-1) + floor(sqrt(a(n-1))) + (a(n-1) mod 7).
+Compute a(60) exactly.
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: <integer>

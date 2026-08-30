@@ -1,0 +1,22 @@
+```
+N │ Prop │ Need │ Allocation (P1,P2,P3,P4,P5,P6)    │ YES Votes
+──┼──────┼──────┼───────────────────────────────────┼──────────
+1 │ P6   │ 1/1  │ ( - ,  - ,  - ,  - ,  - , 100)    │ P6
+2 │ P5   │ 1/2  │ ( - ,  - ,  - ,  - , 100,   0)    │ P5
+3 │ P4   │ 2/3  │ ( - ,  - ,  - , 99,   0,   1)    │ P4, P6
+4 │ P3   │ 2/4  │ ( - ,  - , 99,  0,   1,   0)    │ P3, P5
+5 │ P2   │ 3/5  │ ( - , 98,  0,  1,   0,   1)    │ P2, P4, P6
+6 │ P1   │ 3/6  │ (98,   0,  1,  0,   1,   0)    │ P1, P3, P5
+```
+
+Backward induction reasoning:
+
+- **Tie-breaking rule**: Pirates prefer killing the proposer if coin outcome is equal. Thus, to buy a pirate's vote whose fallback is $x$ coins, the proposer must offer $x + 1$ coins.
+- **N=1 (P6)**: P6 takes all 100 coins.
+- **N=2 (P5, P6)**: P5 votes YES (1/2 = 50% threshold met). Offer: P5=100, P6=0.
+- **N=3 (P4..P6)**: Needs 2/3 votes. P6 gets 0 in N=2, so P6 votes YES for 1 coin. Offer: P4=99, P5=0, P6=1.
+- **N=4 (P3..P6)**: Needs 2/4 votes. P5 gets 0 in N=3, so P5 votes YES for 1 coin. Offer: P3=99, P4=0, P5=1, P6=0.
+- **N=5 (P2..P6)**: Needs 3/5 votes. P4 and P6 get 0 in N=4, so P2 buys P4 and P6 for 1 coin each. Offer: P2=98, P3=0, P4=1, P5=0, P6=1.
+- **N=6 (P1..P6)**: Needs 3/6 votes (50%). P3 and P5 get 0 in N=5, so P1 buys P3 and P5 for 1 coin each. Offer: P1=98, P2=0, P3=1, P4=0, P5=1, P6=0.
+
+FINAL: P1=98, P2=0, P3=1, P4=0, P5=1, P6=0

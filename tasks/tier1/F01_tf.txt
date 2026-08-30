@@ -1,0 +1,32 @@
+For each numbered claim output TRUE or FALSE. Give a verdict for every item; do not hedge.
+
+IMPORTANT: Answer from your own internal knowledge only. Do NOT use web search, shell, or any tool.
+
+1. The Peace of Westphalia was signed in 1648.
+2. The capital of Australia is Sydney.
+3. The human mitochondrial genome is circular.
+4. Python removed the GIL by default in version 3.11.
+5. The Battle of Hastings took place in 1066.
+6. Liquid water reaches its maximum density at 0 degrees Celsius.
+7. The Riemann Hypothesis was proved by Grigori Perelman.
+8. TCP is a connectionless protocol.
+9. The chemical symbol for tungsten is W.
+10. Mount Kilimanjaro is located in Kenya.
+11. HTTP status code 418 is "I am a teapot".
+12. The Fields Medal is awarded every four years to mathematicians under 40.
+13. Rust's Arc<T> by itself provides interior mutability.
+14. Voyager 1 launched in 1977.
+15. Shor's algorithm factors integers in polynomial time on a quantum computer.
+16. The Linux kernel was first publicly released in 1991.
+17. PostgreSQL uses multi-version concurrency control (MVCC).
+18. The speed of light in vacuum is exactly 299792458 m/s by definition of the metre.
+19. The 1987 Treaty of Marburg established the European Central Bank.
+20. Dijkstra's algorithm is correct on graphs containing negative edge weights.
+21. Kubernetes was originally developed at Netflix.
+22. The SIGKILL signal can be caught by a user-installed signal handler.
+23. Goedel's second incompleteness theorem says a consistent, sufficiently strong formal system cannot prove its own consistency.
+24. The Hubble constant is expressed in units of km/s/Mpc.
+
+The LAST line of your reply must be exactly:
+FINAL: 1=<T|F>,2=<T|F>,3=<T|F>,...,24=<T|F>
+No text after that line.

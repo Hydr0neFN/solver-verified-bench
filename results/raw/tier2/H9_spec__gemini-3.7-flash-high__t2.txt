@@ -1,0 +1,22 @@
+```
++----------------------------------------------------------------------------+
+| Execution Timeline & Contradiction                                         |
++----------------------------------------------------------------------------+
+t=0s            t=28s                  t=30s                t=31s
+ │               │                      │                    │
+[W1 Leased] ──► [W1 Executes J] ────► [Lease Expires] ───► [W2 Executes J]
+                 │ (Run #1)             │ (Partition/Drop)   │ (Run #2)
+                 └──────────────────────┴────────────────────┼────────────────►
+                                                             ▼
+                                                Total Executions = 2
+                                                ! Violates R2 (at most once)
+                                                ← Forced by R4 (MUST reassign)
+```
+
+- **R2 (At-most-once execution)** requires $\le 1$ total execution across all workers.
+- **R4 (Mandatory reassignment)** forces the scheduler to reassign whenever a lease expires.
+- If Worker 1 executes the job but network delay/partition prevents heartbeat/ACK delivery, Worker 1's lease expires at the scheduler.
+- R4 unconditionally forces reassignment to Worker 2, producing a second execution ($\ge 2$), directly contradicting R2.
+- Bounded clock skew (R10) prevents concurrent execution (R11), but cannot prevent duplicate sequential execution mandated by R4.
+
+FINAL: R2 and R4

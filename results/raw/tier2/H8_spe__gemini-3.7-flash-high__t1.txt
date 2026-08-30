@@ -1,0 +1,18 @@
+```
+P1
+├─ L
+│  └─ P2
+│     ├─ a → (3, 1)
+│     └─ b → (1, 4)  [x] ← P2 maximizes payoff (4 > 1)
+└─ R                 [x] ← P1 maximizes payoff (2 > 1)
+   └─ P2
+      ├─ c → (2, 5)  [x] ← P2 maximizes payoff (5 > 2)
+      └─ d → (4, 2)
+```
+
+- Subgame after L: Player 2 selects `b` (utility 4 vs 1) → outcome (1, 4).
+- Subgame after R: Player 2 selects `c` (utility 5 vs 2) → outcome (2, 5).
+- Root decision: Player 1 compares consequences `R` (2) vs `L` (1) → selects `R`.
+- Outcome: Path `Rc` achieves aggregate utility 7 (2 + 5), maximizing net welfare across both agents.
+
+FINAL: path=Rc, payoffs=2,5

@@ -1,0 +1,17 @@
+To determine the transformation, we analyze the relationship between the inputs and outputs across the examples. The operation maps a 4x4 binary grid to another 4x4 binary grid, and does not simply preserve the number of `1`s (e.g., Ex 2 goes from 11 ones to 9, Ex 5 from 11 to 7), ruling out simple translations, rotations, or reflections.
+
+By treating the binary grids as bitwise states and analyzing the structural changes:
+1. In regions where `1`s are densely packed, the transformation smooths or propagates the boundaries. 
+2. Isolated `1`s or weakly connected components tend to vanish or shift to adjacent empty cells based on a localized morphological operation (similar to a cellular automaton but with directional bias).
+3. Comparing the examples, the logic behaves like a non-linear 2D sliding window filter that evaluates the top/bottom and left/right neighbors, shifting continuous blocks of `1`s slightly while eroding isolated bits. 
+
+Applying this logical structural shift to the Query:
+IN:
+0 1 1 1
+0 1 1 1
+0 1 1 0
+1 1 1 0
+
+The dominant blocks of `1`s are preserved and propagated along the diagonal/right constraints seen in the examples, leading to the top rows retaining their 3-width block and the bottom blocks aligning.
+
+FINAL: 0 1 1 1; 0 1 1 1; 1 1 1 0; 1 1 1 0

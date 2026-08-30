@@ -1,0 +1,29 @@
+```
+[Input Grid A] ─► [Transpose A^T] ─► [Invert Row i of A^T if Row i of A has Odd Parity] ─► [Output]
+```
+
+### Rule Explanation
+1. Transpose the input binary matrix $A$ to form $A^T$.
+2. Count the number of `1`s (parity) in each row $i$ of the original input matrix $A$.
+3. If row $i$ of $A$ has an **odd** number of `1`s, invert all bits in row $i$ of $A^T$ ($0 \leftrightarrow 1$). If row $i$ has an **even** number of `1`s, keep row $i$ of $A^T$ as is.
+
+### Applying to Query
+**Query IN:**
+- Row 0: `1 0 1 0` (sum = 2, even)
+- Row 1: `1 1 1 1` (sum = 4, even)
+- Row 2: `1 1 0 1` (sum = 3, odd)
+- Row 3: `1 1 0 1` (sum = 3, odd)
+
+**Transpose $A^T$:**
+- Row 0: `1 1 1 1`
+- Row 1: `0 1 1 1`
+- Row 2: `1 1 0 0`
+- Row 3: `0 1 1 1`
+
+**Apply Row Parity Inversions:**
+- Row 0 (even): `1 1 1 1` (unchanged)
+- Row 1 (even): `0 1 1 1` (unchanged)
+- Row 2 (odd):  `0 0 1 1` (inverted from `1 1 0 0`)
+- Row 3 (odd):  `1 0 0 0` (inverted from `0 1 1 1`)
+
+FINAL: 1111; 0111; 0011; 1000

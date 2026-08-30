@@ -1,0 +1,16 @@
+```
+┌──────────┬──────────┬──────────┬──────────┬──────────┬──────────┐
+│ Pos      │ 1        │ 2        │ 3        │ 4        │ 5        │
+├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+│ Name     │ Ana      │ Ben      │ Cy       │ Eli      │ Dee      │
+│ Drink    │ tea      │ cola     │ milk     │ juice    │ water    │
+│ Pet      │ bird     │ fish     │ rat      │ dog      │ cat      │
+└──────────┴──────────┴──────────┴──────────┴──────────┴──────────┘
+```
+
+- Names: Ana=1, Dee=5 → Ben, Cy, Eli ∈ {2, 3, 4}. Ben < Cy and Ben < Eli → Ben=2.
+- Drinks: Milk=3, Water=5. Tea adjacent to Ben(2) → Tea=1. Cola left of Cy → Cola=2, Juice=4.
+- Pets: Bird=1, Dee/Cat=5. Juice=4 → Dog=4. Remaining pets {fish, rat} ∈ {2, 3}.
+- Resolution: |Fish - Eli| = 2 with Eli ∈ {3, 4} → Fish=2, Eli=4 → Cy=3, Rat=3 (right of Cola=2 [x]).
+
+FINAL: names=Ana,Ben,Cy,Eli,Dee | drinks=tea,cola,milk,juice,water | pets=bird,fish,rat,dog,cat

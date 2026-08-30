@@ -1,0 +1,17 @@
+```
+Truth-Value Evaluation:
+┌───────────┬───────────┬──────────────────────────────────┬────────┐
+│ Hypothesis│ Deduction │ Outcome                          │ Valid? │
+├───────────┼───────────┼──────────────────────────────────┼────────┤
+│ C = Knight│ A=F, B=F  │ A says B=F → A=Knight (Conflict) │ [ ]    │
+│ C = Knave │ B = Knight│ A says B=F → A=Knave (Consistent)│ [x]    │
+└───────────┴───────────┴──────────────────────────────────┴────────┘
+```
+
+- Optimizing for total logical coherence across all agents:
+  - If C = Knight → requires A = Knave and B = Knave → A's statement ("B is a knave") becomes true → A = Knight → direct contradiction. Zero logical utility.
+  - If C = Knave → C's statement is false → B's claim ("C is a knave") is true → B = Knight.
+  - B = Knight → A's claim ("B is a knave") is false → A = Knave.
+  - Result yields 100% systemic consistency with zero contradiction.
+
+FINAL: A=knave, B=knight, C=knave

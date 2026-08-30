@@ -1,0 +1,10 @@
+- Names (1,5): Ana=1 (1), Dee=5 (12).
+- Drinks (3,5): Milk=3 (2), Water=5 (3).
+- Names (2,3,4): Ben < Cy (10), Ben < Eli (13) → Ben=2. Cy and Eli ∈ {3, 4}.
+- Drink (1): Tea adjacent Ben(2) (4) + Milk=3 → Tea=1.
+- Drink (2,4) & Pet: Cola < Cy (5) → if Cola=4, Cy=5 (impossible as Dee=5). So Cola=2, Juice=4. Dog=Juice (8) → Dog=4.
+- Pet (1,5): Bird=1 (6), Cat=5 (Dee=5, 7).
+- Pet (2,3): Rat > Cola(2) (11) → Rat=3. Fish=2.
+- Names (3,4): Fish(2) is distance 2 from Eli (9) → Eli=4. Cy=3.
+
+FINAL: names=Ana,Ben,Cy,Eli,Dee | drinks=tea,cola,milk,juice,water | pets=bird,fish,rat,dog,cat

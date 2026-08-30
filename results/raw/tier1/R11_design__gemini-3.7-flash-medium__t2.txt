@@ -1,0 +1,15 @@
+```
+Consumer A                         Consumer B
+    │                                  │
+    ├─ Check Redis (key absent)        │
+    │  Process event                   ├─ Check Redis (key absent)
+    │  Write to Postgres [x]           │  Process event
+    ├─ Add key to Redis                ├─ Write to Postgres [!] ← duplicate
+    │                                  └─ Add key to Redis
+```
+
+- Concurrent delivery race: identical events delivered in parallel both observe key absent in Redis, causing duplicate processing and duplicate writes to Postgres before either adds the key.
+- Non-atomic side effects: Redis update occurs after Postgres write; a crash between the two causes redelivery and duplicate execution.
+- Fix: enforce idempotency atomically within the primary datastore (e.g., `INSERT ... ON CONFLICT DO NOTHING` or unique constraint on idempotency key in Postgres).
+
+FINAL: Check-then-act race condition

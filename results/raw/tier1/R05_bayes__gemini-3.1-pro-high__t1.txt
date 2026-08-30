@@ -1,0 +1,12 @@
+Bayes' Theorem calculation:
+- `P(Disease)` = 0.001
+- `P(No Disease)` = 0.999
+- `P(Positive | Disease)` = 0.99
+- `P(Positive | No Disease)` = 0.05
+
+`P(Disease | Positive)` = `(0.99 * 0.001) / ((0.99 * 0.001) + (0.05 * 0.999))`
+= `0.00099 / (0.00099 + 0.04995)`
+= `0.00099 / 0.05094`
+= `99 / 5094` ≈ `1.94%`
+
+FINAL: 1.94%

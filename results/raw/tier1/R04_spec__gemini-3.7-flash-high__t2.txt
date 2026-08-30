@@ -1,0 +1,13 @@
+```
+┌───────────────────────────┐         ┌───────────────────────────┐
+│     R1: Immutable Log     │         │   R3: Right to Erasure    │
+│ Append-only; no deletion  │ ◄─ ! ─► │ Produce state with no     │
+│ or modification permitted │         │ trace of transaction      │
+└───────────────────────────┘         └───────────────────────────┘
+```
+
+- R1 mandates strict append-only persistence (rows may never be updated or deleted).
+- R3 mandates complete removal of records ("no trace that a voided transaction ever existed").
+- Removing all traces of a record requires deleting/modifying rows, directly violating R1.
+
+FINAL: R1 and R3

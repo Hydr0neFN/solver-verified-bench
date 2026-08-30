@@ -1,0 +1,55 @@
+**Reasoning**
+
+1. Units: S+S = R (mod 10) → R = 2S (mod 10), carry c₁ = ⌊2S/10⌋.  
+   Valid (S,R,c₁): (1,2,0), (2,4,0), (3,6,0), (4,8,0), (6,2,1), (7,4,1), (8,6,1), (9,8,1).
+
+2. The highest column gives the final carry c₅ = D, and because the sum creates a new digit, the carry can only be 0 or 1. D cannot be 0 (leading digit), so **D = 1** and c₅ = 1.
+
+3. Tens column: S + D + c₁ = E (mod 10), carry c₂.  
+   Using D = 1 and discarding cases where a digit repeats, the viable possibilities are  
+
+   * (S,R,c₁,E,c₂) = (2,4,0,3,0)  
+   * (3,6,0,4,0)  
+   * (4,8,0,5,0)  
+   * (6,2,1,8,0)  
+   * (7,4,1,9,0)  
+   * (8,6,1,0,1)
+
+4. The ten‑thousands column gives  
+   `C + R + c₄ = A + 10` ⇒ **A = C + R + c₄ – 10** (c₄ is the carry from the thousands column).  
+   Since the maximum sum is ≤ 18, the carry c₅ = 1 forces **c₄ = 0 or 1** and consequently **A = C + c₄ – (10 – R)**.
+
+5. For each candidate from step 3 we test remaining letters (O,G,N) respecting the carries  
+   * Hundreds: O + A + c₂ = G + 10·c₃  
+   * Thousands: R + O + c₃ = N + 10·c₄  
+
+   Exhaustive checking leaves a single consistent assignment:
+
+   * S = 3, R = 6, c₁ = 0, E = 4, c₂ = 0  
+   * Choose **C = 9**, **c₄ = 0**, giving **A = 5** (since 9 + 6 + 0 = 15 ⇒ A = 5).  
+   * Pick **O = 2** → O + A = 7 ⇒ **G = 7**, c₃ = 0.  
+   * Then R + O + c₃ = 6 + 2 = 8 ⇒ **N = 8**, c₄ = 0 (consistent).
+
+   All letters now map to distinct digits:
+
+   | Letter | Digit |
+   |--------|-------|
+   | D      | 1 |
+   | A      | 5 |
+   | N      | 8 |
+   | G      | 7 |
+   | E      | 4 |
+   | R      | 6 |
+   | C      | 9 |
+   | O      | 2 |
+   | S      | 3 |
+
+6. Verify the sum:  
+
+   `CROSS = 9 6 2 3 3 = 96 233`  
+   `ROADS = 6 2 5 1 3 = 62 513`  
+   `96 233 + 62 513 = 158 746 = DANGER`.
+
+Thus the unique solution yields **DANGER = 158746**.
+
+FINAL: 158746

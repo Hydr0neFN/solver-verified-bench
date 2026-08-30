@@ -1,0 +1,16 @@
+```
+P1 (Root)
+├─ L ── P2
+│       ├─ a ── (3, 1)
+│       └─ b ── (1, 4) [x] ← P2 prefers 4 > 1 (value: 1, 4)
+└─ R ── P2 [x]             ← P1 prefers 2 > 1
+        ├─ c ── (2, 5) [x] ← P2 prefers 5 > 2 (value: 2, 5)
+        └─ d ── (4, 2)
+```
+
+- Node L (P2): compares $u_2(a)=1$ vs $u_2(b)=4$ → chooses **b** (yields $(1, 4)$).
+- Node R (P2): compares $u_2(c)=5$ vs $u_2(d)=2$ → chooses **c** (yields $(2, 5)$).
+- Root (P1): compares $u_1(L)=1$ vs $u_1(R)=2$ → chooses **R**.
+- Equilibrium path: **R → c** with terminal payoffs $(2, 5)$.
+
+FINAL: path=Rc, payoffs=2,5

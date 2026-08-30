@@ -1,0 +1,18 @@
+```
+┌─────┬───────┬───────┬──────┐
+│ Pos │ Name  │ Drink │ Pet  │
+├─────┼───────┼───────┼──────┤
+│ 1   │ Ana   │ tea   │ bird │
+│ 2   │ Ben   │ cola  │ fish │
+│ 3   │ Cy    │ milk  │ rat  │
+│ 4   │ Eli   │ juice │ dog  │
+│ 5   │ Dee   │ water │ cat  │
+└─────┴───────┴───────┴──────┘
+```
+
+- Names: Ana at 1, Dee at 5. Ben < Cy and Ben < Eli → Ben at 2.
+- Drinks: Milk at 3, water at 5. Tea adjacent to Ben → tea at 1. Cola < Cy → cola at 2, juice at 4.
+- Pets: Bird at 1, Dee (5) owns cat. Juice (4) = dog → dog at 4. Rat > cola (2) → rat at 3, fish at 2.
+- Assignment: |pos(fish) - pos(Eli)| = |2 - pos(Eli)| = 2 → Eli at 4, Cy at 3.
+
+FINAL: names=Ana,Ben,Cy,Eli,Dee | drinks=tea,cola,milk,juice,water | pets=bird,fish,rat,dog,cat

@@ -1,0 +1,16 @@
+```
+[Consumer 1] ──(1) Check Redis (Miss) ─────────────────> [Redis]
+[Consumer 1] ──(2) Write Result ────────────────────────> [Postgres]
+     ! Crash before writing key to Redis
+[Broker Retry]
+     ↓
+[Consumer 2] ──(3) Check Redis (Miss) ─────────────────> [Redis]
+[Consumer 2] ──(4) Duplicate Write! ────────────────────> [Postgres] ← FLAW
+```
+
+- **Dual-write non-atomicity**: Postgres write and Redis key update are decoupled across separate stores without ACID transactional boundaries.
+- **Crash failure window**: Worker commits result to Postgres → crashes before adding key to Redis → broker redelivers event → retry sees Redis cache miss → duplicate processing occurs in Postgres.
+- **Check-then-act race**: Concurrent workers check Redis simultaneously → both receive cache miss → both execute duplicate writes in Postgres.
+- **Correct approach**: Store idempotency keys directly in Postgres inside the same transaction as the result payload (e.g., transactional inbox table or `UNIQUE` constraint).
+
+FINAL: Non-atomic dual write between Postgres and Redis

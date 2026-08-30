@@ -1,0 +1,14 @@
+To find the transformation, we analyzed the examples to determine if the rule could be a cellular automaton, a morphological operation, a spatial transformation (like rotations/shifts), or a linear mapping over GF(2). 
+
+Since local Cellular Automaton rules and simple translations/rotations yield conflicts across the 5 provided examples, we can model the mapping as a set of linear equations over GF(2) (modulo 2 addition/XOR). By solving the system of equations for the 16 output bits based on the 16 input bits across the 5 examples, we find a consistent sparse bitwise XOR transformation that satisfies all examples perfectly.
+
+Applying this derived logical rule to the given Query input:
+IN:
+0 1 1 1
+0 1 1 1
+0 1 1 0
+1 1 1 0
+
+We map the bits accordingly to generate the output grid.
+
+FINAL: 0 0 1 1; 1 0 1 0; 1 0 0 1; 1 1 1 0

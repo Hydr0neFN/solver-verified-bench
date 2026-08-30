@@ -1,0 +1,20 @@
+```
+[IN] ──(Transpose)──> [IN^T] ──(XOR row i with sum(IN[i]) % 2)──> [OUT]
+
+Query row parities:
+├─ Row 0: 1 0 1 0 → sum=2 (even) → invert: [ ]
+├─ Row 1: 1 1 1 1 → sum=4 (even) → invert: [ ]
+├─ Row 2: 1 1 0 1 → sum=3 (odd)  → invert: [x]
+└─ Row 3: 1 1 0 1 → sum=3 (odd)  → invert: [x]
+```
+
+- Transformation rule: `OUT[r][c] = IN[c][r] ^ (sum(IN[r]) % 2)`
+- Transpose grid, then bitwise invert row $r$ iff input row $r$ has odd weight.
+
+Application:
+- Row 0: `[1, 1, 1, 1] ^ 0` → `1111`
+- Row 1: `[0, 1, 1, 1] ^ 0` → `0111`
+- Row 2: `[1, 1, 0, 0] ^ 1` → `0011`
+- Row 3: `[0, 1, 1, 1] ^ 1` → `1000`
+
+FINAL: 1111; 0111; 0011; 1000

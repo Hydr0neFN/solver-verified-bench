@@ -1,0 +1,11 @@
+Assume A = Knight:
+- A tells truth → B = Knave
+- B lies → C = Knight
+- C tells truth → A & B = Knaves (Contradiction: A is Knight)
+
+Assume A = Knave:
+- A lies → B = Knight
+- B tells truth → C = Knave
+- C lies → "A & B = Knaves" is false (Consistent: B is Knight)
+
+FINAL: A=knave, B=knight, C=knave

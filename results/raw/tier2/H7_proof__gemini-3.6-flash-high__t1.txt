@@ -1,0 +1,5 @@
+Step 6 is logically invalid. 
+
+Step 1 assumes \(x > 0\), and Step 5 explicitly requires \(x > 0\) so that dividing by \(x\) does not reverse the inequality sign. Step 6 incorrectly drops this domain restriction and claims the result holds "for all real x". For \(x < 0\), dividing by \(x\) flips the inequality (\(x + 1/x \le 2\)), and for \(x = 0\), \(1/x\) is undefined.
+
+FINAL: 6

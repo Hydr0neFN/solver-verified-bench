@@ -1,0 +1,32 @@
+```
+Digits Mod 3 Breakdown:
+┌───────────────┬───────────────┬───────────────┐
+│ Residue 0     │ Residue 1     │ Residue 2     │
+│ {3, 6, 9}     │ {1, 4, 7}     │ {2, 5, 8}     │
+└───────────────┴───────────────┴───────────────┘
+
+Transitions from current digit d_k:
+  Same residue class (2 choices) ──> sum mod 3 + 0
+  Other residue class 1 (3 choices) ──> sum mod 3 + 1
+  Other residue class 2 (3 choices) ──> sum mod 3 + 2
+```
+
+### Reasoning
+
+1. **Total Valid Strings without Adjacent Equal Digits:**
+   - The first digit $d_1$ has $9$ choices (digits $1$ through $9$).
+   - Each subsequent digit $d_i$ ($2 \le i \le 8$) can be any digit except $d_{i-1}$, giving $8$ choices per step.
+   - Total strings of length 8 = $9 \times 8^7 = 18,874,368$.
+
+2. **Symmetry Modulo 3:**
+   - The set $\{1, 2, \dots, 9\}$ splits evenly into 3 residue classes modulo 3, each containing 3 digits.
+   - For any digit $d_{i-1}$, out of the 8 allowed choices for $d_i$:
+     - 2 digits have the same residue mod 3 as $d_{i-1}$ (adding $+0 \pmod 3$).
+     - 3 digits have residue $+1 \pmod 3$ relative to $d_{i-1}$.
+     - 3 digits have residue $+2 \pmod 3$ relative to $d_{i-1}$.
+   - By cyclic symmetry over $\mathbb{Z}_3$, the total sum of the 8 digits is equally distributed among remainders $0$, $1$, and $2 \pmod 3$.
+
+3. **Final Calculation:**
+   $$\text{Valid strings with sum } \equiv 0 \pmod 3 = \frac{9 \times 8^7}{3} = 3 \times 8^7 = 3 \times 2,097,152 = 6,291,456$$
+
+FINAL: 6291456

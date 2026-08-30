@@ -1,0 +1,24 @@
+```
+Pirate Game Backward Induction:
+│ Pirates Alive │ Votes Needed │ Proposed Allocation (P1..P6)         │
+├───────────────┼──────────────┼───────────────────────────────────────┤
+│ P6            │ 1 / 1        │ --, --, --, --, --, 100               │
+│ P5, P6        │ 1 / 2        │ --, --, --, --, 100, 0                │
+│ P4..P6        │ 2 / 3        │ --, --, --, 99, 0, 1                  │
+│ P3..P6        │ 2 / 4        │ --, --, 99, 0, 1, 0                   │
+│ P2..P6        │ 3 / 5        │ --, 98, 0, 1, 0, 1                    │
+│ P1..P6        │ 3 / 6        │ 98, 0, 1, 0, 1, 0                     │
+```
+
+### Reasoning
+
+Using backward induction from fewest to most remaining pirates:
+
+1. **1 Pirate (P6)**: P6 takes all 100 coins.
+2. **2 Pirates (P5, P6)**: P5 needs 1 vote out of 2 (50%). P5 votes YES for self and keeps all 100 coins. (P6 gets 0).
+3. **3 Pirates (P4, P5, P6)**: P4 needs 2 votes out of 3. If P4 dies, P6 gets 0. Offering P6 1 coin secures P6's vote (1 > 0). Allocation: `(P4:99, P5:0, P6:1)`.
+4. **4 Pirates (P3..P6)**: P3 needs 2 votes out of 4. If P3 dies, P5 gets 0. Offering P5 1 coin secures P5's vote. Allocation: `(P3:99, P4:0, P5:1, P6:0)`.
+5. **5 Pirates (P2..P6)**: P2 needs 3 votes out of 5. If P2 dies, P4 and P6 get 0. Offering 1 coin to P4 and 1 coin to P6 secures both votes. Allocation: `(P2:98, P3:0, P4:1, P5:0, P6:1)`.
+6. **6 Pirates (P1..P6)**: P1 needs 3 votes out of 6. If P1 dies, P3 and P5 get 0 under P2's allocation. Offering 1 coin to P3 and 1 coin to P5 secures their YES votes. P1 keeps 98 coins.
+
+FINAL: P1=98, P2=0, P3=1, P4=0, P5=1, P6=0

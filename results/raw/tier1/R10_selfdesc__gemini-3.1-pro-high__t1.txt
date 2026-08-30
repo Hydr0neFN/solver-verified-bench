@@ -1,0 +1,22 @@
+To find a 10-digit self-descriptive number, let the digits be $d_0, d_1, \dots, d_9$. By definition, $d_i$ represents the count of digit $i$ in the number.
+
+From this property, two rules must hold:
+1. The sum of all digits must be 10 (since the number has exactly 10 digits): $\sum_{i=0}^{9} d_i = 10$.
+2. The weighted sum of the digits must also be 10 (since the total sum of all digits can be calculated by multiplying each digit $i$ by its frequency $d_i$): $\sum_{i=0}^{9} i \times d_i = 10$.
+
+Let's test possible values for $d_0$ (the number of zeros), knowing it must be large to keep the sum at 10:
+- If $d_0 = 9$, we have nine 0s. The remaining digit must be 1 (at $d_9$). But this means there's one 9 and one 1, contradicting $d_0=9$.
+- If $d_0 = 8$, we have eight 0s. The number contains an 8, so $d_8 = 1$. The number also contains a 1, so $d_1 \ge 1$. This leaves us with an 8, a 1, and another number, leaving at most seven 0s. Contradiction.
+- If $d_0 = 7$, then $d_7 = 1$. The number contains a 1, so $d_1 \ge 1$. If $d_1 = 2$, we have two 1s, meaning we need another digit like $d_2 = 1$. The sum would be $7+2+1+1 = 11$, which is $> 10$. Contradiction.
+- If $d_0 = 6$, then $d_6 = 1$. The number contains a 6, so $d_1$ must account for the 1. Let's try $d_1 = 2$ (meaning two 1s). Then we need another 1 to place in the array, let's put it at $d_2 = 1$. The sum is exactly $6 + 2 + 1 + 1 = 10$. 
+
+Let's check the digits for $d_0=6, d_1=2, d_2=1, d_6=1$, and the rest $0$:
+- Six 0s (positions 3, 4, 5, 7, 8, 9)
+- Two 1s (positions 2 and 6)
+- One 2 (position 1)
+- Zero 3s, 4s, 5s, 7s, 8s, 9s
+- One 6 (position 0)
+
+This perfectly matches the conditions.
+
+FINAL: 6210001000

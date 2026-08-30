@@ -1,0 +1,26 @@
+```
+[Input Grid] ──┬──> [Rotate 180°] ──┐
+               │                    ├──> [XOR] ──> [Output Grid]
+               └──> [Transpose]   ──┘
+```
+
+Rule: `OUT = rot180(IN) ^ transpose(IN)`
+
+Query application:
+- `rot180(IN)`:
+  `0 1 1 1`
+  `1 0 1 0`
+  `1 1 0 0`
+  `0 0 0 0`
+- `transpose(IN)`:
+  `0 0 0 1`
+  `0 0 1 1`
+  `0 1 0 1`
+  `0 1 1 0`
+- `XOR`:
+  `0 1 1 0`
+  `1 0 0 1`
+  `1 0 0 1`
+  `0 1 1 0`
+
+FINAL: 0 1 1 0; 1 0 0 1; 1 0 0 1; 0 1 1 0

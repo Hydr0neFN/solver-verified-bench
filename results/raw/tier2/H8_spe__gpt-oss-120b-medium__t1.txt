@@ -1,0 +1,6 @@
+Player 2 picks the action giving the higher own payoff at each node: after **L** she prefers **b** (4 > 1), after **R** she prefers **c** (5 > 2).  
+Anticipating this, Player 1 compares his resulting payoffs: **L→b** yields 1, **R→c** yields 2, so he chooses **R**.  
+
+Thus the subgame‑perfect equilibrium leads to the terminal node **R → c**, with payoffs (2, 5).  
+
+FINAL: path=Rc, payoffs=2,5

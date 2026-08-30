@@ -1,0 +1,11 @@
+**Q1.** Does not exist. "Transfinite cache coherence" and the Kellerman-Ostrowski paper are entirely fictional.
+
+**Q2.** Does not exist. There is no known algorithm named the "Zhang-Beaumont sorting algorithm".
+
+**Q3.** False premise. Portugal never joined the Warsaw Pact; it is a founding member of NATO (1949).
+
+**Q4.** Does not exist. `ripgrep` has no `--turbo-parse` flag.
+
+**Q5.** $O(\log n)$
+
+FINAL: Q1=NOTREAL,Q2=NOTREAL,Q3=NOTREAL,Q4=NOTREAL,Q5=O(log n)

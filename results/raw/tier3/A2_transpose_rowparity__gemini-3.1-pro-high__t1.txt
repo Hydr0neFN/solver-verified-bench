@@ -1,0 +1,28 @@
+To find the transformation rule, we can compare the input and output grids in each example. Let's analyze the relationship between the columns of the input and the rows of the output.
+
+If we take the transpose of the input matrix (i.e., its columns become rows), we get something very close to the output matrix. However, some rows are bitwise inverted (0 becomes 1, and 1 becomes 0). 
+
+By checking which rows in the transposed matrix are inverted, we can find a perfect correlation with the sum of the bits in the original input's rows:
+- If row `i` of the IN matrix has an **even** number of 1s, row `i` of the OUT matrix is simply column `i` of the IN matrix (no changes).
+- If row `i` of the IN matrix has an **odd** number of 1s, row `i` of the OUT matrix is column `i` of the IN matrix with **all bits flipped**.
+
+Let's apply this rule to the Query:
+**Query IN:**
+Row 0: `1 0 1 0` (Two 1s -> Even -> Do not flip Col 0)
+Row 1: `1 1 1 1` (Four 1s -> Even -> Do not flip Col 1)
+Row 2: `1 1 0 1` (Three 1s -> Odd -> Flip Col 2)
+Row 3: `1 1 0 1` (Three 1s -> Odd -> Flip Col 3)
+
+**Columns of IN:**
+Col 0: `1 1 1 1`
+Col 1: `0 1 1 1`
+Col 2: `1 1 0 0`
+Col 3: `0 1 1 1`
+
+**Applying the flips for the OUT matrix:**
+Row 0 (from Col 0): `1 1 1 1` (Keep)
+Row 1 (from Col 1): `0 1 1 1` (Keep)
+Row 2 (from Col 2): `0 0 1 1` (Flipped)
+Row 3 (from Col 3): `1 0 0 0` (Flipped)
+
+FINAL: 1 1 1 1; 0 1 1 1; 0 0 1 1; 1 0 0 0

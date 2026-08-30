@@ -1,0 +1,16 @@
+```
+[Worker 1 executes job] ──> [Lease expires] ──> [Scheduler reassigns (R4)]
+                                                         │
+                                                         ▼
+                                                [Worker 2 executes job]
+                                                         │
+                                                         ▼
+                                            Total executions >= 2  ! (violates R2)
+```
+
+- R2 mandates execution count <= 1 under all conditions.
+- R4 requires mandatory reassignment whenever a worker's lease expires.
+- If Worker 1 executes the job (or performs irreversible side effects) and its lease expires before completion or acknowledgment, R4 forces the scheduler to reassign the job to Worker 2.
+- Worker 2 executes the job, resulting in >= 2 executions and directly violating R2.
+
+FINAL: R2 and R4

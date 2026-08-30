@@ -1,0 +1,33 @@
+To solve the cryptarithm:
+
+```
+    C R O S S
+  + R O A D S
+  -----------
+  D A N G E R
+```
+
+1. **Hundred-thousands digit ($D$):** 
+   Adding two 5-digit numbers yields a 6-digit number, so the carry out must be $1$, giving **$D = 1$**.
+
+2. **Units column ($S + S = R$ mod 10):**
+   Testing values for $S$ with $D = 1$ and matching carry propagation:
+   - For $S = 3$, $S + S = 6 \implies \mathbf{R = 6}$ (carry $c_1 = 0$).
+
+3. **Tens column ($S + D + c_1 = E$):**
+   - $3 + 1 + 0 = 4 \implies \mathbf{E = 4}$ (carry $c_2 = 0$).
+
+4. **Ten-thousands column ($C + R = 10 \times 1 + A$):**
+   - Since $R = 6$, $C + 6 = 15 \implies \mathbf{C = 9}$ and $\mathbf{A = 5}$ (carry $c_4 = 0$).
+
+5. **Thousands column ($R + O + c_3 = N$):**
+   - $6 + O = N$. With remaining unused digits, $O = 2 \implies \mathbf{N = 8}$ (carry $c_3 = 0$).
+
+6. **Hundreds column ($O + A + c_2 = G$):**
+   - $2 + 5 + 0 = 7 \implies \mathbf{G = 7}$.
+
+Verification:
+- $96233 + 62513 = 158746$
+- Distinct digits: $A=5, C=9, D=1, E=4, G=7, N=8, O=2, R=6, S=3$.
+
+FINAL: 158746

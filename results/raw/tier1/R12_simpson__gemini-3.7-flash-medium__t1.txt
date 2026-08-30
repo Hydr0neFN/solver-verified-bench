@@ -1,0 +1,21 @@
+```
+       [Stone Size (Confounder)]
+             /           \
+            v             v
+      [Treatment] ───> [Outcome]
+
+│ Stone Size │ Treatment A      │ Treatment B      │ Better │
+├────────────┼──────────────────┼──────────────────┼────────┤
+│ Small      │  81/ 87 (93.10%) │ 234/270 (86.67%) │ A      │
+│ Large      │ 192/263 (73.00%) │  55/ 80 (68.75%) │ A      │
+├────────────┼──────────────────┼──────────────────┼────────┤
+│ Aggregate  │ 273/350 (78.00%) │ 289/350 (82.57%) │ B  !   │
+```
+
+- Simpson's paradox: stone size confounds treatment choice and outcome.
+- Controlling for confounder: Treatment A outperforms Treatment B across both subgroups (small: 93.10% vs 86.67%, large: 73.00% vs 68.75%).
+- Aggregation reversal caused by disproportionate assignment of severe cases (large stones) to Treatment A (263/350 = 75.14%) vs Treatment B (80/350 = 22.86%).
+- Preference: Patient should prefer Treatment A regardless of stone size.
+- Treatment A overall: `(81 + 192) / (87 + 263) = 273 / 350 = 78.00%`.
+
+FINAL: prefer=A, A_overall=78.00%

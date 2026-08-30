@@ -1,0 +1,19 @@
+```
+State    Votes Needed  Payouts (P1..P6)         Margin of Survival
+──────────────────────────────────────────────────────────────────
+2 left   1 of 2        [ -,  -,  -,  -, 100,   0]  P5 safe
+3 left   2 of 3        [ -,  -,  -, 99,   0,   1]  P4 buys P6
+4 left   2 of 4        [ -,  -, 99,  0,   1,   0]  P3 buys P5
+5 left   3 of 5        [ -, 98,  0,  1,   0,   1]  P2 buys P4, P6
+6 left   3 of 6        [98,  0,  1,  0,   1,   0]  P1 buys P3, P5  ← optimal
+```
+
+Backward induction determines the minimum incentive transfer required to preserve the proposer's life and maximize aggregate survival:
+
+- **2 Pirates (P5, P6):** P5 holds 50% voting weight → claims all 100 coins. P6 receives 0.
+- **3 Pirates (P4, P5, P6):** P4 needs 1 ally. P6 expects 0 under P5; 1 coin strictly beats execution preference. Allocation: `(99, 0, 1)`.
+- **4 Pirates (P3..P6):** P3 needs 1 ally. P5 expects 0 under P4; 1 coin secures P5. Allocation: `(99, 0, 1, 0)`.
+- **5 Pirates (P2..P6):** P2 needs 2 allies. P4 and P6 both expect 0 under P3; 1 coin each secures majority. Allocation: `(98, 0, 1, 0, 1)`.
+- **6 Pirates (P1..P6):** P1 requires 3 of 6 votes (proposer + 2). Under P2's regime, P3 and P5 receive 0. Offering 1 coin to P3 and 1 coin to P5 strictly maximizes their utility over P1's demise, securing their votes at minimum cost and eliminating deadweight loss from unnecessary executions.
+
+FINAL: P1=98, P2=0, P3=1, P4=0, P5=1, P6=0

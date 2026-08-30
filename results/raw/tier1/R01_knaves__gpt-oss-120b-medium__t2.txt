@@ -1,0 +1,5 @@
+A is knave → B must be knight (A’s claim false).  
+B is knight → C is knave.  
+C knave’s claim “A and B are both knaves” is false (A knave, B knight), satisfying C’s lying nature.  
+
+FINAL: A=knave, B=knight, C=knave

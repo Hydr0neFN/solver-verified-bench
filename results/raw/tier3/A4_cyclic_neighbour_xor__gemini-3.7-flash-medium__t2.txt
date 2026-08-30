@@ -1,0 +1,19 @@
+```
+[IN(r, (c+1)%4)] (right)
+       │
+      XOR ──→ [OUT(r, c)]
+       │
+[IN((r+1)%4, c)] (down)
+```
+
+- Transformation: 2D cellular automaton with periodic/toroidal boundary conditions.
+- Rule: each cell is the XOR sum of its right neighbor and its down neighbor:
+  `OUT[r, c] = IN[r, (c + 1) % 4] ^ IN[(r + 1) % 4, c]`
+
+Applying to query:
+- Row 0: `[0^1, 0^1, 1^0, 1^0] = [1, 1, 1, 1]`
+- Row 1: `[1^0, 0^1, 0^0, 1^0] = [1, 1, 0, 1]`
+- Row 2: `[1^0, 0^0, 0^0, 0^1] = [1, 0, 0, 1]`
+- Row 3: `[0^1, 0^0, 1^0, 0^1] = [1, 0, 1, 1]`
+
+FINAL: 1111; 1101; 1001; 1011

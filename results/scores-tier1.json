@@ -1,0 +1,1352 @@
+[
+ {
+  "task": "F01_tf",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F01_tf",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F01_tf",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 9450
+ },
+ {
+  "task": "F01_tf",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 9695
+ },
+ {
+  "task": "F01_tf",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F01_tf",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F01_tf",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F01_tf",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F01_tf",
+  "model": "gpt-oss-120b-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 10529
+ },
+ {
+  "task": "F01_tf",
+  "model": "gpt-oss-120b-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 7459
+ },
+ {
+  "task": "F02_fabrication",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F02_fabrication",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F02_fabrication",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 6346
+ },
+ {
+  "task": "F02_fabrication",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 6449
+ },
+ {
+  "task": "F02_fabrication",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F02_fabrication",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F02_fabrication",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F02_fabrication",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F02_fabrication",
+  "model": "gpt-oss-120b-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 6435
+ },
+ {
+  "task": "F02_fabrication",
+  "model": "gpt-oss-120b-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 9301
+ },
+ {
+  "task": "F03_precision",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F03_precision",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F03_precision",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 5728
+ },
+ {
+  "task": "F03_precision",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 6739
+ },
+ {
+  "task": "F03_precision",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F03_precision",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F03_precision",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F03_precision",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "F03_precision",
+  "model": "gpt-oss-120b-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 6077
+ },
+ {
+  "task": "F03_precision",
+  "model": "gpt-oss-120b-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 7510
+ },
+ {
+  "task": "R01_knaves",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R01_knaves",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R01_knaves",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 6458
+ },
+ {
+  "task": "R01_knaves",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 6820
+ },
+ {
+  "task": "R01_knaves",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R01_knaves",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R01_knaves",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R01_knaves",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R01_knaves",
+  "model": "gpt-oss-120b-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 7047
+ },
+ {
+  "task": "R01_knaves",
+  "model": "gpt-oss-120b-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 6353
+ },
+ {
+  "task": "R02_grid",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R02_grid",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R02_grid",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 9458
+ },
+ {
+  "task": "R02_grid",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 8093
+ },
+ {
+  "task": "R02_grid",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R02_grid",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R02_grid",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R02_grid",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R02_grid",
+  "model": "gpt-oss-120b-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 14755
+ },
+ {
+  "task": "R02_grid",
+  "model": "gpt-oss-120b-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 11945
+ },
+ {
+  "task": "R03_bug",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R03_bug",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R03_bug",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 6537
+ },
+ {
+  "task": "R03_bug",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 10775
+ },
+ {
+  "task": "R03_bug",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R03_bug",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R03_bug",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R03_bug",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R03_bug",
+  "model": "gpt-oss-120b-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 7257
+ },
+ {
+  "task": "R03_bug",
+  "model": "gpt-oss-120b-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 4594
+ },
+ {
+  "task": "R04_spec",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R04_spec",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R04_spec",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 8340
+ },
+ {
+  "task": "R04_spec",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 7746
+ },
+ {
+  "task": "R04_spec",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R04_spec",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R04_spec",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R04_spec",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R04_spec",
+  "model": "gpt-oss-120b-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 5952
+ },
+ {
+  "task": "R04_spec",
+  "model": "gpt-oss-120b-medium",
+  "trial": "2",
+  "score": 0.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 5889
+ },
+ {
+  "task": "R05_bayes",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R05_bayes",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R05_bayes",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 6971
+ },
+ {
+  "task": "R05_bayes",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 5947
+ },
+ {
+  "task": "R05_bayes",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R05_bayes",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R05_bayes",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R05_bayes",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R05_bayes",
+  "model": "gpt-oss-120b-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 5843
+ },
+ {
+  "task": "R05_bayes",
+  "model": "gpt-oss-120b-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 5690
+ },
+ {
+  "task": "R06_pirates",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R06_pirates",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R06_pirates",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 14341
+ },
+ {
+  "task": "R06_pirates",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 13334
+ },
+ {
+  "task": "R06_pirates",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R06_pirates",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R06_pirates",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R06_pirates",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R06_pirates",
+  "model": "gpt-oss-120b-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 13534
+ },
+ {
+  "task": "R06_pirates",
+  "model": "gpt-oss-120b-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 13125
+ },
+ {
+  "task": "R07_count",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R07_count",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 64305
+ },
+ {
+  "task": "R07_count",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 17154
+ },
+ {
+  "task": "R07_count",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 14386
+ },
+ {
+  "task": "R07_count",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R07_count",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R07_count",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R07_count",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R07_count",
+  "model": "gpt-oss-120b-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 14574
+ },
+ {
+  "task": "R07_count",
+  "model": "gpt-oss-120b-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 41768
+ },
+ {
+  "task": "R08_falsepremise",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R08_falsepremise",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R08_falsepremise",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 12572
+ },
+ {
+  "task": "R08_falsepremise",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 12522
+ },
+ {
+  "task": "R08_falsepremise",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R08_falsepremise",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R08_falsepremise",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R08_falsepremise",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R08_falsepremise",
+  "model": "gpt-oss-120b-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 6390
+ },
+ {
+  "task": "R08_falsepremise",
+  "model": "gpt-oss-120b-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 6341
+ },
+ {
+  "task": "R09_arc",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R09_arc",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": null,
+  "empty_reason": "unknown",
+  "rc": 1,
+  "ms": 366453
+ },
+ {
+  "task": "R09_arc",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 40137
+ },
+ {
+  "task": "R09_arc",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 23582
+ },
+ {
+  "task": "R09_arc",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 106353
+ },
+ {
+  "task": "R09_arc",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R09_arc",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R09_arc",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R09_arc",
+  "model": "gpt-oss-120b-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 17288
+ },
+ {
+  "task": "R09_arc",
+  "model": "gpt-oss-120b-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 27113
+ },
+ {
+  "task": "R10_selfdesc",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R10_selfdesc",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R10_selfdesc",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 8428
+ },
+ {
+  "task": "R10_selfdesc",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 7984
+ },
+ {
+  "task": "R10_selfdesc",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R10_selfdesc",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R10_selfdesc",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R10_selfdesc",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R10_selfdesc",
+  "model": "gpt-oss-120b-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 10967
+ },
+ {
+  "task": "R10_selfdesc",
+  "model": "gpt-oss-120b-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 11138
+ },
+ {
+  "task": "R11_design",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R11_design",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R11_design",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 16962
+ },
+ {
+  "task": "R11_design",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 11965
+ },
+ {
+  "task": "R11_design",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R11_design",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R11_design",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R11_design",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 26741
+ },
+ {
+  "task": "R11_design",
+  "model": "gpt-oss-120b-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 11089
+ },
+ {
+  "task": "R11_design",
+  "model": "gpt-oss-120b-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 13691
+ },
+ {
+  "task": "R12_simpson",
+  "model": "gemini-3.1-pro-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R12_simpson",
+  "model": "gemini-3.1-pro-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R12_simpson",
+  "model": "gemini-3.6-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 8374
+ },
+ {
+  "task": "R12_simpson",
+  "model": "gemini-3.6-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 8838
+ },
+ {
+  "task": "R12_simpson",
+  "model": "gemini-3.7-flash-high",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R12_simpson",
+  "model": "gemini-3.7-flash-high",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R12_simpson",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 13459
+ },
+ {
+  "task": "R12_simpson",
+  "model": "gemini-3.7-flash-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": null,
+  "ms": null
+ },
+ {
+  "task": "R12_simpson",
+  "model": "gpt-oss-120b-medium",
+  "trial": "1",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 18535
+ },
+ {
+  "task": "R12_simpson",
+  "model": "gpt-oss-120b-medium",
+  "trial": "2",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 20502
+ }
+]

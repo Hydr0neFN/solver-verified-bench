@@ -1,0 +1,4 @@
+A has higher success rates within each stone‑size group (small: 93.1 % vs 86.7 %; large: 73.0 % vs 68.8 %). Since the treatment choice is confounded by stone size, the stratified comparison shows A is superior for both strata, so a patient should prefer A.  
+Overall for A: (81 + 192) / (87 + 263) = 273 / 350 ≈ 0.78 → 78.00 %.
+
+FINAL: prefer=A, A_overall=78.00%

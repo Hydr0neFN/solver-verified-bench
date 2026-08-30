@@ -1,0 +1,15 @@
+```
+[Job Running on Worker W1] ──(Operator cancels)──> [Job Cancelled (R12)]
+            │                                                │
+     (Lease expires)                                         │ (Contradiction)
+            ▼                                                │
+  [Scheduler MUST reassign (R4)] ◄───────────────────────────┘
+```
+
+- R12 permits an operator to cancel an active job at any time prior to reaching a terminal state.
+- Once cancelled, the job is terminal and must not be scheduled or executed further.
+- Worker W1 ceases heartbeating (or partition/timeout occurs), causing W1's 30-second lease to expire.
+- R4 unconditionally mandates that whenever a worker's lease expires, the scheduler **MUST** reassign the job to another worker.
+- Satisfying R4 forces reassignment and execution of the cancelled job, directly violating R12; honoring R12 prevents reassignment, directly violating R4.
+
+FINAL: R4 and R12

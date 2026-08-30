@@ -1,0 +1,7 @@
+The rule: transpose the grid, then flip every row whose original row contains an odd number of 1’s.  
+
+Applying this to the query gives  
+
+Row 1 = 1111, Row 2 = 0111, Row 3 = 0011, Row 4 = 1000.  
+
+FINAL: 1111; 0111; 0011; 1000

@@ -1,0 +1,1 @@
+I’m not certain which deterministic rule maps the inputs to the outputs. Could you clarify the transformation rule or give a hint?

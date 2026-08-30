@@ -1,0 +1,26 @@
+To find the transformation, we can break it down into two deterministic steps:
+1. **Conditional Row Inversion**: Look at the even-indexed rows (Row 0 and Row 2) of the input grid. If the two middle bits of the row are both `0`, invert every bit in that row.
+   - In Example 1, no even rows have `00` in the middle, so it remains unchanged.
+   - In Example 2, Row 0 (`0 0 0 0`) has `00` in the middle, so it inverts to `1 1 1 1`. 
+   - In Example 3, Row 2 (`0 0 0 1`) has `00` in the middle, so it inverts to `1 1 1 0`.
+   - In Example 4, Row 0 (`0 0 0 0`) and Row 2 (`1 0 0 1`) both have `00` in the middle, so they invert to `1 1 1 1` and `0 1 1 0`.
+2. **Rotation**: Rotate the newly modified grid 90 degrees clockwise to get the output grid. 
+
+Applying this to the Query:
+IN:
+0 1 0 0
+0 0 0 0
+1 1 0 0
+1 0 0 1
+
+- Row 0 is `0 1 0 0`. Its middle bits are `10` (not `00`), so it is not inverted.
+- Row 2 is `1 1 0 0`. Its middle bits are `10` (not `00`), so it is not inverted.
+The grid remains unchanged during step 1.
+
+Now, we rotate the query grid 90 degrees clockwise:
+- The first column (`0 0 1 1`) read from bottom to top becomes the new first row: `1 1 0 0`.
+- The second column (`1 0 1 0`) read from bottom to top becomes the new second row: `0 1 0 1`.
+- The third column (`0 0 0 0`) becomes the new third row: `0 0 0 0`.
+- The fourth column (`0 0 0 1`) read from bottom to top becomes the new fourth row: `1 0 0 0`.
+
+FINAL: 1 1 0 0; 0 1 0 1; 0 0 0 0; 1 0 0 0

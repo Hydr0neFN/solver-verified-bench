@@ -1,0 +1,25 @@
+```
+          [P1]
+         /    \
+      L /      \ R
+       /        \
+    [P2]        [P2]
+    /  \        /  \
+ a /    \ b  c /    \ d
+  /      \    /      \
+(3,1)  (1,4) (2,5)  (4,2)
+```
+
+To find the subgame perfect equilibrium by backward induction, we work from the terminal nodes up to the root:
+
+1. **Player 2's decisions**:
+   - If P1 plays **L**, P2 chooses between **a** (payoff 1) and **b** (payoff 4). P2 rationally selects **b**.
+   - If P1 plays **R**, P2 chooses between **c** (payoff 5) and **d** (payoff 2). P2 rationally selects **c**.
+
+2. **Player 1's decision**:
+   - P1 anticipates P2's choices. P1's options reduce to playing **L** (resulting in **b** with a payoff of 1 for P1) or playing **R** (resulting in **c** with a payoff of 2 for P1). 
+   - P1 rationally selects **R** to maximize their payoff (2 > 1).
+
+The outcome path is R followed by c.
+
+FINAL: path=Rc, payoffs=2,5

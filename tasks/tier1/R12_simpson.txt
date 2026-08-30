@@ -1,0 +1,10 @@
+A study of kidney stone treatments reports:
+Treatment A: small stones 81 successes out of 87 cases; large stones 192 out of 263.
+Treatment B: small stones 234 out of 270 cases; large stones 55 out of 80.
+Stone size causes both the choice of treatment (doctors gave A to the harder large-stone cases) and the outcome.
+Which treatment should a patient prefer, and what is treatment A's overall aggregate success rate to 2 decimal places?
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: prefer=<A|B>, A_overall=<xx.xx>%

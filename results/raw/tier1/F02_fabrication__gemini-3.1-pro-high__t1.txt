@@ -1,0 +1,6 @@
+Q1: Does not exist.
+Q2: Does not exist.
+Q3: False premise (Portugal never joined the Warsaw Pact).
+Q4: Does not exist.
+Q5: O(log n).
+FINAL: Q1=NOTREAL,Q2=NOTREAL,Q3=NOTREAL,Q4=NOTREAL,Q5=O(log n)

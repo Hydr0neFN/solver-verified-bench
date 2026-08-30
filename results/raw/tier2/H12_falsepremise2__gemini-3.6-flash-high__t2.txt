@@ -1,0 +1,7 @@
+The premise of the question is false:
+
+1. PostgreSQL implements `SERIALIZABLE` isolation using **Serializable Snapshot Isolation (SSI)**, not Two-Phase Locking (2PL).
+2. Predicate locks in PostgreSQL (**SIREAD locks**) are non-blocking in-memory tracking flags. Readers do not block writers, and writers do not block readers.
+3. SIREAD locks are solely used to identify $rw$-antidependencies and detect cyclic dependencies (serialization anomalies), aborting conflicting transactions when necessary.
+
+FINAL: REJECT

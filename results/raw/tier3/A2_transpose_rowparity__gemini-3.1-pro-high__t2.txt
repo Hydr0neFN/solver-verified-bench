@@ -1,0 +1,34 @@
+To deduce the transformation rule, we can compare the given input (IN) matrices to the output (OUT) matrices. 
+
+1. First, observe what happens if we transpose the IN matrix. The OUT matrix is strikingly similar to the transpose of the IN matrix.
+2. Let's compare the transposed IN matrix with the OUT matrix row by row. We find that OUT is exactly the transposed IN matrix, except some specific rows are completely inverted (0s become 1s, and 1s become 0s). 
+3. Which rows are inverted? Let's count the number of 1s in each row of the original IN matrix. 
+   - In Example 1, IN row 1 has an odd number of 1s (sum=1). OUT row 1 is inverted.
+   - In Example 2, IN rows 2 and 3 have an odd number of 1s (sums=1, 3). OUT rows 2 and 3 are inverted.
+   - In Example 3, IN row 0 has an odd number of 1s (sum=1). OUT row 0 is inverted.
+   - In Example 4, all IN rows have an even number of 1s (sums=2, 2, 2, 0). No OUT rows are inverted (it is perfectly transposed).
+   - In Example 5, IN row 3 has an odd number of 1s (sum=3). OUT row 3 is inverted.
+
+**Rule:** 
+The OUT matrix is the transpose of the IN matrix, but if row `i` in the original IN matrix contains an ODD number of 1s, row `i` of the transposed matrix is inverted. (Mathematically, `OUT_ij = IN_ji XOR (Sum of IN_i modulo 2)`).
+
+**Applying to the Query:**
+IN:
+1 0 1 0  (row 0 sum = 2, EVEN -> do not invert)
+1 1 1 1  (row 1 sum = 4, EVEN -> do not invert)
+1 1 0 1  (row 2 sum = 3, ODD -> invert)
+1 1 0 1  (row 3 sum = 3, ODD -> invert)
+
+The transpose of the IN matrix is:
+row 0: 1 1 1 1
+row 1: 0 1 1 1
+row 2: 1 1 0 0
+row 3: 0 1 1 1
+
+Applying our rule to invert rows 2 and 3:
+row 0: 1 1 1 1
+row 1: 0 1 1 1
+row 2: 0 0 1 1
+row 3: 1 0 0 0
+
+FINAL: 1 1 1 1; 0 1 1 1; 0 0 1 1; 1 0 0 0

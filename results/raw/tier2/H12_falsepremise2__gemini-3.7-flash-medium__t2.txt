@@ -1,0 +1,13 @@
+```
+│ Concept            │ Premise                   │ PostgreSQL Reality        │
+├────────────────────┼───────────────────────────┼───────────────────────────┤
+│ Algorithm          │ Two-Phase Locking (2PL)   │ Serializable SI (SSI)     │
+│ Read lock type     │ Shared blocking locks     │ SIREAD predicate locks    │
+│ Write blocking     │ Readers block writers     │ Never blocks writers      │
+```
+
+- PostgreSQL implements SERIALIZABLE via Serializable Snapshot Isolation (SSI), not two-phase locking (2PL).
+- `SIREAD` locks are non-blocking in-memory markers used strictly for rw-antidependency cycle detection; readers never block writers and writers never block readers.
+- `max_pred_locks_per_page` controls predicate lock promotion granularity (page-level vs. relation-level) to conserve shared memory, not lock blocking.
+
+FINAL: REJECT

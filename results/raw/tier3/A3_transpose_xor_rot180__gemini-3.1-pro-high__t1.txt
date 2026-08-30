@@ -1,0 +1,5 @@
+The transformation appears to map specific binary configurations to target layouts, but it does not map cleanly to standard shift-invariant linear convolutions, local cellular automata (like Game of Life), or rigid rigid transformations. An exhaustive sparse boolean rule search over GF(2) perfectly fits the 5 examples by using a consistent set of 5 pixel locations as a basis to reconstruct the entire output grid perfectly across all training cases. 
+
+Applying this exact inferred GF(2) mapping to the Query grid yields the resulting layout.
+
+FINAL: 1 0 1 1; 0 1 1 1; 0 1 1 0; 1 0 0 1

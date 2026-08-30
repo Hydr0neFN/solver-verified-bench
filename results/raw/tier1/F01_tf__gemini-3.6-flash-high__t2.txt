@@ -1,0 +1,26 @@
+1. **TRUE** — The Peace of Westphalia was signed in 1648, ending the Thirty Years' War and Eighty Years' War.
+2. **FALSE** — The capital of Australia is Canberra, not Sydney.
+3. **TRUE** — The human mitochondrial genome consists of a circular double-stranded DNA molecule.
+4. **FALSE** — Python did not remove the GIL in 3.11. Experimental free-threading (PEP 703) was introduced in version 3.13, and the GIL remains active by default.
+5. **TRUE** — The Battle of Hastings took place on October 14, 1066.
+6. **FALSE** — Liquid water reaches its maximum density at approximately 4 °C (3.98 °C).
+7. **FALSE** — Grigori Perelman proved the Poincaré conjecture; the Riemann Hypothesis remains unsolved.
+8. **FALSE** — TCP is a connection-oriented protocol (UDP is connectionless).
+9. **TRUE** — The chemical symbol for tungsten is W (from its alternative name, Wolfram).
+10. **FALSE** — Mount Kilimanjaro is located in Tanzania, near the border with Kenya.
+11. **TRUE** — HTTP status code 418 is "I am a teapot", defined as an April Fools' joke in RFC 2324 / RFC 7168.
+12. **TRUE** — The Fields Medal is awarded every four years to mathematicians under 40 years of age.
+13. **FALSE** — `Arc<T>` only provides thread-safe reference counting and shared immutable access; interior mutability requires types like `Mutex`, `RwLock`, or atomic types.
+14. **TRUE** — Voyager 1 was launched on September 5, 1977.
+15. **TRUE** — Shor's algorithm factorizes integers in polynomial time on a quantum computer.
+16. **TRUE** — Linus Torvalds publicly released the Linux kernel version 0.01 on September 17, 1991.
+17. **TRUE** — PostgreSQL uses Multi-Version Concurrency Control (MVCC) for managing database transactions.
+18. **TRUE** — Since 1983, the speed of light in a vacuum is defined as exactly 299,792,458 m/s, defining the length of the metre.
+19. **FALSE** — The European Central Bank was established under the Maastricht Treaty (1992) and came into force in 1998, not a "1987 Treaty of Marburg".
+20. **FALSE** — Dijkstra's algorithm requires non-negative edge weights to guarantee correctness.
+21. **FALSE** — Kubernetes was originally designed and developed by Google before being donated to the CNCF.
+22. **FALSE** — `SIGKILL` (signal 9) and `SIGSTOP` cannot be caught, blocked, or ignored by user signal handlers.
+23. **TRUE** — Gödel's second incompleteness theorem states that a consistent, sufficiently powerful formal system cannot prove its own consistency.
+24. **TRUE** — The Hubble constant is expressed in kilometers per second per megaparsec (km/s/Mpc).
+
+FINAL: 1=T,2=F,3=T,4=F,5=T,6=F,7=F,8=F,9=T,10=F,11=T,12=T,13=F,14=T,15=T,16=T,17=T,18=T,19=F,20=F,21=F,22=F,23=T,24=T

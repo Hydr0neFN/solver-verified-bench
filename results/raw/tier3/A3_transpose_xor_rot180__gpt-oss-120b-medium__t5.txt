@@ -1,0 +1,1 @@
+Can you clarify how the transformation should treat the grid edges (e.g., wrap‑around, padding with zeros) or whether it uses a specific neighbourhood/kernel? Knowing this will let me apply the correct deterministic rule to the query.

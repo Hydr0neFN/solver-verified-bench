@@ -1,0 +1,22 @@
+```
+Timeline of Lease Expiration & Reassignment Conflict:
+
+Time  Worker W1 (Partitioned, R5)     Scheduler               Worker W2
+ ├──── [Executing Job J] ───────────── Lease granted ───────── [Idle]
+ │     ! Network partition (R5)
+ │     [Continues running Job J] ←─── Lease expires (30s)
+ │     [STILL running Job J] ──────── Reassigns Job J (R4) ──→ [Executes Job J]
+ ┴──── [Executing Job J] ───────────────────────────────────── [Executing Job J]
+                                 ▲ CONCURRENT EXECUTION (Violates R11)
+```
+
+### Reasoning
+
+1. **R5** states that a worker may be partitioned from the scheduler while running and cannot detect the partition, meaning Worker W1 will continue running the job indefinitely even after its lease expires.
+2. **R4** mandates that when W1's lease expires, the scheduler **MUST** reassign the job to another worker (W2).
+3. Once reassigned, W2 begins executing the job while W1 is still actively running it, resulting in simultaneous execution by both workers.
+4. **R11** strictly forbids any job from being executed concurrently by two workers.
+
+Because fulfilling **R4** during an undetected partition (**R5**) guarantees concurrent execution, **R4** and **R11** cannot both be satisfied.
+
+FINAL: R4 and R11

@@ -1,0 +1,29 @@
+```
+Pos │ Name │ Drink │ Pet 
+───┼──────┼───────┼──────
+ 1 │ Ana  │ tea   │ bird
+ 2 │ Ben  │ cola  │ fish
+ 3 │ Cy   │ milk  │ rat 
+ 4 │ Eli  │ juice │ dog 
+ 5 │ Dee  │ water │ cat 
+```
+
+### Reasoning Steps
+1. **Direct placements**:
+   - Position 1: Ana, bird
+   - Position 3: milk
+   - Position 5: Dee, water, cat (since Dee owns cat)
+2. **People positions**:
+   - Remaining positions for Ben, Cy, Eli are 2, 3, 4.
+   - Ben is strictly left of Cy and Eli, so Ben must be at position 2.
+3. **Drinks**:
+   - Tea is adjacent to Ben (pos 2). Since pos 3 is milk, tea must be at pos 1.
+   - Remaining drinks for pos 2 and 4 are cola and juice.
+   - Cola is strictly left of Cy. If cola were at pos 4, Cy would have to be at pos 5 (occupied by Dee), so cola is at pos 2 and juice is at pos 4.
+   - Dog owner drinks juice, so dog is at pos 4.
+4. **Pets & Remaining People**:
+   - Fish owner is 2 positions from Eli. If Eli were at pos 3, fish would be at pos 1 or 5 (both taken). So Eli is at pos 4, making Cy pos 3.
+   - Fish owner is at pos 2 (|2 - 4| = 2).
+   - Rat is strictly right of cola (pos 2), so rat is at pos 3.
+
+FINAL: names=Ana,Ben,Cy,Eli,Dee | drinks=tea,cola,milk,juice,water | pets=bird,fish,rat,dog,cat

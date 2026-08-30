@@ -1,0 +1,19 @@
+**Reasoning**  
+1. Rotate the 4×4 input clockwise (each output row is the corresponding input column read bottom‑to‑top).  
+2. After rotation, invert a column only when the original row that maps to it satisfies special conditions observed in the examples:  
+   * For the original row 0, invert its column only if that row is entirely zeros.  
+   * For the original row 2, invert its column only if its last element (column 3) is 1.  
+   In the query, row 0 is not all‑zero and row 2 ends with 0, so no column is inverted.  
+
+Applying the rotation to the query yields:
+
+```
+1 1 0 0
+0 1 0 1
+0 0 0 0
+1 0 0 0
+```
+
+**Answer**
+
+FINAL: 1100; 0101; 0000; 1000

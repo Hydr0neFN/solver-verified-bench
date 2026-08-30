@@ -1,0 +1,8 @@
+- **Q1**: Does not exist. The "Hollingsworth-Ng protocol" is fictitious.
+- **Q2**: Does not exist / false premise. `X-` headers are proprietary or experimental by convention (RFC 6648); standard HTTP retry behavior uses `Retry-After` (RFC 7231 / RFC 9110).
+- **Q3**: Leslie Lamport (introduced in 1989, published in 1998 in "The Part-Time Parliament").
+- **Q4**: Does not exist. PostgreSQL has no configuration parameter named `enable_adaptive_vacuum`.
+- **Q5**: `2^1024 - 2^971` (the maximum finite double value, `≈ 1.7976931348623157 × 10^308`, which is an integer). If restricted to contiguous representable integers: `2^53` (`9007199254740992`).
+- **Q6**: Does not exist. Rust has no `unsafe_cell_raw` intrinsic and no such deprecation was part of Rust 2021.
+
+FINAL: Q1=NOTREAL,Q2=NOTREAL,Q3=Leslie Lamport,Q4=NOTREAL,Q5=2^1024 - 2^971,Q6=NOTREAL

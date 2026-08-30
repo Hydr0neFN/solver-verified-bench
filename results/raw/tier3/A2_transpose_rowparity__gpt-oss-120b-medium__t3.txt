@@ -1,0 +1,20 @@
+The transformation first takes the transpose of the 4×4 grid (each output row is the corresponding input column).  
+Then, for each index *i* (0‑3), if the original **row *i*** contains an odd number of 1’s, the transposed row is bitwise‑negated; otherwise it is left unchanged.
+
+Applying this to the query:
+
+- Row sums: [2 (even), 4 (even), 3 (odd), 3 (odd)]
+- Columns → transposed rows:  
+  0: 1111 → kept (even) → 1111  
+  1: 0111 → kept (even) → 0111  
+  2: 1100 → complemented (odd) → 0011  
+  3: 0111 → complemented (odd) → 1000  
+
+Thus the output grid is:
+
+1 1 1 1  
+0 1 1 1  
+0 0 1 1  
+1 0 0 0  
+
+FINAL: 1111; 0111; 0011; 1000

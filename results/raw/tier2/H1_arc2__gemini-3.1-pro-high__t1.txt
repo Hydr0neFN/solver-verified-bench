@@ -1,0 +1,45 @@
+To determine the transformation rule, let's analyze the relationship between the inputs and outputs across the examples:
+
+1. **Base Transformation**: First, look at Example 1, where the output has the exact same number of 1s (eight) as the input. If you rotate the input grid exactly 90 degrees clockwise, you get the output grid perfectly. 
+   - Row 3 of IN becomes Column 0 of OUT.
+   - Row 2 of IN becomes Column 1 of OUT.
+   - Row 1 of IN becomes Column 2 of OUT.
+   - Row 0 of IN becomes Column 3 of OUT.
+
+2. **Conditional Flipping**: For the other examples, a 90-degree clockwise rotation is only part of the rule. Some columns in the rotated matrix get their bits entirely flipped (0s become 1s, and 1s become 0s). 
+   - In Example 2, Column 3 of the rotated grid is flipped. Notice that Column 3 of the original input has an odd number of 1s (sum is 1).
+   - In Example 3, Column 1 of the rotated grid is flipped. Column 1 of its input has an odd number of 1s (sum is 3).
+   - In Example 4, Columns 1 and 3 of the rotated grid are flipped. Columns 1 and 3 of its input both have an odd number of 1s (sums are 1 and 3 respectively).
+
+**The exact rule is:** 
+Rotate the input 90 degrees clockwise. Then, for every column index `c` in the original input that contains an odd number of 1s, flip all the bits in column index `c` of the rotated grid.
+
+**Applying to the Query:**
+Input:
+0 1 0 0  (Row 0)
+0 0 0 0  (Row 1)
+1 1 0 0  (Row 2)
+1 0 0 1  (Row 3)
+
+1. Find the parity of each column in the input:
+   - Col 0: 0+0+1+1 = 2 (Even) -> No flip for Col 0
+   - Col 1: 1+0+1+0 = 2 (Even) -> No flip for Col 1
+   - Col 2: 0+0+0+0 = 0 (Even) -> No flip for Col 2
+   - Col 3: 0+0+0+1 = 1 (Odd) -> **FLIP Col 3**
+
+2. Rotate 90 degrees clockwise to form the columns:
+   - Col 0 (from Row 3): 1 0 0 1
+   - Col 1 (from Row 2): 1 1 0 0
+   - Col 2 (from Row 1): 0 0 0 0
+   - Col 3 (from Row 0): 0 1 0 0
+
+3. Apply the flips:
+   - Col 3 becomes inverted: 1 0 1 1
+
+Reading the final columns row by row:
+Row 0: 1 1 0 1
+Row 1: 0 1 0 0
+Row 2: 0 0 0 1
+Row 3: 1 0 0 1
+
+FINAL: 1 1 0 1; 0 1 0 0; 0 0 0 1; 1 0 0 1

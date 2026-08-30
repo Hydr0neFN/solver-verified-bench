@@ -1,0 +1,23 @@
+```
+Timeline of Network Partition & Lease Expiration:
+
+Time (s)     Worker 1                    Scheduler                    Worker 2
+  0s         [Executing Job J] ---------> [Lease Active]
+ 15s         ! Partitioned (R5)          
+             [Still Executing J]         [Awaiting Heartbeat...]
+ 30s         [Still Executing J]         ! Lease Expires (R3)
+                                         │
+                                         ▼ (R4: MUST Reassign)
+                                         [Assigns J to Worker 2] ---> [Executing Job J]
+ >30s        [Executing Job J] <====================================> [Executing Job J]
+                                    ! CONCURRENT EXECUTION (Violates R11)
+```
+
+- **R4** (Mandatory Reassignment) and **R11** (No Concurrent Execution) are mutually unsatisfiable.
+- Under **R5**, a worker partitioned while executing a job cannot detect the partition and continues running.
+- When Worker 1 is partitioned, heartbeats fail and its lease expires after 30 seconds (**R3**).
+- **R4** mandates that the scheduler **must** reassign the job to Worker 2 upon lease expiry.
+- Because Worker 1 is still running, both Worker 1 and Worker 2 execute the job simultaneously, violating **R11**.
+- Enforcing **R11** requires withholding reassignment (violating **R4**), while enforcing **R4** forces concurrent execution (violating **R11**).
+
+FINAL: R4 and R11

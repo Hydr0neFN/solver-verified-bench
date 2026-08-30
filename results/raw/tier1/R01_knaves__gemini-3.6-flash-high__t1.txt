@@ -1,0 +1,9 @@
+```
+[A = Knight] ──> B = Knave ──> C = Knight ──> C says "A&B Knaves" ──> False ✗
+[A = Knave]  ──> B = Knight ──> C = Knave  ──> C says "A&B Knaves" ──> False [x]
+```
+
+- If A is a knight, then B is a knave, which forces C to be a knight. But C says both A and B are knaves, which would be false, contradicting C being a knight.
+- If A is a knave, then B is a knight, which forces C to be a knave. C says both A and B are knaves; since B is a knight, C's statement is false, consistent with C being a knave.
+
+FINAL: A=knave, B=knight, C=knave

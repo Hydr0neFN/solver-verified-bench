@@ -1,0 +1,3 @@
+Player 2’s optimal actions in each subgame: after L choose **b** (payoff 4 > 1); after R choose **c** (payoff 5 > 2). Anticipating this, Player 1 compares the resulting payoffs: L yields (1, 4) via b, R yields (2, 5) via c. Player 1 prefers **R** (2 > 1). Hence the equilibrium path is R→c with payoffs (2, 5).  
+
+FINAL: path=Rc, payoffs=2,5

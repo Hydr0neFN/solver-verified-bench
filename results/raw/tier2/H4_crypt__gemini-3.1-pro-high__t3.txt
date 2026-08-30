@@ -1,0 +1,30 @@
+To solve the cryptarithm:
+```
+  C R O S S
++ R O A D S
+-----------
+D A N G E R
+```
+
+We can deduce the following:
+1. Since the sum of two 5-digit numbers yields a 6-digit number, the leading digit `D` of the result must be `1`.
+2. `S + S` gives a units digit of `R`. This means `R` must be an even number.
+3. Looking at the ten-thousands column, `C + R` (plus a possible carry) `= 10 + A`. 
+4. A quick brute-force check through the available distinct digit permutations yields the unique mapping:
+   - `C` = 9
+   - `R` = 6
+   - `O` = 2
+   - `S` = 3
+   - `A` = 5
+   - `D` = 1
+   - `N` = 8
+   - `G` = 7
+   - `E` = 4
+
+Plugging these in:
+  96233 (CROSS)
++ 62513 (ROADS)
+-------
+ 158746 (DANGER)
+
+FINAL: 158746

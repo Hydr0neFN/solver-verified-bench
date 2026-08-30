@@ -1,0 +1,17 @@
+```
+┌──────────────────────────────────────────────────────────────────────────┐
+│ R1: Permanent Append-Only Log                                            │
+│ [Row 1: +$100] ──► [Row 2: -$100 (Void)] (Never deleted)         ! Trace │
+└────────────────────────────────────┬─────────────────────────────────────┘
+                                     │ Contradicts
+┌────────────────────────────────────▼─────────────────────────────────────┐
+│ R3: Right to Erasure / No Trace                                          │
+│ Must produce ledger state with zero trace of voided record     [x] Erase │
+└──────────────────────────────────────────────────────────────────────────┘
+```
+
+- **R1** dictates absolute immutability: transaction rows can never be updated or deleted under any circumstances.
+- **R3** mandates erasure/removal ("right to erasure", "no trace... ever existed") for voided transactions.
+- Storing immutable, undeletable rows (R1) makes it logically impossible to satisfy a requirement that demands removing all traces of a transaction record (R3).
+
+FINAL: R1 and R3

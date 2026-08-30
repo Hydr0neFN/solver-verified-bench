@@ -1,0 +1,9 @@
+To find the mutually unsatisfiable pair, we must look for a strict logical contradiction (P and Not-P) within the rules. 
+
+**Reasoning:**
+- **R1** dictates that every transaction row is strictly append-only and may **never be deleted**.
+- **R3** mandates that the system must support the **right to erasure** for a voided transaction, which legally and logically requires the actual, permanent deletion of that data to ensure "no trace" remains. 
+
+If the system merely hides the voided transaction from a generated view (to avoid deleting it), the record still physically exists in the database, meaning the "right to erasure" has not been fulfilled. If the system actually deletes the record to satisfy the erasure requirement of R3, it directly violates the "never be deleted" immutability constraint of R1. You cannot simultaneously guarantee that a record is *never* deleted and guarantee that it *can* be erased upon request. 
+
+FINAL: R1 and R3

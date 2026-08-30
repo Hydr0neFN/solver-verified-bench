@@ -1,0 +1,20 @@
+```
+ Residue (mod 3) │ Sequence count
+─────────────────┼────────────────
+ 0               │ 6291456
+ 1               │ 6291456
+ 2               │ 6291456
+ Total           │ 18874368
+```
+
+- Total strings of length 8 with no adjacent equal digits:
+  - Position 1: 9 choices ($1$–$9$).
+  - Positions 2–8: 8 choices each (any digit except previous).
+  - Total = $9 \times 8^7 = 18{,}874{,}368$.
+- Modulo 3 residue distribution:
+  - Each residue class $\{0, 1, 2\} \pmod 3$ contains exactly 3 digits: $\{3, 6, 9\}$, $\{1, 4, 7\}$, $\{2, 5, 8\}$.
+  - Sum of roots of unity $\sum_{d=1}^9 \omega^d = 0$ where $\omega = e^{2\pi i / 3}$.
+  - Transition matrix column sums are symmetric with respect to modulo 3 shifts, yielding uniform distribution among the 3 residue classes for length 8:
+  $$\frac{9 \times 8^7}{3} = 3 \times 8^7 = 3 \times 2{,}097{,}152 = 6{,}291{,}456$$
+
+FINAL: 6291456

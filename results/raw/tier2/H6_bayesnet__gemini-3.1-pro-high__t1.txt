@@ -1,0 +1,30 @@
+```
+  [A]
+ /   \
+[B] [C]
+ \   /
+  [D]
+```
+
+To compute `P(A=1 | D=1)`, we apply Bayes' theorem: `P(A=1 | D=1) = P(A=1, D=1) / P(D=1)`. 
+
+1. **Find `P(D=1 | A=a)`** by marginalizing over `B` and `C` (conditionally independent given `A`):
+   `P(D=1 | A=a) = sum_{b,c} [P(D=1 | b, c) * P(B=b | A=a) * P(C=c | A=a)]`
+   
+   For `A=1`:
+   `P(D=1 | A=1) = (0.8*0.6*0.9) + (0.8*0.4*0.5) + (0.2*0.6*0.4) + (0.2*0.4*0.05)`
+   `             = 0.432 + 0.160 + 0.048 + 0.004 = 0.644`
+
+   For `A=0`:
+   `P(D=1 | A=0) = (0.1*0.2*0.9) + (0.1*0.8*0.5) + (0.9*0.2*0.4) + (0.9*0.8*0.05)`
+   `             = 0.018 + 0.040 + 0.072 + 0.036 = 0.166`
+
+2. **Compute Joint Probabilities `P(A=a, D=1)`**:
+   `P(A=1, D=1) = P(A=1) * P(D=1 | A=1) = 0.3 * 0.644 = 0.1932`
+   `P(A=0, D=1) = P(A=0) * P(D=1 | A=0) = 0.7 * 0.166 = 0.1162`
+
+3. **Compute Total Probability `P(D=1)` and the Posterior**:
+   `P(D=1) = 0.1932 + 0.1162 = 0.3094`
+   `P(A=1 | D=1) = 0.1932 / 0.3094 ≈ 0.624434...`
+
+FINAL: 62.44%

@@ -1,0 +1,15 @@
+```
+Time  Consumer 1 (Event E)             Consumer 2 (Duplicate E)
+─────┼─────────────────────────────────┼──────────────────────────────
+ T1  │ Check Redis → absent            │
+ T2  │                                 │ Check Redis → absent
+ T3  │ Write to Postgres               │
+ T4  │                                 │ Write to Postgres          ! Double write ←
+ T5  │ Add key to Redis                │ Add key to Redis
+```
+
+- Non-atomic check-then-act → concurrent duplicate events both read cache miss before either records completion.
+- Both consumers proceed to process and write duplicate records to Postgres.
+- (Secondary issue: dual-write hazard → crash after Postgres write but before Redis update causes duplicate write on redelivery).
+
+FINAL: Check-then-act race condition

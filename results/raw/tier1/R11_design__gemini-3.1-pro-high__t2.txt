@@ -1,0 +1,9 @@
+This architecture suffers from the classic distributed systems anti-pattern of maintaining state across two separate datastores without a single atomic transaction. This introduces fatal correctness flaws that completely break the intended idempotency:
+
+1. **The Dual Write Problem (Crash between DB and Redis):** If a consumer successfully processes the event and writes to Postgres, but crashes immediately before adding the key to Redis, the at-least-once pipeline will redeliver the event. Because the key was never saved to Redis, the consumer will process the retry and write to Postgres a second time. 
+2. **Check-Then-Act Race Condition:** Because the "check Redis" and "write Redis" steps are separated by processing time, two concurrent consumers receiving duplicate events can both check Redis, see that the key is missing, and both proceed to write duplicate results into Postgres.
+3. **AOF Data Loss:** Because Redis is only syncing to disk every second, a Redis node crash will wipe out up to 1 second of recently seen idempotency keys. Any retries of events processed during that window will result in duplicates.
+
+To guarantee true idempotency, the idempotency key must be committed in the *exact same atomic transaction* as the data itself (e.g., using a unique constraint on an idempotency table within Postgres). 
+
+FINAL: Non-atomic dual writes between Postgres and Redis

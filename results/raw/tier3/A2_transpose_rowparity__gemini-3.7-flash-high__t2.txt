@@ -1,0 +1,17 @@
+```
+[IN: Row i, Col i] ──► Transpose: OUT_row[i] = IN_col[i]
+                             │
+                             ├─ sum(IN_row[i]) % 2 == 0 ──► Keep
+                             └─ sum(IN_row[i]) % 2 == 1 ──► Invert (~OUT_row[i])
+```
+
+- Transformation: Transpose grid $M \to M^T$.
+- Row-parity condition: For each row $i$, if the sum of elements in `IN` row $i$ is odd, invert all bits in `OUT` row $i$ (bitwise NOT). Otherwise, keep `OUT` row $i$ as `IN` column $i$.
+
+Application to query:
+- Row 0: `1 0 1 0` (sum = 2, even) ──► `IN[:, 0]` = `1 1 1 1`
+- Row 1: `1 1 1 1` (sum = 4, even) ──► `IN[:, 1]` = `0 1 1 1`
+- Row 2: `1 1 0 1` (sum = 3, odd)  ──► `~IN[:, 2]` = `~[1, 1, 0, 0]` = `0 0 1 1`
+- Row 3: `1 1 0 1` (sum = 3, odd)  ──► `~IN[:, 3]` = `~[0, 1, 1, 1]` = `1 0 0 0`
+
+FINAL: 1111; 0111; 0011; 1000

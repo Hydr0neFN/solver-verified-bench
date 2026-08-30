@@ -1,0 +1,5 @@
+R2 requires that a voided transaction be recorded as an explicit compensating row, leaving a permanent trace in the ledger.  
+R3 demands that the system be able to produce a state in which no trace of a voided transaction ever existed, which is impossible if a compensating row must be kept.  
+Thus these two requirements cannot both be satisfied.
+
+FINAL: R2 and R3

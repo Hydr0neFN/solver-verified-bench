@@ -1,0 +1,9 @@
+Let's break this down step-by-step:
+
+1. **Assume C is a knight.** If C tells the truth, then both A and B are knaves. However, if A is a knave, A's statement ("B is a knave") must be a lie, which would mean B is actually a knight. This contradicts C's statement that B is a knave. Therefore, our assumption is wrong, and **C must be a knave**.
+2. **Determine B.** Since C is a knave, B's statement ("C is a knave") is the truth. Therefore, **B is a knight**.
+3. **Determine A.** Since B is a knight, A's statement ("B is a knave") is a lie. Therefore, **A is a knave**.
+
+Checking for consistency: A (knave) lies about B. B (knight) tells the truth about C. C (knave) lies about both A and B being knaves (since B is a knight). The logic holds perfectly.
+
+FINAL: A=knave, B=knight, C=knave

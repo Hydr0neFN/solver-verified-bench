@@ -1,0 +1,16 @@
+```
+P1
+├─ L ── P2
+│       ├─ a ── (3, 1)
+│       └─ b ── (1, 4)  [x]
+└─ R ── P2  [x]
+        ├─ c ── (2, 5)  [x]
+        └─ d ── (4, 2)
+```
+
+Backward induction:
+- Subgame L (P2): 4 > 1 → P2 chooses b → payoff (1, 4)
+- Subgame R (P2): 5 > 2 → P2 chooses c → payoff (2, 5)
+- Root (P1): 2 (R) > 1 (L) → P1 chooses R → payoff (2, 5)
+
+FINAL: path=Rc, payoffs=2,5

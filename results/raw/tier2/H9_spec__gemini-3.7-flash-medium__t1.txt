@@ -1,0 +1,15 @@
+```
+Time (s)    0               20              30              40
+────────────┼───────────────┼───────────────┼───────────────┼────────►
+Worker 1    [=== Leased ===] [== Partition ==] [=== Still Running ===]
+Scheduler   [ Lease active ] [ Awaiting HB  ] [ Lease expired ]
+Worker 2                                    [=== Reassigned & Running ===]
+                                            ▲
+                                            ! Concurrent execution (R11)
+```
+
+- Under R4, scheduler MUST reassign job to a new worker immediately upon lease expiration (t = 30s).
+- Under R5, Worker 1 may be partitioned while still executing and cannot detect the partition, so it continues execution past lease expiry.
+- Reassignment forces Worker 2 to execute concurrently with Worker 1, directly violating R11 (no concurrent execution).
+
+FINAL: R4 and R11

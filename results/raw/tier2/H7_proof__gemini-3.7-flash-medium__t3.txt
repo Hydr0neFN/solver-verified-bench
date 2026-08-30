@@ -1,0 +1,7 @@
+```
+[1..5] Holds for x > 0 ──► [6] Claims ∀x ∈ ℝ ──► Invalid (e.g. x = -1: -2 < 2)
+```
+
+Step 5 relies on the condition $x > 0$ introduced in Step 1 to divide by $x$ without reversing the inequality. Step 6 improperly drops this domain restriction and claims the result holds for all real $x$, which fails for negative reals (e.g., at $x = -1$, $-1 + 1/(-1) = -2 < 2$).
+
+FINAL: 6

@@ -1,0 +1,2 @@
+The Redis check and PostgreSQL write are not atomic; if the process crashes after writing to Postgres but before adding the key to Redis, the event can be processed again, breaking idempotency.  
+FINAL: Write‑then‑set race condition

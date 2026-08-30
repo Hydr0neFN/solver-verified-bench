@@ -1,0 +1,17 @@
+To deduce the transformation, let's analyze the relationship between the `IN` and `OUT` grids across the given examples. 
+
+1. **Dimensionality and Output Characteristics:**
+We notice that all `OUT` matrices have exactly 4 zeros in most cases (Ex 1, 2, 4, 5) and display strong row/column mirroring or repetition. For instance, in Example 4, the top two rows of `OUT` are identical (`1 1 1 0`), and the bottom two rows are identical (`1 0 1 1`). 
+
+2. **Connecting to the Query:**
+The `Query IN` grid is:
+1 0 0 1
+1 1 0 0
+0 1 0 0
+0 0 0 1
+
+By observing the structural symmetries of the `IN` matrix in relation to the `OUT` zeroes, the transformation effectively acts as a deterministic 2D projection/pooling that segregates the grid into dominant block structures based on the isolated components. 
+
+Applying the mirrored block logic seen in Example 4 (where disjoint structures mapped to thick 2x3 opposing blocks of 1s), the sparse diagonal presence in the query produces a symmetric split of 1s heavily weighted to the opposite corners of the 1-dominant regions.
+
+FINAL: 0 1 1 1; 0 1 1 1; 1 1 1 0; 1 1 1 0

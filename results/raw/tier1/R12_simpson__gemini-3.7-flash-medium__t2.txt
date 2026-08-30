@@ -1,0 +1,24 @@
+```
+       ┌─────────────────┐
+       │   Stone Size    │ (Confounder)
+       └──────┬───┬──────┘
+       ┌──────┘   └──────┐
+       ▼                 ▼
+┌──────────────┐   ┌──────────────┐
+│  Treatment   │──▶│   Outcome    │
+└──────────────┘   └──────────────┘
+
+Subgroup     │ Treatment A          │ Treatment B          │ Better
+─────────────┼──────────────────────┼──────────────────────┼────────
+Small stones │  81/87   (93.10%)    │ 234/270 (86.67%)     │ A [x]
+Large stones │ 192/263  (73.00%)    │  55/80  (68.75%)     │ A [x]
+─────────────┼──────────────────────┼──────────────────────┼────────
+Aggregate    │ 273/350  (78.00%)    │ 289/350 (82.57%)     │ B (confounded)
+```
+
+- Simpson's paradox: stone size is a common cause of treatment assignment and success.
+- Treatment A received a much higher share of severe cases (263/350 large vs B's 80/350).
+- Conditioned on stone size, Treatment A dominates in both strata.
+- A's aggregate success rate: 273 / 350 = 78.00%.
+
+FINAL: prefer=A, A_overall=78.00%

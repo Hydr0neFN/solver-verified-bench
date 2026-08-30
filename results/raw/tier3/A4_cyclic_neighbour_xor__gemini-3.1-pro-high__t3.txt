@@ -1,0 +1,41 @@
+By analyzing the examples, we can model the deterministic transformation as a local convolution over the binary field GF(2) with wrap-around (toroidal grid boundary conditions). 
+
+Specifically, each cell `OUT[i, j]` is computed as the logical XOR of the cell immediately to its right and the cell immediately below it:
+`OUT[i, j] = IN[i, (j+1)%4] XOR IN[(i+1)%4, j]`
+
+Let's manually trace this rule for the Query input:
+IN:
+1 0 0 1
+1 1 0 0
+0 1 0 0
+0 0 0 1
+
+**Row 1:**
+- `OUT[0,0]` = right(0) ^ bottom(1) = `1`
+- `OUT[0,1]` = right(0) ^ bottom(1) = `1`
+- `OUT[0,2]` = right(1) ^ bottom(0) = `1`
+- `OUT[0,3]` = right(1) ^ bottom(0) = `1`  *(wrapped right to col 0, bottom to row 1)*
+Result: `1 1 1 1`
+
+**Row 2:**
+- `OUT[1,0]` = right(1) ^ bottom(0) = `1`
+- `OUT[1,1]` = right(0) ^ bottom(1) = `1`
+- `OUT[1,2]` = right(0) ^ bottom(0) = `0`
+- `OUT[1,3]` = right(1) ^ bottom(0) = `1`
+Result: `1 1 0 1`
+
+**Row 3:**
+- `OUT[2,0]` = right(1) ^ bottom(0) = `1`
+- `OUT[2,1]` = right(0) ^ bottom(0) = `0`
+- `OUT[2,2]` = right(0) ^ bottom(0) = `0`
+- `OUT[2,3]` = right(0) ^ bottom(1) = `1`
+Result: `1 0 0 1`
+
+**Row 4:**
+- `OUT[3,0]` = right(0) ^ bottom(1) = `1`  *(wrapped bottom to row 0)*
+- `OUT[3,1]` = right(0) ^ bottom(0) = `0`
+- `OUT[3,2]` = right(1) ^ bottom(0) = `1`
+- `OUT[3,3]` = right(0) ^ bottom(1) = `1`
+Result: `1 0 1 1`
+
+FINAL: 1 1 1 1; 1 1 0 1; 1 0 0 1; 1 0 1 1

@@ -1,0 +1,13 @@
+**Q1.** Does not exist (false premise). There is no "Hollingsworth-Ng protocol" in distributed consensus or consistency literature.
+
+**Q2.** Does not exist (false premise). `X-Retry-Semantics` was never standardised in an RFC; standard HTTP retry semantics are defined via headers like `Retry-After` (RFC 7231 / RFC 9110).
+
+**Q3.** Leslie Lamport.
+
+**Q4.** Does not exist (false premise). PostgreSQL has no configuration parameter named `enable_adaptive_vacuum`.
+
+**Q5.** $2^{1024} - 2^{971} = (2^{53} - 1) \times 2^{971} \approx 1.7976931348623157 \times 10^{308}$ (absolute largest representable integer; $2^{53} = 9,007,199,254,740,992$ for the largest integer where all smaller positive integers are also representable).
+
+**Q6.** Does not exist (false premise). Rust has no `unsafe_cell_raw` intrinsic, and no such deprecation timeline was announced in Rust 2021.
+
+FINAL: Q1=NOTREAL,Q2=NOTREAL,Q3=Leslie Lamport,Q4=NOTREAL,Q5=2^1024 - 2^971,Q6=NOTREAL

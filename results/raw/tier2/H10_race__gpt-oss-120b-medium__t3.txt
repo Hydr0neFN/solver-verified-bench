@@ -1,0 +1,3 @@
+The SELECT‑then‑send‑INSERT sequence isn’t atomic: between reading `welcome_emails` and inserting the row another server can insert, so both processes send the email.  
+
+FINAL: race condition between read and write

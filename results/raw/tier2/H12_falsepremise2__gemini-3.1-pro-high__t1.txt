@@ -1,0 +1,2 @@
+PostgreSQL SERIALIZABLE implemented via Serializable Snapshot Isolation (SSI), not two-phase locking. Predicate locks track dependencies → do not block writers. Serialization anomalies result in transaction aborts, not blocking.
+FINAL: REJECT

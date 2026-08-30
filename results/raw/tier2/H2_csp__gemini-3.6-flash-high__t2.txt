@@ -1,0 +1,41 @@
+### Reasoning
+
+1. **Eun & Kefir/Newt**: 
+   - Kefir is strictly to the right of Bo (Rule 8), so Kefir cannot be at position 1. 
+   - Water cannot be at ends (Rule 10). 
+   - Kefir owner has the Newt (Rule 11). Since Kefir > Bo > Ada (Rules 1, 8), Kefir must be placed towards the right end. Testing positions places **Eun at position 6** drinking **kefir** (and owning the **newt**).
+   - By Rule 12, the **cat** owner is at position 5 (adjacent to Eun).
+
+2. **Ada, Bo & Tea**:
+   - Ada is left of Bo (Rule 1) and Bo is not immediately right of Ada (Rule 5), so $\text{pos}(\text{Bo}) \ge \text{pos}(\text{Ada}) + 2$.
+   - Tea is 2 positions from Ada (Rule 7). 
+   - This fixes **Ada at position 1**, **Bo at position 3**, and **tea at position 3** (drunk by Bo).
+   - By Rule 14, Bo also owns the **bird**.
+
+3. **Cai & Dev**:
+   - Cai and Dev are 3 positions apart (Rule 2). The available pair is positions 2 and 5.
+   - Cai drinks milk (Rule 6), matching position 5. Thus **Cai is at position 5** (milk, cat) and **Dev is at position 2**.
+   - Dev owns the **rat** (Rule 15).
+
+4. **Fay**:
+   - Remaining person **Fay is at position 4** (satisfying Rule 4: not at position 3).
+
+5. **Drinks**:
+   - Cola is immediately left of juice (Rule 9). The only available adjacent pair is positions 1 and 2: **Cola at 1**, **Juice at 2**.
+   - Water cannot be at an end (Rule 10), so **Water is at position 4**.
+
+6. **Pets**:
+   - Dog is strictly to the left of fish (Rule 13). With positions 1 and 4 open, **Dog is at position 1** and **Fish is at position 4** (satisfying Rule 16 as Fish is not with Milk at 5).
+
+```
+Pos   Name    Drink   Pet
+─────────────────────────
+1     Ada     cola    dog
+2     Dev     juice   rat
+3     Bo      tea     bird
+4     Fay     water   fish
+5     Cai     milk    cat
+6     Eun     kefir   newt
+```
+
+FINAL: names=Ada, Dev, Bo, Fay, Cai, Eun | drinks=cola, juice, tea, water, milk, kefir | pets=dog, rat, bird, fish, cat, newt

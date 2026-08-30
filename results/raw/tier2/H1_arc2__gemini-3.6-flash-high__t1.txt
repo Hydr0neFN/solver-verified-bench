@@ -1,0 +1,26 @@
+The deterministic transformation applies a 90° clockwise rotation to the input grid, followed by a bitwise XOR of each row with the column parity vector (the sum modulo 2 of each column in the input grid).
+
+```
+[IN Grid] ──( 90° Clockwise Rotation )──> [Rotated Grid] ──( XOR Column Parities )──> [OUT Grid]
+```
+
+1. **Column Parities of Query IN**:
+   - Column 0 sum: $0 + 0 + 1 + 1 = 2 \rightarrow 0$
+   - Column 1 sum: $1 + 0 + 1 + 0 = 2 \rightarrow 0$
+   - Column 2 sum: $0 + 0 + 0 + 0 = 0 \rightarrow 0$
+   - Column 3 sum: $0 + 0 + 0 + 1 = 1 \rightarrow 1$
+   - Parity vector $v = [0, 0, 0, 1]$
+
+2. **90° Clockwise Rotation of Query IN**:
+   - Row 0: `1 1 0 0`
+   - Row 1: `0 1 0 1`
+   - Row 2: `0 0 0 0`
+   - Row 3: `1 0 0 0`
+
+3. **Bitwise XOR with $v = [0, 0, 0, 1]$**:
+   - Row 0: `1 1 0 0` $\oplus$ `0 0 0 1` = `1 1 0 1`
+   - Row 1: `0 1 0 1` $\oplus$ `0 0 0 1` = `0 1 0 0`
+   - Row 2: `0 0 0 0` $\oplus$ `0 0 0 1` = `0 0 0 1`
+   - Row 3: `1 0 0 0` $\oplus$ `0 0 0 1` = `1 0 0 1`
+
+FINAL: 1101; 0100; 0001; 1001

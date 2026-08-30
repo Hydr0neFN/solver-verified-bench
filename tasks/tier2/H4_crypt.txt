@@ -1,0 +1,13 @@
+Solve the cryptarithm. Each letter stands for a distinct decimal digit; no number has a leading zero.
+
+    C R O S S
+  + R O A D S
+  -----------
+  D A N G E R
+
+The solution is unique. What is the numeric value of DANGER?
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: <integer>

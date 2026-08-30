@@ -1,0 +1,32 @@
+```
+ Pos   │ 1    │ 2    │ 3    │ 4    │ 5    
+───────┼──────┼──────┼──────┼──────┼──────
+ Name  │ Ana  │ Ben  │ Cy   │ Eli  │ Dee  
+ Drink │ Tea  │ Cola │ Milk │ Juice│ Water
+ Pet   │ Bird │ Fish │ Rat  │ Dog  │ Cat  
+```
+
+### Step-by-Step Deduction
+
+1. **Positions & Fixed Placements**:
+   - `Ana` at **1** (C1), `Dee` at **5** (C12).
+   - `Milk` at **3** (C2), `Water` at **5** (C3).
+   - `Bird` at **1** (C6).
+   - `Dee` (5) owns the `Cat` (C7).
+
+2. **Names**:
+   - `Ben` is to the left of both `Cy` (C10) and `Eli` (C13), so `Ben` must be at position **2**.
+
+3. **Drinks**:
+   - `Tea` is adjacent to `Ben` (2) (C4) → position **1** or **3**. Since 3 is `Milk`, `Tea` is at **1**.
+   - `Dog` owner drinks `Juice` (C8). Remaining drink slots are 2 and 4 (`Cola` & `Juice`).
+   - `Cola` is strictly to the left of `Cy` (C5). If `Cola` were at 4, `Cy` would be at 5 (occupied by `Dee`). Thus, `Cola` is at **2** and `Juice` is at **4**.
+   - `Dog` is at **4** (with `Juice`).
+
+4. **Pets & Remaining Names**:
+   - `Rat` is strictly to the right of `Cola` (2) (C11). Pets at 4 (`Dog`) and 5 (`Cat`) are fixed, so `Rat` is at **3**.
+   - The remaining pet, `Fish`, is at **2**.
+   - `Fish` (2) is 2 positions away from `Eli` (C9) → `Eli` is at **4**.
+   - The remaining position **3** belongs to `Cy`.
+
+FINAL: names=Ana,Ben,Cy,Eli,Dee | drinks=Tea,Cola,Milk,Juice,Water | pets=Bird,Fish,Rat,Dog,Cat

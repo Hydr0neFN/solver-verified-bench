@@ -1,0 +1,18 @@
+```
+│ Step │ Deduction                                  │ Result       │
+├──────┼────────────────────────────────────────────┼──────────────┤
+│ 1    │ Sum of two 5-digit numbers has 6 digits    │ D = 1        │
+│ 2    │ 2S mod 10 = R; C + R + c5 = 10 + A         │ S = 3, R = 6 │
+│ 3    │ S + D = E → 3 + 1 = 4                      │ E = 4        │
+│ 4    │ R + O + c3 = N, O + A = G, C + R = 15      │ C = 9, A = 5 │
+│ 5    │ Remaining digits {2, 7, 8} → O, G, N       │ O=2, G=7, N=8│
+```
+
+- Column 6: Sum of two 5-digit numbers produces a carry-out → `D = 1`
+- Column 1: `S + S = R (mod 10)` → `R` is even; `C + R >= 10` with `D = 1`
+- Testing valid permutations resolves to:
+  - `C = 9`, `R = 6`, `O = 2`, `S = 3`, `A = 5`
+  - `D = 1`, `N = 8`, `G = 7`, `E = 4`
+- `96233 + 62513 = 158746`
+
+FINAL: 158746

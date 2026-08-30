@@ -1,0 +1,30 @@
+```
+IN (Query)                     Col Parity    OUT (Transformed)
+┌─────────┐                                 ┌─────────┐
+│ 0 1 1 1 │                                 │ 0 0 0 0 │
+│ 0 1 1 1 │                     c0: 1 (odd) │ 0 1 1 1 │
+│ 0 1 1 0 │                     c1: 0 (even)│ 0 1 1 1 │
+│ 1 1 1 0 │                     c2: 0 (even)│ 1 0 1 1 │
+└─────────┘                     c3: 0 (even)└─────────┘
+  │ │ │ │
+  1 4 4 2 (sum)
+  ↓ ↓ ↓ ↓
+ [1 0 0 0] (parity)
+```
+
+### Rule
+
+Each cell $\text{OUT}[k][c]$ is obtained by:
+$$\text{OUT}[k][c] = \text{IN}[3 - c][k] \oplus \left(\sum_{m=0}^{3} \text{IN}[m][c] \pmod 2\right)$$
+
+- Map Row $3 - c$ of $\text{IN}$ to Column $c$ of $\text{OUT}$ (reflection across anti-diagonal / 90° rotation + reflection).
+- Invert Column $c$ if and only if Column $c$ of $\text{IN}$ has an odd number of `1`s.
+
+### Application to Query
+
+- **Col 0**: $\text{sum} = 0+0+0+1 = 1$ (odd) $\rightarrow$ invert Row 3 `[1, 1, 1, 0]` $\rightarrow$ `[0, 0, 0, 1]^T`
+- **Col 1**: $\text{sum} = 1+1+1+1 = 4$ (even) $\rightarrow$ keep Row 2 `[0, 1, 1, 0]` $\rightarrow$ `[0, 1, 1, 0]^T`
+- **Col 2**: $\text{sum} = 1+1+1+1 = 4$ (even) $\rightarrow$ keep Row 1 `[0, 1, 1, 1]` $\rightarrow$ `[0, 1, 1, 1]^T`
+- **Col 3**: $\text{sum} = 1+1+0+0 = 2$ (even) $\rightarrow$ keep Row 0 `[0, 1, 1, 1]` $\rightarrow$ `[0, 1, 1, 1]^T`
+
+FINAL: 0000; 0111; 0111; 1011

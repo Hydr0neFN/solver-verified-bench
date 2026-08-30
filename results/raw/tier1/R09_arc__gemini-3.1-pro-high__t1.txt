@@ -1,0 +1,44 @@
+To find the transformation rule, we can analyze the relationship between the input grids (IN) and output grids (OUT). 
+
+If we apply a 180-degree rotation to the input grids, we get an interesting alignment. Let's compare the input grid XOR'd with its 180-degree rotation for Example 1:
+
+**Example 1 IN:**
+1 0 0 1
+0 1 1 0
+1 1 0 0
+0 0 1 0
+
+**Example 1 IN Rotated 180°:**
+0 1 0 0
+0 0 1 1
+0 1 1 0
+1 0 0 1
+
+**Bitwise XOR of the two:**
+1 1 0 1
+0 1 0 1
+1 0 1 0
+1 0 1 1
+
+This perfectly matches the OUT grid for Example 1. This rule (OUT = IN ⊕ IN_Rotated_180) holds true for Examples 2 and 3 as well.
+
+Now, we apply this rule to the query grid:
+**Query IN:**
+1 0 1 1
+0 1 0 0
+1 1 0 1
+1 0 1 0
+
+**Query IN Rotated 180°:**
+0 1 0 1
+1 0 1 1
+0 0 1 0
+1 1 0 1
+
+**Bitwise XOR of the two:**
+Row 1: (1 0 1 1) ⊕ (0 1 0 1) = 1 1 1 0
+Row 2: (0 1 0 0) ⊕ (1 0 1 1) = 1 1 1 1
+Row 3: (1 1 0 1) ⊕ (0 0 1 0) = 1 1 1 1
+Row 4: (1 0 1 0) ⊕ (1 1 0 1) = 0 1 1 1
+
+FINAL: 1 1 1 0; 1 1 1 1; 1 1 1 1; 0 1 1 1

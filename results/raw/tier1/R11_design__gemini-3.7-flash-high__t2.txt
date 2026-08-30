@@ -1,0 +1,13 @@
+```
+C1 ── Check Redis (miss) ──► Process ──► Write Postgres ──► Add Redis
+                                            ▲
+C2 ── Check Redis (miss) ──► Process ──► Write Postgres ──► Add Redis
+                                            │
+                             ! DUPLICATE WRITE (TOCTOU race)
+```
+
+- Non-atomic check-then-act sequence (`Redis` read → `Postgres` write → `Redis` write) creates a Time-of-Check to Time-of-Use (TOCTOU) race condition.
+- When duplicate events are dispatched concurrently under at-least-once delivery, multiple consumers query `Redis` before any consumer writes the key, leading to duplicate writes in `Postgres`.
+- Additional non-atomic dual-write failure: a crash after `Postgres` commit but before `Redis` insert reprocesses the event on redelivery.
+
+FINAL: Check-then-act race condition (TOCTOU)

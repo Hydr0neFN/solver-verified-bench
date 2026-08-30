@@ -1,0 +1,21 @@
+The addition forces the leading carry to be 1, so D = 1.  
+From the units column 2S = R + 10c₁. The only viable option without contradicting later columns is c₁ = 0, S = 3, R = 6.  
+
+Tens column gives S + D = E → E = 4.  
+
+Working through the remaining columns with distinct digits and the carry relations yields the unique assignment  
+
+- D = 1 A = 5 N = 8 G = 7 E = 4 R = 6  
+- C = 9 O = 2 S = 3  
+
+These satisfy all column sums, giving  
+
+ CROSS = 9 6 2 3 3  
+ ROADS = 6 2 5 1 3  
+ DANGER = 1 5 8 7 4 6  
+
+Thus  
+
+**DANGER = 158746**
+
+FINAL: 158746

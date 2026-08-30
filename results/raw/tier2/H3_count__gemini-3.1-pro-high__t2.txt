@@ -1,0 +1,7 @@
+To find the number of permutations of length $10$ such that $|p(i) - i| \ge 2$, we are looking for permutations that avoid $p(i) = i-1$, $p(i) = i$, and $p(i) = i+1$ for all $i$. 
+
+This is equivalent to finding the permanent of a $10 \times 10$ matrix with $0$s on the main diagonal and the two adjacent super/sub-diagonals, and $1$s elsewhere. We can solve this mathematically using the Principle of Inclusion-Exclusion by finding the rook polynomial of the forbidden tridiagonal board. 
+
+Since $n=10$ is small, we can also easily determine the answer computationally by using backtracking or iterating through all $10! = 3,628,800$ permutations and counting those that satisfy the condition. Applying either method yields exactly $159,737$ valid permutations.
+
+FINAL: 159737

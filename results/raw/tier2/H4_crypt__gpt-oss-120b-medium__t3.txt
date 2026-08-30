@@ -1,0 +1,38 @@
+**Reasoning**
+
+1. Units: 2·S = R + 10c₁ → two cases:
+   * c₁=0 → (S,R) = (2,4), (3,6), (4,8)  
+   * c₁=1 → (S,R) = (6,2), (7,4), (8,6), (9,8)
+
+2. Tens: S + 1 + c₁ = E + 10c₂ gives E and c₂ for each case. The only consistent triples (S,R,c₁,c₂,E) are  
+
+   (2,4,0,0,3), (3,6,0,0,4), (4,8,0,0,5), (6,2,1,0,8), (7,4,1,0,9), (8,6,1,1,0).
+
+3. Hundreds‑to‑hundred‑thousands columns give:  
+
+   * O + A + c₂ = G + 10c₃  
+   * R + O + c₃ = N + 10c₄  
+   * C + R + c₄ = A + 10 (carry c₅ = D = 1)
+
+4. Trying each candidate, only the set  
+   **S=3, R=6, E=4, c₁=0, c₂=0** leads to a feasible assignment:
+
+   * Choose c₄=0 → A = C − 4.  
+   * With C=9 we get A=5 (distinct, non‑zero).  
+   * From the fourth column, N = R + O + c₃ must be <10.  
+   * Selecting O=2, c₃=0 satisfies O + A = G → G = 7.  
+   * Then N = 6 + 2 + 0 = 8, all digits distinct.
+
+5. The full digit mapping is  
+
+   D=1, A=5, N=8, G=7, E=4, R=6, C=9, O=2, S=3.
+
+6. Verify:  
+
+   CROSS = 9 6 2 3 3 = 96233  
+   ROADS = 6 2 5 1 3 = 62513  
+   96233 + 62513 = 158746 = DANGER.
+
+Hence the unique solution is **158746**.
+
+FINAL: 158746

@@ -1,0 +1,23 @@
+```
+[IN] ──┬──> Transpose (IN^T) ──────┐
+       └──> 180° Rotate (IN^180) ──┴──> [XOR] ──> [OUT]
+```
+
+- Rule: $\text{OUT}[r][c] = \text{IN}[c][r] \oplus \text{IN}[3-r][3-c] = (\text{IN}^T \oplus \text{IN}^{180})[r][c]$
+- $\text{IN}^T$:
+  `0 0 0 1`
+  `0 0 1 1`
+  `0 1 0 1`
+  `0 1 1 0`
+- $\text{IN}^{180}$:
+  `0 1 1 1`
+  `1 0 1 0`
+  `1 1 0 0`
+  `0 0 0 0`
+- $\text{OUT} = \text{IN}^T \oplus \text{IN}^{180}$:
+  `0 1 1 0`
+  `1 0 0 1`
+  `1 0 0 1`
+  `0 1 1 0`
+
+FINAL: 0110; 1001; 1001; 0110

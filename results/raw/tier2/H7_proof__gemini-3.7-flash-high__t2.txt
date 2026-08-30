@@ -1,0 +1,11 @@
+```
+[1. x > 0] ────────────┐
+                       ▼
+[2-4. x² + 1 ≥ 2x] ─→ [5. x + 1/x ≥ 2 (x > 0)] ─!→ [6. ∀x ∈ ℝ (Invalid)]
+```
+
+- Step 1 restricts the scope to $x > 0$.
+- Step 5 holds conditionally under $x > 0$.
+- Step 6 generalizes the statement to all real $x$, which is invalid (e.g., $x = -1 \implies x + 1/x = -2 < 2$).
+
+FINAL: 6

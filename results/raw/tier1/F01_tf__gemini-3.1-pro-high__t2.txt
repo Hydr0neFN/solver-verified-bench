@@ -1,0 +1,26 @@
+1. TRUE - The Peace of Westphalia was indeed signed in 1648, ending the Thirty Years' War.
+2. FALSE - The capital of Australia is Canberra, not Sydney.
+3. TRUE - The human mitochondrial genome is a circular DNA molecule.
+4. FALSE - Python did not remove the GIL by default in 3.11. (Work to make the GIL optional is targeted for later versions like 3.13+).
+5. TRUE - The Battle of Hastings took place in the year 1066.
+6. FALSE - Liquid water reaches its maximum density at approximately 4 degrees Celsius, not 0 degrees.
+7. FALSE - Grigori Perelman proved the Poincaré Conjecture, not the Riemann Hypothesis.
+8. FALSE - TCP is a connection-oriented protocol (UDP is connectionless).
+9. TRUE - The chemical symbol for tungsten is W (from Wolfram).
+10. FALSE - Mount Kilimanjaro is located in Tanzania, not Kenya.
+11. TRUE - HTTP status code 418 is "I am a teapot" (defined in RFC 2324).
+12. TRUE - The Fields Medal is awarded every four years to mathematicians under the age of 40.
+13. FALSE - Rust's `Arc<T>` provides thread-safe shared ownership, but does not provide interior mutability by itself (it requires wrapping something like a `Mutex` or `RwLock`).
+14. TRUE - Voyager 1 was launched in 1977.
+15. TRUE - Shor's algorithm factors integers in polynomial time on a quantum computer.
+16. TRUE - The Linux kernel was first publicly released by Linus Torvalds in 1991.
+17. TRUE - PostgreSQL uses multi-version concurrency control (MVCC) to manage concurrent access to data.
+18. TRUE - The speed of light in vacuum is defined exactly as 299,792,458 m/s.
+19. FALSE - The European Central Bank was established by the Treaty of Amsterdam (with groundwork in the Maastricht Treaty), not a "Treaty of Marburg" in 1987.
+20. FALSE - Dijkstra's algorithm is not guaranteed to be correct on graphs with negative edge weights; Bellman-Ford is typically used for that.
+21. FALSE - Kubernetes was originally developed by Google (inspired by Borg), not Netflix.
+22. FALSE - The SIGKILL signal cannot be caught, blocked, or ignored by any user-installed signal handler.
+23. TRUE - Gödel's second incompleteness theorem states that a consistent, sufficiently strong formal system cannot prove its own consistency.
+24. TRUE - The Hubble constant is traditionally expressed in units of kilometers per second per megaparsec (km/s/Mpc).
+
+FINAL: 1=T,2=F,3=T,4=F,5=T,6=F,7=F,8=F,9=T,10=F,11=T,12=T,13=F,14=T,15=T,16=T,17=T,18=T,19=F,20=F,21=F,22=F,23=T,24=T

@@ -1,0 +1,14 @@
+Answer each with a single precise value.
+
+IMPORTANT: Answer from your own internal knowledge only. Do NOT use web search, shell, or any tool.
+
+Q1. Default TCP port for PostgreSQL.
+Q2. Maximum value of a signed 32-bit two's complement integer.
+Q3. Number of explicitly stored mantissa (fraction) bits in an IEEE 754 binary64 double.
+Q4. The git subcommand that finds a bug-introducing commit by binary search.
+Q5. The exit status a bash shell reports for a process killed by SIGTERM.
+Q6. The default TCP port used by the Kubernetes API server for secure traffic.
+
+The LAST line of your reply must be exactly:
+FINAL: Q1=<v>,Q2=<v>,Q3=<v>,Q4=<v>,Q5=<v>,Q6=<v>
+No text after that line.

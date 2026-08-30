@@ -1,0 +1,29 @@
+```
+[IN Grid] ──┬──> Transpose (T) ──────┐
+            │                        ├─> Bitwise XOR ──> [OUT Grid]
+            └──> Rotate 180 (R180) ──┘
+```
+
+The transformation rule is $\text{OUT} = \text{Transpose}(\text{IN}) \oplus \text{Rotate}_{180}(\text{IN})$.
+
+For the Query grid:
+
+1. **Transpose ($\text{T}$)**:
+   `0 0 0 1`
+   `0 0 1 1`
+   `0 1 0 1`
+   `0 1 1 0`
+
+2. **Rotate 180° ($\text{R180}$)**:
+   `0 1 1 1`
+   `1 0 1 0`
+   `1 1 0 0`
+   `0 0 0 0`
+
+3. **Bitwise XOR ($\text{T} \oplus \text{R180}$)**:
+   Row 1: `0001` $\oplus$ `0111` = `0110`
+   Row 2: `0011` $\oplus$ `1010` = `1001`
+   Row 3: `0101` $\oplus$ `1100` = `1001`
+   Row 4: `0110` $\oplus$ `0000` = `0110`
+
+FINAL: 0110; 1001; 1001; 0110

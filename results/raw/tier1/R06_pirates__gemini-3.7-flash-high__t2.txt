@@ -1,0 +1,22 @@
+```
+┌──────┬────────┬────┬────┬────┬────┬────┬────┬────────────────────────────┐
+│ Step │ Propos │ P1 │ P2 │ P3 │ P4 │ P5 │ P6 │ Votes Secured (≥50%)       │
+├──────┼────────┼────┼────┼────┼────┼────┼────┼────────────────────────────┤
+│ N=1  │   P6   │  - │  - │  - │  - │  - │100 │ P6 [x]                     │
+│ N=2  │   P5   │  - │  - │  - │  - │100 │  0 │ P5 [x]                     │
+│ N=3  │   P4   │  - │  - │  - │ 99 │  0 │  1 │ P4, P6 [x]                 │
+│ N=4  │   P3   │  - │  - │ 99 │  0 │  1 │  0 │ P3, P5 [x]                 │
+│ N=5  │   P2   │  - │ 98 │  0 │  1 │  0 │  1 │ P2, P4, P6 [x]             │
+│ N=6  │   P1   │ 98 │  0 │  1 │  0 │  1 │  0 │ P1, P3, P5 [x] ← Optimal    │
+└──────┴────────┴────┴────┴────┴────┴────┴────┴────────────────────────────┘
+```
+
+### Backward Induction Reasoning
+
+- **Survival & utility preservation**: Proposers minimize mortality risk and allocate minimal surplus necessary to incentivize agreement.
+- **Incentive constraint**: Bloodthirst implies a vote is `NO` unless the offer is strictly greater than the voter's counterfactual payoff if the proposer dies ($c_{\text{offer}} \ge c_{\text{next}} + 1$).
+- **$N=5$ state**: P2 requires 3/5 votes. In $N=4$, P4 and P6 receive 0. P2 bribes P4 and P6 with 1 coin each $\rightarrow$ allocation $(98, 0, 1, 0, 1)$.
+- **$N=6$ state**: P1 requires 3/6 votes (self + 2). In $N=5$, P3 and P5 receive 0. P1 secures P3 and P5 with 1 coin each, yielding net positive utility to both and guaranteeing survival for all.
+- **Payoff vector**: P1 keeps $100 - 2 = 98$, giving 1 coin to P3 and 1 coin to P5.
+
+FINAL: P1=98, P2=0, P3=1, P4=0, P5=1, P6=0

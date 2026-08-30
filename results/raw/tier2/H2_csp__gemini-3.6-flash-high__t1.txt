@@ -1,0 +1,23 @@
+```
+┌──────┬──────────┬──────────┬──────────┐
+│ Pos  │ Name     │ Drink    │ Pet      │
+├──────┼──────────┼──────────┼──────────┤
+│ 1    │ Ada      │ cola     │ dog      │
+│ 2    │ Dev      │ juice    │ rat      │
+│ 3    │ Bo       │ tea      │ bird     │
+│ 4    │ Fay      │ water    │ fish     │
+│ 5    │ Cai      │ milk     │ cat      │
+│ 6    │ Eun      │ kefir    │ newt     │
+└──────┴──────────┴──────────┴──────────┘
+```
+
+### Reasoning
+
+1. **Eun & Kefir/Newt**: Eun is at an end. Kefir (owned by the newt owner) is strictly to the right of Bo, placing Kefir/Newt at position 6 (Eun) and Bo to her left.
+2. **Cai & Dev**: Cai (milk) and Dev (rat) are 3 positions apart. With position 6 occupied by Eun, they must be at positions 2 (Dev) and 5 (Cai).
+3. **Ada & Bo & Tea**: Ada is at position 1 (to the left of Bo, not immediately adjacent). Tea is 2 positions away from Ada at position 3, which is where Bo sits (owning the bird).
+4. **Fay**: Fay takes the remaining position 4.
+5. **Drinks**: Cola-Juice pair fits at positions 1 and 2. Water sits at position 4.
+6. **Pets**: Cat is adjacent to Eun at position 5. Dog and Fish occupy positions 1 and 4 respectively (Dog to the left of Fish).
+
+FINAL: names=Ada, Dev, Bo, Fay, Cai, Eun | drinks=cola, juice, tea, water, milk, kefir | pets=dog, rat, bird, fish, cat, newt

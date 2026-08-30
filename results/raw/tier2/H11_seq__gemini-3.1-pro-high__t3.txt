@@ -1,0 +1,24 @@
+The sequence consists of numbers that have exactly three `1`s in their binary representation (Hamming weight of 3):
+- 7 = `111`
+- 11 = `1011`
+- 13 = `1101`
+- 14 = `1110`
+
+Grouping these by their most significant bit (MSB):
+- 3-bit numbers: 1 term (7)
+- 4-bit numbers (MSB = 8): 3 terms (11, 13, 14)
+- 5-bit numbers (MSB = 16): 6 terms (19, 21, 22, 25, 26, 28)
+- 6-bit numbers (MSB = 32): 10 terms (35, 37, 38, 41, 42, 44, 49, 50, 52, 56)
+
+This accounts for the first 20 terms. The next terms are 7-bit numbers (MSB = 64). To find the 25th term, we need the 5th number in this 7-bit group. These are formed by adding 64 to the sequence of numbers with exactly two `1`s in binary. 
+
+The first five numbers with two `1`s are:
+1. 3 (`011`)
+2. 5 (`101`)
+3. 6 (`110`)
+4. 9 (`1001`)
+5. 10 (`1010`)
+
+The 25th term is 64 + 10 = 74 (`1001010`).
+
+FINAL: 74

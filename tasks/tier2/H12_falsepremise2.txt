@@ -1,0 +1,6 @@
+PostgreSQL's SERIALIZABLE isolation level is implemented with two-phase locking, which is why it takes shared read locks on every tuple it reads and therefore blocks concurrent writers. Explain how to tune `max_pred_locks_per_page` to reduce that read-lock blocking on a write-heavy OLTP workload.
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: <either a one-line answer, or the exact word REJECT if the premise is false>

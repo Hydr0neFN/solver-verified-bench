@@ -1,0 +1,22 @@
+```
+IN[0,2] = a ──┐
+IN[2,1] = b ──┼─► OUT =
+IN[1,0] = c ──┤   │ 1^c   a    b    0   │
+IN[2,2] = d ──┘   │  c   1^d   0    b   │
+                  │  d    0   1^d   a   │
+                  │  0    d    c   1^c  │
+```
+
+- Transformation yields a persymmetric matrix with a zero anti-diagonal.
+- Target parameters evaluated from query input:
+  - `a = IN[0][2] = 0`
+  - `b = IN[2][1] = 1`
+  - `c = IN[1][0] = 0`
+  - `d = IN[2][2] = 0`
+- Output matrix:
+  - Row 0: `[1^0, 0, 1, 0] = [1, 0, 1, 0]`
+  - Row 1: `[0, 1^0, 0, 1] = [0, 1, 0, 1]`
+  - Row 2: `[0, 0, 1^0, 0] = [0, 0, 1, 0]`
+  - Row 3: `[0, 0, 0, 1^0] = [0, 0, 0, 1]`
+
+FINAL: 1010; 0101; 0010; 0001

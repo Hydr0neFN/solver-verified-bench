@@ -1,0 +1,3 @@
+PostgreSQL's `SERIALIZABLE` isolation level uses **Serializable Snapshot Isolation (SSI)** rather than Two-Phase Locking (2PL). Under SSI, predicate locks (SIREAD locks) are non-blocking flags used solely for conflict detection—readers do not block writers, and writers do not block readers.
+
+FINAL: REJECT

@@ -1,0 +1,20 @@
+```
+Thread 1 (items: [A, B])            Thread 2 (items: [B, A])
+       │                                   │
+       ▼                                   ▼
+Acquires Lock(A)                    Acquires Lock(B)
+       │                                   │
+       ▼                                   ▼
+Blocks on Lock(B) ────────────────► Holds Lock(B)
+       ▲                                   │
+       │                                   ▼
+Holds Lock(A) ◄──────────────────── Blocks on Lock(A)
+       │                                   │
+       └────────────── ! DEADLOCK ─────────┘
+```
+
+- Dict iteration order follows caller key insertion order.
+- Locks are acquired sequentially via `for sku in items: self._locks[sku].acquire()` without a consistent canonical ordering (e.g. `sorted(items)`).
+- Concurrent threads reserving overlapping SKUs in different key orders produce circular wait → permanent deadlock.
+
+FINAL: Deadlock due to inconsistent lock acquisition order

@@ -1,0 +1,23 @@
+```
+Rule (2D toroidal cellular XOR):
+
+┌──────────────┬──────────────┐
+│  OUT[r, c]   │ IN[r, c+1]   │ ← Right neighbor (mod 4)
+├──────────────┼──────────────┤
+│ IN[r+1, c]   │              │
+└──────────────┴──────────────┘
+       ▲
+       └─ Down neighbor (mod 4)
+
+OUT[r, c] = IN[(r + 1) % 4, c] ⊕ IN[r, (c + 1) % 4]
+```
+
+- Each cell `OUT[r, c]` is computed as the XOR sum of its neighbor below `(r+1, c)` and its neighbor to the right `(r, c+1)` with periodic boundary wrap (mod 4).
+
+Applying to query:
+- Row 0: `[1, 1, 0, 0] ⊕ [0, 0, 1, 1] → 1 1 1 1`
+- Row 1: `[0, 1, 0, 0] ⊕ [1, 0, 0, 1] → 1 1 0 1`
+- Row 2: `[0, 0, 0, 1] ⊕ [1, 0, 0, 0] → 1 0 0 1`
+- Row 3: `[1, 0, 0, 1] ⊕ [0, 0, 1, 0] → 1 0 1 1`
+
+FINAL: 1 1 1 1; 1 1 0 1; 1 0 0 1; 1 0 1 1

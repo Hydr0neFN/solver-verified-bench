@@ -1,0 +1,17 @@
+```
+Time │ Thread A                       │ Thread B
+─────┼────────────────────────────────┼────────────────────────────────
+  1  │ SELECT -> None                 │ 
+  2  │                                │ SELECT -> None
+  3  │ mailer.send() [x]              │ 
+  4  │                                │ mailer.send() [x]
+  5  │ INSERT ON CONFLICT & COMMIT    │ 
+  6  │                                │ INSERT ON CONFLICT & COMMIT
+```
+
+- Concurrent requests execute `SELECT` before either transaction writes to DB.
+- Both threads read `None`.
+- Both threads proceed to send the email.
+- Check (SELECT) and state change (INSERT) lack atomicity. 
+
+FINAL: check-then-act race condition

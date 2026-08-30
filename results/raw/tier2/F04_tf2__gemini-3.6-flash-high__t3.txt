@@ -1,0 +1,18 @@
+1. **TRUE** — HTTP/2 uses binary framing to multiplex multiple request/response streams concurrently over a single underlying TCP connection.
+2. **TRUE** — While Python 3.6 preserved insertion order as an implementation detail of CPython, Python 3.7 made dict insertion order preservation an official language specification guarantee.
+3. **FALSE** — Raft is a crash fault-tolerant (CFT) consensus algorithm; it assumes nodes may crash or be disconnected, but not behave maliciously (Byzantine).
+4. **FALSE** — PostgreSQL's `REPEATABLE READ` is implemented via Snapshot Isolation, which remains vulnerable to write skew anomalies. `SERIALIZABLE` level is required in Postgres to prevent write skew.
+5. **TRUE** — TLS 1.3 removed static RSA key exchange to enforce forward secrecy; RSA is only supported for digital signatures/authentication in TLS 1.3.
+6. **TRUE** — The Linux Out-Of-Memory (OOM) killer calculates an `oom_score` (combining process memory consumption and `oom_score_adj`) to select which process to terminate.
+7. **TRUE** — Git's conceptual object model represents files as complete snapshots (blobs) for each commit, unlike traditional delta-based version control systems (though packfiles use delta compression as a storage optimization under the hood).
+8. **FALSE** — The CAP theorem states that in the presence of a network partition (P), a system must choose between Consistency (C) and Availability (A). Partition tolerance cannot simply be "opted out of" in real networks.
+9. **FALSE** — `Send` indicates that ownership of a type can be transferred across thread boundaries. `Sync` is the marker trait for types that can be safely shared by reference (`&T`) across threads.
+10. **TRUE** — x86-64 implements Total Store Order (TSO), which permits StoreLoad reordering (earlier stores queued in store buffers may be completed after later loads from memory).
+11. **TRUE** — IPv6 addresses are 128 bits long (16 bytes).
+12. **TRUE** — Practical collision attacks against SHA-1 were demonstrated (e.g., the SHAttered attack by CWI and Google in 2017).
+13. **FALSE** — Kafka only guarantees total ordering of messages within a single partition, not globally across all partitions of a topic.
+14. **TRUE** — Under the Java Memory Model (JMM), a write to a `volatile` variable establishes a happens-before relationship with any subsequent read of that same `volatile` variable.
+15. **FALSE** — While DNS primarily uses UDP for standard queries, DNS regularly uses TCP for responses exceeding 512 bytes (or EDNS payload limits), zone transfers (AXFR/IXFR), and DNS over TLS.
+16. **TRUE** — Kubernetes StatefulSet provides pods with unique, deterministic ordinal indexes and stable network identifiers (hostnames/DNS records) that persist across rescheduling.
+
+FINAL: 1=T,2=T,3=F,4=F,5=T,6=T,7=T,8=F,9=F,10=T,11=T,12=T,13=F,14=T,15=F,16=T

@@ -1,0 +1,24 @@
+```
+[D = 1] ← Carry from C + R (5-digit + 5-digit = 6-digit)
+   │
+   ▼
+[C + R = 15] ──→ [C = 9, R = 6, A = 5]
+   │
+   ├─→ S + S = R ──→ [S = 3] ──→ [E = S + D = 4]
+   │
+   ├─→ R + O = N ──→ [O = 2] ──→ [N = 8]
+   │
+   └─→ O + A = G ──→ [G = 2 + 5 = 7]
+```
+
+- Addition of two 5-digit numbers yields a 6-digit number `DANGER` → `D = 1`.
+- Units column: `S + S = R` (or `R + 10`). Since `R = 6`, `S = 3`.
+- Tens column: `S + D = E` → `3 + 1 = 4` → `E = 4`.
+- Ten-thousands column: `C + R = 10 * D + A` → `9 + 6 = 15` → `C = 9, A = 5`.
+- Thousands column: `R + O = N` → `6 + 2 = 8` → `O = 2, N = 8`.
+- Hundreds column: `O + A = G` → `2 + 5 = 7` → `G = 7`.
+
+Reconstruction:
+`96233 + 62513 = 158746`
+
+FINAL: 158746

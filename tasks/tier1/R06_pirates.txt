@@ -1,0 +1,6 @@
+Six perfectly rational pirates, ranked P1 (most senior) to P6, split 100 indivisible gold coins. The most senior living pirate proposes an allocation; all living pirates vote. If at least half of the living pirates vote yes (the proposer votes; ties pass), the proposal stands. Otherwise the proposer is thrown overboard and the next most senior proposes. Preferences, in strict order: (1) survive, (2) maximize own coins, (3) when otherwise indifferent, prefer that another pirate is thrown overboard. All of this is common knowledge. What does P1 propose?
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: P1=<n>, P2=<n>, P3=<n>, P4=<n>, P5=<n>, P6=<n>

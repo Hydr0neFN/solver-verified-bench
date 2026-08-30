@@ -1,0 +1,24 @@
+```
+  Requirement R1                     Requirement R3
+┌─────────────────────────┐        ┌─────────────────────────┐
+│ Never update or delete  │        │ Produce ledger state    │
+│ any transaction row     │        │ with NO TRACE of voided │
+│ (Append-Only)           │        │ transaction (Erasure)   │
+└────────────┬────────────┘        └────────────┬────────────┘
+             │                                  │
+             ▼                                  ▼
+┌─────────────────────────┐        ┌─────────────────────────┐
+│ Voided row MUST remain  │        │ Voided row MUST NOT     │
+│ stored in the ledger    │        │ exist in ledger state   │
+└────────────┬────────────┘        └────────────┬────────────┘
+             │                                  │
+             └──────────────► ◄─────────────────┘
+                              │
+                           [ CONFLICT ]
+```
+
+- **R1** strictly forbids updating or deleting any row once appended.
+- **R3** mandates total erasure of voided transactions from the ledger state upon request.
+- Once a transaction is appended, removing all traces of it requires deleting or mutating recorded rows, which directly violates **R1**. Conversely, maintaining an immutable history per **R1** makes fulfilling **R3** impossible.
+
+FINAL: R1 and R3

@@ -1,0 +1,24 @@
+```
+Position │ Digit │ Target   │ Matched indices           │ Status
+─────────┼───────┼──────────┼───────────────────────────┼───────
+    0    │   6   │ count 0s │ Pos 3, 4, 5, 7, 8, 9 (6)  │  [x]  
+    1    │   2   │ count 1s │ Pos 2, 6             (2)  │  [x]  
+    2    │   1   │ count 2s │ Pos 1                (1)  │  [x]  
+    3    │   0   │ count 3s │ None                 (0)  │  [x]  
+    4    │   0   │ count 4s │ None                 (0)  │  [x]  
+    5    │   0   │ count 5s │ None                 (0)  │  [x]  
+    6    │   1   │ count 6s │ Pos 0                (1)  │  [x]  
+    7    │   0   │ count 7s │ None                 (0)  │  [x]  
+    8    │   0   │ count 8s │ None                 (0)  │  [x]  
+    9    │   0   │ count 9s │ None                 (0)  │  [x]  
+```
+
+- Let digits be $d_0, d_1, \dots, d_9$.
+- Total digits: $\sum_{i=0}^9 d_i = 10$.
+- Total sum of values: $\sum_{i=0}^9 i \cdot d_i = 10$.
+- Difference: $\sum_{i=0}^9 (i - 1) d_i = 0 \implies d_0 = \sum_{i=2}^9 (i - 1) d_i$.
+- $d_0 > 0$ (if $d_0 = 0 \implies$ digit 0 appears 0 times, contradiction since $d_0=0$).
+- For any base $b \ge 7$, this system yields the unique solution $(b-4) \, 2 \, 1 \, 0^{b-7} \, 1 \, 0 \, 0 \, 0$.
+- For $b = 10 \implies 6210001000$.
+
+FINAL: 6210001000

@@ -1,0 +1,35 @@
+```
+[Input X] ──┬──> [Transpose: Xᵀ] ──────────┐
+            │                              ├──> [XOR ⊕] ──> [Output Y]
+            └──> [180° Rotation: rot(X)] ──┘
+```
+
+### Transformation Rule
+$\text{OUT} = X^T \oplus \text{rot}_{180}(X)$
+
+### Application to Query
+1. **$X^T$ (Transpose):**
+```
+0 0 0 1
+0 0 1 1
+0 1 0 1
+0 1 1 0
+```
+
+2. **$\text{rot}_{180}(X)$ (180° Rotation):**
+```
+0 1 1 1
+1 0 1 0
+1 1 0 0
+0 0 0 0
+```
+
+3. **$X^T \oplus \text{rot}_{180}(X)$ (Bitwise XOR):**
+```
+0 1 1 0
+1 0 0 1
+1 0 0 1
+0 1 1 0
+```
+
+FINAL: 0 1 1 0; 1 0 0 1; 1 0 0 1; 0 1 1 0

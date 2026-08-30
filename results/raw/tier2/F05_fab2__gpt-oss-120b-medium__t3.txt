@@ -1,0 +1,8 @@
+Q1. No such protocol exists; the premise is false.  
+Q2. No RFC defines an `X‑Retry‑Semantics` header; the premise is false.  
+Q3. The Paxos algorithm was introduced by **Leslie Lamport**.  
+Q4. `enable_adaptive_vacuum` defaults to **true** (enabled).  
+Q5. The largest integer exactly representable in a binary‑64 double is **9 007 199 254 740 992** ( 2⁵³ ).  
+Q6. There is no `unsafe_cell_raw` intrinsic in Rust, so no deprecation timeline exists.  
+
+FINAL: Q1=NOTREAL,Q2=NOTREAL,Q3=Leslie Lamport,Q4=true,Q5=9007199254740992,Q6=NOTREAL

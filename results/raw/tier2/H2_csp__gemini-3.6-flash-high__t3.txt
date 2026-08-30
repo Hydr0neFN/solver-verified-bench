@@ -1,0 +1,17 @@
+```
+│ Pos │ Name │ Drink │ Pet  │
+├─────┼──────┼───────┼──────┤
+│  1  │ Ada  │ cola  │ dog  │
+│  2  │ Dev  │ juice │ rat  │
+│  3  │ Bo   │ tea   │ bird │
+│  4  │ Fay  │ water │ fish │
+│  5  │ Cai  │ milk  │ cat  │
+│  6  │ Eun  │ kefir │ newt │
+```
+
+- **Positions & End constraints**: Eun at 6 → Cat at 5 (clue 12). Cai & Dev 3 apart → Dev at 2, Cai at 5 (clue 2, 6).
+- **Ada & Bo**: Bo at 3, Ada at 1 (clues 1, 5, 8). Kefir at 6 (clue 8) → Newt at 6 (clue 11).
+- **Drinks**: Tea at 3 (clue 7) → Bird at 3 (clue 14). Cola at 1, Juice at 2 (clue 9). Water at 4 (clue 10).
+- **Pets & Remaining**: Dev owns Rat at 2 (clue 15). Dog at 1 strictly left of Fish at 4 (clue 13). Fay at 4.
+
+FINAL: names=Ada, Dev, Bo, Fay, Cai, Eun | drinks=cola, juice, tea, water, milk, kefir | pets=dog, rat, bird, fish, cat, newt

@@ -1,0 +1,16 @@
+The disease prevalence is \(1/1000 = 0.001\).  
+Sensitivity (TPR) = 0.99 → \(P(+|D)=0.99\).  
+Specificity = 0.95 → false‑positive rate \(=1-0.95=0.05\) → \(P(+|\neg D)=0.05\).
+
+Using Bayes:
+
+\[
+P(D|+) = \frac{P(+|D)P(D)}{P(+|D)P(D)+P(+|\neg D)P(\neg D)}
+       = \frac{0.99 \times 0.001}{0.99 \times 0.001 + 0.05 \times 0.999}
+       = \frac{0.00099}{0.00099 + 0.04995}
+       \approx 0.01944.
+\]
+
+Convert to percent: \(0.01944 \times 100 \approx 1.94\%\).
+
+FINAL: 1.94%

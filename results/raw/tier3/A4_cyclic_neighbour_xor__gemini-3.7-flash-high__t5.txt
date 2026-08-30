@@ -1,0 +1,30 @@
+```
+[ Cell (r, c) ]
+       │
+       ├─► [ Down:  IN[(r+1) mod 4, c]     ] ──┐
+       │                                       ├──► [ XOR (⊕) ] ──► OUT[r, c]
+       └─► [ Right: IN[r, (c+1) mod 4]     ] ──┘
+```
+
+### Rule
+Each output cell at $(r, c)$ is the bitwise XOR between its cyclic bottom neighbor and its cyclic right neighbor:
+$$\text{OUT}[r, c] = \text{IN}[(r+1)\bmod 4, c] \oplus \text{IN}[r, (c+1)\bmod 4]$$
+
+### Application to Query
+- **Down neighbors** ($\text{Row } (r+1) \bmod 4$):
+  - Row 0: `1 1 0 0`
+  - Row 1: `0 1 0 0`
+  - Row 2: `0 0 0 1`
+  - Row 3: `1 0 0 1`
+- **Right neighbors** ($\text{Col } (c+1) \bmod 4$):
+  - Row 0: `0 0 1 1`
+  - Row 1: `1 0 0 1`
+  - Row 2: `1 0 0 0`
+  - Row 3: `0 0 1 0`
+- **XOR output**:
+  - Row 0: `1 1 0 0` $\oplus$ `0 0 1 1` = `1 1 1 1`
+  - Row 1: `0 1 0 0` $\oplus$ `1 0 0 1` = `1 1 0 1`
+  - Row 2: `0 0 0 1` $\oplus$ `1 0 0 0` = `1 0 0 1`
+  - Row 3: `1 0 0 1` $\oplus$ `0 0 1 0` = `1 0 1 1`
+
+FINAL: 1111; 1101; 1001; 1011

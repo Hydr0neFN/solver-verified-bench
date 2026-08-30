@@ -1,0 +1,26 @@
+```
+[IN] ──┬─► [Transpose: IN^T] ──────────┬─► [XOR] ──► [OUT]
+       └─► [Rotate 180°: rot180(IN)] ──┘
+```
+
+- Rule: $\text{OUT} = \text{IN}^\top \oplus \text{rot}_{180}(\text{IN})$.
+- Anti-diagonal entries cancel to $0$ ($\text{IN}[3-r][r] \oplus \text{IN}[3-r][r] = 0$).
+
+Application to Query:
+- $\text{IN}^\top$:
+  `0 0 0 1`
+  `0 0 1 1`
+  `0 1 0 1`
+  `0 1 1 0`
+- $\text{rot}_{180}(\text{IN})$:
+  `0 1 1 1`
+  `1 0 1 0`
+  `1 1 0 0`
+  `0 0 0 0`
+- $\text{XOR}$:
+  `0 1 1 0`
+  `1 0 0 1`
+  `1 0 0 1`
+  `0 1 1 0`
+
+FINAL: 0110; 1001; 1001; 0110

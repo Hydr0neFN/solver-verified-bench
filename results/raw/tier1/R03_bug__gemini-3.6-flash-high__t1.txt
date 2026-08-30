@@ -1,0 +1,6 @@
+- Lock acquisition order depends on the key iteration order of `items`.
+- Thread 1 requesting `{A, B}` acquires `A` and waits for `B`.
+- Thread 2 requesting `{B, A}` acquires `B` and waits for `A`.
+- Unordered locking causes circular wait under concurrency.
+
+FINAL: Deadlock due to inconsistent lock acquisition order

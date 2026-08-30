@@ -1,0 +1,14 @@
+```
+IN              ROT180             OUT (IN ⊕ ROT180)
+1 0 1 1         0 1 0 1            1 1 1 0
+0 1 0 0    ⊕    1 0 1 1     →      1 1 1 1
+1 1 0 1         0 0 1 0            1 1 1 1
+1 0 1 0         1 1 0 1            0 1 1 1
+```
+
+Rule:
+- Each cell is XORed with its point-reflection across the grid center:
+  $\text{OUT}[r][c] = \text{IN}[r][c] \oplus \text{IN}[3-r][3-c]$
+- Equivalently: $\text{OUT} = \text{IN} \oplus \text{rot}_{180}(\text{IN})$.
+
+FINAL: 1 1 1 0; 1 1 1 1; 1 1 1 1; 0 1 1 1

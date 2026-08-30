@@ -1,0 +1,15 @@
+```
+[Input Grid A] ──> [Transpose Aᵀ] ──> [Flip row i if row_sum(A[i]) is odd] ──> [Output Grid]
+```
+
+- Transformation rule: $\text{OUT}[i, j] = \text{IN}[j, i] \oplus (\sum_{k=0}^3 \text{IN}[i, k] \bmod 2)$
+- Transpose input grid $\text{IN}$ to get $\text{IN}^\top$.
+- Invert (NOT) all bits in row $i$ of $\text{IN}^\top$ if the $i$-th row of $\text{IN}$ contains an odd number of $1$s.
+
+Application to Query:
+- Row 0: `1 0 1 0` (sum = 2, even) $\rightarrow$ keep Col 0 `1 1 1 1` $\rightarrow$ `1 1 1 1`
+- Row 1: `1 1 1 1` (sum = 4, even) $\rightarrow$ keep Col 1 `0 1 1 1` $\rightarrow$ `0 1 1 1`
+- Row 2: `1 1 0 1` (sum = 3, odd)  $\rightarrow$ flip Col 2 `1 1 0 0` $\rightarrow$ `0 0 1 1`
+- Row 3: `1 1 0 1` (sum = 3, odd)  $\rightarrow$ flip Col 3 `0 1 1 1` $\rightarrow$ `1 0 0 0`
+
+FINAL: 1111; 0111; 0011; 1000

@@ -1,0 +1,16 @@
+```
+Time  Consumer 1           Consumer 2           Redis       Postgres
+────  ───────────────────  ───────────────────  ──────────  ────────────
+T1    Check key (miss)                          Key: ∅
+T2                         Check key (miss)     Key: ∅
+T3    Write to Postgres                                     Write #1 [x]
+T4                         Write to Postgres                Write #2 [!]
+T5    Add key to Redis                          Key: SHA
+T6                         Add key to Redis     Key: SHA
+```
+
+- **Race Condition (TOCTOU)**: Concurrent duplicate deliveries pass the Redis check simultaneously before either writes back to Redis → duplicate Postgres writes.
+- **Non-Atomic Dual-Write**: Crash between Postgres commit and Redis key insertion causes retry to re-execute write.
+- **Fix**: Store idempotency key / unique constraint directly in Postgres within the write transaction.
+
+FINAL: Check-then-act race condition

@@ -1,0 +1,3 @@
+The transformation is the element‑wise XOR of the original grid with its 180° rotation (i.e., each cell is XORed with the cell opposite it). Applying this to the query grid yields:
+
+FINAL: 1 1 1 0; 1 1 1 1; 1 1 1 1; 0 1 1 1

@@ -1,0 +1,29 @@
+```
+Sequence Rule: Integers with binary Hamming weight = 3 (3 set bits)
+
+MSB (2^k)   Lower Bits (2^a + 2^b)     Count   Terms Range
+─────────────────────────────────────────────────────────────────────────────
+k=2 (4)     2^1 + 2^0 = 3              1       [1st] 7
+k=3 (8)     Combinations: 3, 5, 6      3       [2nd-4th] 11, 13, 14
+k=4 (16)    C(4, 2) combinations       6       [5th-10th] 19 ... 28
+k=5 (32)    C(5, 2) combinations       10      [11th-20th] 35 ... 56
+k=6 (64)    2^3 + 2^1 = 10 ← 25th term 5       [21st-25th] 67, 69, 70, 73, 74
+```
+
+### Reasoning
+
+The sequence consists of positive integers whose binary representation contains **exactly three 1s** (Hamming weight of 3), listed in ascending order.
+
+To find the 25th term:
+1. **1-bit MSB at $2^2 = 4$**: $4 + 2 + 1 = 7$ (1 term: 1st)
+2. **1-bit MSB at $2^3 = 8$**: $\binom{3}{2} = 3$ terms ($11, 13, 14$) (4th term total)
+3. **1-bit MSB at $2^4 = 16$**: $\binom{4}{2} = 6$ terms ($19, 21, 22, 25, 26, 28$) (10th term total)
+4. **1-bit MSB at $2^5 = 32$**: $\binom{5}{2} = 10$ terms ($35$ through $56$) (20th term total)
+5. **1-bit MSB at $2^6 = 64$**:
+   - 21st: $64 + 2 + 1 = 67$
+   - 22nd: $64 + 4 + 1 = 69$
+   - 23rd: $64 + 4 + 2 = 70$
+   - 24th: $64 + 8 + 1 = 73$
+   - 25th: $64 + 8 + 2 = 74$
+
+FINAL: 74

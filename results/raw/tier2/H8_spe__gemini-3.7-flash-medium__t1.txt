@@ -1,0 +1,17 @@
+```
+P1
+├─ L
+│  └─ P2
+│     ├─ a -> (3, 1)
+│     └─ b -> (1, 4)  [x] (4 > 1)
+└─ R  [x] (2 > 1)
+   └─ P2
+      ├─ c -> (2, 5)  [x] (5 > 2)
+      └─ d -> (4, 2)
+```
+
+- Subgame after L: P2 chooses `b` (4 > 1) → yields (1, 4)
+- Subgame after R: P2 chooses `c` (5 > 2) → yields (2, 5)
+- Root (P1): chooses `R` over `L` since 2 > 1 → reaches `c`
+
+FINAL: path=Rc, payoffs=2,5

@@ -1,0 +1,18 @@
+To find a 10-digit self-descriptive number, let its digits be $d_0, d_1, \dots, d_9$. By definition, $d_i$ represents the frequency of the digit $i$ in the number.
+This imposes two main constraints:
+1. The sum of all digits must be 10 (since there are 10 positions).
+2. The sum of $(i \times d_i)$ for all $i$ from 0 to 9 must also be 10 (since the total count of all digits multiplied by their values equals the length of the number).
+
+We can deduce the digits logically:
+- $d_0$ cannot be 0 (otherwise there are no zeros, but $d_0 = 0$ is a zero, a contradiction). It also cannot be too large (e.g., if $d_0=9$, then $d_9$ must be at least 1, which requires a 1, making the sum exceed 10).
+- Let's try $d_0 = 6$. This means there are six 0s in the number. 
+- Since $d_0 = 6$, the digit 6 appears at least once, so $d_6 \ge 1$. Let's assume $d_6 = 1$.
+- We have accounted for 6 and 1. This means the digit 1 appears at least once, so $d_1 \ge 1$.
+- If we set $d_1 = 2$, we are claiming the digit 1 appears twice (which would be $d_6$ and $d_2$). 
+- If $d_1 = 2$, then the digit 2 appears once, so we set $d_2 = 1$.
+- Now let's check our non-zero digits: $d_0 = 6$, $d_1 = 2$, $d_2 = 1$, $d_6 = 1$. 
+- Their sum is $6 + 2 + 1 + 1 = 10$. The remaining six digits ($d_3, d_4, d_5, d_7, d_8, d_9$) are all 0. 
+
+This perfectly satisfies all conditions: there are six 0s, two 1s, one 2, and one 6. Mathematical proof confirms this is the unique solution in base 10.
+
+FINAL: 6210001000

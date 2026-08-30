@@ -1,0 +1,18 @@
+```
+Query IN                Permutation Mapping         Query OUT
+[0 1 1 1] (r0 == r1)    [r0, r1] ← [R0, R2] (Ex 2)  [0 1 1 1]
+[0 1 1 1]               r2       ←  R3      (Ex 2)  [0 1 1 1]
+[0 1 1 0] (r2, sum 2)   r3       ←  R1      (Ex 2)  [0 0 0 1]
+[1 1 1 0] (r3, sum 3)   [c1, c2] ← [C0, C2] (Ex 2)  [1 0 1 0]
+```
+
+- Query input shares canonical bipartite graph isomorphism with Example 2:
+  - Rows with sum 3: duplicate pair `{r0, r1}` corresponds to `{R0, R2}` in Ex 2; unique row `r3` corresponds to `R1` in Ex 2.
+  - Row with sum 2: `r2` corresponds to `R3` in Ex 2.
+  - Columns with sum 4: `{c1, c2}` correspond to `{C0, C2}` in Ex 2; `c0` (sum 1) corresponds to `C1`; `c3` (sum 2) corresponds to `C3`.
+- Applying the canonical mapping to Example 2's output:
+  - Duplicate rows `{r0, r1}` retain pattern `[0, 1, 1, 1]`.
+  - Row `r2` transforms to `[0, 0, 0, 1]`.
+  - Row `r3` transforms to `[1, 0, 1, 0]`, preserving column index symmetry.
+
+FINAL: 0111; 0111; 0001; 1010

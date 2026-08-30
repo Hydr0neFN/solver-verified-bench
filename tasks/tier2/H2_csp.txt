@@ -1,0 +1,25 @@
+Six people (Ada, Bo, Cai, Dev, Eun, Fay) sit at positions 1..6 left to right. Each has exactly one distinct drink (tea, cola, milk, juice, water, kefir) and exactly one distinct pet (cat, dog, fish, bird, rat, newt).
+
+1. Ada sits somewhere to the left of Bo.
+2. Cai and Dev are exactly 3 positions apart.
+3. Eun sits at an end (position 1 or 6).
+4. Fay is not at position 3.
+5. Bo is NOT immediately to the right of Ada.
+6. The milk drinker is Cai.
+7. The tea drinker is exactly 2 positions away from Ada.
+8. Kefir is strictly to the right of Bo.
+9. Cola is immediately to the left of juice.
+10. Water is at neither end.
+11. The newt owner drinks kefir.
+12. The cat owner is immediately adjacent to Eun.
+13. The dog owner sits strictly to the left of the fish owner.
+14. The bird owner drinks tea.
+15. Dev owns the rat.
+16. The fish owner does not drink milk.
+
+The assignment is unique. Find it.
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: names=<pos1..pos6 comma separated> | drinks=<pos1..pos6> | pets=<pos1..pos6>

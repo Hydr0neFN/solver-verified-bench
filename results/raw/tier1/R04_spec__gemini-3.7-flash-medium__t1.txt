@@ -1,0 +1,13 @@
+```
+[R1] Store row ──> Immutable log ──> Never updated / deleted
+                                            ▲
+                                            │ ! Contradiction
+                                            ▼
+[R3] Void tx   ──> Erasure request ──> Erase record / leave no trace
+```
+
+- R1 forbids deleting or modifying any transaction row (strict append-only immutability).
+- R3 requires complete erasure of the record so that the ledger state retains no trace of the transaction.
+- If a row cannot be deleted or modified (R1), it remains in the ledger, making complete erasure with no trace (R3) logically impossible.
+
+FINAL: R1 and R3

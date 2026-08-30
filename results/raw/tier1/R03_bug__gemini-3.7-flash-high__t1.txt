@@ -1,0 +1,16 @@
+```
+Thread 1: reserve({A, B})            Thread 2: reserve({B, A})
+        │                                    │
+  [Acquire Lock A]                     [Acquire Lock B]
+        │                                    │
+  [Wait for Lock B] ───(held by T2)───► [Holds Lock B]
+        ▲                                    │
+        └───(held by T1)─── [Wait for Lock A]┘
+                                 ! Deadlock
+```
+
+- `reserve` acquires locks in dictionary insertion order of `items`.
+- Concurrent calls with different key orders (e.g., `{A, B}` vs `{B, A}`) → circular wait → deadlock.
+- Fix: sort keys globally before acquisition (e.g., `sorted(items)`).
+
+FINAL: Deadlock due to inconsistent lock acquisition order

@@ -1,0 +1,17 @@
+```
+Consumer A       Consumer B         Redis            Postgres
+    │                │                │                 │
+    ├─ 1. Check ────►│                │                 │
+    │  (Miss)        ├─ 2. Check ────►│                 │
+    │                │  (Miss)        │                 │
+    ├─ 3. Write ───────────────────────────────────────►│ [x] Row 1
+    │                ├─ 4. Write ──────────────────────►│ ! Duplicate row
+    ├─ 5. Add key ──►│                │                 │
+    │                └─ 6. Add key ──►│                 │
+```
+
+- **Non-atomic check-then-set race**: Two concurrent duplicate deliveries both observe a Redis cache miss prior to either adding the key, causing duplicate processing and double Postgres writes.
+- **Dual-write atomicity failure**: If a consumer crashes after writing to Postgres but before updating Redis, message redelivery re-executes the Postgres write.
+- **Remediation**: Execute idempotency checks directly inside Postgres within the write transaction using `INSERT ... ON CONFLICT DO NOTHING` on the idempotency key.
+
+FINAL: Non-atomic check-then-set race condition

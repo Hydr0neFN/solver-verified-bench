@@ -1,0 +1,18 @@
+```
+[IN] ──> [Rotate 90° CW] ──> [XOR col c with parity(col c of IN)] ──> [OUT]
+```
+
+- Formula: `OUT[r][c] = IN[3-c][r] ^ (IN[0][c] ^ IN[1][c] ^ IN[2][c] ^ IN[3][c])`
+- Query `IN` column parities: `[1, 0, 0, 0]`
+- Rotated 90° CW:
+  `1 0 0 0`
+  `1 1 1 1`
+  `1 1 1 1`
+  `0 0 1 1`
+- Inverting column 0 (odd parity) yields:
+  `0 0 0 0`
+  `0 1 1 1`
+  `0 1 1 1`
+  `1 0 1 1`
+
+FINAL: 0 0 0 0; 0 1 1 1; 0 1 1 1; 1 0 1 1

@@ -1,0 +1,3 @@
+Numbers whose binary representation contains exactly three 1’s (Hamming weight = 3). Listing them in increasing order gives the sequence, and the 25th element is 74.
+
+FINAL: 74

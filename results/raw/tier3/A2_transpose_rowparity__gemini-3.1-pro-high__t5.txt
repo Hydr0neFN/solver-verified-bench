@@ -1,0 +1,27 @@
+To find the transformation rule, let's analyze the relationship between the `IN` and `OUT` matrices in the given examples:
+
+1.  **Transpose:** The `OUT` matrix is fundamentally formed by transposing the `IN` matrix. Thus, row `i` of the `OUT` matrix comes from column `i` of the `IN` matrix.
+2.  **Parity Inversion:** We count the number of `1`s in each row `i` of the original `IN` matrix. 
+    *   If row `i` has an **even** sum of `1`s, column `i` of `IN` is copied exactly to row `i` of `OUT`.
+    *   If row `i` has an **odd** sum of `1`s, column `i` of `IN` is **bitwise inverted** (0s become 1s, 1s become 0s) to form row `i` of `OUT`.
+
+Let's apply this established rule to the Query matrix:
+**Query IN:**
+r0: `1 0 1 0` (Sum = 2, Even)
+r1: `1 1 1 1` (Sum = 4, Even)
+r2: `1 1 0 1` (Sum = 3, Odd)
+r3: `1 1 0 1` (Sum = 3, Odd)
+
+**Columns of Query IN:**
+c0: `1 1 1 1`
+c1: `0 1 1 1`
+c2: `1 1 0 0`
+c3: `0 1 1 1`
+
+**Constructing the Query OUT matrix:**
+*   **OUT row 0:** Corresponds to `IN` row 0 (Even). Keep `c0` as is -> `1 1 1 1`
+*   **OUT row 1:** Corresponds to `IN` row 1 (Even). Keep `c1` as is -> `0 1 1 1`
+*   **OUT row 2:** Corresponds to `IN` row 2 (Odd). Invert `c2` -> `0 0 1 1`
+*   **OUT row 3:** Corresponds to `IN` row 3 (Odd). Invert `c3` -> `1 0 0 0`
+
+FINAL: 1 1 1 1; 0 1 1 1; 0 0 1 1; 1 0 0 0

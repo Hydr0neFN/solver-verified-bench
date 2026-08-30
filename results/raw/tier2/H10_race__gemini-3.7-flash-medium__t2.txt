@@ -1,0 +1,17 @@
+```
+Server A                          Server B
+   │                                 │
+   ├─ SELECT sent_at (empty)         │
+   │                                 ├─ SELECT sent_at (empty)
+   ├─ mailer.send()                  │
+   │                                 ├─ mailer.send() ! duplicate ←
+   ├─ INSERT ... ON CONFLICT         │
+   │                                 ├─ INSERT ... ON CONFLICT
+   ▼                                 ▼
+```
+
+- `SELECT` executes without row locking (`FOR UPDATE`).
+- Read Committed isolation level allows concurrent transactions to read the same non-existent row state simultaneously.
+- Both threads pass `row is not None` check → both invoke `mailer.send()` before either records `sent_at`.
+
+FINAL: check-then-act race condition

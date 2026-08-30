@@ -1,0 +1,11 @@
+Brief reasoning:  
+Assuming the transformation sets each output cell to the XOR of the corresponding input cell and its transposed counterpart (i.e., output[i][j] = input[i][j] ⊕ input[j][i]), the diagonal entries become 0, and off‑diagonal entries are the parity between symmetric positions.
+
+Applying this to the query grid yields:
+
+- Row 1: 0 ⊕ 0, 0 ⊕ 0, 0 ⊕ 0, 0 ⊕ 1 → 0001  
+- Row 2: 0 ⊕ 0, 0 ⊕ 0, 1 ⊕ 1, 1 ⊕ 1 → 0000  
+- Row 3: 0 ⊕ 0, 1 ⊕ 1, 0 ⊕ 0, 1 ⊕ 1 → 0000  
+- Row 4: 1 ⊕ 0, 1 ⊕ 1, 1 ⊕ 1, 0 ⊕ 0 → 1000  
+
+FINAL: 0001; 0000; 0000; 1000

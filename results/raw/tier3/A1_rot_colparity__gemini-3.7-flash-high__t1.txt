@@ -1,0 +1,19 @@
+```
+[IN: Row 3-c] ──(Rotate 90° CCW)──> [OUT: Col c]
+                                           │
+[IN: Col c sum odd?] ─── yes: invert ──────┘
+                     └─── no:  keep
+```
+
+- **Transformation rule**:
+  1. Base mapping: rotate 90° counter-clockwise (OUT column $c$ receives IN row $3-c$).
+  2. Column inversion: if IN column $c$ has an odd number of `1`s, invert (bitwise NOT) OUT column $c$; otherwise keep it unchanged.
+
+- **Applying to Query**:
+  - IN column sums: `[1, 4, 4, 2]` → inversion mask: `[1, 0, 0, 0]` (invert column 0 only).
+  - OUT Col 0 = NOT(IN Row 3 `[1, 1, 1, 0]`) = `[0, 0, 0, 1]`ᵀ
+  - OUT Col 1 = IN Row 2 `[0, 1, 1, 0]` = `[0, 1, 1, 0]`ᵀ
+  - OUT Col 2 = IN Row 1 `[0, 1, 1, 1]` = `[0, 1, 1, 1]`ᵀ
+  - OUT Col 3 = IN Row 0 `[0, 1, 1, 1]` = `[0, 1, 1, 1]`ᵀ
+
+FINAL: 0000; 0111; 0111; 1011

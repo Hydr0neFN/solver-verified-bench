@@ -1,0 +1,3 @@
+The SELECT and INSERT are done in separate statements without any locking, so two concurrent servers can both see no row, both send the email, and then both insert – breaking the exactly‑once guarantee.
+
+FINAL: race condition between select and insert

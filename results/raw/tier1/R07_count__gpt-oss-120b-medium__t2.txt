@@ -1,0 +1,8 @@
+FINAL: 22492320
+Brief reasoning:  
+- First digit: 9 choices. Each subsequent digit cannot equal the previous, giving 8 choices per position → total strings = 9·8⁷ = 9·2,097,152 = 18,874,368.  
+- Digits 1‑9 contain each residue class mod 3 exactly three times, and the adjacency restriction does not bias the residue distribution of the sum. Hence the sums are evenly distributed among the three residues, so one‑third of the strings have sum ≡ 0 (mod 3).  
+
+Final count = 18,874,368 ÷ 3 = 6,291,456.
+
+FINAL: 6291456

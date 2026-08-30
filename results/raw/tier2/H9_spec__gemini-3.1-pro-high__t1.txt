@@ -1,0 +1,11 @@
+To determine the mutually unsatisfiable pair, we must look at the fundamental guarantees of distributed systems regarding delivery/execution semantics.
+
+* **R2** dictates an **"at-most-once"** execution guarantee. In distributed systems, this strictly implies that a system must *never* retry an operation if there is any ambiguity about whether the first attempt succeeded, because retrying risks executing the job more than once.
+* **R4** dictates a **mandatory retry mechanism** (reassignment) if a worker's lease expires. 
+* Because workers can be partitioned from the scheduler (R5) without crashing, a worker might fully execute a job and write its output (R7) but fail to send heartbeats or a completion acknowledgment. 
+* When the lease expires, the scheduler is forced by **R4** to reassign the job to a new worker. 
+* The new worker will execute the job a second time, directly violating the absolute guarantee of **R2**. 
+
+You cannot logically pair a mandatory timeout-retry behavior (which provides "at-least-once" semantics) with a strict "at-most-once" guarantee over an unreliable network. (Note: R10 and leases correctly prevent *concurrent* execution for R11, but cannot prevent sequential double-execution).
+
+FINAL: R2 and R4

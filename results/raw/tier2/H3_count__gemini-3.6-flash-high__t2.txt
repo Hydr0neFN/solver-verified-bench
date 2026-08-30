@@ -1,0 +1,16 @@
+To find the number of permutations $p$ of $\{1, 2, \dots, 10\}$ satisfying $|p(i) - i| \ge 2$ for all $i \in \{1, 2, \dots, 10\}$, we compute the permanent of the $10 \times 10$ binary matrix $A$ where $A_{i,j} = 1$ if $|i - j| \ge 2$ and $0$ if $|i - j| \le 1$.
+
+This is equivalent to counting rooks on a $10 \times 10$ board avoiding the tridiagonal forbidden board of size $3n - 2 = 28$ cells. Using inclusion-exclusion / dynamic programming over subproblems for $n = 10$:
+
+- $n = 1: 0$
+- $n = 2: 0$
+- $n = 3: 0$
+- $n = 4: 1$
+- $n = 5: 4$
+- $n = 6: 29$
+- $n = 7: 206$
+- $n = 8: 1708$
+- $n = 9: 15702$
+- $n = 10: 159737$
+
+FINAL: 159737

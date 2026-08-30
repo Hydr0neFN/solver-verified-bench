@@ -1,0 +1,11 @@
+```
+Pos (i) │ 0 │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9
+────────┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───
+Digit   │ 6 │ 2 │ 1 │ 0 │ 0 │ 0 │ 1 │ 0 │ 0 │ 0
+```
+
+- Constraint 1: \(\sum_{i=0}^{9} d_i = 10\) (total number of digits is 10).
+- Constraint 2: \(\sum_{i=0}^{9} i \cdot d_i = 10\) (sum of digit positions weighted by frequency).
+- Solving these constraints yields a unique 10-digit solution: `6210001000`.
+
+FINAL: 6210001000

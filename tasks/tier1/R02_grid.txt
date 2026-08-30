@@ -1,0 +1,21 @@
+Five people (Ana, Ben, Cy, Dee, Eli) sit in a row at positions 1..5 (left to right). Each has one distinct drink (tea, cola, milk, juice, water) and one distinct pet (cat, dog, fish, bird, rat).
+Constraints:
+1. Ana is at position 1.
+2. Milk is at position 3.
+3. Water is at position 5.
+4. The tea drinker sits immediately adjacent to Ben (distance exactly 1).
+5. Cola is strictly to the left of Cy.
+6. The bird is at position 1.
+7. Dee owns the cat.
+8. The dog owner drinks juice.
+9. The fish owner sits exactly 2 positions away from Eli.
+10. Ben sits to the left of Cy.
+11. The rat is strictly to the right of the cola drinker.
+12. Dee is at position 5.
+13. Ben sits to the left of Eli.
+Find the unique assignment.
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: names=<p1>,<p2>,<p3>,<p4>,<p5> | drinks=<p1>,<p2>,<p3>,<p4>,<p5> | pets=<p1>,<p2>,<p3>,<p4>,<p5>

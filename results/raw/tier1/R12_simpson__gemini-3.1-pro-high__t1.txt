@@ -1,0 +1,14 @@
+This is a classic example of Simpson's Paradox. We can determine the best treatment by comparing their success rates for each specific condition (stone size), which controls for the confounding variable.
+
+**Success rates by stone size:**
+*   **Small stones:** Treatment A is **93.1%** (81/87) successful, while Treatment B is **86.7%** (234/270). Treatment A is better.
+*   **Large stones:** Treatment A is **73.0%** (192/263) successful, while Treatment B is **68.8%** (55/80). Treatment A is better.
+
+Because Treatment A yields a higher success rate for *both* small and large stones, a patient should prefer Treatment A regardless of their stone size. The overall aggregate rates are misleading because Treatment A was assigned disproportionately to the more difficult (large stone) cases, dragging its overall average down. 
+
+**Treatment A's overall aggregate success rate:**
+*   Total successes: 81 + 192 = 273
+*   Total cases: 87 + 263 = 350
+*   Rate: 273 / 350 = 0.78 = 78.00%
+
+FINAL: prefer=A, A_overall=78.00%

@@ -1,0 +1,21 @@
+```
+│ Index │ Binary (popcount = 3) │ Value │
+├───────┼───────────────────────┼───────┤
+│ 20    │ 0111000               │ 56    │
+│ 21    │ 1000011               │ 67    │
+│ 22    │ 1000101               │ 69    │
+│ 23    │ 1000110               │ 70    │
+│ 24    │ 1001001               │ 73    │
+│ 25    │ 1001010               │ 74  ← │
+```
+
+- Rule: Positive integers with exactly three $1$s in binary representation (Hamming weight = 3, OEIS A014311).
+- 20th term = 56 ($2^5 + 2^4 + 2^3$).
+- Terms 21–25 transition to 7-bit values ($2^6 + \dots$):
+  - 21st: $64 + 2 + 1 = 67$
+  - 22nd: $64 + 4 + 1 = 69$
+  - 23rd: $64 + 4 + 2 = 70$
+  - 24th: $64 + 8 + 1 = 73$
+  - 25th: $64 + 8 + 2 = 74$
+
+FINAL: 74

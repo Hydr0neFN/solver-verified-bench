@@ -1,0 +1,18 @@
+```
+Server A               Postgres               Server B
+   │                      │                      │
+   ├──1. SELECT ─────────>│                      │
+   │<──returns None───────┤                      │
+   │                      │<──2. SELECT ─────────┤
+   │                      ├───returns None──────>│
+   │                      │                      │
+   ├──3. mailer.send() [x]│                      │
+   │   (Email 1 sent)     │                      │
+   │                      │──4. mailer.send() [x]!
+   │                      │   (Email 2 sent)     │
+   ▼                      ▼                      ▼
+```
+
+Two concurrent application servers querying Postgres for the same `user_id` will both read `row is None` because `SELECT` without row-level locking (`FOR UPDATE`) does not lock the non-existent row under `READ COMMITTED` isolation. Both servers proceed to execute `mailer.send()`, sending duplicate welcome emails before either executes the `INSERT`.
+
+FINAL: Check-then-act race condition

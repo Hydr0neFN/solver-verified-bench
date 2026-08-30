@@ -1,0 +1,6 @@
+A disease affects 1 in 1000 people. A test has sensitivity 99 percent (true positive rate) and specificity 95 percent (true negative rate). A person drawn uniformly at random from the population tests positive. What is the probability they have the disease? Give a percentage to 2 decimal places.
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: <number>%

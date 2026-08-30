@@ -1,0 +1,10 @@
+To determine the optimal proposal, we solve backwards using subgame perfect equilibrium, starting from the case where only the least senior pirate (P6) is left. To get a "Yes" vote from another pirate, the proposer must offer them strictly more than what they would get in the next round (if offered the exact same amount, they vote "No" due to preference #3).
+
+- **1 pirate left (P6):** P6 takes all the coins. (P6=100)
+- **2 pirates left (P5, P6):** P5 needs 1 vote (50% of 2). He votes for himself, keeping 100 and giving P6 0. (P5=100, P6=0)
+- **3 pirates left (P4, P5, P6):** P4 needs 2 votes (himself + 1). If P4 dies, P6 gets 0. So P4 buys P6's vote for 1 coin. (P4=99, P5=0, P6=1)
+- **4 pirates left (P3, P4, P5, P6):** P3 needs 2 votes (himself + 1). If P3 dies, P5 gets 0. P3 buys P5's vote for 1 coin. (P3=99, P4=0, P5=1, P6=0)
+- **5 pirates left (P2, P3, P4, P5, P6):** P2 needs 3 votes (himself + 2). If P2 dies, P4 and P6 get 0. P2 buys their votes for 1 coin each. (P2=98, P3=0, P4=1, P5=0, P6=1)
+- **6 pirates left (P1, P2, P3, P4, P5, P6):** P1 needs 3 votes (himself + 2). If P1 dies, P3 and P5 will get 0. To minimize his cost, P1 buys the votes of P3 and P5 for 1 coin each, keeping the rest for himself.
+
+FINAL: P1=98, P2=0, P3=1, P4=0, P5=1, P6=0

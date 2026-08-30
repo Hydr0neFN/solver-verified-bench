@@ -1,0 +1,6 @@
+- D must be 1, as the sum of two 5-digit numbers yields a 6-digit number, meaning the maximum carry is 1.
+- `S + S` ends in `R`.
+- Using brute force over remaining digit combinations yields the unique mapping: C=9, R=6, O=2, S=3, A=5, D=1, N=8, G=7, E=4.
+- 96233 + 62513 = 158746.
+
+FINAL: 158746

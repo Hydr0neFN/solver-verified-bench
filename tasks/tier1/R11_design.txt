@@ -1,0 +1,8 @@
+Critique this architecture. Name the single most severe CORRECTNESS flaw (not a scalability nitpick).
+
+We run an at-least-once event pipeline. Each consumer writes results into Postgres. To make processing idempotent we compute an idempotency key = SHA256(event payload) and keep a Redis SET of seen keys with a 24h TTL. Before processing, the consumer checks Redis; if the key is present it skips the event, otherwise it processes the event, writes to Postgres, and then adds the key to Redis. Redis runs as a single node with AOF persistence set to everysec.
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: <one short phrase naming the flaw>

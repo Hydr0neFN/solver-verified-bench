@@ -1,0 +1,28 @@
+**Reasoning**
+
+- With *n* pirates a proposal passes with ≥ ⌈n/2⌉ yes votes (proposer counts).
+- Work backwards:
+  * 1 pirate → P6 keeps 100.
+  * 2 pirates → P5 keeps 100, P6 0.
+  * 3 pirates → P4 keeps 99, gives 1 to P6 (P5 0).  
+    (P6 prefers 1 > 0, votes yes.)
+  * 4 pirates → P3 keeps 99, gives 1 to P5 (P4,P6 0).  
+    (P5 votes yes.)
+  * 5 pirates → P2 keeps 98, gives 1 to P4 and 1 to P6 (others 0).  
+    (P4,P6 vote yes.)
+  * 6 pirates → P1 needs 2 extra votes.  
+    If P1 dies, the 5‑pirate outcome gives P3 0 and P5 0.  
+    Bribe them with 1 coin each.
+
+```
+[6 pirates] → need 3 yes
+   ↓ if P1 dies → 5‑pirate outcome:
+P2=98, P3=0, P4=1, P5=0, P6=1
+   ↓ bribe those with 0:
+give 1 to P3, give 1 to P5
+   ↓ votes: P1, P3, P5 = 3 → proposal passes
+```
+
+Thus P1 can keep the maximum while securing the needed votes.
+
+FINAL: P1=98, P2=0, P3=1, P4=0, P5=1, P6=0

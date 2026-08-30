@@ -1,0 +1,16 @@
+A two-player extensive-form game with perfect information.
+
+Player 1 moves first and chooses L or R.
+If L, Player 2 chooses a or b. If R, Player 2 chooses c or d.
+Terminal payoffs are written (Player 1, Player 2):
+  L then a -> (3, 1)
+  L then b -> (1, 4)
+  R then c -> (2, 5)
+  R then d -> (4, 2)
+
+Find the subgame perfect equilibrium outcome by backward induction: which terminal node is reached, and what are the payoffs?
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: path=<La|Lb|Rc|Rd>, payoffs=<p1>,<p2>

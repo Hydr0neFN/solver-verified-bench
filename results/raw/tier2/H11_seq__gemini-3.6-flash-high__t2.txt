@@ -1,0 +1,24 @@
+```
+Binary Hamming weight 3 (numbers with exactly three 1s in binary):
+
+┌───────────┬─────────────┬─────────────┬─────────────────┐
+│ MSB (2^k) │ Lower Comb. │ Term Count  │ Cumulative      │
+├───────────┼─────────────┼─────────────┼─────────────────┤
+│ 2^2 = 4   │ C(2,2) = 1  │ 1           │ 1st (7)         │
+│ 2^3 = 8   │ C(3,2) = 3  │ 3           │ 2nd - 4th       │
+│ 2^4 = 16  │ C(4,2) = 6  │ 6           │ 5th - 10th      │
+│ 2^5 = 32  │ C(5,2) = 10 │ 10          │ 11th - 20th     │
+│ 2^6 = 64  │ C(6,2) = 15 │ 5 needed    │ 21st - 25th     │
+└───────────┴─────────────┴─────────────┴─────────────────┘
+```
+
+Sequence rule: Integers in strictly increasing order whose binary representation contains exactly 3 set bits (1s).
+
+- 20th term: 56 (`111000₂` = 32 + 16 + 8)
+- 21st term: 67 (`1000011₂` = 64 + 2 + 1)
+- 22nd term: 69 (`1000101₂` = 64 + 4 + 1)
+- 23rd term: 70 (`1000110₂` = 64 + 4 + 2)
+- 24th term: 73 (`1001001₂` = 64 + 8 + 1)
+- 25th term: 74 (`1001010₂` = 64 + 8 + 2)
+
+FINAL: 74

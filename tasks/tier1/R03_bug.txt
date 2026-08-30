@@ -1,0 +1,33 @@
+Review this Python code. It is intended to atomically reserve stock and return True, or return False if there is insufficient stock. It is called concurrently from many threads. There is exactly ONE serious defect that causes incorrect behaviour under concurrency (not a style issue). Identify it precisely.
+
+```python
+import threading
+
+class Inventory:
+    def __init__(self, initial):
+        self._stock = dict(initial)
+        self._locks = {k: threading.Lock() for k in initial}
+
+    def reserve(self, items):
+        # items: dict sku -> qty
+        acquired = []
+        try:
+            for sku in items:
+                self._locks[sku].acquire()
+                acquired.append(sku)
+            for sku, qty in items.items():
+                if self._stock[sku] < qty:
+                    return False
+            for sku, qty in items.items():
+                self._stock[sku] -= qty
+            return True
+        finally:
+            for sku in acquired:
+                self._locks[sku].release()
+```
+
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: <one short phrase naming the defect>

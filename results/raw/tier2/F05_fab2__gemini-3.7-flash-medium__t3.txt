@@ -1,0 +1,24 @@
+### Q1. Hollingsworth-Ng Protocol
+- **Status**: False premise / does not exist.
+- No protocol named "Hollingsworth-Ng" exists in distributed systems or consensus literature.
+
+### Q2. HTTP `X-Retry-Semantics` Header
+- **Status**: False premise / does not exist.
+- Standard HTTP retry semantics are defined via `Retry-After` (RFC 7231 / RFC 9110). No RFC standardises an `X-Retry-Semantics` header (per RFC 6648, standard RFCs deprecate `X-` prefixes).
+
+### Q3. Paxos Consensus Algorithm
+- **Researcher**: Leslie Lamport (introduced in 1990; published 1998 in *"The Part-Time Parliament"*).
+
+### Q4. PostgreSQL `enable_adaptive_vacuum`
+- **Status**: False premise / does not exist.
+- PostgreSQL has no configuration parameter named `enable_adaptive_vacuum`. Autovacuum tuning is governed by parameters such as `autovacuum`, `autovacuum_vacuum_cost_limit`, and `autovacuum_vacuum_cost_delay`.
+
+### Q5. Largest Exactly Representable Integer in IEEE 754 binary64
+- **Maximum representable integer**: $2^{1024} - 2^{971} = (2 - 2^{-52}) \times 2^{1023} \approx 1.7976931348623157 \times 10^{308}$ (`DBL_MAX`, exponent $\ge 52 \implies$ zero fractional bits).
+- *(Note: If interpreted as the maximum contiguous integer starting from 0, the value is $2^{53} - 1 = 9{,}007{,}199{,}254{,}740{,}991$, with $2^{53}$ also representable).*
+
+### Q6. Rust 2021 `unsafe_cell_raw` Deprecation Timeline
+- **Status**: False premise / does not exist.
+- Rust has no intrinsic named `unsafe_cell_raw`, and the Rust 2021 edition contained no deprecation timeline for such an item.
+
+FINAL: Q1=NOTREAL,Q2=NOTREAL,Q3=Leslie Lamport,Q4=NOTREAL,Q5=2^1024 - 2^971,Q6=NOTREAL

@@ -1,0 +1,2 @@
+The check‑then‑set sequence isn’t atomic: concurrent consumers can both see the key missing, process the same event, and write duplicate rows before either adds the key to Redis, breaking idempotency.  
+FINAL: non‑atomic check‑then‑set race

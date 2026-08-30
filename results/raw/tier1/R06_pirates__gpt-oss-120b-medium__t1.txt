@@ -1,0 +1,6 @@
+P1 needs 3 yes votes (including his own). If he dies, the outcome for the remaining pirates is: P2 = 98, P3 = 0, P4 = 1, P5 = 0, P6 = 1.  
+To obtain votes, P1 must give any pirate more coins than they would receive after his death; if equal, they prefer him dead.  
+The cheapest two pirates to bribe are P3 and P5 (each would get 0 otherwise), so give each 1 coin.  
+Allocation → P1 = 98, P2 = 0, P3 = 1, P4 = 0, P5 = 1, P6 = 0, giving exactly three yes votes (P1, P3, P5), which meets the tie‑pass rule.  
+
+FINAL: P1=98, P2=0, P3=1, P4=0, P5=1, P6=0

@@ -1,0 +1,19 @@
+```
+┌────┬────────┐
+│ n  │ Perms  │
+├────┼────────┤
+│  4 │      1 │
+│  5 │      4 │
+│  6 │     29 │
+│  7 │    206 │
+│  8 │   1708 │
+│  9 │  15702 │
+│ 10 │ 159737 │
+└────┴────────┘
+```
+
+The problem counts permutations $p \in S_{10}$ with $|p(i) - i| \ge 2$, which corresponds to the permanent of the $10 \times 10$ complement matrix $A$ where $A_{i,j} = 1$ if $|i - j| \ge 2$ and $0$ otherwise (OEIS A001883). 
+
+Evaluating the permanent via subset dynamic programming over valid placement masks yields $159737$.
+
+FINAL: 159737

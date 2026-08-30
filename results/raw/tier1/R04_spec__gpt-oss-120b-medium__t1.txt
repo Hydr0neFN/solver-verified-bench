@@ -1,0 +1,3 @@
+R1 requires permanent retention of every row, while R3 demands the ability to erase all evidence of a voided transaction. These two cannot both hold.  
+
+FINAL: R1 and R3

@@ -1,0 +1,18 @@
+```
+Pos │ Name │ Drink │ Pet
+────┼──────┼───────┼─────
+ 1  │ Ana  │ tea   │ bird
+ 2  │ Ben  │ cola  │ fish
+ 3  │ Cy   │ milk  │ rat
+ 4  │ Eli  │ juice │ dog
+ 5  │ Dee  │ water │ cat
+```
+
+- Pos 1 = Ana (C1), Pos 5 = Dee (C12) → Pet 5 = cat (C7), Drink 5 = water (C3), Pet 1 = bird (C6), Drink 3 = milk (C2).
+- Ben < Cy (C10) and Ben < Eli (C13) with {Ben, Cy, Eli} ∈ {2, 3, 4} → Ben = 2.
+- Tea adj Ben (C4) and Drink 3 = milk → Drink 1 = tea.
+- Cola left of Cy (C5) and Cy ∈ {3, 4} → Drink 2 = cola, Drink 4 = juice → Pet 4 = dog (C8).
+- Rat right of cola (C11) → Pet 3 = rat → Pet 2 = fish.
+- Fish (Pos 2) distance 2 from Eli (C9) → Eli = 4 → Cy = 3.
+
+FINAL: names=Ana,Ben,Cy,Eli,Dee | drinks=tea,cola,milk,juice,water | pets=bird,fish,rat,dog,cat

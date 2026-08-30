@@ -1,0 +1,21 @@
+```
+Transformation: 2D toroidal cellular automaton / convolution over GF(2)
+Each cell is the XOR of its right neighbor and bottom neighbor:
+
+  OUT[r, c] = IN[r, (c + 1) mod 4] ⊕ IN[(r + 1) mod 4, c]
+
+Query IN:                  Query OUT:
+┌───────────┐              ┌───────────┐
+│ 1  0  0  1│              │ 1  1  1  1│
+│ 1  1  0  0│      →       │ 1  1  0  1│
+│ 0  1  0  0│              │ 1  0  0  1│
+│ 0  0  0  1│              │ 1  0  1  1│
+└───────────┘              └───────────┘
+```
+
+- Row 0: `(0⊕1, 0⊕1, 1⊕0, 1⊕0) → 1 1 1 1`
+- Row 1: `(1⊕0, 0⊕1, 0⊕0, 1⊕0) → 1 1 0 1`
+- Row 2: `(1⊕0, 0⊕0, 0⊕0, 0⊕1) → 1 0 0 1`
+- Row 3: `(0⊕1, 0⊕0, 1⊕0, 0⊕1) → 1 0 1 1`
+
+FINAL: 1111; 1101; 1001; 1011

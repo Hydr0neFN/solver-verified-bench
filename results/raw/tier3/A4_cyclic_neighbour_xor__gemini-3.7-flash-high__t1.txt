@@ -1,0 +1,26 @@
+```
+[IN: Right Neighbor (r, (c+1)%4)] ──┐
+                                    ├──► [XOR / GF(2)] ──► [OUT[r][c]]
+[IN: Down Neighbor ((r+1)%4, c)]  ──┘
+
+      QUERY IN                     QUERY OUT
+┌───┬───┬───┬───┐             ┌───┬───┬───┬───┐
+│ 1 │ 0 │ 0 │ 1 │             │ 1 │ 1 │ 1 │ 1 │
+├───┼───┼───┼───┤             ├───┼───┼───┼───┤
+│ 1 │ 1 │ 0 │ 0 │    ─────►   │ 1 │ 1 │ 0 │ 1 │
+├───┼───┼───┼───┤             ├───┼───┼───┼───┤
+│ 0 │ 1 │ 0 │ 0 │             │ 1 │ 0 │ 0 │ 1 │
+├───┼───┼───┼───┤             ├───┼───┼───┼───┤
+│ 0 │ 0 │ 0 │ 1 │             │ 1 │ 0 │ 1 │ 1 │
+└───┴───┴───┴───┘             └───┴───┴───┴───┘
+```
+
+- Rule: 2D Toroidal Cellular Automaton over $\text{GF}(2)$.
+- Equation: $\text{OUT}[r][c] = \text{IN}[r][(c+1)\bmod 4] \oplus \text{IN}[(r+1)\bmod 4][c]$.
+- Computation:
+  - Row 0: $[0\oplus 1,\ 0\oplus 1,\ 1\oplus 0,\ 1\oplus 0] \rightarrow [1, 1, 1, 1]$
+  - Row 1: $[1\oplus 0,\ 0\oplus 1,\ 0\oplus 0,\ 1\oplus 0] \rightarrow [1, 1, 0, 1]$
+  - Row 2: $[1\oplus 0,\ 0\oplus 0,\ 0\oplus 0,\ 0\oplus 1] \rightarrow [1, 0, 0, 1]$
+  - Row 3: $[0\oplus 1,\ 0\oplus 0,\ 1\oplus 0,\ 0\oplus 1] \rightarrow [1, 0, 1, 1]$
+
+FINAL: 1111; 1101; 1001; 1011

@@ -1,0 +1,22 @@
+```
+Player1
+├─ L
+│  ├─ a → (3,1)
+│  └─ b → (1,4)
+└─ R
+   ├─ c → (2,5)
+   └─ d → (4,2)
+```
+
+Player 2 picks the branch giving the higher second‑player payoff:
+- after L: chooses **b** (payoff 4 > 1)
+- after R: chooses **c** (payoff 5 > 2)
+
+Player 1 anticipates these choices and compares his own payoffs:
+- L‑b yields (1, 4)
+- R‑c yields (2, 5)
+
+Player 1 prefers the higher own payoff, so selects **R**.  
+Resulting terminal node: **R then c**.
+
+FINAL: path=Rc, payoffs=2,5

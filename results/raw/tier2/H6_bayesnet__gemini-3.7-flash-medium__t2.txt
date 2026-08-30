@@ -1,0 +1,31 @@
+```
+      [A]
+     /   \
+    ▼     ▼
+   [B]   [C]
+    \     /
+     ▼   ▼
+      [D]
+```
+
+- $P(D=1 \mid A=1) = \sum_{B,C} P(D=1 \mid B,C) P(B \mid A=1) P(C \mid A=1)$
+  - $(1,1) \to 0.9 \times 0.8 \times 0.6 = 0.432$
+  - $(1,0) \to 0.5 \times 0.8 \times 0.4 = 0.160$
+  - $(0,1) \to 0.4 \times 0.2 \times 0.6 = 0.048$
+  - $(0,0) \to 0.05 \times 0.2 \times 0.4 = 0.004$
+  - Total $P(D=1 \mid A=1) = 0.644$
+
+- $P(D=1 \mid A=0) = \sum_{B,C} P(D=1 \mid B,C) P(B \mid A=0) P(C \mid A=0)$
+  - $(1,1) \to 0.9 \times 0.1 \times 0.2 = 0.018$
+  - $(1,0) \to 0.5 \times 0.1 \times 0.8 = 0.040$
+  - $(0,1) \to 0.4 \times 0.9 \times 0.2 = 0.072$
+  - $(0,0) \to 0.05 \times 0.9 \times 0.8 = 0.036$
+  - Total $P(D=1 \mid A=0) = 0.166$
+
+- Marginal & posterior:
+  - $P(A=1, D=1) = 0.644 \times 0.3 = 0.1932$
+  - $P(A=0, D=1) = 0.166 \times 0.7 = 0.1162$
+  - $P(D=1) = 0.1932 + 0.1162 = 0.3094$
+  - $P(A=1 \mid D=1) = \frac{0.1932}{0.3094} \approx 62.4434\%$
+
+FINAL: 62.44%

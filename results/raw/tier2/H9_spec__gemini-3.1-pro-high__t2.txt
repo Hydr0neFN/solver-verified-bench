@@ -1,0 +1,11 @@
+To determine the mutually unsatisfiable pair, we have to look at the delivery and execution guarantees of distributed systems—specifically the fundamental conflict between "at most once" and "at least once" semantics.
+
+Requirement **R2** dictates "at most once" execution. In distributed systems, guaranteeing a task is executed *at most once* means you must never retry it if there is any ambiguity about its completion, because retrying risks executing the job a second time.
+
+Requirement **R4** dictates that if a worker's lease expires, the scheduler *MUST* reassign the job. This is an "at least once" (retry on timeout) mechanism. 
+
+Because workers can be cleanly partitioned from the scheduler while still running and executing the job (Requirement **R5**), a lease expiration at the scheduler does not guarantee that the original worker crashed or failed to execute the job. The worker might have fully or partially executed the job but simply couldn't send its heartbeat. If the scheduler complies with R4 and reassigns the job, the second worker will execute it again. This results in the job being executed more than once, which directly violates R2. 
+
+You cannot simultaneously guarantee that a job is never executed twice (R2) and enforce mandatory retries on timeout (R4) in a network where partitions occur. 
+
+FINAL: R2 and R4

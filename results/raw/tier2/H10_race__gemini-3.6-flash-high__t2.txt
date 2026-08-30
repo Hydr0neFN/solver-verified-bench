@@ -1,0 +1,14 @@
+```
+Server 1                   Server 2                   PostgreSQL
+  │                          │                            │
+  ├─ SELECT user_id ─────────┼───────────────────────────►│ (Not found)
+  │                          ├─ SELECT user_id ──────────►│ (Not found)
+  ├─ mailer.send() [x]       │                            │
+  │                          ├─ mailer.send() [x] ← Dup!  │
+  ├─ INSERT ─────────────────┼───────────────────────────►│
+  │                          └─ INSERT ──────────────────►│
+```
+
+Concurrent servers execute the `SELECT` query before inserting a record or holding a lock. Under `READ COMMITTED` isolation, two or more transactions can simultaneously query and observe `row is None`, causing multiple servers to call `mailer.send()` before inserting into PostgreSQL.
+
+FINAL: Check-then-act race condition

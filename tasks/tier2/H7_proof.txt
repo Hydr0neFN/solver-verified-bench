@@ -1,0 +1,16 @@
+Below is a purported proof. Exactly one numbered step is logically invalid (the first one that does not follow). Identify its number.
+
+Claim: for all real x > 0, x + 1/x >= 2.
+
+1. Let x > 0.
+2. Consider (x - 1)^2 >= 0, which holds for every real x.
+3. Expanding, x^2 - 2x + 1 >= 0.
+4. Adding 2x to both sides, x^2 + 1 >= 2x.
+5. Since x > 0, dividing both sides by x preserves the inequality: x + 1/x >= 2.
+6. Therefore for all real x, x + 1/x >= 2.
+7. In particular the minimum of x + 1/x on x > 0 is 2, attained at x = 1.
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: <step number>

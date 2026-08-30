@@ -1,0 +1,16 @@
+```
+┌─────────────┬──────────────────┬──────────────────┬───────────┐
+│ Stone Size  │ Treatment A      │ Treatment B      │ Preferred │
+├─────────────┼──────────────────┼──────────────────┼───────────┤
+│ Small       │  81/ 87 (93.10%) │ 234/270 (86.67%) │ [x] A     │
+│ Large       │ 192/263 (73.00%) │  55/ 80 (68.75%) │ [x] A     │
+├─────────────┼──────────────────┼──────────────────┼───────────┤
+│ Aggregate   │ 273/350 (78.00%) │ 289/350 (82.57%) │ ! Simpson │
+└─────────────┴──────────────────┴──────────────────┴───────────┘
+```
+
+- Stone size acts as a confounder: Treatment A was disproportionately assigned to severe large-stone cases (263/350 vs 80/350).
+- Stratifying by stone size resolves Simpson's paradox: Treatment A yields higher success rates in both small (93.10% > 86.67%) and large (73.00% > 68.75%) subgroups → patient should prefer **A**.
+- Treatment A aggregate success rate: $\frac{81 + 192}{87 + 263} = \frac{273}{350} = 78.00\%$.
+
+FINAL: prefer=A, A_overall=78.00%

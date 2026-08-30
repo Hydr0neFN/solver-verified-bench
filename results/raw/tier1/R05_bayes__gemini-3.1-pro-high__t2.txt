@@ -1,0 +1,13 @@
+```
+Population (100,000)
+├─ Disease (100)
+│  ├─ Test+ (99)    ← True positives
+│  └─ Test- (1)
+└─ Healthy (99,900)
+   ├─ Test+ (4,995) ← False positives
+   └─ Test- (94,905)
+```
+Total positive results $\rightarrow 99 + 4995 = 5094$.
+Probability of disease $\rightarrow 99 / 5094 \approx 0.0194$.
+
+FINAL: 1.94%

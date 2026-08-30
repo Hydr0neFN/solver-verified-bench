@@ -1,0 +1,12 @@
+To find the unique assignment, we can map the 16 constraints to absolute positions (1 to 6) and relative distances:
+1. Eun is at position 1 or 6 (rule 3), which restricts the cat owner to position 2 or 5 (rule 12).
+2. Cai and Dev are at distances of exactly 3 (rule 2), allowing only position pairs (1,4), (2,5), or (3,6).
+3. We know Cai drinks milk (rule 6) and Dev owns the rat (rule 15).
+4. Ada is to the left of Bo, but not immediately left (rules 1, 5). The tea drinker is exactly 2 away from Ada (rule 7), and the bird owner drinks tea (rule 14).
+5. Cola and juice are adjacent (rule 9). Water is at positions 2, 3, 4, or 5 (rule 10).
+6. Kefir is to the right of Bo (rule 8) and paired with the newt (rule 11).
+7. The dog owner is left of the fish owner (rule 13), and the fish owner doesn't drink milk (rule 16). 
+
+Evaluating permutations computationally or manually against these interlocking constraints forces a single valid configuration, collapsing the options to exactly one unique matching matrix. 
+
+FINAL: names=Ada,Dev,Bo,Fay,Cai,Eun | drinks=cola,juice,tea,water,milk,kefir | pets=dog,rat,bird,fish,cat,newt

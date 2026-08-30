@@ -1,0 +1,2 @@
+PostgreSQL implements the `SERIALIZABLE` isolation level using Serializable Snapshot Isolation (SSI), not two-phase locking. In SSI, reads acquire non-blocking SIREAD (predicate) locks to track dependencies and detect serialization anomalies, rather than acquiring traditional shared read locks. Consequently, reads do not block concurrent writers in PostgreSQL; instead, detected conflicts result in transaction aborts. 
+FINAL: REJECT

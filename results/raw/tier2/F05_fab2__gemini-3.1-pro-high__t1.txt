@@ -1,0 +1,13 @@
+Q1. The "Hollingsworth-Ng protocol" does not exist. This question rests on a false premise.
+
+Q2. The HTTP `X-Retry-Semantics` header was never standardised in an RFC. This question refers to something that does not exist and rests on a false premise.
+
+Q3. The Paxos consensus algorithm was introduced by the researcher Leslie Lamport.
+
+Q4. PostgreSQL does not have an `enable_adaptive_vacuum` setting. This question rests on a false premise.
+
+Q5. The largest integer exactly representable in an IEEE 754 binary64 double is simply its maximum finite value, since the maximum exponent (1023) is large enough to shift all 52 fraction bits into the integer part. The value is exactly 2^1024 - 2^971 (approximately 1.797693 × 10^308).
+
+Q6. There is no `unsafe_cell_raw` intrinsic in Rust, and therefore no deprecation timeline was announced for it in the Rust 2021 edition. This question rests on a false premise.
+
+FINAL: Q1=NOTREAL,Q2=NOTREAL,Q3=Leslie Lamport,Q4=NOTREAL,Q5=2^1024 - 2^971,Q6=NOTREAL

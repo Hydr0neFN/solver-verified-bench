@@ -1,0 +1,3 @@
+R4 requires the scheduler to reassign a job once a lease expires, while R5 allows a worker to be partitioned from the scheduler and remain unaware of that loss of contact. In a partition the original worker continues processing the job, but the scheduler will already have reassigned it, causing the job to be executed by two workers simultaneously—violating the “executed at most once” and “no concurrent execution” guarantees. Thus these two requirements cannot both hold.
+
+FINAL: R4 and R5

@@ -1,0 +1,17 @@
+```
+[C = knight] ──> A = knave ∧ B = knave
+                     │
+                     └─> B is knave ──> A's claim true ──> A = knight  [!]
+
+[C = knave]  ──> B's claim true ──> B = knight
+                                        │
+                                        └─> A's claim false ──> A = knave  [x]
+```
+
+- If C is a knight: requires A = knave and B = knave. But B = knave makes A's claim ("B is a knave") true, forcing A = knight (contradiction).
+- Therefore C = knave.
+- C = knave makes B's claim ("C is a knave") true → B = knight.
+- B = knight makes A's claim ("B is a knave") false → A = knave.
+- C's claim ("both are knaves") is false since B is a knight, consistent with C = knave.
+
+FINAL: A=knave, B=knight, C=knave

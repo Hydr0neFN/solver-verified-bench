@@ -1,0 +1,20 @@
+```
+[IN] ──(Transpose)──> [IN^T] ──(Invert row r if sum(IN[r]) is odd)──> [OUT]
+
+Rule formula: OUT[r][c] = IN[c][r] ^ (IN[r][0] ^ IN[r][1] ^ IN[r][2] ^ IN[r][3])
+
+Query row evaluation:
+┌─────┬──────────────┬──────────────┬────────┬─────────────────────────┐
+│ Row │ IN Content   │ Row 1s (Sum) │ Parity │ Transposed Row -> OUT   │
+├─────┼──────────────┼──────────────┼────────┼─────────────────────────┤
+│  0  │ 1  0  1  0   │      2       │ Even   │ 1  1  1  1  -> 1 1 1 1  │
+│  1  │ 1  1  1  1   │      4       │ Even   │ 0  1  1  1  -> 0 1 1 1  │
+│  2  │ 1  1  0  1   │      3       │ Odd  ! │ 1  1  0  0  -> 0 0 1 1  │
+│  3  │ 1  1  0  1   │      3       │ Odd  ! │ 0  1  1  1  -> 1 0 0 0  │
+└─────┴──────────────┴──────────────┴────────┴─────────────────────────┘
+```
+
+- Each output row `r` is formed by taking column `r` of the input grid (matrix transpose).
+- If the sum of elements in row `r` of the input grid is odd, bitwise invert row `r` of the output grid.
+
+FINAL: 1111; 0111; 0011; 1000

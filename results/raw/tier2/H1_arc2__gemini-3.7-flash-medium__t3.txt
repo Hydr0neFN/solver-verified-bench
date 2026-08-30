@@ -1,0 +1,20 @@
+```
+[IN] ──► [Invert row r if r ∈ {0, 2} and row[r][1] == 0] ──► [Rotate 90° CW] ──► [OUT]
+
+Query execution:
+IN:                Pre-rotation:      OUT (90° CW):
+0 1 0 0            0 1 0 0            1 1 0 0
+0 0 0 0  ────────► 0 0 0 0  ────────► 0 1 0 1
+1 1 0 0            1 1 0 0            0 0 0 0
+1 0 0 1            1 0 0 1            1 0 0 0
+```
+
+- Each even row $r \in \{0, 2\}$ is inverted bitwise iff $\text{IN}[r][1] == 0$.
+  - Ex 1: $\text{IN}[0][1]=1, \text{IN}[2][1]=1 \implies$ no rows inverted.
+  - Ex 2: $\text{IN}[0][1]=0, \text{IN}[2][1]=1 \implies$ row 0 inverted.
+  - Ex 3: $\text{IN}[0][1]=1, \text{IN}[2][1]=0 \implies$ row 2 inverted.
+  - Ex 4: $\text{IN}[0][1]=0, \text{IN}[2][1]=0 \implies$ rows 0 and 2 inverted.
+- Resulting grid is rotated 90° clockwise ($\text{OUT}[r][c] = \text{IN}'[3-c][r]$).
+- For Query: $\text{IN}[0][1] = 1$ and $\text{IN}[2][1] = 1 \implies$ no rows inverted; pure 90° clockwise rotation.
+
+FINAL: 1100; 0101; 0000; 1000

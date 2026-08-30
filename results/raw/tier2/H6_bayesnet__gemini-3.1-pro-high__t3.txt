@@ -1,0 +1,19 @@
+To find $P(A=1 | D=1)$, we apply Bayes' theorem: 
+$P(A=1 | D=1) = \frac{P(A=1, D=1)}{P(D=1)}$
+
+First, compute $P(A=1, D=1)$ by marginalizing out conditionally independent variables $B$ and $C$:
+$P(D=1 | A=1) = \sum_{b,c} P(B=b | A=1) P(C=c | A=1) P(D=1 | B=b, C=c)$
+$P(D=1 | A=1) = (0.8 \times 0.6 \times 0.9) + (0.8 \times 0.4 \times 0.5) + (0.2 \times 0.6 \times 0.4) + (0.2 \times 0.4 \times 0.05)$
+$P(D=1 | A=1) = 0.432 + 0.160 + 0.048 + 0.004 = 0.644$
+$P(A=1, D=1) = P(A=1) \times P(D=1 | A=1) = 0.3 \times 0.644 = 0.1932$
+
+Next, compute $P(A=0, D=1)$ using the same logic for $A=0$:
+$P(D=1 | A=0) = (0.1 \times 0.2 \times 0.9) + (0.1 \times 0.8 \times 0.5) + (0.9 \times 0.2 \times 0.4) + (0.9 \times 0.8 \times 0.05)$
+$P(D=1 | A=0) = 0.018 + 0.040 + 0.072 + 0.036 = 0.166$
+$P(A=0, D=1) = P(A=0) \times P(D=1 | A=0) = 0.7 \times 0.166 = 0.1162$
+
+Finally, we calculate $P(D=1)$ and the conditional probability:
+$P(D=1) = P(A=1, D=1) + P(A=0, D=1) = 0.1932 + 0.1162 = 0.3094$
+$P(A=1 | D=1) = \frac{0.1932}{0.3094} \approx 0.624434...$
+
+FINAL: 62.44%

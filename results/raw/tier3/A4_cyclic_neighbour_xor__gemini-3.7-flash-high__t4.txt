@@ -1,0 +1,16 @@
+```
+[IN(r, c+1)] ──┐
+               ├─► [XOR] ──► OUT(r, c)  (toroidal wrap mod 4)
+[IN(r+1, c)] ──┘
+```
+
+Each cell $(r, c)$ in `OUT` is the XOR of its right neighbor and bottom neighbor with periodic/toroidal boundary conditions:
+$$\text{OUT}[r, c] = \text{IN}[r, (c + 1) \bmod 4] \oplus \text{IN}[(r + 1) \bmod 4, c]$$
+
+Applying to Query:
+- Row 0: `(0^1, 0^1, 1^0, 1^0)` $\to$ `1 1 1 1`
+- Row 1: `(1^0, 0^1, 0^0, 1^0)` $\to$ `1 1 0 1`
+- Row 2: `(1^0, 0^0, 0^0, 0^1)` $\to$ `1 0 0 1`
+- Row 3: `(0^1, 0^0, 1^0, 0^1)` $\to$ `1 0 1 1`
+
+FINAL: 1 1 1 1; 1 1 0 1; 1 0 0 1; 1 0 1 1

@@ -1,0 +1,10 @@
+To determine P1's proposal, we solve the problem using backward induction, analyzing what happens when fewer pirates remain:
+
+- **1 Pirate (P6):** If only P6 remains, P6 takes everything. `[P6=100]` 
+- **2 Pirates (P5, P6):** P5 needs 1 vote (50% of 2). P5 votes for himself, taking all coins. `[P5=100, P6=0]`
+- **3 Pirates (P4, P5, P6):** P4 needs 2 votes (50% of 3). P4 buys P6's vote for 1 coin (since P6 gets 0 if P4 dies, and 1 > 0). `[P4=99, P5=0, P6=1]`
+- **4 Pirates (P3, P4, P5, P6):** P3 needs 2 votes (50% of 4). P3 votes for himself and needs 1 more vote. He buys P5 (who would get 0 if P3 dies) for 1 coin. `[P3=99, P4=0, P5=1, P6=0]`
+- **5 Pirates (P2, P3, P4, P5, P6):** P2 needs 3 votes. He needs 2 additional votes and buys the pirates who get nothing if he dies (P4 and P6) for 1 coin each. `[P2=98, P3=0, P4=1, P5=0, P6=1]`
+- **6 Pirates (P1, P2, P3, P4, P5, P6):** P1 needs 3 votes (at least half of 6). P1 votes for himself and needs 2 more votes. He looks at what happens if he dies (the 5-pirate scenario): P3 and P5 would get 0 coins. To secure their votes, P1 offers them 1 coin each, which they strictly prefer over getting 0. P1 keeps the rest.
+
+FINAL: P1=98, P2=0, P3=1, P4=0, P5=1, P6=0

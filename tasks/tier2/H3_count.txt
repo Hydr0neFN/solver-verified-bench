@@ -1,0 +1,6 @@
+How many permutations p of the set {1,2,...,10} satisfy |p(i) - i| >= 2 for every i from 1 to 10? Give the exact integer.
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: <integer>

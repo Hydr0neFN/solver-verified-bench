@@ -1,0 +1,5 @@
+The digits must satisfy two conditions: the count of each digit *i* equals the digit at position *i*, and the total of all counts is 10. By enumerating possibilities that meet the sum‑to‑10 constraint and checking the self‑count condition, the only 10‑digit arrangement that works is  
+
+`6 2 1 0 0 0 1 0 0 0`, i.e. **6210001000**.
+
+FINAL: 6210001000

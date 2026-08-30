@@ -1,0 +1,7 @@
+Small‑stone success: A = 81/87 ≈ 93.1 %, B = 234/270 ≈ 86.7 % (A better).  
+Large‑stone success: A = 192/263 ≈ 73.0 %, B = 55/80 ≈ 68.8 % (A better).  
+Thus A outperforms B within each stone‑size category, making it the preferable treatment for a patient regardless of stone size.  
+
+Overall A success = (81 + 192) / (87 + 263) = 273/350 ≈ 0.78 → **78.00 %**.
+
+FINAL: prefer=A, A_overall=78.00%

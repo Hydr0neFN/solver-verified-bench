@@ -1,0 +1,16 @@
+Race condition (Time-of-Check to Time-of-Use). With READ COMMITTED isolation and no row locking, concurrent transactions can both execute `SELECT` and find no record before either executes the `INSERT`. Both then proceed to call `mailer.send()`, sending duplicate emails. 
+
+```text
+Time │ Worker 1                           │ Worker 2
+─────┼────────────────────────────────────┼────────────────────────────────────
+  1  │ SELECT sent_at -> None             │ 
+  2  │                                    │ SELECT sent_at -> None
+  3  │ mailer.send() -> Email sent!       │ 
+  4  │                                    │ mailer.send() -> Email sent!
+  5  │ INSERT ON CONFLICT...              │ 
+  6  │                                    │ INSERT ON CONFLICT...
+```
+
+The subsequent `INSERT ... ON CONFLICT DO UPDATE` succeeds for both without error, silently masking the duplicate action. To fix, the database insert (e.g., `INSERT ... ON CONFLICT DO NOTHING RETURNING user_id`) must act as the atomic lock before sending the email.
+
+FINAL: Time-of-check to time-of-use (TOCTOU) race condition

@@ -1,0 +1,39 @@
+```
+[IN Grid] ──(Rotate 90° CW)──> [Rotated Grid]
+    │                                │
+ (Col XOR)                     (Col-wise XOR)
+    │                                │
+    ▼                                ▼
+[Parity Mask] ─────────────────> [OUT Grid]
+```
+
+### Rule
+1. Rotate `IN` 90° clockwise: `Rotated[r][c] = IN[3 - c][r]`.
+2. Compute column parities of `IN`: `Mask[c] = IN[0][c] ^ IN[1][c] ^ IN[2][c] ^ IN[3][c]`.
+3. Invert column `c` if `Mask[c] == 1`: `OUT[r][c] = Rotated[r][c] ^ Mask[c]`.
+
+### Query Step-by-Step
+- **IN Column XORs (`Mask`)**:
+  - `c0 = 0 ^ 0 ^ 0 ^ 1 = 1`
+  - `c1 = 1 ^ 1 ^ 1 ^ 1 = 0`
+  - `c2 = 1 ^ 1 ^ 1 ^ 1 = 0`
+  - `c3 = 1 ^ 1 ^ 0 ^ 0 = 0`
+  - `Mask = [1, 0, 0, 0]`
+
+- **Rotate 90° CW**:
+  ```
+  1 0 0 0
+  1 1 1 1
+  1 1 1 1
+  0 0 1 1
+  ```
+
+- **Apply Mask (invert Col 0)**:
+  ```
+  0 0 0 0
+  0 1 1 1
+  0 1 1 1
+  1 0 1 1
+  ```
+
+FINAL: 0000; 0111; 0111; 1011

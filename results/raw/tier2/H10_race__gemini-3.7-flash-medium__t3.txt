@@ -1,0 +1,15 @@
+```
+Server A                                Server B
+   │                                       │
+   ├─ SELECT sent_at (empty)               │
+   │                                       ├─ SELECT sent_at (empty)
+   ├─ mailer.send() [EMAIL 1]              │
+   │                                       ├─ mailer.send() [EMAIL 2: DUPLICATE]
+   ├─ INSERT ... ON CONFLICT               │
+   └─ COMMIT                               ├─ INSERT ... ON CONFLICT
+                                           └─ COMMIT
+```
+
+Two concurrent processes both execute `SELECT` before either executes `INSERT`, observing no existing record. Both proceed to call `mailer.send()` before the database state is updated or locked.
+
+FINAL: check-then-act race condition

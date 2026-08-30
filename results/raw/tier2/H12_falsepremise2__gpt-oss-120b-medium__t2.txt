@@ -1,0 +1,2 @@
+PostgreSQL’s SERIALIZABLE level uses Serializable Snapshot Isolation (SSI), not two‑phase locking; it employs predicate‑locking rather than shared row locks, so the described lock‑blocking behavior is inaccurate.  
+FINAL: REJECT

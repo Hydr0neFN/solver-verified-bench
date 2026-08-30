@@ -1,0 +1,16 @@
+```
+[IN] ──► [Transpose: INᵀ[r] = col_r(IN)] ──► [XOR with sum(IN[r]) % 2] ──► [OUT]
+```
+
+### Rule
+1. Transpose the grid: $\text{OUT}[r][c] = \text{IN}[c][r]$.
+2. Invert row $r$ (bitwise NOT) if the $r$-th row of $\text{IN}$ has an odd number of $1$s:
+$$\text{OUT}[r][c] = \text{IN}[c][r] \oplus (\sum_{j=0}^{3} \text{IN}[r][j] \bmod 2)$$
+
+### Query Evaluation
+- Row 0: `[1, 0, 1, 0]` $\to$ sum = $2$ (even) $\to$ Col 0 `[1, 1, 1, 1]` unchanged $\to$ `1 1 1 1`
+- Row 1: `[1, 1, 1, 1]` $\to$ sum = $4$ (even) $\to$ Col 1 `[0, 1, 1, 1]` unchanged $\to$ `0 1 1 1`
+- Row 2: `[1, 1, 0, 1]` $\to$ sum = $3$ (odd)  $\to$ Col 2 `[1, 1, 0, 0]` inverted  $\to$ `0 0 1 1`
+- Row 3: `[1, 1, 0, 1]` $\to$ sum = $3$ (odd)  $\to$ Col 3 `[0, 1, 1, 1]` inverted  $\to$ `1 0 0 0`
+
+FINAL: 1111; 0111; 0011; 1000

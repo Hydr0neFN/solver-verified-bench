@@ -1,0 +1,12 @@
+```
+Server A                         Server B
+   │                                │
+   ├─ SELECT (no row found)         ├─ SELECT (no row found)
+   ├─ mailer.send()                 ├─ mailer.send()  ! duplicate send ←
+   ├─ INSERT ...                    ├─ INSERT (conflict update)
+   ▼                                ▼
+```
+
+- Non-atomic check and execution → multiple workers concurrently read non-existent record and invoke `mailer.send` before either inserts or locks the row.
+
+FINAL: check-then-act race condition

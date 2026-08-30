@@ -1,0 +1,5 @@
+Steps 1 through 5 establish that if $x > 0$, then $x + \frac{1}{x} \ge 2$. 
+
+Step 6 invalidly generalizes this result to "all real $x$", dropping the assumption $x > 0$ established in Step 1. (Furthermore, the statement in Step 6 is false for $x \le 0$).
+
+FINAL: 6

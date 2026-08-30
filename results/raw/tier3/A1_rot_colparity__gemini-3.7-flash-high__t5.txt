@@ -1,0 +1,28 @@
+Evaluating the deterministic transformation on the 4x4 binary grids...
+```
+[IN] ──► [Rot 90° CW: IN[3-c][r]] ──► [XOR Column Parity W] ──► [OUT]
+                     ▲                            ▲
+                     └──── W[c] = ⊕_k IN[k][c] ───┘
+```
+
+### Rule
+1. Compute the column parity mask $W \in \{0, 1\}^4$:
+   $$W[c] = \bigoplus_{k=0}^3 \text{IN}[k][c]$$
+2. Rotate $\text{IN}$ $90^\circ$ clockwise (or equivalently, reverse each column $r$ to form row $r$) and $\text{XOR}$ with $W$:
+   $$\text{OUT}[r][c] = \text{IN}[3-c][r] \oplus W[c]$$
+
+### Application to Query
+- $\text{IN}$:
+  - $\text{row}_0 = [0, 1, 1, 1]$
+  - $\text{row}_1 = [0, 1, 1, 1]$
+  - $\text{row}_2 = [0, 1, 1, 0]$
+  - $\text{row}_3 = [1, 1, 1, 0]$
+- Column parity mask:
+  - $W = [0\oplus 0\oplus 0\oplus 1, \; 1\oplus 1\oplus 1\oplus 1, \; 1\oplus 1\oplus 1\oplus 1, \; 1\oplus 1\oplus 0\oplus 0] = [1, 0, 0, 0]$
+- Output rows $\text{OUT}[r] = \text{reverse}(\text{col}_r(\text{IN})) \oplus W$:
+  - $\text{OUT}[0] = [1, 0, 0, 0] \oplus [1, 0, 0, 0] = [0, 0, 0, 0]$
+  - $\text{OUT}[1] = [1, 1, 1, 1] \oplus [1, 0, 0, 0] = [0, 1, 1, 1]$
+  - $\text{OUT}[2] = [1, 1, 1, 1] \oplus [1, 0, 0, 0] = [0, 1, 1, 1]$
+  - $\text{OUT}[3] = [0, 0, 1, 1] \oplus [1, 0, 0, 0] = [1, 0, 1, 1]$
+
+FINAL: 0 0 0 0; 0 1 1 1; 0 1 1 1; 1 0 1 1

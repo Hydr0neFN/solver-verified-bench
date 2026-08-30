@@ -1,0 +1,13 @@
+**Q1.** No known “Hollingsworth‑Ng protocol”; the premise appears false.  
+
+**Q2.** There is no RFC that standardises an HTTP header named `X‑Retry‑Semantics`.  
+
+**Q3.** The Paxos consensus algorithm was introduced by **Leslie Lamport** (1998).  
+
+**Q4.** The default for PostgreSQL’s `enable_adaptive_vacuum` is **on** (true).  
+
+**Q5.** The largest integer that can be represented exactly in an IEEE 754 binary64 double is **2⁵³ = 9007199254740992**.  
+
+**Q6.** No `unsafe_cell_raw` intrinsic exists in the Rust language; the premise is false.  
+
+FINAL: Q1=NOTREAL,Q2=NOTREAL,Q3=Leslie Lamport,Q4=true,Q5=9007199254740992,Q6=NOTREAL

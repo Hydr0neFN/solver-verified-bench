@@ -1,0 +1,11 @@
+```
+Thread 1: locks 'A' ──────> waits for 'B' ──────┐
+                                                ▼
+Thread 2: locks 'B' ──────> waits for 'A' ──> [ DEADLOCK ] !
+```
+
+- Locks in `self._locks` are acquired in arbitrary iteration order of `items`.
+- Concurrent threads requesting overlapping SKUs in differing orders cause circular wait.
+- Fix: sort keys canonically (e.g. `sorted(items)`) before calling `.acquire()`.
+
+FINAL: Deadlock due to inconsistent lock acquisition order

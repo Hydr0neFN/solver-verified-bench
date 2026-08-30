@@ -1,0 +1,1 @@
+FINAL: A=knave, B=knight, C=knave

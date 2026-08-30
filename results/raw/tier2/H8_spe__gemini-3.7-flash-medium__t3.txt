@@ -1,0 +1,19 @@
+```
+                  [P1]
+                 /    \
+               L/      \R [x] (2 > 1)
+               ▼        ▼
+            [P2]        [P2]
+           /    \      /    \
+         a/    b \   c/    d \
+         ▼        ▼  ▼        ▼
+       (3,1)  (1,4) (2,5)  (4,2)
+               [x]   [x]
+             (4 > 1) (5 > 2)
+```
+
+- Subgame `L`: P2 chooses `b` (payoff 4 > 1) → yields (1, 4)
+- Subgame `R`: P2 chooses `c` (payoff 5 > 2) → yields (2, 5)
+- Root: P1 compares `L` (payoff 1) vs `R` (payoff 2) → chooses `R`
+
+FINAL: path=Rc, payoffs=2,5

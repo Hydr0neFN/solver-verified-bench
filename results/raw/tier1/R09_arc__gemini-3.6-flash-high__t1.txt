@@ -1,0 +1,17 @@
+```
+[IN Grid] ──┬──> [Identity] ────────────┐
+            │                           ├──> [Bitwise XOR] ──> [OUT Grid]
+            └──> [180° Rotation] ───────┘
+```
+
+The transformation rule is element-wise XOR between the input grid `IN` and its 180-degree rotation `rot180(IN)`:
+`OUT[r, c] = IN[r, c] ^ IN[3-r, 3-c]`
+
+Applying this to the Query grid:
+
+- **Row 1**: `1 0 1 1` ^ `0 1 0 1` = `1 1 1 0`
+- **Row 2**: `0 1 0 0` ^ `1 0 1 1` = `1 1 1 1`
+- **Row 3**: `1 1 0 1` ^ `0 0 1 0` = `1 1 1 1`
+- **Row 4**: `1 0 1 0` ^ `1 1 0 1` = `0 1 1 1`
+
+FINAL: 1 1 1 0; 1 1 1 1; 1 1 1 1; 0 1 1 1

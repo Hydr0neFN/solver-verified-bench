@@ -1,0 +1,18 @@
+1. **TRUE** — HTTP/2 frames and multiplexes multiple concurrent streams across a single TCP connection.
+2. **TRUE** — CPython 3.6 added ordered dicts as an implementation detail; Python 3.7 standardized it as a language guarantee.
+3. **FALSE** — Raft is a crash-fault-tolerant (CFT) algorithm; it assumes non-malicious nodes and does not handle Byzantine faults.
+4. **FALSE** — PostgreSQL's `REPEATABLE READ` implements Snapshot Isolation (SI), which allows write skew anomalies; preventing write skew requires `SERIALIZABLE` (SSI).
+5. **TRUE** — TLS 1.3 removed static RSA and static Diffie-Hellman key exchanges in favor of ephemeral (ECDHE/DHE) modes for forward secrecy.
+6. **TRUE** — Linux kernel ranks candidate processes by `oom_score` (computed from memory usage and adjusted by `oom_score_adj`).
+7. **TRUE** — Git's object model represents commits as trees pointing to complete blob objects (snapshots); delta compression is an internal packfile optimization.
+8. **FALSE** — Trade-off applies specifically in the presence of network partitions; during normal operation, a system can provide both consistency and availability.
+9. **FALSE** — `Send` indicates transfer of ownership across thread boundaries; sharing by reference (`&T`) requires `Sync`.
+10. **TRUE** — x86-64 Total Store Order (TSO) hardware allows store buffers to delay stores past subsequent loads (StoreLoad reordering).
+11. **TRUE** — IPv6 addresses are 128 bits (16 bytes) in length.
+12. **TRUE** — The SHAttered attack (2017) demonstrated practical SHA-1 collision generation with two distinct PDF files.
+13. **FALSE** — Kafka guarantees message ordering strictly within an individual partition, not globally across multiple partitions of a topic.
+14. **TRUE** — Under the Java Memory Model (JSR-133), a write to a `volatile` variable establishes a happens-before relationship with any subsequent read of that variable.
+15. **FALSE** — DNS utilizes TCP as well as UDP (e.g., responses exceeding packet size limits, truncation `TC=1` fallback, zone transfers).
+16. **TRUE** — StatefulSets assign each pod an ordinal index with persistent DNS and network identity (e.g., `<pod-name>-<ordinal>.<service-name>`).
+
+FINAL: 1=T,2=T,3=F,4=F,5=T,6=T,7=T,8=F,9=F,10=T,11=T,12=T,13=F,14=T,15=F,16=T

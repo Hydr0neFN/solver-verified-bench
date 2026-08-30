@@ -1,0 +1,16 @@
+```
+┌──────────┬──────────┬──────────┬──────────┬──────────┬──────────┐
+│ Position │    1     │    2     │    3     │    4     │    5     │
+├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+│ Name     │ Ana      │ Ben      │ Cy       │ Eli      │ Dee      │
+│ Drink    │ tea      │ cola     │ milk     │ juice    │ water    │
+│ Pet      │ bird     │ fish     │ rat      │ dog      │ cat      │
+└──────────┴──────────┴──────────┴──────────┴──────────┴──────────┘
+```
+
+- **Names**: `Ana=1`, `Dee=5` → `Ben < Cy, Eli` forces `Ben=2`.
+- **Drinks**: `milk=3`, `water=5` → `tea` adjacent to `Ben(2)` gives `tea=1` → `cola < Cy` forces `cola=2`, `juice=4`.
+- **Pets**: `bird=1`, `cat=5` (Dee), `dog=4` (juice) → `rat > cola(2)` gives `rat=3`, `fish=2`.
+- **Resolution**: `|pos[fish](2) - pos[Eli]| = 2` forces `Eli=4` → `Cy=3`.
+
+FINAL: names=Ana,Ben,Cy,Eli,Dee | drinks=tea,cola,milk,juice,water | pets=bird,fish,rat,dog,cat

@@ -1,0 +1,18 @@
+1. **TRUE**: The HTTP/2 protocol multiplexes streams over a single TCP connection.
+2. **TRUE**: In Python, `dict` preserved insertion order as a language guarantee starting in 3.7.
+3. **FALSE**: The Raft consensus algorithm is crash-fault tolerant, not Byzantine-fault tolerant. 
+4. **FALSE**: PostgreSQL's REPEATABLE READ is implemented as Snapshot Isolation, which allows write skew. You need SERIALIZABLE to prevent it.
+5. **TRUE**: TLS 1.3 removed support for RSA key exchange (RSA key transport) to enforce forward secrecy, though RSA is still used for authentication.
+6. **TRUE**: The Linux OOM killer selects victims primarily by their `oom_score`.
+7. **TRUE**: Git logically stores full snapshots of files per commit in its object model; deltas are only an optimization used in packfiles.
+8. **FALSE**: The CAP theorem states that in the presence of a network partition (P), a system must choose between consistency (C) and availability (A). It does not mean you "choose exactly two in all circumstances."
+9. **FALSE**: Rust's `Send` marker trait means ownership of a type can be safely *transferred* across threads. Safe sharing by reference is indicated by the `Sync` trait.
+10. **TRUE**: The x86-64 memory model (Total Store Order) permits StoreLoad reordering, allowing a later load to execute before an earlier store to a different location.
+11. **TRUE**: An IPv6 address is 128 bits.
+12. **TRUE**: SHA-1 collisions have been demonstrated in practice (e.g., the 2017 SHAttered attack).
+13. **FALSE**: Kafka only guarantees total ordering of messages within a single partition, not globally across all partitions of a topic.
+14. **TRUE**: The `volatile` keyword in Java establishes a happens-before relationship between a write to a volatile variable and any subsequent read of that variable.
+15. **FALSE**: DNS queries can use TCP for large responses (like zone transfers or when responses exceed the UDP payload limits).
+16. **TRUE**: In Kubernetes, a StatefulSet provides stable, unique network identities for each pod (e.g., `pod-name-0`, `pod-name-1`).
+
+FINAL: 1=T,2=T,3=F,4=F,5=T,6=T,7=T,8=F,9=F,10=T,11=T,12=T,13=F,14=T,15=F,16=T

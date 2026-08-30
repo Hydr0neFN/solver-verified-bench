@@ -1,0 +1,3 @@
+The code suffers from a time-of-check to time-of-use (TOCTOU) race condition. Because it checks the database state (`SELECT`) without taking any locks, performs the external action (`mailer.send()`), and only then updates the database (`INSERT`), multiple concurrent requests can simultaneously execute the `SELECT`, see that no email has been sent, and all proceed to send the email before any of them record the action. 
+
+FINAL: Race condition

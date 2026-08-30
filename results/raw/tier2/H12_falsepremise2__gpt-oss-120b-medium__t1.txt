@@ -1,0 +1,3 @@
+Increasing `max_pred_locks_per_page` lets PostgreSQL keep more fine‑grained predicate locks on a page before it escalates to a page‑level lock, thus reducing shared‑read lock contention on writes in a serializable, write‑heavy OLTP workload. Raise the setting (e.g., to 10‑20 or higher, matching your `max_pred_locks_per_relation` and memory budget) and reload the config.  
+
+FINAL: Increase max_pred_locks_per_page (e.g., to 10‑20) to allow more predicate locks per page and avoid page‑level lock escalation.

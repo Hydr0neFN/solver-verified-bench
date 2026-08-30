@@ -1,0 +1,31 @@
+```
+[Input Grid]
+      │
+      ▼
+[Transpose] ─────────> OUT[r, c] = IN[c, r]
+      │
+      ▼
+[Parity Condition] ──> sum(IN[r, :]) % 2
+      │
+      ├─ Odd (1)  ───> Invert OUT[r, :] (0 ↔ 1)
+      └─ Even (0) ───> Keep OUT[r, :] as-is
+      │
+      ▼
+[Output Grid]
+```
+
+### Transformation Rule
+
+1. **Transpose** the input grid: `OUT[r, c] = IN[c, r]`.
+2. For each row `r`, compute parity `sum(IN[r, :]) % 2`:
+   - If odd, invert all bits in row `r` of the transposed grid.
+   - If even, keep row `r` unchanged.
+
+### Application to Query
+
+- Row 0: `[1, 0, 1, 0]` → sum = 2 (even) → keep `INᵀ[0] = [1, 1, 1, 1]`
+- Row 1: `[1, 1, 1, 1]` → sum = 4 (even) → keep `INᵀ[1] = [0, 1, 1, 1]`
+- Row 2: `[1, 1, 0, 1]` → sum = 3 (odd)  → invert `INᵀ[2] = [1, 1, 0, 0]` → `[0, 0, 1, 1]`
+- Row 3: `[1, 1, 0, 1]` → sum = 3 (odd)  → invert `INᵀ[3] = [0, 1, 1, 1]` → `[1, 0, 0, 0]`
+
+FINAL: 1111; 0111; 0011; 1000

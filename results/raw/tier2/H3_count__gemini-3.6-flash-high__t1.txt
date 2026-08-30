@@ -1,0 +1,37 @@
+```
+│  k │ r_k (Forbidden) │   (10-k)! │          Term (-1)^k * r_k * (10-k)! │
+├────┼─────────────────┼───────────┼──────────────────────────────────────┤
+│  0 │               1 │   3628800 │                             +3628800 │
+│  1 │              28 │    362880 │                            -10160640 │
+│  2 │             326 │     40320 │                            +13144320 │
+│  3 │            2054 │      5040 │                            -10352160 │
+│  4 │            7646 │       720 │                             +5505120 │
+│  5 │           17266 │       120 │                             -2071920 │
+│  6 │           23431 │        24 │                              +562344 │
+│  7 │           18336 │         6 │                              -110016 │
+│  8 │            7622 │         2 │                               +15244 │
+│  9 │            1444 │         1 │                                -1444 │
+│ 10 │              89 │         1 │                                  +89 │
+├────┼─────────────────┼───────────┼──────────────────────────────────────┤
+│Sum │                 │           │                              159737  │
+```
+
+To find the number of permutations $p$ of $\{1, 2, \dots, 10\}$ such that $|p(i) - i| \ge 2$ for all $i$, we use the Principle of Inclusion-Exclusion (Rook Theory on restricted matrices).
+
+1. **Forbidden Positions**:
+   A cell $(i, j)$ in the $10 \times 10$ matrix is forbidden if $|i - j| \le 1$.
+   The forbidden region forms a tridiagonal band of $3(10) - 2 = 28$ cells.
+
+2. **Inclusion-Exclusion Formula**:
+   \[
+   N = \sum_{k=0}^{10} (-1)^k r_k (10 - k)!
+   \]
+   where $r_k$ is the number of ways to place $k$ non-attacking rooks on the forbidden tridiagonal board.
+
+3. **Evaluating the Sum**:
+   Summing all terms gives:
+   \[
+   3628800 - 10160640 + 13144320 - 10352160 + 5505120 - 2071920 + 562344 - 110016 + 15244 - 1444 + 89 = 159737
+   \]
+
+FINAL: 159737

@@ -1,0 +1,12 @@
+```
+IN (Query)                OUT (Predicted)
+[ 1  0  0  1 ]            [ 0  0  1  1 ]
+[ 1  1  0  0 ]  ───────►  [ 0  0  1  1 ]
+[ 0  1  0  0 ]            [ 0  0  1  1 ]
+[ 0  0  0  1 ]            [ 0  0  1  1 ]
+```
+
+- Transformation maps column uniqueness/degeneracy structure.
+- When all 4 columns are pairwise distinct (Ex. 3 & Query) → outputs constant columns `[0, 0, 1, 1]`.
+
+FINAL: 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1

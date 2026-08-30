@@ -1,0 +1,15 @@
+```
+Premise (Strict 2PL):
+  [Reader] ──(Shared Lock)──> [Tuple] ──(Blocks)──> [Writer]
+
+PostgreSQL Reality (SSI):
+  [Reader] ──(SIREAD Lock)──> [Memory Tracker] ──(Non-blocking)──> [Writer]
+                                    │
+                                    └──> [Cycle Detected] ──> Abort (40001)
+```
+
+- PostgreSQL implements `SERIALIZABLE` via Serializable Snapshot Isolation (SSI), not Two-Phase Locking (2PL).
+- Predicate locks (`SIREAD`) are in-memory tracking markers; they never block readers or writers.
+- `max_pred_locks_per_page` governs lock promotion granularity (tuple → page) to prevent predicate lock table memory exhaustion, not lock contention/blocking.
+
+FINAL: REJECT

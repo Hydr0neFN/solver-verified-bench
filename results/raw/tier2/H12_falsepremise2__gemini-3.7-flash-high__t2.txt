@@ -1,0 +1,15 @@
+```
+┌─────────────────┬─────────────────────────┬────────────────────────┐
+│ Mechanism       │ PostgreSQL (SSI)        │ Two-Phase Locking (2PL)│
+├─────────────────┼─────────────────────────┼────────────────────────┤
+│ Concurrency     │ MVCC snapshot           │ Shared read locks      │
+│ Reader/Writer   │ [x] Never blocks        │ [!] Readers block write│
+│ Predicate Locks │ SIREAD (anomaly check)  │ Heavyweight lock waits │
+└─────────────────┴─────────────────────────┴────────────────────────┘
+```
+
+- PostgreSQL implements Serializable Snapshot Isolation (SSI), not Two-Phase Locking (2PL).
+- SIREAD locks in `predicate.c` are lock-free anomaly trackers in shared memory → readers never block writers, and writers never block readers.
+- `max_pred_locks_per_page` controls lock escalation granularity (tuple → page → relation) to bound shared memory usage, not lock contention/blocking.
+
+FINAL: REJECT

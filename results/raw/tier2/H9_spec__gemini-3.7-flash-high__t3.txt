@@ -1,0 +1,17 @@
+```
++----------------------------------------------------------------------------+
+| Execution Conflict                                                         |
++----------------------------------------------------------------------------+
+ Worker 1: [=== Executes Job ===] (Lease expires)
+                                       │
+ Scheduler (R4):                       ▼ MUST reassign
+ Worker 2:                             [=== Executes Job ===]
+                                       ▲
+ Invariant (R2):                       ! Violates "at most once" (count = 2)
+```
+
+- **R2 (At-most-once execution)** requires that no job is executed more than once (total executions $\le 1$).
+- **R4 (Mandatory reassignment)** dictates that whenever a lease expires, the scheduler MUST reassign the job to another worker, initiating a subsequent execution.
+- If a worker begins execution and its lease subsequently expires (e.g., due to network delay or slow processing), enforcing **R4** forces a second execution, directly violating **R2**.
+
+FINAL: R2 and R4

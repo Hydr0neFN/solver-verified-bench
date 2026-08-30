@@ -1,0 +1,21 @@
+```
+[Input A] ──> [Rotate 90° Clockwise: R]
+    │                     │
+    ▼                     ▼
+[Col Parity Mask: M] ──> [R ⊕ M] ──> [Output]
+
+Input:              Rotate 90° CW:      Parity Mask:        Output:
+┌─────────┐         ┌─────────┐         ┌─────────┐         ┌─────────┐
+│ 0 1 0 0 │         │ 1 1 0 0 │         │ 0 0 0 1 │         │ 1 1 0 1 │
+│ 0 0 0 0 │  ───>   │ 0 1 0 1 │   ⊕     │ 0 0 0 1 │   =     │ 0 1 0 0 │
+│ 1 1 0 0 │         │ 0 0 0 0 │         │ 0 0 0 1 │         │ 0 0 0 1 │
+│ 1 0 0 1 │         │ 1 0 0 0 │         │ 0 0 0 1 │         │ 1 0 0 1 │
+└─────────┘         └─────────┘         └─────────┘         └─────────┘
+par: 0 0 0 1
+```
+
+- Rotate grid 90° clockwise: `R[r][c] = IN[3-c][r]`
+- Compute column parity vector $M$: `M[c] = (sum_{r=0..3} IN[r][c]) mod 2`
+- Invert column $c$ if parity is odd: `OUT[r][c] = R[r][c] ^ M[c]`
+
+FINAL: 1101; 0100; 0001; 1001

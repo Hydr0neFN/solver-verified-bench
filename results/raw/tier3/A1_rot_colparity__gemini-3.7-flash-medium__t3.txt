@@ -1,0 +1,24 @@
+```
+[Input M] ──> [Rotate 90° CW: R] ──(+)──> [Output]
+    │                               ▲
+    └───> [Col Parity Mask: p] ─────┘
+```
+
+- **Rotation:** $R_{r, c} = M_{3-c, r}$ (90° clockwise rotation).
+- **Parity mask:** $p_c = \left(\sum_{r=0}^{3} M_{r, c}\right) \bmod 2$ (column parities of $M$).
+- **Combine:** $\text{OUT}_{r, c} = R_{r, c} \oplus p_c$ (XOR each column $c$ with $p_c$).
+
+Applying to query:
+- $R$:
+  `1 0 0 0`
+  `1 1 1 1`
+  `1 1 1 1`
+  `0 0 1 1`
+- $p = [1, 0, 0, 0]$ (only column 0 flips)
+- $\text{OUT}$:
+  `0 0 0 0`
+  `0 1 1 1`
+  `0 1 1 1`
+  `1 0 1 1`
+
+FINAL: 0000; 0111; 0111; 1011

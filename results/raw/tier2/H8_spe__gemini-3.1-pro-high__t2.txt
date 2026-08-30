@@ -1,0 +1,16 @@
+```
+[P1]
+ ├─ L → [P2]
+ │       ├─ a → (3, 1)
+ │       └─ b → (1, 4)  ← [x] P2 chooses b (4 > 1)
+ └─ R → [P2]
+         ├─ c → (2, 5)  ← [x] P2 chooses c (5 > 2)
+         └─ d → (4, 2)
+```
+
+Backward induction:
+- Node L: P2 chooses b (4 > 1). P1 expects 1.
+- Node R: P2 chooses c (5 > 2). P1 expects 2.
+- Root: P1 chooses R (2 > 1).
+
+FINAL: path=Rc, payoffs=2,5

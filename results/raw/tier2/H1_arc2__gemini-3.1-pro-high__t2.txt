@@ -1,0 +1,50 @@
+To infer the transformation, let's analyze the relationship between the input (IN) and output (OUT) grids across the given examples. 
+
+1. **Rotation**: If we rotate the IN grid 90 degrees clockwise, the resulting grid looks very similar to the OUT grid. 
+   For Example 1, rotating IN 90° clockwise yields exactly the OUT grid.
+2. **Column Parity (XOR)**: For Examples 2, 3, and 4, the rotated IN grid differs from the OUT grid by entire columns being flipped (0s become 1s, and 1s become 0s). 
+   Let's check which columns are flipped by finding the sum of 1s in each column of the *original* IN grid:
+   - In Ex 1, all IN columns have an even number of 1s (sums: 2, 4, 2, 0). No columns are flipped.
+   - In Ex 2, IN column 3 has an odd number of 1s (sum: 1). In OUT, column 3 of the rotated grid is flipped.
+   - In Ex 3, IN column 1 has an odd number of 1s (sum: 3). In OUT, column 1 of the rotated grid is flipped.
+   - In Ex 4, IN columns 1 and 3 have an odd number of 1s. In OUT, columns 1 and 3 are flipped.
+
+**Rule**: 
+1. Rotate the IN grid 90 degrees clockwise.
+2. For each column `j` in the original IN grid, if it contains an odd number of 1s, invert all the bits in column `j` of the newly rotated grid.
+
+**Applying to the Query**:
+Query IN:
+0 1 0 0
+0 0 0 0
+1 1 0 0
+1 0 0 1
+
+Step 1: Rotate 90 degrees clockwise.
+Row 0 (0,1,0,0) becomes Col 3 -> `0, 1, 0, 0`
+Row 1 (0,0,0,0) becomes Col 2 -> `0, 0, 0, 0`
+Row 2 (1,1,0,0) becomes Col 1 -> `1, 1, 0, 0`
+Row 3 (1,0,0,1) becomes Col 0 -> `1, 0, 0, 1`
+
+Rotated Grid:
+1 1 0 0
+0 1 0 1
+0 0 0 0
+1 0 0 0
+
+Step 2: Calculate column parities of Query IN.
+Col 0: 0+0+1+1 = 2 (Even)
+Col 1: 1+0+1+0 = 2 (Even)
+Col 2: 0+0+0+0 = 0 (Even)
+Col 3: 0+0+0+1 = 1 (Odd)
+
+Step 3: Invert column 3 of the rotated grid.
+Column 3 goes from `0, 1, 0, 0` to `1, 0, 1, 1`.
+
+Final Grid:
+1 1 0 1
+0 1 0 0
+0 0 0 1
+1 0 0 1
+
+FINAL: 1 1 0 1; 0 1 0 0; 0 0 0 1; 1 0 0 1

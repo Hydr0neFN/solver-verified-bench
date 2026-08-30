@@ -1,0 +1,22 @@
+```
+IN (Query)            rot270 (90° CW)       Col XOR Parity      OUT
+[0 1 0 0]             [1 1 0 0]             [0  0  0  1]        [1 1 0 1]
+[0 0 0 0]      →      [0 1 0 1]      ^      [0  0  0  1]   =    [0 1 0 0]
+[1 1 0 0]             [0 0 0 0]             [0  0  0  1]        [0 0 0 1]
+[1 0 0 1]             [1 0 0 0]             [0  0  0  1]        [1 0 0 1]
+```
+
+The transformation consists of two deterministic steps:
+1. Rotate the input grid 90° clockwise ($rot_{270}$).
+2. XOR each column $c$ of the rotated grid with the XOR sum (parity) of column $c$ in the original input grid.
+
+Applying this rule to the Query grid:
+- Input column XOR parities: $[0, 0, 0, 1]$
+- Rotated grid:
+  `1 1 0 0`
+  `0 1 0 1`
+  `0 0 0 0`
+  `1 0 0 0`
+- XORing column 3 with 1 yields the output grid.
+
+FINAL: 1101; 0100; 0001; 1001

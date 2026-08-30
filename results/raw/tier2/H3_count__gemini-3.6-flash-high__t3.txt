@@ -1,0 +1,14 @@
+To find the number of permutations $p$ of $\{1, 2, \dots, 10\}$ satisfying $|p(i) - i| \ge 2$ for all $1 \le i \le 10$:
+
+- **Forbidden values**: Each element $i$ cannot map to $i-1$, $i$, or $i+1$.
+- **Rook Board / Inclusion-Exclusion**: This is equivalent to placing 10 non-attacking rooks on a $10 \times 10$ board while avoiding the tridiagonal band of forbidden cells ($p(i) \in \{i-1, i, i+1\}$).
+- **Sequence values** (OEIS A0001883):
+  - $n=4 \to 1$
+  - $n=5 \to 4$
+  - $n=6 \to 29$
+  - $n=7 \to 206$
+  - $n=8 \to 1708$
+  - $n=9 \to 15702$
+  - $n=10 \to 159737$
+
+FINAL: 159737

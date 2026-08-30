@@ -1,0 +1,11 @@
+Ada left of Bo; Ada ≠ Bo+1 → Ada = 1, Bo = 3.  
+Eun at end = 6 ⇒ cat owner at 5 (Cai).  
+Dev‑Cai distance 3 ⇒ Dev = 2, Cai = 5 (milk).  
+Tea = Ada+2 ⇒ tea at 3 → Bo tea ⇒ Bo bird.  
+Kefir > Bo ⇒ only position 6 left ⇒ Eun kefir → Eun newt.  
+Cola‑juice adjacent → only free spots 1,2 → Ada cola, Dev juice.  
+Water not ends → must be Fay at 4.  
+Remaining pets: dog, fish for Ada/Fay; dog left of fish → Ada dog, Fay fish.  
+All constraints satisfied.
+
+FINAL: names=Ada,Dev,Bo,Fay,Cai,Eun | drinks=cola,juice,tea,water,milk,kefir | pets=dog,rat,bird,fish,cat,newt

@@ -1,0 +1,32 @@
+```
+[Input Grid]
+      │
+      ▼
+[Transpose: row i := col i]
+      │
+      ▼
+[Bitwise NOT on row i if sum(IN[i]) is odd]
+      │
+      ▼
+[Output Grid]
+```
+
+### Transformation Rule
+1. Transpose the input grid: $\text{OUT}[i][j] = \text{IN}[j][i]$.
+2. For each row $i$, if the sum of elements in $\text{IN}[i]$ is odd, invert every bit in row $i$ of the transposed grid:
+   $$\text{OUT}[i][j] = \text{IN}[j][i] \oplus \left(\sum_{k=0}^3 \text{IN}[i][k] \bmod 2\right)$$
+
+### Application to Query
+- **Row parities of IN**:
+  - Row 0: `1 0 1 0` $\rightarrow \sum = 2$ (even $\rightarrow$ keep)
+  - Row 1: `1 1 1 1` $\rightarrow \sum = 4$ (even $\rightarrow$ keep)
+  - Row 2: `1 1 0 1` $\rightarrow \sum = 3$ (odd $\rightarrow$ invert)
+  - Row 3: `1 1 0 1` $\rightarrow \sum = 3$ (odd $\rightarrow$ invert)
+
+- **Transposed rows ($\text{IN}^T$)**:
+  - Row 0: `1 1 1 1` $\rightarrow$ keep $\rightarrow$ `1 1 1 1`
+  - Row 1: `0 1 1 1` $\rightarrow$ keep $\rightarrow$ `0 1 1 1`
+  - Row 2: `1 1 0 0` $\rightarrow$ invert $\rightarrow$ `0 0 1 1`
+  - Row 3: `0 1 1 1` $\rightarrow$ invert $\rightarrow$ `1 0 0 0`
+
+FINAL: 1111; 0111; 0011; 1000

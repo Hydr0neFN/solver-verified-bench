@@ -1,0 +1,19 @@
+```
+Requirement Conflict Map
+──────────────────────────────────────────────────────────────────────
+Requirement            Constraint                         Status
+──────────────────────────────────────────────────────────────────────
+R1 (Immutability)   →  Rows never updated or deleted      [x] Permanent
+R3 (Right to Erasure)→ Zero trace / record erasure        ! Conflict
+──────────────────────────────────────────────────────────────────────
+R1: Retain row permanently ──┐
+                             ├──► Contradiction: record cannot persist
+R3: Erase without trace ─────┘    while leaving zero trace.
+```
+
+- R1 enforces absolute physical immutability: no row may ever be updated or deleted.
+- R3 enforces complete record erasure ("right to erasure"), requiring that zero trace of the record exists upon request.
+- A stored record cannot simultaneously be retained without deletion (R1) and erased leaving no trace (R3).
+- Requirements R2, R4, R5, and R6 describe standard event-sourced ledger mechanics and contain no pairwise contradictions.
+
+FINAL: R1 and R3

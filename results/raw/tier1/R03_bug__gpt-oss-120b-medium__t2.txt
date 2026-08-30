@@ -1,0 +1,2 @@
+The per‑SKU locks are acquired in whatever order the caller’s dict provides, so two threads can lock the same items in opposite order and deadlock.  
+FINAL: lock ordering deadlock

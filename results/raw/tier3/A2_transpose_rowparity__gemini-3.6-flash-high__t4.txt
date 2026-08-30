@@ -1,0 +1,38 @@
+```
++----------------------------------------------------------------------------+
+| Transformation Pipeline                                                    |
++----------------------------------------------------------------------------+
+  [Input Grid IN]
+         │
+         ▼
+  1. Transpose: T = INᵀ  (Row r of T = Column r of IN)
+         │
+         ▼
+  2. Parity Check & Row Inversion:
+     Row r of OUT = NOT(T[r])  if sum(Row r of IN) is odd
+                  = T[r]       if sum(Row r of IN) is even
+         │
+         ▼
+  [Output Grid OUT]
+```
+
+### Reasoning
+
+1. **Transpose**: Transpose the input grid $\text{IN}$ to get $\text{IN}^T$, so row $r$ of $\text{IN}^T$ is column $r$ of $\text{IN}$.
+2. **Conditional Inversion**: Inspect row $r$ of the original input matrix $\text{IN}$. If row $r$ contains an **odd** number of 1s (odd parity), invert all bits of row $r$ in $\text{IN}^T$. Otherwise, leave row $r$ unchanged.
+
+### Application to Query
+
+Input Matrix $\text{IN}$:
+- Row 0: `1 0 1 0` (Sum = 2, Even $\rightarrow$ keep row 0 of $\text{IN}^T$)
+- Row 1: `1 1 1 1` (Sum = 4, Even $\rightarrow$ keep row 1 of $\text{IN}^T$)
+- Row 2: `1 1 0 1` (Sum = 3, Odd $\rightarrow$ invert row 2 of $\text{IN}^T$)
+- Row 3: `1 1 0 1` (Sum = 3, Odd $\rightarrow$ invert row 3 of $\text{IN}^T$)
+
+Columns of $\text{IN}$ ($\text{IN}^T$ rows):
+- Row 0 of $\text{IN}^T$: `1 1 1 1` $\rightarrow$ `1 1 1 1`
+- Row 1 of $\text{IN}^T$: `0 1 1 1` $\rightarrow$ `0 1 1 1`
+- Row 2 of $\text{IN}^T$: `1 1 0 0` $\rightarrow$ `0 0 1 1` (inverted)
+- Row 3 of $\text{IN}^T$: `0 1 1 1` $\rightarrow$ `1 0 0 0` (inverted)
+
+FINAL: 1111; 0111; 0011; 1000

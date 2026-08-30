@@ -1,0 +1,11 @@
+The total number of 8‑digit strings using digits 1‑9 with no equal adjacent digits is  
+
+\(9 \times 8^{7}=9 \times 2{,}097{,}152 = 18{,}874{,}368\).
+
+Because the digits 1‑9 contain each residue modulo 3 exactly three times, the set of allowed strings is symmetric under a permutation that cycles the residues (e.g., 1→2, 2→3, 3→1, …). This bijection maps strings with sum ≡ s (mod 3) to strings with sum ≡ s+2 (mod 3); iterating gives an equal count for each of the three possible sums. Hence one‑third of all strings satisfy the divisibility‑by‑3 condition.
+
+\[
+\frac{18{,}874{,}368}{3}=6{,}291{,}456
+\]
+
+FINAL: 6291456

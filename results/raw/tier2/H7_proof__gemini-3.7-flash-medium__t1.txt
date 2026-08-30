@@ -1,0 +1,11 @@
+```
+Step │ Status │ Note
+─────┼────────┼──────────────────────────────────────────────
+1–5  │  [x]   │ Correctly derives x + 1/x >= 2 assuming x > 0
+6    │  !     │ Invalidly generalizes to all real x (e.g. x = -1)
+```
+
+- Steps 1–5 hold conditionally under the premise $x > 0$.
+- Step 6 drops the hypothesis $x > 0$ and asserts the inequality for all real $x$, which is false (e.g., at $x = -1$, $x + 1/x = -2 \not\ge 2$, and undefined at $x = 0$).
+
+FINAL: 6

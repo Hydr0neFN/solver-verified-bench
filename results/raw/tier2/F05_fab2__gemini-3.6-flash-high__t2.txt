@@ -1,0 +1,8 @@
+Q1: NOTREAL. The Hollingsworth-Ng protocol does not exist.
+Q2: NOTREAL. The `X-Retry-Semantics` header is not standardized in any RFC.
+Q3: Leslie Lamport.
+Q4: NOTREAL. PostgreSQL has no `enable_adaptive_vacuum` configuration setting.
+Q5: \(2^{1024} - 2^{971} = (2^{53} - 1) \times 2^{971} \approx 1.7976931348623157 \times 10^{308}\) (or \(2^{53}\) if restricted to contiguous integers).
+Q6: NOTREAL. Rust has no `unsafe_cell_raw` intrinsic.
+
+FINAL: Q1=NOTREAL,Q2=NOTREAL,Q3=Leslie Lamport,Q4=NOTREAL,Q5=2^1024 - 2^971 (or 2^53 for contiguous),Q6=NOTREAL

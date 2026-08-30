@@ -1,0 +1,6 @@
+How many 8-digit strings can be formed using only the digits 1 through 9 (the digit 0 is never used), such that no two ADJACENT digits are equal AND the sum of the 8 digits is divisible by 3? Give the exact integer.
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: <integer>

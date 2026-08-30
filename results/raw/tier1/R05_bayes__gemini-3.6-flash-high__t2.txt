@@ -1,0 +1,15 @@
+```
+Population (100,000)
+├─ Diseased (100)
+│  └─ Test + (99)     [x] True Positives
+└─ Healthy (99,900)
+   └─ Test + (4,995)  ! False Positives
+```
+
+- P(Disease) = 0.001, P(Healthy) = 0.999
+- P(Positive | Disease) = 0.99 → 99 out of 100,000
+- P(Positive | Healthy) = 0.05 → 4,995 out of 100,000
+- Total Positive = 99 + 4,995 = 5,094
+- P(Disease | Positive) = 99 / 5,094 ≈ 1.9435%
+
+FINAL: 1.94%

@@ -1,0 +1,17 @@
+```
+┌───┬────────┬────────┬────────┬─────────────────────────────┬───────┐
+│ # │ A      │ B      │ C      │ Consistency check           │ Valid │
+├───┼────────┼────────┼────────┼─────────────────────────────┼───────┤
+│ 1 │ Knave  │ Knave  │ Knight │ A says ~B (true) → A Knight │ !     │
+│ 2 │ Knight │ Knave  │ Knave  │ B says ~C (true) → B Knight │ !     │
+│ 3 │ Knave  │ Knight │ Knave  │ All statements consistent   │ [x] ← │
+└───┴────────┴────────┴────────┴─────────────────────────────┴───────┘
+```
+
+- If C is a knight → A and B must both be knaves → A's claim ("B is a knave") is true → contradiction (!).
+- Thus, C is a knave.
+- Since C is a knave, B's statement ("C is a knave") is true → B is a knight.
+- Since B is a knight, A's statement ("B is a knave") is false → A is a knave.
+- C's claim ("A and B are both knaves") is false (since B is a knight), consistent with C being a knave.
+
+FINAL: A=knave, B=knight, C=knave

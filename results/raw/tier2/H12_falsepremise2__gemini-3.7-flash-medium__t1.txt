@@ -1,0 +1,11 @@
+```
+2PL (Premise)   : [Reader] ──shared lock──x [Writer Blocked]
+PostgreSQL SSI  : [Reader] ──SIREAD flag──> [Concurrent Writer Runs]
+```
+
+- PostgreSQL implements Serializable Snapshot Isolation (SSI), not two-phase locking (2PL).
+- Readers never block writers, and writers never block readers.
+- SIREAD predicate locks are non-blocking memory markers used exclusively to detect serialization dependency cycles (triggering `40001` serialization failures on commit).
+- `max_pred_locks_per_page` governs lock promotion threshold to prevent predicate lock table exhaustion, not physical blocking.
+
+FINAL: REJECT

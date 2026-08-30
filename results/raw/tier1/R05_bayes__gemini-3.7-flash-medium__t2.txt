@@ -1,0 +1,16 @@
+```
+Population: 100,000
+├─ Diseased: 100
+│  ├─ Test (+): 99    ← True +
+│  └─ Test (-): 1
+└─ Healthy: 99,900
+   ├─ Test (+): 4,995 ← False +
+   └─ Test (-): 94,905
+```
+
+- True Positives = $100 \times 0.99 = 99$
+- False Positives = $99,900 \times 0.05 = 4,995$
+- Total Positives = $99 + 4,995 = 5,094$
+- $P(\text{Disease} \mid +) = \frac{99}{5,094} \approx 0.019435 \rightarrow 1.94\%$
+
+FINAL: 1.94%

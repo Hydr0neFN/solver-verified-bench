@@ -1,0 +1,13 @@
+1. From the highest place value: $C + R$ produces a 2-digit sum $DA$, so the carry to the hundred-thousands place must be $1$, giving $D = 1$.
+2. Analyzing the additions column by column (right to left):
+   - Units: $S + S = R$ (no carry over to tens, as $S + 1 = E \le 9$)
+   - Tens: $S + D = E \implies S + 1 = E$
+   - Hundreds: $O + A = G$
+   - Thousands: $R + O = N$
+   - Ten-Thousands: $C + R = 10 + A$
+3. Testing distinct digit assignments gives:
+   - $C = 9, R = 6, O = 2, S = 3, A = 5, D = 1, N = 8, G = 7, E = 4$
+4. Verification:
+   - $96233 + 62513 = 158746$
+
+FINAL: 158746

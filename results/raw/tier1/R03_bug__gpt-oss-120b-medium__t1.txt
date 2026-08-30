@@ -1,0 +1,3 @@
+The method acquires the per‑SKU locks in whatever order the caller’s `items` dict iterates; different threads can therefore take the same set of locks in different orders, causing a classic deadlock where each thread blocks waiting for a lock the other holds.  
+
+FINAL: inconsistent lock acquisition order leading to deadlock

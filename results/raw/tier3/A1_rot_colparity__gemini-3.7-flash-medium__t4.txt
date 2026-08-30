@@ -1,0 +1,25 @@
+```
+[IN: 4x4] ──> [Rotate 90° CW (R)] ──(+)──> [OUT: 4x4]
+     │                                ▲
+     └──────> [Col Parity (V)] ───────┘
+```
+
+- Rule:
+  1. Rotate grid 90° clockwise: $R[r][c] = IN[3-c][r]$
+  2. Compute input column parity: $V[c] = \bigoplus_{r=0}^3 IN[r][c]$
+  3. Bitwise XOR: $OUT[r][c] = R[r][c] \oplus V[c]$
+
+- Application to Query:
+  - $R$:
+    `1 0 0 0`
+    `1 1 1 1`
+    `1 1 1 1`
+    `0 0 1 1`
+  - $V = [1, 0, 0, 0]$
+  - $OUT$:
+    `0 0 0 0`
+    `0 1 1 1`
+    `0 1 1 1`
+    `1 0 1 1`
+
+FINAL: 0000; 0111; 0111; 1011

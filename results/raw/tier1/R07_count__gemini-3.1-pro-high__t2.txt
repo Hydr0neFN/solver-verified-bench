@@ -1,0 +1,25 @@
+To find the number of valid 8-digit strings, we can break the problem into two parts: finding the total number of strings with no identical adjacent digits, and then determining how many of those have a digit sum divisible by 3.
+
+**1. Total strings with no adjacent equal digits:**
+There are 9 choices for the first digit (any digit from 1 to 9). 
+For each subsequent digit, it can be any of the 9 digits except the one immediately preceding it, giving exactly 8 choices. 
+Since there are 8 digits in total, the first digit has 9 choices and the remaining 7 digits each have 8 choices. 
+Total valid strings = $9 \times 8^7 = 18,874,368$.
+
+**2. Strings with sum divisible by 3:**
+Consider a mapping function $f(x)$ applied to each digit in a string, where we add 1 to the digit, wrapping 9 back to 1:
+$f(x) = x + 1$ (for $x \in \{1..8\}$)
+$f(9) = 1$
+
+Applying this mapping to every digit of a valid 8-digit string creates a new string. Because $x \neq y \implies f(x) \neq f(y)$, the new string will also never have adjacent equal digits. This means the mapping is a bijection (a perfect one-to-one correspondence) on the set of all valid 8-digit strings.
+
+Now, observe how this mapping affects the sum of the digits modulo 3. For every digit $x \in \{1..9\}$, it is always true that $f(x) \equiv x + 1 \pmod 3$. 
+Since the string has exactly 8 digits, applying this mapping increases the total sum of the string by $8 \pmod 3$, which simplifies to $+2 \pmod 3$.
+
+Because shifting the sum by 2 modulo 3 cycles perfectly through all three possible remainders ($0 \to 2 \to 1 \to 0$), this bijection proves that the total number of valid strings is divided exactly equally among the three remainder classes modulo 3.
+
+**3. Calculation:**
+Exactly one-third of all valid 8-digit strings will have a sum divisible by 3.
+Number of strings = $\frac{9 \times 8^7}{3} = 3 \times 8^7 = 3 \times 2,097,152 = 6,291,456$.
+
+FINAL: 6291456

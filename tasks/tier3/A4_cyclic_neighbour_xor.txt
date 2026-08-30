@@ -1,0 +1,74 @@
+One deterministic transformation maps a 4x4 binary grid to a 4x4 binary grid. Every example uses the same rule. Infer it and apply it to the query.
+
+Example 1
+IN:
+1 0 0 0
+0 1 1 0
+0 0 0 1
+1 1 1 1
+OUT:
+0 1 1 1
+1 1 0 1
+1 1 0 1
+0 1 1 1
+
+Example 2
+IN:
+0 0 0 0
+1 1 1 0
+0 0 1 0
+0 0 1 1
+OUT:
+1 1 1 0
+1 1 1 1
+0 1 1 1
+0 1 1 0
+
+Example 3
+IN:
+0 1 1 0
+1 1 1 1
+1 1 0 0
+1 0 1 0
+OUT:
+0 0 1 1
+0 0 1 1
+0 0 1 1
+0 0 1 1
+
+Example 4
+IN:
+1 1 0 0
+0 1 1 1
+0 0 0 0
+1 0 1 1
+OUT:
+1 1 1 0
+1 1 1 0
+1 0 1 1
+1 0 1 1
+
+Example 5
+IN:
+0 0 0 0
+1 1 1 1
+0 0 0 1
+1 1 1 0
+OUT:
+1 1 1 1
+1 1 1 0
+1 1 0 0
+1 1 0 1
+
+Query
+IN:
+1 0 0 1
+1 1 0 0
+0 1 0 0
+0 0 0 1
+OUT: ?
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: <row1 four digits>; <row2>; <row3>; <row4>

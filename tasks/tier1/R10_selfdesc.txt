@@ -1,0 +1,6 @@
+A self-descriptive number in base 10 is a 10-digit number in which the digit at position i (positions indexed 0 to 9 from the left) equals the number of times the digit i occurs in the whole number. Find every such number.
+
+Show brief reasoning, then the LAST line of your reply must be exactly:
+FINAL: <answer>
+No text after that line.
+Answer format: FINAL: <the number, or a comma-separated list>

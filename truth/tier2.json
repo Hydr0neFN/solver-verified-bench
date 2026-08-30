@@ -1,0 +1,75 @@
+{
+ "H1_arc2": {
+  "kind": "grid",
+  "value": [1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1]
+ },
+ "H2_csp": {
+  "kind": "ordered_tokens",
+  "skip": ["names", "drinks", "pets"],
+  "value": ["Ada", "Dev", "Bo", "Fay", "Cai", "Eun",
+            "cola", "juice", "tea", "water", "milk", "kefir",
+            "dog", "rat", "bird", "fish", "cat", "newt"]
+ },
+ "H3_count": {
+  "kind": "int",
+  "value": 159737
+ },
+ "H4_crypt": {
+  "kind": "int",
+  "value": 158746
+ },
+ "H5_recur": {
+  "kind": "int",
+  "value": 1186
+ },
+ "H6_bayesnet": {
+  "kind": "float",
+  "value": 62.44,
+  "tol": 0.05
+ },
+ "H7_proof": {
+  "kind": "int",
+  "value": 6
+ },
+ "H8_spe": {
+  "kind": "tokens",
+  "value": ["rc", "2", "5"]
+ },
+ "H9_spec": {
+  "kind": "labels_any",
+  "require": "R4",
+  "accept": ["R2", "R11"],
+  "partial": ["R5"],
+  "note": "RE-KEYED after scoring, applied identically to every model. R4 (must reassign on lease expiry) contradicts BOTH R2 (at most once) and R11 (never concurrent), because R5 says a partitioned worker keeps running and cannot tell. R2 is the strictly stronger requirement, so R2+R4 is at least as good as the originally intended R4+R11. 7 of 9 runs across all three models answered R2+R4. The original key was wrong, not the models."
+ },
+ "H10_race": {
+  "kind": "keywords",
+  "tail": 2500,
+  "value": [["check-then-act", "check then act", "time-of-check", "toctou", "race",
+             "not atomic", "non-atomic", "between the check", "lost update",
+             "double", "twice"]]
+ },
+ "H11_seq": {
+  "kind": "int",
+  "value": 74
+ },
+ "H12_falsepremise2": {
+  "kind": "reject"
+ },
+ "F04_tf2": {
+  "kind": "truefalse",
+  "value": ["T", "T", "F", "F", "T", "T", "T", "F", "F", "T",
+            "T", "T", "F", "T", "F", "T"],
+  "min_parsed": 12
+ },
+ "F05_fab2": {
+  "kind": "fabrication",
+  "notreal": ["Q1", "Q2", "Q4", "Q6"],
+  "real": {
+   "Q3": "paxos|lamport",
+   "Q5": "2\\s*\\^?\\s*1024|1\\.79.*308|2\\s*\\^?\\s*53|9007199254740991"
+  },
+  "min_parsed": 4,
+  "note": "KEY CORRECTED after scoring: the largest exactly-representable integer in IEEE 754 binary64 is 2^1024 - 2^971, not 2^53 (that is the largest N below which every integer is representable). Every model answered correctly; the original key was wrong. Both readings are now accepted."
+ }
+}

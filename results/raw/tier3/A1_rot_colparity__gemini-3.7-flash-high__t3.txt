@@ -1,0 +1,21 @@
+```
+[Input Matrix M] ──► [Rotate 90° CW: R[r][c] = M[3-c][r]] ──► [Flip col c if M col c sum is odd] ──► [Output]
+```
+
+### Rule
+1. **Rotate 90° clockwise**: $R[r][c] = \text{IN}[3-c][r]$
+2. **Conditional column inversion**: If the sum of column $c$ in the input grid is odd, invert all bits in column $c$ of the rotated grid.
+
+### Application to Query
+- **Input column sums & parities**:
+  - Col 0: $0+0+0+1 = 1$ (odd $\to$ flip col 0)
+  - Col 1: $1+1+1+1 = 4$ (even $\to$ keep col 1)
+  - Col 2: $1+1+1+1 = 4$ (even $\to$ keep col 2)
+  - Col 3: $1+1+0+0 = 2$ (even $\to$ keep col 3)
+- **90° CW rotation**:
+  - Col 0: `1 1 1 0` $\to$ flipped $\to$ `0 0 0 1`
+  - Col 1: `0 1 1 0` $\to$ kept $\to$ `0 1 1 0`
+  - Col 2: `0 1 1 1` $\to$ kept $\to$ `0 1 1 1`
+  - Col 3: `0 1 1 1` $\to$ kept $\to$ `0 1 1 1`
+
+FINAL: 0 0 0 0; 0 1 1 1; 0 1 1 1; 1 0 1 1

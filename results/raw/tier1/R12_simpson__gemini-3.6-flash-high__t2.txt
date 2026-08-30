@@ -1,0 +1,14 @@
+```
+ Stone Size  │ Treatment A          │ Treatment B          │ Better
+─────────────┼──────────────────────┼──────────────────────┼────────
+ Small       │  81/ 87 (93.10%) [x] │ 234/270 (86.67%)     │   A   
+ Large       │ 192/263 (73.00%) [x] │  55/ 80 (68.75%)     │   A   
+─────────────┼──────────────────────┼──────────────────────┼────────
+ Aggregate   │ 273/350 (78.00%)     │ 289/350 (82.57%)     │ Simpson's
+```
+
+- **Simpson's Paradox**: Stone size is a confounding variable affecting both treatment choice and success rate.
+- **Stratified Analysis**: Treatment A yields a higher success rate for both small stones (93.10% vs 86.67%) and large stones (73.00% vs 68.75%). A patient should prefer **Treatment A**.
+- **Treatment A Aggregate Rate**: \( \frac{81 + 192}{87 + 263} = \frac{273}{350} = 78.00\% \).
+
+FINAL: prefer=A, A_overall=78.00%

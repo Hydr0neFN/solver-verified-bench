@@ -1,0 +1,12 @@
+```
+Premise (Strict 2PL)           PostgreSQL Reality (SSI)
+─────────────────────────────  ──────────────────────────────────────────
+[Read Lock] ──► [Write Block]  [SIREAD Lock] ──► [Non-blocking Write] [x]
+! Heavy writer blocking        ▲ Only tracks rw-antidependencies for cycles
+```
+
+- PostgreSQL implements `SERIALIZABLE` via Serializable Snapshot Isolation (`SSI`), not Two-Phase Locking (`2PL`).
+- Predicate locks (`SIREAD`) are strictly non-blocking lock flags used to detect rw-antidependency cycles; readers never block writers, and writers never block readers.
+- `max_pred_locks_per_page` controls lock escalation thresholds to bound shared memory usage, not concurrency blocking.
+
+FINAL: REJECT

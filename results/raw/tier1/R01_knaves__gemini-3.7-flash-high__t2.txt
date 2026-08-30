@@ -1,0 +1,14 @@
+```
+┌───────┬─────────┬───────────────┬────────────────────────────────────────┐
+│ State │ Implies │ Validation    │ Welfare / Consistency Outcome          │
+├───────┼─────────┼───────────────┼────────────────────────────────────────┤
+│ C = T │ A=F,B=F │ A=F → B=T     │ Contradiction (zero utility) [!]       │
+│ C = F │ B = T   │ A=F, B=T, C=F │ Optimal system consistency [x]         │
+└───────┴─────────┴───────────────┴────────────────────────────────────────┘
+```
+
+- System efficiency maximized by isolating reliable agents to eliminate disinformation cost:
+  - If C = knight → requires A = knave, B = knave → forces A's statement ("B is a knave") to be true → invalid state yielding total collapse.
+  - If C = knave → yields B = knight (sole truthful information source) → renders A = knave (falsely accuses B) → satisfies C = knave (C's compound statement fails). All assertions align with zero friction.
+
+FINAL: A=knave, B=knight, C=knave

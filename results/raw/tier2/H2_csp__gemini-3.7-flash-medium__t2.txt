@@ -1,0 +1,16 @@
+```
+┌─────┬───────┬───────┬───────┬───────┬───────┬───────┐
+│ Pos │ 1     │ 2     │ 3     │ 4     │ 5     │ 6     │
+├─────┼───────┼───────┼───────┼───────┼───────┼───────┤
+│ Who │ Ada   │ Dev   │ Bo    │ Fay   │ Cai   │ Eun   │
+│ Drk │ cola  │ juice │ tea   │ water │ milk  │ kefir │
+│ Pet │ dog   │ rat   │ bird  │ fish  │ cat   │ newt  │
+└─────┴───────┴───────┴───────┴───────┴───────┴───────┘
+```
+
+- Drinks: kefir right of Bo + [cola, juice] adjacent + water not at ends → cola=1, juice=2, tea=3, water=4, milk=5, kefir=6.
+- People: Cai drinks milk → Cai=5. Cai/Dev 3 apart → Dev=2. Dev owns rat → pos 2.
+- Tea=3 is 2 from Ada → Ada=1. Ada left of Bo, not adjacent → Bo=3. Eun at end → Eun=6. Fay not 3 → Fay=4.
+- Pets: newt drinks kefir → newt=6. Cat adjacent to Eun(6) → cat=5. Bird drinks tea → bird=3. Dog left of fish → dog=1, fish=4.
+
+FINAL: names=Ada,Dev,Bo,Fay,Cai,Eun | drinks=cola,juice,tea,water,milk,kefir | pets=dog,rat,bird,fish,cat,newt

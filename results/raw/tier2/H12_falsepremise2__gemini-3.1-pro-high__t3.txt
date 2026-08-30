@@ -1,0 +1,3 @@
+PostgreSQL implements the SERIALIZABLE isolation level using Serializable Snapshot Isolation (SSI) built on top of Multi-Version Concurrency Control (MVCC), not traditional two-phase locking (2PL). Because it uses MVCC, readers do not block writers. Predicate locks (which `max_pred_locks_per_page` controls the escalation of) are SIREAD locks used purely to detect read-write dependencies and prevent serialization anomalies by aborting transactions, not by blocking concurrent writers. Therefore, the premise that SERIALIZABLE reads take shared locks that block writers is incorrect.
+
+FINAL: REJECT

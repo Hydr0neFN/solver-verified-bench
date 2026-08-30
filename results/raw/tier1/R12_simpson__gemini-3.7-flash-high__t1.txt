@@ -1,0 +1,25 @@
+```
+    ┌──────────────┐
+    │  Stone Size  │ (Confounder)
+    └──┬────────┬──┘
+       │        │
+       ▼        ▼
+┌───────────┐  ┌───────────┐
+│ Treatment │  │  Success  │
+└───────────┘  └───────────┘
+
+┌─────────────┬─────────────────┬─────────────────┬───────────┐
+│ Group       │ Treatment A     │ Treatment B     │ Winner    │
+├─────────────┼─────────────────┼─────────────────┼───────────┤
+│ Small stones│  81/87  (93.10%)│ 234/270 (86.67%)│ A         │
+│ Large stones│ 192/263 (73.00%)│  55/80  (68.75%)│ A         │
+├─────────────┼─────────────────┼─────────────────┼───────────┤
+│ Aggregate   │ 273/350 (78.00%)│ 289/350 (82.57%)│ [B]*      │
+└─────────────┴─────────────────┴─────────────────┴───────────┘
+* Confounded aggregate (Simpson's paradox).
+```
+
+- **Causal adjustment**: Stone size is a confounder. Conditioned on stone size, Treatment A has a higher success rate in both subgroups (93.10% vs 86.67% small; 73.00% vs 68.75% large) → prefer **A**.
+- **Aggregate calculation for A**: $(81 + 192) / (87 + 263) = 273 / 350 = 0.7800 \to 78.00\%$.
+
+FINAL: prefer=A, A_overall=78.00%

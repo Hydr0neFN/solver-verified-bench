@@ -1,0 +1,11 @@
+```
+Server 1 │ [SELECT] (none) ──> [mailer.send()] ──> [INSERT / commit]
+Server 2 │ ──> [SELECT] (none) ──> [mailer.send()] ──> [INSERT (conflict)]
+                                         ! duplicate send
+```
+
+- Non-atomic check-then-act sequence (TOCTOU).
+- Concurrent servers execute `SELECT` before either executes `INSERT`.
+- Both pass the `if row is not None` guard → duplicate `mailer.send()` executes before database state updates.
+
+FINAL: Check-then-act race condition

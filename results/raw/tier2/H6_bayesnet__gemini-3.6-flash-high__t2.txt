@@ -1,0 +1,25 @@
+```
+    [A]
+   /   \
+  ▼     ▼
+ [B]   [C]
+   \   /
+    ▼ ▼
+    [D]
+```
+
+1. Marginalize over \(B\) and \(C\) given \(A=1\):
+\(P(D=1 | A=1) = 0.8 \times 0.6 \times 0.9 + 0.8 \times 0.4 \times 0.5 + 0.2 \times 0.6 \times 0.4 + 0.2 \times 0.4 \times 0.05 = 0.432 + 0.160 + 0.048 + 0.004 = 0.644\)
+
+2. Marginalize over \(B\) and \(C\) given \(A=0\):
+\(P(D=1 | A=0) = 0.1 \times 0.2 \times 0.9 + 0.1 \times 0.8 \times 0.5 + 0.9 \times 0.2 \times 0.4 + 0.9 \times 0.8 \times 0.05 = 0.018 + 0.040 + 0.072 + 0.036 = 0.166\)
+
+3. Compute joint and marginal probabilities:
+\(P(D=1, A=1) = P(A=1) \times P(D=1 | A=1) = 0.3 \times 0.644 = 0.1932\)
+\(P(D=1, A=0) = P(A=0) \times P(D=1 | A=0) = 0.7 \times 0.166 = 0.1162\)
+\(P(D=1) = 0.1932 + 0.1162 = 0.3094\)
+
+4. Compute posterior:
+\(P(A=1 | D=1) = \frac{P(D=1, A=1)}{P(D=1)} = \frac{0.1932}{0.3094} \approx 0.624434 = 62.44\%\)
+
+FINAL: 62.44%

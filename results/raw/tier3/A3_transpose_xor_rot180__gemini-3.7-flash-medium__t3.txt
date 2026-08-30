@@ -1,0 +1,27 @@
+```
+[IN] ──┬──> [Rotate 180°: IN(3-r, 3-c)] ──┐
+       │                                  ├──> [XOR] ──> [OUT]
+       └──> [Transpose:  IN(c, r)]      ──┘
+```
+
+The transformation rule computes each cell via:
+$\text{OUT}[r][c] = \text{IN}[3-r][3-c] \oplus \text{IN}[c][r]$
+
+Applying to Query:
+- $\text{rot180}(\text{IN})$:
+  - Row 0: `0 1 1 1`
+  - Row 1: `1 0 1 0`
+  - Row 2: `1 1 0 0`
+  - Row 3: `0 0 0 0`
+- $\text{transpose}(\text{IN})$:
+  - Row 0: `0 0 0 1`
+  - Row 1: `0 0 1 1`
+  - Row 2: `0 1 0 1`
+  - Row 3: `0 1 1 0`
+- $\text{OUT} = \text{rot180}(\text{IN}) \oplus \text{transpose}(\text{IN})$:
+  - Row 0: `0 1 1 0`
+  - Row 1: `1 0 0 1`
+  - Row 2: `1 0 0 1`
+  - Row 3: `0 1 1 0`
+
+FINAL: 0 1 1 0; 1 0 0 1; 1 0 0 1; 0 1 1 0

@@ -1,0 +1,19 @@
+```
+│ n   │ Permutations with |p(i)-i| >= 2 │
+│ 1   │                               0 │
+│ 2   │                               0 │
+│ 3   │                               0 │
+│ 4   │                               1 │
+│ 5   │                               4 │
+│ 6   │                              29 │
+│ 7   │                             206 │
+│ 8   │                            1708 │
+│ 9   │                           15702 │
+│ 10  │                          159737 │
+```
+
+- Matrix formulation: permanent of $10 \times 10$ adjacency matrix $A$ where $A_{i,j} = 1$ if $|i - j| \ge 2$, else $0$.
+- Forbidden positions form a tridiagonal band: $|p(i) - i| \le 1$.
+- Computed via dynamic programming over subsets / Ryser's expansion of the permanent.
+
+FINAL: 159737

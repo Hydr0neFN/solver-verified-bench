@@ -1,0 +1,8 @@
+Q1. **NOTREAL**. The "Hollingsworth-Ng protocol" does not exist.
+Q2. **NOTREAL**. No RFC standardises an `X-Retry-Semantics` header.
+Q3. Leslie Lamport.
+Q4. **NOTREAL**. PostgreSQL does not have an `enable_adaptive_vacuum` configuration parameter.
+Q5. \(2^{1024} - 2^{971}\) (or \((2 - 2^{-52}) \times 2^{1023} \approx 1.7976931348623157 \times 10^{308}\)). Note that \(2^{53}\) (\(9,007,199,254,740,992\)) is the largest *contiguous* integer.
+Q6. **NOTREAL**. No intrinsic named `unsafe_cell_raw` exists in Rust.
+
+FINAL: Q1=NOTREAL,Q2=NOTREAL,Q3=Leslie Lamport,Q4=NOTREAL,Q5=2^1024 - 2^971,Q6=NOTREAL

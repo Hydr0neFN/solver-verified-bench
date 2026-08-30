@@ -1,0 +1,23 @@
+```
+[IN] ──(Rotate 90° CW)──> [R] ──(XOR Column Parity v)──> [OUT]
+```
+
+- **Transformation rule**:
+  1. $R = \text{rot90}_{\text{cw}}(\text{IN})$, where $R_{r, c} = \text{IN}_{3 - c, r}$.
+  2. Parity mask $v_c = \left( \sum_{i=0}^3 \text{IN}_{i, c} \right) \bmod 2$.
+  3. $\text{OUT}_{r, c} = R_{r, c} \oplus v_c$.
+
+- **Application to Query**:
+  - Input column sums: $[1, 4, 4, 2] \implies v = [1, 0, 0, 0]$.
+  - Rotated grid $R$:
+    `1 0 0 0`
+    `1 1 1 1`
+    `1 1 1 1`
+    `0 0 1 1`
+  - Invert column 0 ($v_0 = 1$):
+    Row 0: `0 0 0 0`
+    Row 1: `0 1 1 1`
+    Row 2: `0 1 1 1`
+    Row 3: `1 0 1 1`
+
+FINAL: 0000; 0111; 0111; 1011

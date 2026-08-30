@@ -1,0 +1,33 @@
+To infer the transformation rule, we can compare each `OUT` matrix to the transpose of the `IN` matrix (`IN^T`).
+
+In Example 4, `OUT` is exactly `IN^T`. 
+If we examine the other examples, we see that `OUT` is identical to `IN^T` except that certain rows are bitwise inverted. Let's see which rows of `IN^T` get inverted:
+- Ex 1: Row 1 is inverted. In the original `IN` matrix, Row 1 has exactly one `1` (odd parity). All other rows have an even number of `1`s.
+- Ex 2: Rows 2 and 3 are inverted. In the original `IN` matrix, Rows 2 and 3 have an odd number of `1`s (1 and 3 respectively). Rows 0 and 1 have an even number of `1`s.
+- Ex 3: Row 0 is inverted. In the original `IN` matrix, Row 0 has an odd number of `1`s. The rest are even.
+- Ex 5: Row 3 is inverted. In the original `IN` matrix, Row 3 has an odd number of `1`s. The rest are even.
+
+**Rule:** 
+1. Transpose the `IN` matrix.
+2. For each row `i`, count the number of `1`s in the original `IN` matrix's row `i`. If the sum is odd, bitwise invert row `i` of the transposed matrix. If the sum is even, leave it unchanged.
+
+**Applying to the Query:**
+Query `IN`:
+1 0 1 0  -> sum: 2 (even) -> Keep `IN^T` row 0
+1 1 1 1  -> sum: 4 (even) -> Keep `IN^T` row 1
+1 1 0 1  -> sum: 3 (odd)  -> Invert `IN^T` row 2
+1 1 0 1  -> sum: 3 (odd)  -> Invert `IN^T` row 3
+
+Query `IN^T`:
+Row 0: 1 1 1 1
+Row 1: 0 1 1 1
+Row 2: 1 1 0 0
+Row 3: 0 1 1 1
+
+Applying the flips to Rows 2 and 3:
+Row 0: 1 1 1 1
+Row 1: 0 1 1 1
+Row 2: 0 0 1 1
+Row 3: 1 0 0 0
+
+FINAL: 1 1 1 1; 0 1 1 1; 0 0 1 1; 1 0 0 0

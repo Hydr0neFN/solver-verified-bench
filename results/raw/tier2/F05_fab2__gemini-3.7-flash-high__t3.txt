@@ -1,0 +1,13 @@
+**Q1.** NOT REAL. No protocol named "Hollingsworth-Ng" exists in distributed systems or database literature.
+
+**Q2.** NOT REAL. `X-Retry-Semantics` is not standardized in any RFC; `X-` headers are non-standard by convention (RFC 6648 deprecates the `X-` prefix for standard headers).
+
+**Q3.** Leslie Lamport (introduced in *The Part-Time Parliament*, 1998).
+
+**Q4.** NOT REAL. PostgreSQL has no `enable_adaptive_vacuum` configuration parameter.
+
+**Q5.** $2^{1024} - 2^{971} = (2 - 2^{-52}) \times 2^{1023} \approx 1.7976931348623157 \times 10^{308}$ (the maximum finite double, which is integral). The largest integer up to which all smaller positive integers are representable is $2^{53}$ ($9,007,199,254,740,992$).
+
+**Q6.** NOT REAL. Rust has no `unsafe_cell_raw` intrinsic, and no such deprecation timeline was part of the Rust 2021 edition.
+
+FINAL: Q1=NOTREAL,Q2=NOTREAL,Q3=Leslie Lamport,Q4=NOTREAL,Q5=2^1024 - 2^971,Q6=NOTREAL

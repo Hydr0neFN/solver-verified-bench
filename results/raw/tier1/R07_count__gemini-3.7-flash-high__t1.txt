@@ -1,0 +1,24 @@
+```
+Digit partition mod 3:
+  R0 = {3, 6, 9}  (|R0| = 3)
+  R1 = {1, 4, 7}  (|R1| = 3)
+  R2 = {2, 5, 8}  (|R2| = 3)
+
+Transition & distribution flow:
+  [d1: 9 choices] ──► [d2..d8: 8 choices each] ──► Total: 9 × 8^7 = 18874368
+         │
+         ▼
+  Root of unity filter: T(ω) = 0 for length 8
+         │
+         ▼
+  Exact 1/3 split ──► 18874368 / 3 = 6291456
+```
+
+- **Total valid strings:** 9 choices for $d_1$, 8 choices for each subsequent digit $d_i \neq d_{i-1}$ $\implies 9 \times 8^7 = 18{,}874{,}368$.
+- **Symmetry mod 3:** The digits $\{1, \dots, 9\}$ partition evenly into 3 residue classes of size 3.
+- **Roots of unity filter:** For $\omega = e^{2\pi i / 3}$, the transition matrix $A(\omega) = \operatorname{diag}(1, \omega, \omega^2) \otimes (J_3 - I_3)$.
+  $$\sum_{\text{valid strings}} \omega^{\sum d_i} = 3 \cdot 2^7 (1 + \omega^8 + \omega^{16}) = 384 \cdot 0 = 0$$
+- $\implies$ Valid strings are equally distributed among sums $\equiv 0, 1, 2 \pmod 3$.
+- **Count:** $\frac{9 \times 8^7}{3} = 3 \times 8^7 = 6{,}291{,}456$.
+
+FINAL: 6291456

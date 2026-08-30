@@ -1,0 +1,19 @@
+```
+IN(r, c)
+   │
+   ├── [Right neighbor: (r, (c+1) mod 4)] ──────┐
+   │                                            ├──⊕ (XOR) → OUT(r, c)
+   └── [Bottom neighbor: ((r+1) mod 4, c)] ─────┘
+```
+
+Each cell in the output grid is the XOR sum of its right and bottom neighbors on a 4×4 toroidal grid:
+
+$$\text{OUT}[r, c] = \text{IN}[r, (c + 1) \bmod 4] \oplus \text{IN}[(r + 1) \bmod 4, c]$$
+
+Applying to Query:
+- Row 0: `(0^1, 0^1, 1^0, 1^0) = (1, 1, 1, 1)`
+- Row 1: `(1^0, 0^1, 0^0, 1^0) = (1, 1, 0, 1)`
+- Row 2: `(1^0, 0^0, 0^0, 0^1) = (1, 0, 0, 1)`
+- Row 3: `(0^1, 0^0, 1^0, 0^1) = (1, 0, 1, 1)`
+
+FINAL: 1111; 1101; 1001; 1011
