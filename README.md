@@ -2,7 +2,7 @@
 
 一組小型、可重現的題庫，用來比較 Antigravity CLI 能取用的模型。每題答案都由 solver 產生並確認唯一解，計分完全機械化。
 
-> 英文版：[README.en.md](README.en.md)
+> English Version：[README.en.md](README.en.md)
 
 **先讀這個：**[METHODOLOGY.md](METHODOLOGY.md) 說明這份測試*不能*用來主張什麼。最重要的一點是模型在測試中有程式執行權，所以分數是「模型 + 工具」，不是純推理。
 
