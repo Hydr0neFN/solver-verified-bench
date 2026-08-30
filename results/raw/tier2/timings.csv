@@ -235,3 +235,14 @@ H6_bayesnet|gpt-oss-120b-medium|2|0|10477
 H1_arc2|gpt-oss-120b-medium|2|0|81641
 H1_arc2|gemini-3.6-flash-high|2|0|30725
 H9_spec|gemini-3.6-flash-high|3|0|53307
+H1_arc2|gemini-3.6-flash-high|4|0|159165
+H1_arc2|gemini-3.7-flash-high|4|0|205639
+H1_arc2|gemini-3.6-flash-high|5|0|100703
+H1_arc2|gemini-3.7-flash-high|5|0|371788
+H1_arc2|gemini-3.6-flash-high|6|0|184515
+H1_arc2|gemini-3.7-flash-high|6|0|334717
+H1_arc2|gemini-3.6-flash-high|7|0|132686
+H1_arc2|gemini-3.7-flash-high|7|0|326512
+H1_arc2|gemini-3.6-flash-high|8|0|35085
+H1_arc2|gemini-3.7-flash-high|8|0|132478
+H1_arc2|gemini-3.6-flash-high|9|0|73430

@@ -1,0 +1,17 @@
+```
+IN row r ──→ Column 3-r of OUT (90° CW rotation mapping)
+                  │
+                  ├─ r ∈ {0, 2} and IN[r, 1] == 0 ──→ Bitwise NOT (invert)
+                  └─ Otherwise ───────────────────→ Keep as-is
+```
+
+- Each row $r$ ($0 \le r \le 3$) of $\text{IN}$ maps to column $3-r$ of $\text{OUT}$.
+- If $r \in \{0, 2\}$ and $\text{IN}[r, 1] == 0$, the 4-bit vector is bitwise inverted before placement; otherwise it is placed directly.
+
+Applying to the query:
+- Row 0: `0 1 0 0` ($r=0$, $\text{IN}[0,1]=1$) $\rightarrow$ not inverted $\rightarrow$ $\text{OUT}[:, 3] = [0, 1, 0, 0]^\top$
+- Row 1: `0 0 0 0` ($r=1$, odd) $\rightarrow$ not inverted $\rightarrow$ $\text{OUT}[:, 2] = [0, 0, 0, 0]^\top$
+- Row 2: `1 1 0 0` ($r=2$, $\text{IN}[2,1]=1$) $\rightarrow$ not inverted $\rightarrow$ $\text{OUT}[:, 1] = [1, 1, 0, 0]^\top$
+- Row 3: `1 0 0 1` ($r=3$, odd) $\rightarrow$ not inverted $\rightarrow$ $\text{OUT}[:, 0] = [1, 0, 0, 1]^\top$
+
+FINAL: 1100; 0101; 0000; 1000

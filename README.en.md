@@ -22,7 +22,7 @@ A small, reproducible task battery comparing the models reachable through the An
 
 | model | F04 | F05 | H10 | H11 | H12 | H1 | H2 | H3 | H4 | H5 | H6 | H7 | H8 | H9 | mean |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `gemini-3.7-flash-high` | 100 | 100 | 100 | 100 | 100 | 33 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | **95.2%** |
+| `gemini-3.7-flash-high` | 100 | 100 | 100 | 100 | 100 | 38 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | **95.5%** |
 | `gemini-3.7-flash-medium` | 100 | 100 | 100 | 100 | 100 | 0 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 67 | **90.5%** |
 | `gemini-3.6-flash-high` | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | **100.0%** |
 | `gemini-3.1-pro-high` | 100 | 100 | 100 | 100 | 100 | 67 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | **97.6%** |
@@ -36,8 +36,6 @@ A small, reproducible task battery comparing the models reachable through the An
 | `gemini-3.7-flash-medium` | 80 | 100 | 60 | 80 | **80.0%** |
 | `gemini-3.6-flash-high` | 80 | 100 | 60 | 100 | **85.0%** |
 | `gemini-3.1-pro-high` | 0 | 100 | 40 | 40 | **45.0%** |
-| `claude-opus-4-6-thinking` | — | 100 | — | — | **partial 1/4** |
-| `claude-sonnet-4-6` | 100 | 100 | — | — | **partial 2/4** |
 | `gpt-oss-120b-medium` | 0 | 60 | 0 | 0 | **15.0%** |
 
 Cells are mean score % for that task. `⚠` means at least one cell for that model has fewer trials than the tier target (2 / 3 / 5 for tiers 1 / 2 / 3) — one sample fewer is enough to flip a ranking, so treat that row's mean as indicative. `partial` means the model is missing whole tasks, and no mean is given for it.
@@ -48,12 +46,10 @@ Only tiers with adequate timing coverage are shown. **Not comparable across acco
 
 | model | tier 1 | tier 2 | tier 3 |
 |---|---|---|---|
-| `gemini-3.7-flash-high` | — | 14s | 165s |
+| `gemini-3.7-flash-high` | — | 15s | 165s |
 | `gemini-3.7-flash-medium` | — | 12s | 215s |
-| `gemini-3.6-flash-high` | 9s | 10s | 65s |
+| `gemini-3.6-flash-high` | 9s | 11s | 65s |
 | `gemini-3.1-pro-high` | — | 29s | 467s |
-| `claude-opus-4-6-thinking` | — | — | 8s |
-| `claude-sonnet-4-6` | — | — | 6s |
 | `gpt-oss-120b-medium` | 10s | 16s | 55s |
 
 ## Reproducing

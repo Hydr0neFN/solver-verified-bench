@@ -1,0 +1,31 @@
+```
+[Input Grid] ──(Rotate 90° CW)──> [Rotated Grid] ──(XOR Column Parity)──> [Output Grid]
+```
+
+- **Transformation Rule**:
+  1. Rotate the $4 \times 4$ binary grid $90^\circ$ clockwise: $R_{i,j} = \text{IN}_{3-j, i}$.
+  2. Compute the parity (sum $\bmod\ 2$) of each column $j$ of the original $\text{IN}$ grid: $P_j = \left(\sum_{i=0}^3 \text{IN}_{i,j}\right) \bmod 2$.
+  3. Invert (XOR) each column $j$ of the rotated grid where $P_j = 1$: $\text{OUT}_{i,j} = R_{i,j} \oplus P_j$.
+
+- **Application to Query**:
+  - $\text{IN}$ column parities: $[2\bmod 2, 2\bmod 2, 0\bmod 2, 1\bmod 2] = [0, 0, 0, 1]$.
+  - $\text{Rotated } 90^\circ\text{ CW}$:
+    $$
+    \begin{pmatrix}
+    1 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 1 \\
+    0 & 0 & 0 & 0 \\
+    1 & 0 & 0 & 0
+    \end{pmatrix}
+    $$
+  - XOR Column $3$ with $1$:
+    $$
+    \begin{pmatrix}
+    1 & 1 & 0 & 1 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 0 & 1 \\
+    1 & 0 & 0 & 1
+    \end{pmatrix}
+    $$
+
+FINAL: 1101; 0100; 0001; 1001

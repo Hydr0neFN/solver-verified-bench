@@ -1,0 +1,30 @@
+To determine the output grid from the input grid, we deduce two steps from the examples:
+
+1. **Rotate 90° Clockwise**: First, rotate the 4x4 input grid 90 degrees clockwise.
+2. **Column Inversion by Parity**: Calculate the sum of 1s in each column of the *original* input grid. For any column index $c$ where the original column sum is **odd**, invert (toggle 0s and 1s) the entire column $c$ in the rotated grid.
+
+### Verification on Query
+- **Query Input Grid**:
+  ```
+  0 1 0 0
+  0 0 0 0
+  1 1 0 0
+  1 0 0 1
+  ```
+- **Original Column Sums**: `[2, 2, 0, 1]` $\rightarrow$ Only column 3 has an odd sum.
+- **Rotated 90° Clockwise**:
+  ```
+  1 1 0 0
+  0 1 0 1
+  0 0 0 0
+  1 0 0 0
+  ```
+- **Invert Column 3**:
+  ```
+  1 1 0 1
+  0 1 0 0
+  0 0 0 1
+  1 0 0 1
+  ```
+
+FINAL: 1101; 0100; 0001; 1001

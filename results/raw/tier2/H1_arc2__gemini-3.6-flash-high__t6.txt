@@ -1,0 +1,32 @@
+I have launched the CA rule search in the background. I will wait for it to complete before analyzing the results.
+The transformation from the input grid to the output grid follows a 2-step deterministic pipeline:
+
+```
++-------------------+      +-------------------+      +-------------------+
+|  Input Grid (IN)  | ---> |  Rotated 90° CW   | ---> | Output Grid (OUT) |
++-------------------+      +-------------------+      +-------------------+
+| 0 1 0 0           |      | 1 1 0 0           |      | 1 1 0 1           |
+| 0 0 0 0           |      | 0 1 0 1           |      | 0 1 0 0           |
+| 1 1 0 0           |      | 0 0 0 0           |      | 0 0 0 1           |
+| 1 0 0 1           |      | 1 0 0 0           |      | 1 0 0 1           |
++-------------------+      +-------------------+      +-------------------+
+  Parities: 0 0 0 1  =======> XOR each row with [0, 0, 0, 1]
+```
+
+1. **Rotate 90° Clockwise**: Rotate the input grid 90° clockwise.
+2. **XOR Column Parity**: Compute the column parity vector $V = [\text{sum}(\text{col}_0) \bmod 2, \dots, \text{sum}(\text{col}_3) \bmod 2]$ of the input grid, and XOR $V$ into every row of the rotated grid.
+
+For the Query input:
+- **Column Parities**: $\text{col}_0 = 2 \to 0, \text{col}_1 = 2 \to 0, \text{col}_2 = 0 \to 0, \text{col}_3 = 1 \to 1$, giving $V = [0, 0, 0, 1]$.
+- **Rotated Grid**:
+  `1 1 0 0`
+  `0 1 0 1`
+  `0 0 0 0`
+  `1 0 0 0`
+- **Result (XOR with $V$)**:
+  `1 1 0 1`
+  `0 1 0 0`
+  `0 0 0 1`
+  `1 0 0 1`
+
+FINAL: 1101; 0100; 0001; 1001

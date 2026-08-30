@@ -1,0 +1,35 @@
+```
+[Input Grid] → [Rotate 90° CW] → [Invert Cols w/ Odd IN Parity] → [Output Grid]
+```
+
+### Reasoning
+
+1. **Deterministic Rule**:
+   - **Step 1**: Rotate the input binary grid 90° clockwise.
+   - **Step 2**: Calculate the column parity (sum modulo 2) for each column of the *original* input grid. For any column with odd parity (sum mod 2 = 1), invert all bits in that column of the rotated grid.
+
+2. **Query Execution**:
+   - **Input Grid**:
+     ```
+     0 1 0 0
+     0 0 0 0
+     1 1 0 0
+     1 0 0 1
+     ```
+   - **Column Parities**: `col 0 = 0`, `col 1 = 0`, `col 2 = 0`, `col 3 = 1` $\rightarrow$ column 3 is inverted.
+   - **90° CW Rotation**:
+     ```
+     1 1 0 0
+     0 1 0 1
+     0 0 0 0
+     1 0 0 0
+     ```
+   - **Invert Column 3**:
+     ```
+     1 1 0 1
+     0 1 0 0
+     0 0 0 1
+     1 0 0 1
+     ```
+
+FINAL: 1101; 0100; 0001; 1001

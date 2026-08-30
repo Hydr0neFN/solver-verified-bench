@@ -1,0 +1,28 @@
+The transformation mapping the 4x4 binary grid operates as follows:
+
+1. **Rotate 90° Clockwise**: Rotate the input grid 90 degrees clockwise.
+2. **Column Inversion**: Calculate the XOR sum (parity of 1s) for each column $c \in \{0, 1, 2, 3\}$ of the original input grid. If column $c$ has an odd number of 1s (XOR sum = 1), invert all bits in column $c$ of the rotated grid.
+
+**Applying to the Query:**
+- **Query IN:**
+  `0 1 0 0`
+  `0 0 0 0`
+  `1 1 0 0`
+  `1 0 0 1`
+- **Rotated 90° CW:**
+  `1 1 0 0`
+  `0 1 0 1`
+  `0 0 0 0`
+  `1 0 0 0`
+- **Input Column XOR sums:**
+  - Col 0: $0 \oplus 0 \oplus 1 \oplus 1 = 0$
+  - Col 1: $1 \oplus 0 \oplus 1 \oplus 0 = 0$
+  - Col 2: $0 \oplus 0 \oplus 0 \oplus 0 = 0$
+  - Col 3: $0 \oplus 0 \oplus 0 \oplus 1 = 1$ (Invert Column 3)
+- **Final Result:**
+  `1 1 0 1`
+  `0 1 0 0`
+  `0 0 0 1`
+  `1 0 0 1`
+
+FINAL: 1101; 0100; 0001; 1001

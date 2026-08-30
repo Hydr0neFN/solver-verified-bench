@@ -1,0 +1,16 @@
+```
+[IN 4x4] ──► [Invert row r if r∈{0,2} & IN[r,1]==0] ──► [Rotate 90° CW] ──► [OUT 4x4]
+```
+
+- For even rows ($r \in \{0, 2\}$), invert all bits in row $r$ if and only if $\text{IN}[r, 1] = 0$.
+- Odd rows ($r \in \{1, 3\}$) remain unchanged.
+- Rotate the resulting grid $90^\circ$ clockwise.
+
+Applying to Query:
+- Row 0: `[0 1 0 0]` $\rightarrow \text{IN}[0, 1] = 1 \implies$ unchanged `[0 1 0 0]`
+- Row 1: `[0 0 0 0]` $\rightarrow$ odd row $\implies$ unchanged `[0 0 0 0]`
+- Row 2: `[1 1 0 0]` $\rightarrow \text{IN}[2, 1] = 1 \implies$ unchanged `[1 1 0 0]`
+- Row 3: `[1 0 0 1]` $\rightarrow$ odd row $\implies$ unchanged `[1 0 0 1]`
+- Clockwise $90^\circ$ rotation yields the output grid.
+
+FINAL: 1 1 0 0; 0 1 0 1; 0 0 0 0; 1 0 0 0

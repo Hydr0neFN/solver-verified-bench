@@ -1,0 +1,29 @@
+```
+Transformation Pipeline:
+  [Input 4x4 Grid]
+         │
+         ▼
+  [Invert even row r (r ∈ {0, 2}) if IN[r, 1] == 0]
+         │
+         ▼
+  [Rotate 90° Clockwise]
+         │
+         ▼
+  [Output 4x4 Grid]
+```
+
+- **Rule**:
+  1. For rows `r ∈ {0, 2}`, if `IN[r, 1] == 0`, bitwise invert the row (`0 ↔ 1`).
+  2. Rotate the resulting grid 90° clockwise (`OUT[r, c] = GRID[3 - c, r]`).
+- **Query Evaluation**:
+  - Row 0 (`0 1 0 0`): `IN[0, 1] == 1` → unchanged (`0 1 0 0`)
+  - Row 1 (`0 0 0 0`): odd row → unchanged (`0 0 0 0`)
+  - Row 2 (`1 1 0 0`): `IN[2, 1] == 1` → unchanged (`1 1 0 0`)
+  - Row 3 (`1 0 0 1`): odd row → unchanged (`1 0 0 1`)
+  - Rotate 90° clockwise:
+    - Row 0: `1 1 0 0`
+    - Row 1: `0 1 0 1`
+    - Row 2: `0 0 0 0`
+    - Row 3: `1 0 0 0`
+
+FINAL: 1100; 0101; 0000; 1000

@@ -1,0 +1,18 @@
+```
+[IN] ──(90° CW Rot)──> [R] ──(⊕ Col Parities)──> [OUT]
+```
+
+- Transformation: Rotate grid 90° clockwise, then bitwise XOR each row with the column parity vector of the input grid ($P_j = \sum_{i} \text{IN}_{i,j} \bmod 2$).
+- Query IN column parities: `[0, 0, 0, 1]`.
+- Query 90° CW rotation:
+  `1 1 0 0`
+  `0 1 0 1`
+  `0 0 0 0`
+  `1 0 0 0`
+- XOR with parity matrix `[0, 0, 0, 1]`:
+  `1 1 0 1`
+  `0 1 0 0`
+  `0 0 0 1`
+  `1 0 0 1`
+
+FINAL: 1101; 0100; 0001; 1001

@@ -88,11 +88,13 @@ sound; the models simply got it wrong together.
 The runner takes a parallelism argument. That is not a convenience knob — set it wrong
 and you measure the harness instead of the model.
 
-Running three tier-3 cells at once with a 10-minute budget, `claude-sonnet-4-6` failed
-at a flat **~201 s every time**, with an empty reply and nothing on stderr. Run alone
-with a 15-minute budget, the same task finished in **3 min 14 s with the correct
-answer**. Nothing about the model changed; the parallel runs were being throttled, and
-scoring them would have recorded "cannot solve it" for a task the model solves.
+Running three tier-3 cells at once with a 10-minute budget, one model failed at a flat
+**~201 s every time**, with an empty reply and nothing on stderr. Run alone with a
+15-minute budget, the same task finished in **3 min 14 s with the correct answer**.
+Nothing about the model changed; the parallel runs were being throttled, and scoring
+them would have recorded "cannot solve it" for a task it solves. (That model was dropped
+from these tables for unrelated reasons -- it never got enough coverage to report -- but
+the lesson survives it.)
 
 Failure duration is the tell, and the scorer uses it:
 
@@ -102,28 +104,24 @@ Failure duration is the tell, and the scorer uses it:
 | ~200 s under parallelism | throttling | excluded; re-run sequentially |
 | the whole budget (~600 s+) | the model did not converge | scored zero |
 
-The Gemini models tolerated six-way parallelism. The Claude models did not. If you
-reproduce this, run those sequentially with a generous budget, and check the elapsed
-time on every failure before believing it.
+The Gemini models tolerated six-way parallelism. Not every model does. If you add one,
+start it sequentially with a generous budget, and check the elapsed time on every
+failure before believing it.
 
-## What was not measured, and why
+## Uneven trial counts on one task, and why
 
-`claude-sonnet-4-6` and `claude-opus-4-6-thinking` were added late and are reported as
-**partial**: Sonnet completed two of the four induction rules, Opus one. Neither is given
-a tier mean.
+`H1_arc2` carries more trials than any other cell: nine for `gemini-3.6-flash-high` and
+eight for `gemini-3.7-flash-high`, against three for everything else. That is deliberate.
+It was the single task where those two models disagreed most, and three trials could not
+tell a real gap from a run of luck -- a lesson this benchmark had already learned the
+hard way on the induction tier, where a 2-of-3 lead reversed completely once twenty
+trials were run.
 
-The reason is quota, not model behaviour. Both accounts available for this work had their
-CLAUDE+GPT weekly limit exhausted by these two models -- one account in roughly ten
-minutes of thinking-tier runs. Quota is consumed in proportion to token cost, and a
-tier-3 induction task keeps a thinking model working for minutes at a time, so the run
-count is a poor guide to the cost. On the tasks they did reach, both answered correctly
-every time, but two and one rules respectively are not enough to characterise either
-model and no inference should be drawn from those cells.
-
-Substituting a different harness was considered and rejected. The same model version
-reached through another tool is not the same measurement: system prompt, tool set and
-time budget all differ, and the comparison in these tables depends on every model seeing
-an identical prompt through an identical path.
+Both models were given the same extra trials; 3.7 has one fewer only because the run was
+interrupted mid-pair. The gap widened rather than closed, which is why it is reported as
+a finding rather than as noise. No other model was given extra trials, so read the
+`H1_arc2` row as better-sampled than its neighbours rather than as a like-for-like
+comparison of sample sizes.
 
 ## Limits
 

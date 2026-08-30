@@ -1,0 +1,25 @@
+```
+[Input Grid] ──► Rotate 90° CW ──► [Rotated Grid] ──┐
+                                                    ├──► XOR ──► [Output Grid]
+[Input Grid] ──► Col Parities  ──► [Column Mask]  ──┘
+```
+
+Transformation rule:
+1. Rotate input grid 90° clockwise.
+2. Compute column parities of input grid (`sum % 2` per column) to form a 1x4 mask.
+3. XOR each row of the rotated grid with the column mask.
+
+Query application:
+- Rotated 90° CW:
+  `1 1 0 0`
+  `0 1 0 1`
+  `0 0 0 0`
+  `1 0 0 0`
+- Column parities of IN: `0 0 0 1`
+- Result (Rotated XOR Mask):
+  `1 1 0 1`
+  `0 1 0 0`
+  `0 0 0 1`
+  `1 0 0 1`
+
+FINAL: 1101; 0100; 0001; 1001

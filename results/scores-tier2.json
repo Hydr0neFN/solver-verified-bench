@@ -811,6 +811,66 @@
  },
  {
   "task": "H1_arc2",
+  "model": "gemini-3.6-flash-high",
+  "trial": "4",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 159165,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "H1_arc2",
+  "model": "gemini-3.6-flash-high",
+  "trial": "5",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 100703,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "H1_arc2",
+  "model": "gemini-3.6-flash-high",
+  "trial": "6",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 184515,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "H1_arc2",
+  "model": "gemini-3.6-flash-high",
+  "trial": "7",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 132686,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "H1_arc2",
+  "model": "gemini-3.6-flash-high",
+  "trial": "8",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 35085,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "H1_arc2",
+  "model": "gemini-3.6-flash-high",
+  "trial": "9",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 73430,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "H1_arc2",
   "model": "gemini-3.7-flash-high",
   "trial": "1",
   "score": 0.0,
@@ -837,6 +897,56 @@
   "empty_reason": null,
   "rc": 0,
   "ms": 204987,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "H1_arc2",
+  "model": "gemini-3.7-flash-high",
+  "trial": "4",
+  "score": 0.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 205639,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "H1_arc2",
+  "model": "gemini-3.7-flash-high",
+  "trial": "5",
+  "score": 0.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 371788,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "H1_arc2",
+  "model": "gemini-3.7-flash-high",
+  "trial": "6",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 334717,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "H1_arc2",
+  "model": "gemini-3.7-flash-high",
+  "trial": "7",
+  "score": 1.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 326512,
+  "retried_after_timeout": false
+ },
+ {
+  "task": "H1_arc2",
+  "model": "gemini-3.7-flash-high",
+  "trial": "8",
+  "score": 0.0,
+  "empty_reason": null,
+  "rc": 0,
+  "ms": 132478,
   "retried_after_timeout": false
  },
  {
