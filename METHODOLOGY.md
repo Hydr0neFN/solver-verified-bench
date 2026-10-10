@@ -1,5 +1,7 @@
 # Methodology, and what this benchmark does not measure
 
+> **Paused 2026-10-10:** the bench's agy CLI runs (`bench/run-model.sh`) are not runnable until agy is restored (Student re-verification).
+
 Read this before quoting any number from the results.
 
 ## What is being compared
