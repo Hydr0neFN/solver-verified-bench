@@ -124,4 +124,4 @@ python bench/audit_ambiguity.py
 
 ## 授權
 
-MIT — see [LICENSE](LICENSE).
+MIT，詳見 [LICENSE](LICENSE)。
